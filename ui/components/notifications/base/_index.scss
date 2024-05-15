@@ -98,6 +98,11 @@
     background-color: var(--slds-g-color-neutral-base-100, #{$color-background-reminder-hover});
     text-decoration: none;
   }
+
+  &:focus {
+    outline: 2px solid var(--slds-g-color-brand-base-40);
+    outline-offset: rem(-4px);
+  }
 }
 
 /**
@@ -120,4 +125,9 @@
   position: absolute;
   top: 0;
   right: 0;
+
+  &:focus {
+    box-shadow: var(--slds-g-shadow-7, #{$shadow-button-focus});
+    outline: 0;
+  }
 }

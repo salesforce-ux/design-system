@@ -57,6 +57,11 @@
   padding-left: var(--slds-c-tabs-item-spacing-inline-start, var(--sds-c-tabs-item-spacing-inline-start, var(--sds-c-tabs-item-spacing-inline, $spacing-small)));
   margin-bottom: calc(var(--slds-c-tabs-list-sizing-border, var(--sds-c-tabs-list-sizing-border, #{$border-width-thin})) * -1);
 
+  &:has(:focus-visible) {
+    outline: 2px solid var(--slds-g-color-brand-base-40);
+    outline-offset: rem(-6px);
+  }
+
   &:after {
     display: block;
     content: '';
@@ -193,7 +198,8 @@
   text-transform: inherit; // For button menu to inherit the parents text-transform
   z-index: 1; // For subtab notification background coloring
 
-  &:focus {
+  &:focus,
+  &:focus-visible {
     outline: 0;
   }
 
@@ -205,7 +211,7 @@
   }
 
   &[tabindex="0"]:focus {
-    text-decoration: underline;
+    text-decoration: none;
   }
 }
 
@@ -222,10 +228,13 @@
   .slds-button {
     line-height: inherit;
     color: var(--slds-c-tabs-item-text-color, var(--sds-c-tabs-item-text-color, var(--slds-g-color-neutral-base-30, #{$color-text-action-label})));
-    box-shadow: none;
     --slds-c-button-color-border-active: transparent;
-    &:focus {
-      text-decoration: underline;
+    
+    &:focus,
+    &:focus-visible {
+      text-decoration: none;
+      outline: 0;
+      box-shadow: none;
     }
   }
 
@@ -368,4 +377,19 @@
  */
 .slds-tabs__right-icon {
   margin-left: $spacing-x-small;
+}
+
+.slds-tabs_default__nav {
+
+  .slds-has-error,
+  .slds-has-warning,
+  .slds-has-success {
+    .slds-tabs_default__link {
+      &:focus {
+        box-shadow: var(--slds-g-shadow-6);
+        outline: 0;
+        text-decoration: none;
+      }
+    }
+  }
 }

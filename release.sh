@@ -9,17 +9,37 @@ package_json="$dist_path/package.json"
 
 use_exising_dist=false
 
+echo "==============================================================="
+if [[ "$@" == "--make-index" ]]; then
+  make_index=true
+  echo "» Site index to be built"
+
+  # Check if the .algoliakeys.json file exists
+  if [ ! -f ".algoliakeys.json" ]; then
+    # Print an error message
+    tput setab 1; echo "» Error: .algoliakeys.json file not found and is needed to index the site"; tput sgr0
+    # Exit the script with a non-zero status code
+    exit 1
+  fi
+else
+  make_index=false
+  echo "» Skipping site index build"
+fi
+echo "==============================================================="
+
+
 if [ -e "$package_json" ]; then
   # Use jq to extract the version property
   version=$(jq -r '.version' "$package_json")
 
   # Prompt the user to continue
-  read -p "The version v$version exists in the .dist folder. Do you want to continue? (y/n): " choice
+  read -p "The version v$version exists in the .dist folder. Do you want to continue? (Y/n)" choice
+  choice=${choice:-y} # set default value to "y" if user presses Enter
 
   # Check the user's choice
   if [[ "$choice" == "y" || "$choice" == "Y" ]]; then
       echo "==============================================================="
-      echo "Continuing with the existing version $version"
+      echo "» Continuing with the existing version $version"
       echo "==============================================================="
       use_exising_dist=true
   fi
@@ -27,7 +47,7 @@ fi
 
 if [ "$use_exising_dist" = false ]; then
   echo "==============================================================="
-  echo "Continuing to build and dist anew from v$(jq -r '.version' "./package.json")"
+  echo "» Continuing to build and dist anew from v$(jq -r '.version' "./package.json")"
   echo "==============================================================="
 fi
 
@@ -137,73 +157,57 @@ if [ "$build_site_only" = false ]; then
   # Publish the tarball to the Heroku app
   heroku builds:create --source-tar site-release.tar.gz -a ${HEROKU_APP_NAME}
 
-  # Clone Algolia Docsearch Scraper
-  echo "» Installing docsearch scraper..."
-  git clone https://github.com/algolia/docsearch-scraper.git
-
   cd ./.www/
+  if [ "$make_index" = true ]; then
+    echo "» Running docsearch scraper from Docker..."
 
-  # start python server on port 80
-  python3 -m http.server 80 &
+    # start python server on port 80
+    python3 -m http.server 80 &
 
-  # install python3
-  brew install python
+    # copy Algolia environment variables into .env
+    # relies on design-system-site/environment.js being run first
+    echo APPLICATION_ID=$(cat ../../.algoliakeys.json | jq -r .SLDS__SEARCH__APP_ID) > .env
+    echo API_KEY=$(cat ../../.algoliakeys.json | jq -r .SLDS__SEARCH__API_KEY) >> .env
 
-  cd ../docsearch-scraper/
+    # Run Algolia Docsearch Scraper in Docker
+    # https://docsearch.algolia.com/docs/legacy/run-your-own/#run-the-crawl-from-the-docker-image
+    docker run -v /dev/shm:/dev/shm -it --env-file=.env -e "CONFIG=$(cat ../../searchconfig.json | jq -r tostring)" algolia/docsearch-scraper
 
-  # crudely install pipenv
-  curl https://raw.githubusercontent.com/pypa/pipenv/master/get-pipenv.py | python
-
-  # copy Algolia environment variables into .env
-  # relies on design-system-site/environment.js being run first
-  echo APPLICATION_ID=$(cat ../.algoliakeys.json | jq -r .SLDS__SEARCH__APP_ID) > .env
-  echo API_KEY=$(cat ../.algoliakeys.json | jq -r .SLDS__SEARCH__API_KEY) >> .env
-
-
-  # install pipenv dependencies
-  pipenv install
-
-  # check for active python server on port 80
-  max_iterations=10
-  wait_seconds=1
-  http_endpoint="http://127.0.0.1:80/"
-  iterations=0
-
-  while true
-  do
-    ((iterations++))
-    echo "» Attempt $iterations"
-    sleep $wait_seconds
-    http_code=$(curl --verbose -s -o /tmp/result.txt -w '%{http_code}' "$http_endpoint";)
-
-    # python server is running, begin crawling
-    if [ "$http_code" -eq 200 ]; then
-      echo "» Python server active. Crawling site..."
-      pipenv run ./docsearch run ../../searchconfig.json
-      break
-    fi
-
-    # no active server, end loop
-    if [ "$iterations" -ge "$max_iterations" ]; then
-      echo "» No active python server. Skipping indexing operation..."
-      exit 1
-    fi
-  done
-
-  # kill python server
-  lsof -ti tcp:80 | xargs kill
+    # kill python server
+    lsof -ti tcp:80 | xargs kill
+  fi
 
   # Exit back to parent directory and clean-up after ourselves
   cd ../../
 
   echo "» Removing '__release' folder..."
-  rm -rf __release/
+
+  # Prompt the user to remove release folder
+  read -p "Do you want to delete the '__release' folder? (y/n): " do_delete_release_folder
+
+  # Check the user's choice
+  if [[ "$do_delete_release_folder" == "y" || "$do_delete_release_folder" == "Y" ]]; then
+      echo "==============================================================="
+      echo "» Removing __release folder..."
+      echo "==============================================================="
+      rm -rf __release/
+  fi
+
   cp postcss.config.js.bak postcss.config.js
   rm postcss.config.js.bak
 
-  # Validate staged site
-  echo "» Validating site..."
-  SLDS_VALIDATION_URL=${VALIDATION_URL} npx ava __tests__/site/site-validation.ava.js
+    # Prompt the user to remove release folder
+  read -p "Do you want to validate the site? (y/n): " do_validate_site
+
+  # Check the user's choice
+  if [[ "$do_validate_site" == "y" || "$do_validate_site" == "Y" ]]; then
+      echo "==============================================================="
+      echo "» Validating site..."
+      echo "==============================================================="
+      # Validate staged site
+      SLDS_VALIDATION_URL=${VALIDATION_URL} npx ava __tests__/site/site-validation.ava.js
+  fi
+
 fi
 
 # Exit back to parent directory

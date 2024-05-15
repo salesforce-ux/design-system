@@ -169,7 +169,7 @@ const ColorPickerCustom = props => {
           aria-describedby="color-picker-instructions"
         >
           <span className="slds-assistive-text">
-            Saturation: 46%. Brightness: 45%.
+            hex #5679C0
           </span>
         </a>
       </div>

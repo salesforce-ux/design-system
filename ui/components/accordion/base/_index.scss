@@ -74,7 +74,7 @@
   line-height: var(--slds-c-accordion-heading-line-height, var(--sds-c-accordion-heading-line-height, $line-height-heading));
 
   .slds-button:focus {
-    text-decoration: underline;
+    outline-offset: rem(-4px);
     box-shadow: none;
   }
 }
@@ -113,6 +113,7 @@
   &:hover,
   &:focus {
     color: var(--sds-c-accordion-heading-text-color-hover, var(--sds-c-accordion-heading-text-color-hover, $brand-accessible-active));
+    max-width: max-content;
   }
 }
 

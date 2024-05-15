@@ -102,6 +102,11 @@
     color: currentColor;
     border-color: var(--slds-g-color-border-base-4, #{$color-border});
   }
+
+  &:focus {
+    outline: 2px solid var(--slds-g-color-brand-base-40);
+    outline-offset: rem(-4px);
+  }
 }
 
 /**
@@ -118,6 +123,11 @@
     line-height: inherit;
     color: var(--slds-g-color-neutral-base-30, #{$color-text-action-label});
     padding: 0 $spacing-medium;
+
+    &:focus {
+      outline: 0;
+      box-shadow: var(--slds-g-shadow-6);
+    }
   }
 }
 
@@ -138,10 +148,6 @@
   border-color: var(--slds-g-color-border-base-4, #{$color-border});
   font-weight: $tabs-font-weight;
   color: var(--slds-g-color-neutral-base-10, #{$color-text-action-label-active});
-
-  &:focus {
-    text-decoration: underline;
-  }
 }
 
 /**

@@ -67,6 +67,11 @@
   &:last-child {
     border-bottom: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
   }
+
+  .slds-button:focus {
+    outline-offset: rem(-1px);
+    box-shadow: none;
+  }
 }
 
 /**

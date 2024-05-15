@@ -160,8 +160,8 @@
  * @modifier
  */
 .slds-rich-text-editor.slds-has-focus {
-  border-color: var(--slds-g-color-brand-base-60, #{$color-border-input-active});
-  box-shadow: $shadow-button-focus;
+  border: $border-width-thin solid var(--slds-g-color-border-base-4, #{$color-border});
+  box-shadow: var(--slds-g-shadow-5, #{$shadow-button-focus});
 }
 
 /**
@@ -198,6 +198,10 @@
   max-height: var(--slds-c-textarea-sizing-max-height, var(--sds-c-textarea-sizing-max-height, $size-small));
   padding: $spacing-medium;
   background-color: var(--slds-g-color-neutral-base-100, #{$color-background-input});
+
+  &:focus {
+    box-shadow: var(--slds-g-shadow-6, #{$shadow-button-focus});
+  }
 }
 
 .slds-picklist__label[disabled] .slds-icon {

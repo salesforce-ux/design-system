@@ -142,6 +142,12 @@
     @include focus-inverse;
   }
 
+  &:focus {
+    box-shadow: var(--slds-g-shadow-6, #{$shadow-button-focus});
+    border-color: transparent;
+    outline: 0;
+  }
+
   &:active {
     color: var(--slds-g-color-neutral-100-opacity-50, #{$color-text-link-inverse-active});
   }

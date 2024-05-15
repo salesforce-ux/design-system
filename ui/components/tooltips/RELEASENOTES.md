@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.24.0
+
+### Changed
+
+- Updated Tooltip component description.
+
 ## 2.17.0
 
 ### Added

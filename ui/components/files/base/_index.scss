@@ -118,7 +118,6 @@
 
   &:focus {
     border: $border-width-thin solid var(--slds-g-color-brand-base-50, #{$color-border-brand-dark});
-    box-shadow: $elevation-shadow-4;
   }
 
   // When a spinner is used with .slds-file__title_card, this attempts to visually center the spinner
@@ -165,6 +164,13 @@
   &:after {
     content: '';
     display: block;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px var(--slds-g-color-neutral-base-100, #{$palette-neutral-100});
+    outline: 2px solid var(--slds-g-color-brand-base-40, #{$palette-blue-40});
+    outline-offset: 2px;
+    border-radius: $border-radius-small;
   }
 }
 

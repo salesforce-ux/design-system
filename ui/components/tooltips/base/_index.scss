@@ -29,6 +29,11 @@
   }
 }
 
+a:has(+ .slds-popover.slds-popover_tooltip):focus {
+  box-shadow: var(--slds-g-shadow-5);
+  outline: 0;
+}
+
 /**
  * @name rise
  * @summary Toggles on tooltip

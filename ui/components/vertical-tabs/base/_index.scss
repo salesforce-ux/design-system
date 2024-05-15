@@ -46,6 +46,11 @@
   &:last-child {
     margin-bottom: -1px;
   }
+
+  &:focus-within {
+    box-shadow: var(--slds-g-shadow-6, #{$shadow-button-focus});
+    outline: 0;
+  }
 }
 
 /**
@@ -69,6 +74,7 @@
 
   &:focus {
     outline: 0;
+    text-decoration: none;
   }
 }
 
@@ -135,5 +141,5 @@
  * @group interactions
  */
 .slds-vertical-tabs__nav-item.slds-has-focus {
-  text-decoration: underline;
+  text-decoration: none;
 }

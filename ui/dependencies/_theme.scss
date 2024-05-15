@@ -116,7 +116,7 @@
     }
 
     &:focus {
-      box-shadow: $shadow-link-focus-inverse;
+      box-shadow: var(--slds-g-shadow-6, #{$shadow-button-focus});
       border: $border-width-thin solid var(--slds-g-color-neutral-base-100, #{$color-border-link-focus-inverse});
     }
 
@@ -151,7 +151,7 @@
     }
 
     &:focus {
-      box-shadow: 0 0 3px var(--slds-g-color-neutral-base-30, #{$color-gray-10});
+      box-shadow: var(--slds-g-shadow-5, #{$shadow-button-focus});
       border: $border-width-thin solid var(--slds-g-color-neutral-base-30, #{$color-gray-10});
     }
 
@@ -181,8 +181,7 @@
 
     &:focus {
       color: var(--slds-g-color-neutral-base-30, #{$color-gray-10});
-      box-shadow: 0 0 3px var(--slds-g-color-neutral-base-30, #{$color-gray-10});
-      border: $border-width-thin solid var(--slds-g-color-neutral-base-30, #{$color-gray-10});
+      box-shadow: var(--slds-g-shadow-5, #{$shadow-button-focus});
     }
 
     &:active {

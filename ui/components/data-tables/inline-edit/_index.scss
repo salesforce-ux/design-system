@@ -149,7 +149,9 @@
   box-shadow: $brand-accessible-active 0 0 0 1px inset, $brand-accessible-active -0.25rem 0 0 inset;
 }
 
-
+.slds-is-resizable .slds-th__action:focus {
+  box-shadow: var(--slds-g-shadow-6, #{$shadow-button-focus});
+}
 
 /**
  * Informs a table cell that it has editing capabilities
@@ -162,7 +164,7 @@
 
   &.slds-has-focus { // This is the focused state
     background-color: var(--slds-g-color-neutral-base-100, #{$color-background-alt});
-    box-shadow: $brand-accessible-active 0 0 0 1px inset;
+    box-shadow: var(--slds-g-shadow-6, #{$shadow-button-focus});
 
     .slds-button__icon_edit,
     .slds-button__icon--edit,

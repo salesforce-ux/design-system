@@ -67,7 +67,7 @@
       outline: 0;
 
       > .slds-day {
-        box-shadow: $brand-accessible 0 0 0 1px inset;
+        box-shadow: var(--slds-g-shadow-7);
       }
     }
 
@@ -91,9 +91,22 @@
 
     &.slds-is-selected:focus > .slds-day {
       background: $brand-accessible-active;
-      box-shadow: $brand-accessible-active 0 0 3px;
+      box-shadow: var(--slds-g-shadow-5, #{$shadow-button-focus});
+      outline: 0;
       color: var(--slds-g-color-neutral-base-100, #{$color-text-brand-primary});
     }
+  }
+
+  .slds-datepicker__month {
+    [role="gridcell"]:focus,
+    [role="gridcell"].slds-has-focus {
+      box-shadow: none;
+    }
+  }
+
+  .slds-button:focus {
+    box-shadow: none;
+    outline-offset: 0;
   }
 }
 

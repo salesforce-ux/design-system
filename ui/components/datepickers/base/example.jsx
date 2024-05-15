@@ -45,8 +45,8 @@ let DatepickerHeader = props => (
         />
       </div>
       <h2
-        aria-atomic="true"
-        aria-live="assertive"
+        aria-atomic="false"
+        aria-live="polite"
         className="slds-align-middle"
         id={`${props.idPrefix}-month`}
       >
@@ -144,7 +144,6 @@ export let DatePicker = props => (
   <DatepickerContainer className="slds-dropdown slds-dropdown_left">
     <DatepickerHeader idPrefix={props.idPrefix} />
     <table
-      aria-labelledby={`${props.idPrefix}-month`}
       aria-multiselectable="true"
       className="slds-datepicker__month"
       role="grid"

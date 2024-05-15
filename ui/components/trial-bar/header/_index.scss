@@ -19,4 +19,8 @@
   .slds-icon--selected {
     fill: var(--slds-g-color-success-base-70, #{$color-text-success-inverse});
   }
+
+  button:not([class*=slds-button_]):not([class*=slds-button--]):focus {
+    box-shadow: var(--slds-g-shadow-5, #{$shadow-button-focus});
+  }
 }

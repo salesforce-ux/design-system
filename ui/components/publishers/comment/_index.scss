@@ -35,7 +35,7 @@
    * @modifier
    */
   &.slds-has-focus {
-    @include form-input-focus;
+    box-shadow: var(--slds-g-shadow-5, #{$shadow-button-focus});
   }
 
   .slds-publisher__actions {

@@ -198,45 +198,6 @@ $kx-button-gradient-size: 140px;
   }
 }
 
-// Kinetic styles for Neutral/Outline and light backgrounds
-[kx-scope="button-neutral"] {
-
-  &:focus,
-  &:hover {
-    // These purposefully overrides the interaction states to facilitate the Kinetics effect
-    /*! @css-var-fallback background-color */
-    --slds-c-button-color-background-hover: var(--slds-c-button-neutral-color-background-hover, var(--sds-c-button-neutral-color-background-hover, var(--slds-g-color-neutral-base-100, #{$button-color-background-primary})));
-
-    /*! @css-var-fallback border-color */
-    --slds-c-button-color-border-hover: var(--slds-c-button-neutral-color-border-hover, var(--sds-c-button-brand-color-border-hover, #{$brand-accessible}));
-  }
-
-  &:active {
-    // These purposefully overrides the interaction states to facilitate the Kinetics effect
-    /*! @css-var-fallback background-color */
-    --slds-c-button-color-background-active: var(--slds-c-button-neutral-color-background-active, var(--sds-c-button-neutral-color-background-hover, var(--slds-g-color-neutral-base-100, #{$button-color-background-primary})));
-
-    /*! @css-var-fallback border-color */
-    --slds-c-button-color-border-active: var(--slds-c-button-neutral-color-border-active, var(--sds-c-button-brand-color-border-hover, #{$brand-accessible}));
-  }
-}
-
-[kx-scope="button-outline"] {
-
-  &:hover,
-  &:focus {
-    // This purposefully overrides the interaction states to facilitate the Kinetics effect
-    /*! @css-var-fallback background-color */
-    --slds-c-button-color-background-hover: var(--slds-c-button-outline-brand-color-background-hover, var(--sds-c-button-outline-brand-color-background-hover, var(--slds-g-color-neutral-base-100, #{$button-color-background-primary})));
-  }
-
-  &:active {
-    // This purposefully overrides the interaction states to facilitate the Kinetics effect
-    /*! @css-var-fallback background-color */
-    --slds-c-button-color-background-active: var(--slds-c-button-outline-brand-color-background-active, var(--sds-c-button-outline-brand-color-background-active, var(--slds-g-color-neutral-base-100, #{$button-color-background-primary})));
-  }
-}
-
 [kx-scope="button-neutral"],
 [kx-scope="button-outline"] {
 

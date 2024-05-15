@@ -390,8 +390,11 @@
 
   &:focus,
   &:focus:hover {
-    outline: 0;
-    text-decoration: underline;
+    text-decoration: none;
+  }
+
+  &:focus-visible {
+    outline-offset: rem(-6px);
   }
 
   &:hover {
@@ -435,6 +438,12 @@
     ~ .slds-dropdown {
       visibility: visible;
       opacity: 1;
+    }
+  }
+
+  .slds-context-bar__button {
+    &:focus {
+      outline-offset: rem(-1px);
     }
   }
 

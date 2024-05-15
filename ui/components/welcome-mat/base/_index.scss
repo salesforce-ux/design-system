@@ -58,6 +58,14 @@
   background-size: contain;
   background-color: var(--sds-g-color-palette-cloud-blue-90, #{$welcome-mat-background-color-info});
   align-items: center;
+
+  &:focus {
+    box-shadow: var(--slds-g-shadow-6, #{$shadow-button-focus});
+  }
+
+  &:focus-visible {
+    outline: 0;
+  }
 }
 
 /**

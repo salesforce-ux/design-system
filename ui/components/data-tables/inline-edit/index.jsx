@@ -91,6 +91,7 @@ export const InlineEditTr = (props) => {
           isLocked={props.isLocked}
           isRequired={props.showEditRequired}
           showEdit={props.showEdit}
+          isEdited={props.showEditedCell}
         />
       </Td>
       <Td isEditable type="advanced">

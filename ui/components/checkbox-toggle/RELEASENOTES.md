@@ -3,6 +3,13 @@
 # Checkbox Toggle Release Notes
 
 <!-- ## [Unreleased] -->
+
+## 2.23.0
+
+### Changed
+
+- Updated Checkbox Toggle Focus Style.
+
 ## 2.22.0
 
 ### Fixed

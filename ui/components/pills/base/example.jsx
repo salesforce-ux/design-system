@@ -3,7 +3,7 @@
 
 import React from 'react';
 import SvgIcon from '../../../shared/svg-icon';
-import { Pill, PillContainer } from '../';
+import { Pill, PillContainer, PillWithTruncation, LinkedPillWithTruncation } from '../';
 
 /// ////////////////////////////////////////
 // Export
@@ -39,6 +39,24 @@ export let states = [
       <PillContainer>
         <Pill label="Pill label that is longer than the area that contains it" />
       </PillContainer>
+    )
+  },
+  {
+    id: 'pill-truncated-tooltip',
+    label: 'Truncated Pill as Tooltip',
+    demoStyles: 'width: 220px;',
+    storybookStyles: true,
+    element: (
+      <PillWithTruncation/>
+    )
+  },
+  {
+    id: 'linked-pill-truncated-tooltip',
+    label: 'Truncated Linked Pill as Tooltip',
+    demoStyles: 'width: 220px;',
+    storybookStyles: true,
+    element: (
+      <LinkedPillWithTruncation/>
     )
   }
 ];

@@ -151,14 +151,15 @@
     background: transparent;
   }
 
-  &:focus,
+  &:focus-visible,
   &:hover {
     box-shadow: none;
+    outline: none;
   }
 
-  &:focus:after {
-    height: ($border-width-thick + 1px);
-    background: $brand-primary;
+  &:focus {
+    box-shadow: var(--slds-g-shadow-6);
+    outline: 0;
   }
 
   &:hover,

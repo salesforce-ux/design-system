@@ -108,7 +108,7 @@ It is most common to expand the `listbox` of options when a user clicks on the C
 
 #### Loading more options
 
-If you are dynamically loading in more items to the listbox, the very last `<li>` of the `<ul>` should receive the `role="presentation"` attribute and have the [Spinner component](/components/spinners/) injected into it.
+If you are dynamically loading in more items to the listbox, the very last `<li>` of the `<ul>` should receive the `role="option"` attribute and have the [Spinner component](/components/spinners/) injected into it.
 
 For layout purposes, wrap the spinner in a `<div>` with the class `slds-align_absolute-center` to position the spinner in the middle of the list item, as well as `slds-p-top_medium` to provide the appropriate amount of space for the spinner to be visible.
 
@@ -225,7 +225,7 @@ By typing the first letter of an option name, the first matching option will hig
 
 To collapse the Combobox the user should be able to press the `Escape` key on their keyboard or click anywhere outside of the Combobox.
 
-Pressing the `Enter` key whilst an option is highlighted will select the option as the current value and collapse the Combobox.
+Pressing the `Enter` or `Tab` key while an option is highlighted selects the option as the current value and collapses the Combobox.
 
 <Blockquote type="a11y" header="Accessibility Requirement">
   <p>
@@ -235,7 +235,7 @@ Pressing the `Enter` key whilst an option is highlighted will select the option 
 
 ### Selecting an option
 
-A user selects an option by using their mouse to click the option they require, or pressing the `Enter` key once they have arrowed to the desired option.
+A user selects an option by clicking the option they want, or by using arrow keys to highlight the desired option and pressing the `Enter` or `Tab` key.
 
 Upon selection the Combobox collapses, only showing the `input` field. The value of the `input` inside the Combobox is set to match the selected option name so the user can see what was previously selected from the `listbox` of options.
 
@@ -364,7 +364,7 @@ The same keyboard interactions apply from the base Combobox, but with these diff
 
 ### Selecting an option
 
-The user again can click on the desired option or press the `Enter` key with the desired option highlighted. Alternatively they can leave their entered text string as the value of the Combobox.
+The user again can click on the desired option or press the `Enter` or `Tab` key with the desired option highlighted. Alternatively they can leave their entered text string as the value of the Combobox.
 
 Selecting an option from the `listbox` will close the `listbox`.
 
@@ -434,7 +434,7 @@ The same keyboard interactions apply from the base Combobox, but with these diff
 
 ### Selecting an option
 
-The user again can click on the desired option or press the `Enter` key with the desired option highlighted. The user can only select from the returned options; a plain text string is not a valid selection with the Entity Lookup.
+The user again can click on the desired option or press the `Enter` or `Tab` key with the desired option highlighted. The user can only select from the returned options; a plain text string is not a valid selection with the Entity Lookup.
 
 The selected option is still set as the value of the text `input`, but this time we make the `input` look like a dismissible pill. This `input` becomes readonly at this point, so the user can no longer type into it.
 

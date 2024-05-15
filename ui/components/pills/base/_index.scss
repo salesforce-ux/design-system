@@ -40,7 +40,7 @@
 
   &:focus {
     /*! @css-var-fallback box-shadow */
-    --slds-c-pill-shadow: var(--sds-c-pill-shadow-focus, var(--slds-g-shadow-5, #{$shadow-button-focus}));
+    --slds-c-pill-shadow: var(--sds-c-pill-shadow-focus, var(--_slds-g-shadow-outset-focus, #{$shadow-button-focus}));
 
     outline: 0;
   }
@@ -54,7 +54,7 @@
   }
 
   .slds-pill__remove:focus {
-    box-shadow: var(--slds-g-shadow-7);
+    box-shadow: var(--_slds-g-shadow-inset-inverse-focus);
     outline: 0;
   }
 }
@@ -110,7 +110,7 @@
 
     .slds-pill__action:focus,
     .slds-pill:focus {
-      box-shadow: var(--slds-g-shadow-6);
+      box-shadow: var(--_slds-g-shadow-inset-focus);
     }
 
     .slds-pill.slds-pill_bare:focus {
@@ -120,7 +120,7 @@
 }
 
 .slds-listbox_selection-group .slds-listbox-item .slds-pill:focus {
-  box-shadow: var(--slds-g-shadow-6);
+  box-shadow: var(--_slds-g-shadow-inset-focus);
 }
 
 /**
@@ -137,7 +137,7 @@
   &:focus {
     outline: 0;
     border-radius: $border-radius-medium;
-    box-shadow: var(--slds-c-pill-label-shadow-focus, var(--sds-c-pill-label-shadow-focus, var(--slds-g-shadow-5, #{$shadow-button-focus})));
+    box-shadow: var(--slds-c-pill-label-shadow-focus, var(--sds-c-pill-label-shadow-focus, var(--_slds-g-shadow-outset-focus, #{$shadow-button-focus})));
   }
 }
 
@@ -232,7 +232,7 @@
   flex-grow: 1;
 
   &:focus {
-    box-shadow: var(--slds-c-pill-action-shadow, var(--sds-c-pill-action-shadow, var(--slds-g-shadow-5, #{$shadow-button-focus})));
+    box-shadow: var(--slds-c-pill-action-shadow, var(--sds-c-pill-action-shadow, var(--_slds-g-shadow-outset-focus, #{$shadow-button-focus})));
     outline: 0;
   }
 }

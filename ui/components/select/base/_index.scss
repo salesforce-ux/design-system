@@ -37,7 +37,7 @@
   &:focus {
     border-color: var(--slds-g-color-border-base-4, #{$color-border-input});
     box-shadow: var(--slds-c-select-shadow-focus, var(--sds-c-select-shadow-focus,
-      var(--slds-g-shadow-5, #{$shadow-button-focus})));
+      var(--_slds-g-shadow-outline-focus, #{$shadow-button-focus})));
   }
 
   &[disabled],
@@ -130,7 +130,7 @@
 
     &:focus {
       box-shadow: var(--slds-g-color-error-base-40, #{$color-border-error}) 0 0 0 $border-width-thin inset,
-        var(--slds-g-shadow-5, #{$shadow-button-focus});
+        var(--_slds-g-shadow-outline-focus, #{$shadow-button-focus});
     }
   }
 }

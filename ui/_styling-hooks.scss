@@ -6,3 +6,10 @@
 // ----------------------------------------------------------------------------
 
 @import '../design-tokens/dist/slds-hooks.custom-props';
+
+:root {
+  --_slds-g-shadow-outset-focus: 0 0 0 2px var(--slds-g-color-neutral-base-100, #FFFFFF), 0 0 0 4px var(--slds-g-color-brand-base-40, #0B5CAB);
+  --_slds-g-shadow-inset-focus: 0 0 0 2px var(--slds-g-color-neutral-base-100) inset, 0 0 0 4px var(--slds-g-color-brand-base-40, #0B5CAB) inset;
+  --_slds-g-shadow-inset-inverse-focus: 0 0 0 2px var(--slds-g-color-brand-base-40, #0B5CAB) inset, 0 0 0 4px var(--slds-g-color-neutral-base-100, #FFFFFF) inset;
+  --_slds-g-shadow-outline-focus: 0 0 0 2px var(--slds-g-color-brand-base-40, #0B5CAB);
+}

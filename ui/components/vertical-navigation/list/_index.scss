@@ -133,7 +133,7 @@
   &:focus {
     outline: 0;
     text-decoration: none;
-    box-shadow: var(--slds-g-shadow-7);
+    box-shadow: var(--_slds-g-shadow-inset-inverse-focus);
 
     &:hover {
       box-shadow: inset 2px 0 0 $brand-primary;

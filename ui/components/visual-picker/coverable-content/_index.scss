@@ -51,7 +51,7 @@
 
     &:focus ~ label .slds-visual-picker__figure {
       border: $border-width-thin solid var(--slds-g-color-border-base-1, #{$color-border});
-      box-shadow: var(--slds-g-shadow-5, #{$shadow-button-focus});
+      box-shadow: var(--_slds-g-shadow-outset-focus, #{$shadow-button-focus});
       outline: 0;
     }
 
@@ -60,7 +60,7 @@
     }
 
     &:checked:focus ~ label .slds-visual-picker__figure {
-      box-shadow: var(--slds-g-shadow-5, #{$shadow-button-focus});
+      box-shadow: var(--_slds-g-shadow-outset-focus, #{$shadow-button-focus});
     }
 
     &:focus ~ label .slds-visual-picker__body > *:first-child {

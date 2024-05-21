@@ -58,7 +58,7 @@ export let Modal = (props) => (
       {
         props.closeButton !== false ? (
           <ButtonIcon
-            className="slds-modal__close slds-button_icon-inverse"
+            className="slds-modal__close"
             iconClassName="slds-button__icon_large"
             symbol="close"
             assistiveText="Cancel and close"
@@ -92,7 +92,7 @@ export let ModalHeaderDeprecated = (props) => (
   <div className={classNames('slds-modal__header', props.className)}>
     {props.closeButton !== false ? (
       <ButtonIcon
-        className="slds-modal__close slds-button_icon-inverse"
+        className="slds-modal__close"
         iconClassName="slds-button__icon_large"
         symbol="close"
         assistiveText="Cancel and close"

@@ -194,7 +194,7 @@
   margin-left: auto;
   position: relative;
   bottom: $spacing-x-small;
-  right: ($spacing-x-small * -1);
+  background-color: var(--slds-g-color-neutral-base-100);
 }
 
 @mixin backdrop {

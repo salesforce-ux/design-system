@@ -3,6 +3,10 @@
 
 ## 2.25.0 - Upcoming
 
+## Updated
+
+- Updated background color of the Modal's close icon along with it's active state styling
+
 ## 2.24.2 - May 2, 2024
 
 ## 2.24.1 - April 25, 2024

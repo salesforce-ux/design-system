@@ -195,6 +195,11 @@
   position: relative;
   bottom: $spacing-x-small;
   background-color: var(--slds-g-color-neutral-base-100);
+
+  &:active {
+    background-color: var(--slds-g-color-neutral-base-95);
+    border: none;
+  }
 }
 
 @mixin backdrop {

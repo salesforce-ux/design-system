@@ -1,0 +1,43 @@
+name: 'Send Slack Notifications'
+description: 'sends build notification to slack channels'
+
+inputs:
+  slack-webhook-url:
+    description: 'Webhook URL for the slack app'
+    required: true
+  slack-title:
+    description: 'Slack Notification title'
+    required: true
+  slack-body:
+    description: 'Slack Notification message body'
+    required: true
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Send Slack Notifications
+      id: send-slack-notification
+      run: |
+        echo "Slack notification sent to #broadcast-design-system-releases"
+        curl -X POST -H 'Content-type: application/json' \
+          --data '{
+            "blocks": [
+              {
+                "type": "section",
+                "text": {
+                  "type": "mrkdwn",
+                  "text": "${{ inputs.slack-title }}"
+                }
+              },
+              {
+                "type": "divider"
+              },
+              {
+                "type": "section",
+                "text": {
+                  "type": "mrkdwn",
+                  "text": "${{ inputs.slack-body }}"
+                }
+              }
+            ]}' ${{ inputs.slack-webhook-url }}
+      shell: bash

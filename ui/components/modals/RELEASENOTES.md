@@ -3,7 +3,12 @@
 # Modals Release Notes
 
 <!-- ## [Unreleased] -->
-## 2.24.0 - Upcoming
+## 2.25.0
+
+### Updated
+- Updated background color of the Modal's close icon along with it's active state styling
+
+## 2.24.0
 
 ## Changed
 

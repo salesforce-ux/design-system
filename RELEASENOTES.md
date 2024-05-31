@@ -3,6 +3,11 @@
 
 ## Release 2.25.0 - Upcoming
 
+## Components
+### [Modals](https://www.lightningdesignsystem.com/components/modals)
+#### Updated
+- Updated background color of the Modal's close icon along with it's active state styling
+
 ## Release 2.24.2 - May 2, 2024
 
 ## Components
@@ -71,6 +76,12 @@
 ### [Combobox](https://www.lightningdesignsystem.com/components/combobox)
 #### Changed
 - Updated Combobox blueprint to use `role="option"` on div wrapping loading spinner
+
+### [Modals](https://www.lightningdesignsystem.com/components/modals)
+## Changed
+- Added tabindex to the heading element to make it programmatically focussable.
+#### Fixed
+- Fixed modal by removing code explicitly scoped to patching internal, private implementations. Appropriate styles will be displayed again.
 
 ### [Progress Indicator](https://www.lightningdesignsystem.com/components/progress-indicator)
 #### Changed

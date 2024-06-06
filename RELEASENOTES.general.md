@@ -1,6 +1,12 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
+## 2.24.3 - Jun 6, 2024
+
+## Updated
+
+- bump icon version
+
 ## 2.24.2 - May 2, 2024
 
 ## 2.24.1 - April 25, 2024

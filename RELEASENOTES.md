@@ -8,6 +8,21 @@
 #### Updated
 - Updated background color of the Modal's close icon along with it's active state styling
 
+## Release 2.24.4 - Jun 13, 2024
+
+## Updated
+- Updated focus ring color for links to blue-40.
+
+## Components
+### [Tabs](https://www.lightningdesignsystem.com/components/tabs)
+## Fixed
+- Added new focus style for tabs when `.slds-has-focus` class is getting added.
+
+## Release 2.24.3 - Jun 6, 2024
+
+## Updated
+- bump icon version
+
 ## Release 2.24.2 - May 2, 2024
 
 ## Components

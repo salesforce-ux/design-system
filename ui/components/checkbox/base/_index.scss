@@ -106,13 +106,13 @@
       + .slds-checkbox__label .slds-checkbox--faux {
         // @todo consider shared hooks for inputs
 
-        outline: 1px solid var(--slds-g-color-brand-base-80, #{$palette-blue-80});
+        outline: 0;
         outline-offset: 0px;
         /*! @css-var-fallback border-color */
-        --slds-c-checkbox-color-border: var(--slds-c-checkbox-color-border-focus, var(--sds-c-checkbox-color-border-focus, var(--slds-g-color-brand-base-60, #{$color-border-input-active})));
+        --slds-c-checkbox-color-border: var(--slds-c-checkbox-color-border-focus, var(--sds-c-checkbox-color-border-focus));
 
         /*! @css-var-fallback box-shadow */
-        --slds-c-checkbox-shadow: var(--slds-c-checkbox-shadow-focus, var(--sds-c-checkbox-shadow-focus, 0 0 3px #{$brand-accessible}));
+        --slds-c-checkbox-shadow: var(--slds-c-checkbox-shadow-focus, var(--sds-c-checkbox-shadow-focus, var(--slds-g-shadow-outset-focus-1, #{$shadow-button-focus})));
       }
 
       &:checked > .slds-checkbox_faux,
@@ -123,7 +123,7 @@
       &:checked + .slds-checkbox__label .slds-checkbox--faux {
         // @todo consider shared hooks for inputs
         /*! @css-var-fallback border-color */
-        --slds-c-checkbox-color-border: var(--slds-c-checkbox-color-border-focus, var(--sds-c-checkbox-color-border-focus, var(--slds-g-color-brand-base-60, #{$color-border-input-active})));
+        --slds-c-checkbox-color-border: var(--slds-c-checkbox-color-border-focus, var(--sds-c-checkbox-color-border-focus));
       }
     }
 
@@ -136,7 +136,7 @@
       + .slds-checkbox__label .slds-checkbox_faux,
       + .slds-checkbox__label .slds-checkbox--faux {
         // @todo consider shared hooks for inputs
-        outline: 1px solid var(--slds-g-color-brand-base-80, #{$palette-blue-80});
+        outline: 0;
         outline-offset: 0px;
       }
     }

@@ -998,7 +998,7 @@ props:
   FUNDING_REQUIREMENT:
     value: '#396547'
   YOUR_ACCOUNT:
-    value: '#1B96FF'
+    value: '#014486'
   BILL_OF_MATERIALS:
     value: '#FF5D2D'
   BUYER_GROUP_QUALIFIER:
@@ -1091,3 +1091,39 @@ props:
     value: '#B60554'
   PROMPT_BUILDER:
     value: '#2F2CB7'
+  ACCOUNT_SCORE:
+    value: '#5867E8'
+  AGGREGATE:
+    value: '#1B96FF'
+  APP_FORM_PARTICIPANT:
+    value: '#056764'
+  APP_FORM_PRODUCT_PARTICIPANT:
+    value: '#7E2600'
+  COST_MODEL:
+    value: '#032D60'
+  LABELS:
+    value: '#3BA755'
+  LIST_FEE:
+    value: '#2F2CB7'
+  LIST_RATE:
+    value: '#396547'
+  PARTY_PROFILE:
+    value: '#5A1BA9'
+  PATH_EXPERIMENT:
+    value: '#DD7A01'
+  PEOPLE_SCORE:
+    value: '#5867E8'
+  PRICE_ADJUSTMENT_SCHEDULE:
+    value: '#FF538A'
+  PRICE_ADJUSTMENT_TIER:
+    value: '#032D60'
+  PROGRAM_COHORT:
+    value: '#1B96FF'
+  PROGRAM_COHORT_MEMBER:
+    value: '#1B96FF'
+  RATE_ADJUSTMENT:
+    value: '#B60554'
+  RECORD_CONSENT:
+    value: '#FF538A'
+  WHATSAPP:
+    value: '#3BA755'

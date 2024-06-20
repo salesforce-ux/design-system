@@ -186,4 +186,4 @@ jobs:
           GH_APP_CLIENT_ID: ${{ secrets.DSE_CI_APP_ID }}
           GH_APP_CLIENT_SECRET: ${{ secrets.DSE_CI_CLIENT_SECRET }}
         # single quotes are needed around the JSON string here so that is can be parsed by the node script
-        run: batchesData='${{ steps.applitools_batch.outputs.batches }}' node scripts/ci/pr-checks
+        run: batchesData='${{ steps.applitools_batch.outputs.batches }}' node scripts/ci/pr-checks.mjs

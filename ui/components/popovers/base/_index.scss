@@ -200,4 +200,8 @@
     border-top-color: var(--slds-g-color-brand-base-10, #{$color-border-inverse});
     background-color: var(--slds-g-color-brand-base-20, #{$color-background-alt-inverse});
   }
+
+  .slds-button:focus {
+    box-shadow: var(--slds-g-shadow-outset-focus-1);
+  }
 }

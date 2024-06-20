@@ -45,7 +45,7 @@
    * @group interaction
    */
   &.slds-has-focus {
-    box-shadow: 0 0 4px 2px $brand-accessible;
+    box-shadow: var(--slds-g-shadow-outset-focus-1, #{$shadow-button-focus});
   }
 
   /**

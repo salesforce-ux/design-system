@@ -1,7 +1,69 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
+## 2.25.0 - Upcoming
+
+## 2.24.2 - May 2, 2024
+
+## 2.24.1 - April 25, 2024
+
+## Updated
+
+- Updated focus styles for buttons and input elements
+- Updated account icon bg to blue-30
+
+## 2.24.0 - April 18, 2024
+
+## Added
+
+- New focus styles incorporated to all components.
+- Updated icons to `v10.8.3`
+  - Standard Set:
+    - Added account_score
+    - Added aggregate
+    - Added app_form_participant
+    - Added app_form_product_participant
+    - Added cost_model
+    - Added labels
+    - Added list_fee
+    - Added list_rate
+    - Added party_profile
+    - Added path_experiment
+    - Added people_score
+    - Added price_adjustment_schedule
+    - Added price_adjustment_tier
+    - Added program_cohort
+    - Added program_cohort_member
+    - Added rate_adjustment
+    - Added record_consent
+    - Added whatsapp
+
+  - Utility Set:
+    - Added aggregate
+    - Added array
+    - Added bottom_group_alignment
+    - Added cant_sync
+    - Added center_group_alignment
+    - Added columns
+    - Added fully_synced
+    - Added inner_join
+    - Added join
+    - Added left_join
+    - Added not_in_sync
+    - Added not_saved
+    - Added outer_join
+    - Added path_experiment
+    - Added program_cohort
+    - Added program_cohort_member
+    - Added record_consent
+    - Added right_join
+    - Added skill
+    - Added sync_in_progress
+    - Added top_group_alignment
+
 ## 2.23.2 - February 1, 2024
+
+- Moved global styling hooks from slds-wcag class selector to root selector scope.
 
 ## 2.23.1 - January 16, 2024
 
@@ -43,6 +105,7 @@
 - Added `aria-label="disabled"` to `RichTextEditor` component which is similar to `RteToolbar`.
 - Added Button element for `Pill` remove feature. Now remove button is focusable and can be clickable.
 - Updated RTL stylings for `setup-assistant` component
+- Added new shadow styling hook to implement new focus style.
 
 ## 2.22.2 - November 9, 2023
 

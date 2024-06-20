@@ -68,7 +68,16 @@
   > .slds-tree__item {
     background: var(--slds-g-color-neutral-base-95, #{$color-background-row-hover});
     cursor: pointer;
-    text-decoration: underline;
+    text-decoration: none;
+    box-shadow: var(--slds-g-shadow-inset-focus-1, #{$shadow-button-focus});
+  }
+}
+
+.slds-tree [role="treeitem"][aria-selected="true"]:focus {
+  > .slds-tree__item {
+    box-shadow: $brand-primary 4px 0 0 inset,
+      0 0 0 2px var(--slds-g-color-neutral-base-100, #{$palette-neutral-100}),
+      0 0 0 4px var(--slds-g-color-brand-base-40, #{$palette-blue-40});
   }
 }
 

@@ -2,6 +2,7 @@
   "imports": [
     "@salesforce-ux/sds-styling-hooks/src/props/colors.json",
     "@salesforce-ux/sds-styling-hooks/src/props/palettes.json",
-    "./transparent-colors.json"
+    "./transparent-colors.json",
+    "./shadow.json"
   ]
 }

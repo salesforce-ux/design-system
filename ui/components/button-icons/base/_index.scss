@@ -103,6 +103,11 @@
     border-color: var(--slds-g-color-neutral-base-80, #{$brand-disabled});
     color: var(--slds-g-color-neutral-base-100, #{$color-text-button-brand-disabled});
   }
+
+  &:focus {
+    box-shadow: var(--slds-g-shadow-outset-focus-1);
+    outline: 0;
+  }
 }
 
 
@@ -140,6 +145,12 @@
 
   &:focus {
     @include focus-inverse;
+  }
+
+  &:focus {
+    box-shadow: var(--slds-g-shadow-inset-focus-1, #{$shadow-button-focus});
+    border-color: transparent;
+    outline: 0;
   }
 
   &:active {

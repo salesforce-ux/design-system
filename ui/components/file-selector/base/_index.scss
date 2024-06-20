@@ -47,7 +47,7 @@
 .slds-file-selector__input {
 
   &:focus ~ .slds-file-selector__body > .slds-file-selector__button {
-    box-shadow: $shadow-button-focus;
+    box-shadow: var(--slds-g-shadow-outline-focus-1, #{$shadow-button-focus});
   }
 
   &[disabled] ~ .slds-file-selector__body {

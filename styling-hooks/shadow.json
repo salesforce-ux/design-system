@@ -1,0 +1,72 @@
+{
+"aliases": {
+    "PALETTE_NEUTRAL_100": {
+      "value": "#FFFFFF"
+    },
+    "PALETTE_BLUE_40": {
+      "value": "#0B5CAB"
+    }
+  },
+  "props": {
+    "shadow-outset-focus-1": {
+      "originalValue": "0 0 0 2px {!PALETTE_NEUTRAL_100}, 0 0 0 4px {!PALETTE_BLUE_40}",
+      "syntax": "<length>",
+      "name": "shadow-outset-focus-1",
+      "value": "0 0 0 2px {!PALETTE_NEUTRAL_100}, 0 0 0 4px {!PALETTE_BLUE_40}",
+      "scope": "global",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "inherits": false,
+      "type": "raw",
+      "namespace": "slds",
+      "category": "shadow",
+      "comment": "Shadow with double border style outset"
+    },
+    "shadow-inset-focus-1": {
+      "originalValue": "0 0 0 2px {!PALETTE_NEUTRAL_100} inset, 0 0 0 4px {!PALETTE_BLUE_40} inset",
+      "syntax": "<length>",
+      "name": "shadow-inset-focus-1",
+      "value": "0 0 0 2px {!PALETTE_NEUTRAL_100} inset, 0 0 0 4px {!PALETTE_BLUE_40} inset",
+      "scope": "global",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "inherits": false,
+      "type": "raw",
+      "namespace": "slds",
+      "category": "shadow",
+      "comment": "Shadow with double border style inset"
+    },
+    "shadow-inset-inverse-focus-1": {
+      "originalValue": "0 0 0 2px {!PALETTE_BLUE_40} inset, 0 0 0 4px {!PALETTE_NEUTRAL_100} inset",
+      "syntax": "<length>",
+      "name": "shadow-inset-inverse-focus-1",
+      "value": "0 0 0 2px {!PALETTE_BLUE_40} inset, 0 0 0 4px {!PALETTE_NEUTRAL_100} inset",
+      "scope": "global",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "inherits": false,
+      "type": "raw",
+      "namespace": "slds",
+      "category": "shadow",
+      "comment": "Shadow with double border style inset inverse"
+    },
+    "shadow-outline-focus-1": {
+      "originalValue": "0 0 0 2px {!PALETTE_BLUE_40}",
+      "syntax": "<length>",
+      "name": "shadow-outline-focus-1",
+      "value": "0 0 0 2px {!PALETTE_BLUE_40}",
+      "scope": "global",
+      "cssProperties": [
+        "box-shadow"
+      ],
+      "inherits": false,
+      "type": "raw",
+      "namespace": "slds",
+      "category": "shadow",
+      "comment": "Shadow around the border"
+    }
+  }
+}

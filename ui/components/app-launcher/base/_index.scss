@@ -26,6 +26,10 @@
     border-color: $brand-accessible-active;
   }
 
+  &:focus {
+    box-shadow: var(--slds-g-shadow-outset-focus-1, #{$shadow-button-focus});
+  }
+
   /**
    * @summary Add styles associated with drag and drop of a tile
    * @selector .slds-is-draggable

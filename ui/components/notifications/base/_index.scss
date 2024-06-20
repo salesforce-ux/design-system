@@ -98,6 +98,11 @@
     background-color: var(--slds-g-color-neutral-base-100, #{$color-background-reminder-hover});
     text-decoration: none;
   }
+
+  &:focus {
+    box-shadow: inset var(--slds-g-shadow-outline-focus-1);
+    outline: 0;
+  }
 }
 
 /**
@@ -120,4 +125,9 @@
   position: absolute;
   top: 0;
   right: 0;
+
+  &:focus {
+    box-shadow: var(--slds-g-shadow-inset-inverse-focus-1, #{$shadow-button-focus});
+    outline: 0;
+  }
 }

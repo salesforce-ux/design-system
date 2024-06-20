@@ -70,9 +70,13 @@
   margin-left: $spacing-x-small;
   transition: transform 80ms ease-out, box-shadow 0.1s linear;
 
-  &:hover,
-  &:focus {
+  &:hover {
     box-shadow: $brand-header-contrast-weak-active 0 0 0 2px;
+  }
+
+  &:focus {
+    box-shadow: var(--slds-g-shadow-outline-focus-1);
+    outline: 0;
   }
 }
 

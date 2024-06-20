@@ -194,7 +194,12 @@
   margin-left: auto;
   position: relative;
   bottom: $spacing-x-small;
-  right: ($spacing-x-small * -1);
+  background-color: var(--slds-g-color-neutral-base-100);
+
+  &:active {
+    background-color: var(--slds-g-color-neutral-base-95);
+    border: none;
+  }
 }
 
 @mixin backdrop {
@@ -398,7 +403,6 @@
    * makes this not feasible. Not ideal, but this is the best solution for now.
    * Selectors are scoped to lightning-* to avoid any potential outside conflicts.
    */
-  lightning-button-icon + div,
   lightning-modal,
   lightning-modal-header,
   lightning-modal-body,

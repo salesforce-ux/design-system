@@ -59,6 +59,10 @@
     .slds-button {
       text-decoration: none;
 
+      &:focus {
+        box-shadow: var(--slds-g-shadow-outline-focus-1);
+      }
+
       &.slds-button_neutral {
         color: $brand-accessible;
       }

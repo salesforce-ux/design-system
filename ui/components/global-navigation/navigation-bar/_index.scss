@@ -320,6 +320,10 @@
     .slds-indicator_unsaved {
       color: currentColor;
     }
+
+    .slds-button_icon:focus {
+      box-shadow: var(--slds-g-shadow-inset-focus-1);
+    }
   }
 
   &.slds-has-success.slds-is-active,
@@ -390,8 +394,11 @@
 
   &:focus,
   &:focus:hover {
-    outline: 0;
-    text-decoration: underline;
+    text-decoration: none;
+  }
+
+  &:focus-visible {
+    outline-offset: rem(-6px);
   }
 
   &:hover {
@@ -406,6 +413,10 @@
   &:active {
     color: inherit;
     text-decoration: none;
+  }
+
+  &.slds-button:focus {
+    box-shadow: var(--slds-g-shadow-inset-focus-1);
   }
 }
 

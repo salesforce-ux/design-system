@@ -3,6 +3,20 @@
 # Modals Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.25.0
+
+### Updated
+- Updated background color of the Modal's close icon along with it's active state styling
+
+## 2.24.0
+
+## Changed
+
+- Added tabindex to the heading element to make it programmatically focussable.
+
+### Fixed
+
+- Fixed modal by removing code explicitly scoped to patching internal, private implementations. Appropriate styles will be displayed again.
 
 ## 2.23.2
 

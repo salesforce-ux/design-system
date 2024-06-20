@@ -3,6 +3,11 @@
 # Combobox Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.24.0
+
+### Changed
+
+- Updated Combobox blueprint to use `role="option"` on div wrapping loading spinner
 
 ## 2.23.0
 

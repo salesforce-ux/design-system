@@ -3,6 +3,14 @@
 # Color Picker Release Notes
 
 <!-- ## [Unreleased] -->
+
+## 2.23.0
+
+### Changed
+
+- Updated assistive text content.
+
+
 ## 2.17.0
 
 ### Changed

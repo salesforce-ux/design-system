@@ -3,7 +3,7 @@
   align-items: center;
   min-height: $height-tappable;
 
-  .slds-button {
+  .slds-progress__marker {
 
     &:before { // Create invisible tap target area
       position: absolute;
@@ -22,7 +22,7 @@
 .slds-progress__marker_icon {
   @include square($square-tappable-small);
 
-  .slds-button__icon {
+  .slds-icon {
     @include square($square-tappable-xx-small);
   }
 }

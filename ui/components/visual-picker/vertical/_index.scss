@@ -30,8 +30,4 @@
   .slds-visual-picker__body {
     width: $size-large;
   }
-
-  input:focus ~ label .slds-visual-picker__text .slds-text-heading_medium {
-    text-decoration: underline;
-  }
 }

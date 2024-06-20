@@ -49,7 +49,7 @@ export const ListboxList = props => (
  */
 export const ListboxItem = props => (
   <li
-    role="presentation"
+    role={props.isLoadingSpinner ? "option" : "presentation" }
     className={classNames('slds-listbox__item', props.className)}
   >
     {props.children}
@@ -394,7 +394,7 @@ export class Listbox extends Component {
                 .slice(0, count)
                 .map(this.renderPlainOptions)}
           {loading && (
-            <ListboxItem>
+            <ListboxItem isLoadingSpinner>
               <div className="slds-align_absolute-center slds-p-top_medium">
                 <Spinner className="slds-spinner_x-small slds-spinner_inline" />
               </div>

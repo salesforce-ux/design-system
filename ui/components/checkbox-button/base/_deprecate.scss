@@ -96,8 +96,8 @@
       ~ .slds-checkbox--faux,
       + .slds-checkbox_faux,
       + .slds-checkbox--faux {
-        @include focus-button;
-        border-color: var(--slds-g-color-brand-base-60, #{$color-border-input-active});
+        box-shadow: var(--slds-g-shadow-outset-focus-1, #{$shadow-button-focus});
+        border: none;
       }
     }
 

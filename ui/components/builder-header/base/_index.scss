@@ -84,8 +84,9 @@
 
   &:focus {
     text-decoration: underline;
-    box-shadow: none;
+    box-shadow: var(--slds-g-shadow-inset-inverse-focus-1, #{$shadow-button-focus});
     outline: none;
+    border-radius: 0;
   }
 }
 

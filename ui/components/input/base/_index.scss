@@ -21,6 +21,12 @@
     @include input-focus-active;
   }
 
+  &:focus {
+    --slds-c-input-shadow: var(--slds-c-input-shadow-focus, var(--slds-g-shadow-outline-focus-1, #{$shadow-button-focus}));
+    --slds-c-input-color-border: inherit;
+    outline: 0;
+  }
+
   &[disabled],
   &.slds-is-disabled {
     @include input-disabled;
@@ -97,6 +103,11 @@
   &:active {
     /*! @css-var-fallback box-shadow */
     --slds-c-input-shadow-focus: none;
+  }
+
+  &:focus {
+    box-shadow: var(--slds-g-shadow-inset-inverse-focus-1, #{$shadow-button-focus});
+    outline: 0;
   }
 }
 
@@ -343,6 +354,12 @@
 
     /*! @css-var-fallback box-shadow */
     --slds-c-input-shadow: var(--slds-g-color-error-base-40, #{$color-border-error}) 0 0 0 #{$border-width-thin} inset, #{$shadow-button-focus};
+  }
+
+  &:focus {
+    --slds-c-input-shadow: var(--slds-g-color-error-base-40, #{$color-border-error}) 0 0 0 #{$border-width-thin} inset, var(--slds-g-shadow-outline-focus-1, #{$shadow-button-focus});
+    --slds-c-input-color-border: var(--slds-g-color-error-base-40, #{$color-border-error});
+    outline: 0;
   }
 }
 

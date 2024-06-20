@@ -16,9 +16,9 @@
   justify-content: space-between;
   line-height: var(--slds-c-pill-line-height, var(--sds-c-pill-line-height, $line-height-text));
   max-width: 100%; // Required to make the container shrink when truncated
-  padding-top: var(--slds-c-pill-spacing-block-start, var(--sds-c-pill-spacing-block-start, $spacing-xxx-small));
-  padding-right: var(--slds-c-pill-spacing-inline-end, var(--sds-c-pill-spacing-inline-end, $spacing-xxx-small));
-  padding-bottom: var(--slds-c-pill-spacing-block-end, var(--sds-c-pill-spacing-block-end, $spacing-xxx-small));
+  padding-top: var(--slds-c-pill-spacing-block-start, var(--sds-c-pill-spacing-block-start, 0));
+  padding-right: var(--slds-c-pill-spacing-inline-end, var(--sds-c-pill-spacing-inline-end, 0));
+  padding-bottom: var(--slds-c-pill-spacing-block-end, var(--sds-c-pill-spacing-block-end, 0));
   padding-left: var(--slds-c-pill-spacing-inline-start, var(--sds-c-pill-spacing-inline-start, $spacing-xxx-small));
   border-width: var(--slds-c-pill-sizing-border, var(--sds-c-pill-sizing-border, $border-width-thin));
   border-style: solid;
@@ -39,17 +39,23 @@
   }
 
   &:focus {
-    /*! @css-var-fallback border-color */
-    --slds-c-pill-color-border: var(--sds-c-pill-color-border-focus, var(--slds-g-color-brand-base-60, #{$color-border-input-active}));
-
     /*! @css-var-fallback box-shadow */
-    --slds-c-pill-shadow: var(--sds-c-pill-shadow-focus, #{$shadow-button-focus});
+    --slds-c-pill-shadow: var(--sds-c-pill-shadow-focus, var(--slds-g-shadow-outset-focus-1, #{$shadow-button-focus}));
 
     outline: 0;
   }
 
   a {
     text-decoration: none;
+  }
+
+  .slds-popover_tooltip, .slds-popover--tooltip {
+    width: max-content;
+  }
+
+  .slds-pill__remove:focus {
+    box-shadow: var(--slds-g-shadow-inset-inverse-focus-1);
+    outline: 0;
   }
 }
 
@@ -97,6 +103,24 @@
     margin-left: 0;
     margin-right: 0;
   }
+
+  .slds-pill_link,
+  .slds-pill--link,
+  .slds-listbox-item {
+
+    .slds-pill__action:focus,
+    .slds-pill:focus {
+      box-shadow: var(--slds-g-shadow-inset-focus-1);
+    }
+
+    .slds-pill.slds-pill_bare:focus {
+      outline-offset: -2px;
+    }
+  }
+}
+
+.slds-listbox_selection-group .slds-listbox-item .slds-pill:focus {
+  box-shadow: var(--slds-g-shadow-inset-focus-1);
 }
 
 /**
@@ -113,7 +137,7 @@
   &:focus {
     outline: 0;
     border-radius: $border-radius-medium;
-    box-shadow: var(--slds-c-pill-label-shadow-focus, var(--sds-c-pill-label-shadow-focus, $shadow-button-focus));
+    box-shadow: var(--slds-c-pill-label-shadow-focus, var(--sds-c-pill-label-shadow-focus, var(--slds-g-shadow-outset-focus-1, #{$shadow-button-focus})));
   }
 }
 
@@ -151,8 +175,10 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-left: $spacing-xx-small;
   border-radius: $border-radius-small;
+  padding: $spacing-xx-small;
+  box-sizing:content-box;
+  right: 0;
 
   svg {
     @include square($square-icon-xx-small-content);
@@ -181,7 +207,6 @@
   .slds-pill__remove {
     position: absolute;
     top: 50%;
-    right: $spacing-xxx-small;
     transform: translateY(-50%);
   }
 }
@@ -194,7 +219,7 @@
  */
 .slds-pill__action {
   padding-top: var(--slds-c-pill-spacing-block-start, var(--sds-c-pill-spacing-block-start, $spacing-xxx-small));
-  padding-right: calc(#{$square-icon-xx-small-boundary} + var(--slds-c-pill-spacing-inline-end, var(--sds-c-pill-spacing-inline-end, #{$spacing-xxx-small})) + 2px);
+  padding-right: calc(#{$square-icon-xx-small-boundary} + var(--slds-c-pill-spacing-inline-end, var(--sds-c-pill-spacing-inline-end, #{$spacing-xxx-small})) + 6px);
   padding-bottom: var(--slds-c-pill-spacing-block-end, var(--sds-c-pill-spacing-block-end, $spacing-xxx-small));
   padding-left: var(--slds-c-pill-spacing-inline-start, var(--sds-c-pill-spacing-inline-start, $spacing-xxx-small));
   border-width: var(--slds-c-pill-sizing-border, var(--sds-c-pill-sizing-border, $border-width-thin));
@@ -207,9 +232,8 @@
   flex-grow: 1;
 
   &:focus {
+    box-shadow: var(--slds-c-pill-action-shadow, var(--sds-c-pill-action-shadow, var(--slds-g-shadow-outset-focus-1, #{$shadow-button-focus})));
     outline: 0;
-    border-color: var(--slds-c-pill-action-color-border, var(--sds-c-pill-action-color-border, var(--slds-g-color-brand-base-60, #{$color-border-input-active})));
-    box-shadow: var(--slds-c-pill-action-shadow, var(--sds-c-pill-action-shadow, $shadow-button-focus));
   }
 }
 
@@ -235,6 +259,7 @@
 
   &:hover {
     --slds-c-pill-error-text-color: var(--slds-g-color-error-base-30, #{$color-text-error});
+
     .slds-pill__icon_container .slds-icon-text-error {
       --slds-c-icon-color-foreground: var(--slds-g-color-error-base-30, #{$color-text-error});
     }

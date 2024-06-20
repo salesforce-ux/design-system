@@ -95,10 +95,6 @@
   &.slds-is-active:before {
     background: $brand-primary-transparent-10;
   }
-
-  &:focus-within:before {
-    box-shadow: inset 0 0 0 1px var(--slds-g-color-brand-base-60, #{$color-brand});
-  }
 }
 
 /**
@@ -136,7 +132,14 @@
 
   &:focus {
     outline: 0;
-    text-decoration: underline;
+    text-decoration: none;
+    box-shadow: var(--slds-g-shadow-inset-inverse-focus-1);
+
+    &:hover {
+      box-shadow: inset 2px 0 0 $brand-primary;
+      outline: 2px solid var(--slds-g-color-palette-blue-40);
+      outline-offset: 1px;
+    }
   }
 }
 
@@ -153,6 +156,13 @@
   .slds-nav-vertical__action {
     font-weight: bold;
     box-shadow: inset 4px 0 0 $brand-primary;
+
+    &:focus {
+      text-decoration: none;
+      box-shadow: inset 4px 0 0 $brand-primary;
+      outline: 2px solid var(--slds-g-color-palette-blue-40);
+      outline-offset: 1px;
+    }
 
     @include rtl() {
       box-shadow: inset -4px 0 0 $brand-primary;

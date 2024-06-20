@@ -30,6 +30,13 @@
       fill: var(--slds-g-color-brand-base-10, #{$color-border-inverse});
     }
   }
+
+  // Historically close button is not visible for Brand variant
+  &:not(.slds-popover_brand-dark):not(.slds-popover_prompt) {
+    .slds-button:focus {
+      box-shadow: none;
+    }
+  }
 }
 
 @mixin brand-nubbin($position, $location: "after", $color: transparent) {

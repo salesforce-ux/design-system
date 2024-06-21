@@ -3,6 +3,45 @@
 
 ## Release 2.25.0 - Upcoming
 
+- Updated icons to `v10.10.0`
+  - Standard Set:
+    - Added data_governance
+    - Added data_lake_objects
+    - Added inbox
+    - Added metric
+    - Added metric_definition
+    - Added omni_channel
+    - Added operation_plan
+    - Added operation_plan_execution
+    - Added operation_plan_request
+    - Added operation_plan_step
+    - Added operation_plan_step_execution
+    - Added policy
+    - Added prep_flow
+    - Added query_editor
+    - Added robot
+    - Added taxonomy
+    - Added visualization
+    - Added workspace
+  - Utility Set:
+    - Added angle
+    - Added card_details
+    - Added circle
+    - Added cms
+    - Added contactless_pay
+    - Added format
+    - Added height
+    - Added highlight
+    - Added line_chart
+    - Added output
+    - Added replay
+    - Added robot
+    - Added sort_ascending
+    - Added width
+    - Added work_queue
+  - Doctype Set
+    - Added shared_folder
+
 ## Components
 ### [Modals](https://www.lightningdesignsystem.com/components/modals)
 #### Updated

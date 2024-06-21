@@ -151,6 +151,10 @@
   color: var(--slds-g-color-neutral-base-50, #{$datepicker-color-text-day-adjacent-month});
 }
 
+.slds-form-element__help:has(+ .slds-datepicker) {
+  position: absolute;
+}
+
 .slds-table {
 
   .slds-datepicker {

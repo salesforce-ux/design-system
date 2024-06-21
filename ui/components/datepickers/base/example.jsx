@@ -458,6 +458,7 @@ export let DatePickerElement = props => (
     hasTooltip={props.hasTooltip}
     showTooltip={props.showTooltip}
     fieldLevelMessage={props.fieldLevelMessage}
+    inlineMessage={!props.hasError && props.format}
     dropdown={
       (!props.isDisabled &&
         <DatePicker
@@ -504,6 +505,7 @@ export default [
         dateInputId={dateInputId + '-default'}
         isOpen
         todayActive
+        format="mm/dd/yyyy"
       />
     )
   }
@@ -524,6 +526,7 @@ export let states = [
         dateSelected="single"
         dateRange="week-4"
         defaultValue="06/24/2021"
+        format="mm/dd/yyyy"
       />
     )
   },
@@ -554,6 +557,7 @@ export let states = [
         isOpen
         todayActive
         isRequired
+        format="mm/dd/yyyy"
       />
     )
   },
@@ -589,6 +593,7 @@ export let states = [
         fieldLevelMessage="Format: mmm d yyyy | ex: Jan 1 2023"
         hasTooltip
         showTooltip
+        format="mm/dd/yyyy"
       />
     )
   },
@@ -603,6 +608,7 @@ export let states = [
         labelContent="Date"
         dateInputId={dateInputId + '-table'}
         isDisabled
+        format="mm/dd/yyyy"
       />
     )
   }
@@ -631,6 +637,7 @@ export let examples = [
           dateInputId={dateInputId + '-table'}
           isOpen
           todayActive
+          format="mm/dd/yyyy"
         />
       </SimpleTable>
     )
@@ -650,6 +657,7 @@ export let examples = [
           dateSelected="single"
           dateRange="week-4"
           defaultValue="06/24/2021"
+          format="mm/dd/yyyy"
         />
       </SimpleTable>
     )

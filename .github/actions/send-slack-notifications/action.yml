@@ -1,5 +1,5 @@
 name: 'Send Slack Notifications'
-description: 'sends build notification to slack channels'
+description: 'sends build notification to slack channels using incoming webhooks'
 
 inputs:
   slack-webhook-url:

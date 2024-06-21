@@ -3,10 +3,64 @@
 
 ## Release 2.25.0 - Upcoming
 
+- Updated icons to `v10.10.0`
+  - Standard Set:
+    - Added data_governance
+    - Added data_lake_objects
+    - Added inbox
+    - Added metric
+    - Added metric_definition
+    - Added omni_channel
+    - Added operation_plan
+    - Added operation_plan_execution
+    - Added operation_plan_request
+    - Added operation_plan_step
+    - Added operation_plan_step_execution
+    - Added policy
+    - Added prep_flow
+    - Added query_editor
+    - Added robot
+    - Added taxonomy
+    - Added visualization
+    - Added workspace
+  - Utility Set:
+    - Added angle
+    - Added card_details
+    - Added circle
+    - Added cms
+    - Added contactless_pay
+    - Added format
+    - Added height
+    - Added highlight
+    - Added line_chart
+    - Added output
+    - Added replay
+    - Added robot
+    - Added sort_ascending
+    - Added width
+    - Added work_queue
+  - Doctype Set
+    - Added shared_folder
+
 ## Components
 ### [Modals](https://www.lightningdesignsystem.com/components/modals)
 #### Updated
 - Updated background color of the Modal's close icon along with it's active state styling
+
+## Release 2.24.4 - Jun 13, 2024
+
+## Updated
+- Updated focus ring color for links to blue-40.
+
+## Components
+### [Tabs](https://www.lightningdesignsystem.com/components/tabs)
+## Fixed
+- Added new focus style for tabs when `.slds-has-focus` class is getting added.
+
+## Release 2.24.3 - Jun 6, 2024
+
+## Updated
+- bump icon version
 
 ## Release 2.24.2 - May 2, 2024
 

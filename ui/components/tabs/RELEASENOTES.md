@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.24.4
+
+## Fixed
+
+- Added new focus style for tabs when `.slds-has-focus` class is getting added.
+
 ## 2.23.0
 
 ## Added

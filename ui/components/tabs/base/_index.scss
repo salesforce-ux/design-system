@@ -113,12 +113,14 @@
    */
   &:focus,
   &.slds-has-focus {
-    outline: 0;
-
     &:after {
       height: calc(var(--slds-c-tabs-list-sizing-border, var(--sds-c-tabs-list-sizing-border, #{$border-width-thick})) + 1px);
       background-color: var(--slds-c-tabs-item-color-border-active, var(--sds-c-tabs-item-color-border-active, $brand-primary));
     }
+  }
+
+  &:focus {
+    outline: 0;
   }
 
   // Remove box-shadow when slds-button is used in conjunction with class

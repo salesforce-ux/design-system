@@ -44,6 +44,19 @@
   - Doctype Set
     - Added shared_folder
 
+## 2.24.4 - Jun 13, 2024
+
+## Updated
+
+- Updated focus ring color for links to blue-40.
+
+
+## 2.24.3 - Jun 6, 2024
+
+## Updated
+
+- bump icon version
+
 ## 2.24.2 - May 2, 2024
 
 ## 2.24.1 - April 25, 2024

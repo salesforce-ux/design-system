@@ -1127,3 +1127,39 @@ props:
     value: '#FF538A'
   WHATSAPP:
     value: '#3BA755'
+  DATA_GOVERNANCE:
+    value: '#396547'
+  DATA_LAKE_OBJECTS:
+    value: '#5a1ba9'
+  INBOX:
+    value: '#107cad'
+  METRIC:
+    value: '#06a59a'
+  METRIC_DEFINITION:
+    value: '#107cad'
+  OMNI_CHANNEL:
+    value: '#107cad'
+  OPERATION_PLAN:
+    value: '#5a1ba9'
+  OPERATION_PLAN_EXECUTION:
+    value: '#5a1ba9'
+  OPERATION_PLAN_REQUEST:
+    value: '#5a1ba9'
+  OPERATION_PLAN_STEP:
+    value: '#5a1ba9'
+  OPERATION_PLAN_STEP_EXECUTION:
+    value: '#5a1ba9'
+  POLICY:
+    value: '#06a59a'
+  PREP_FLOW:
+    value: '#ff538a'
+  QUERY_EDITOR:
+    value: '#7e2600'
+  ROBOT:
+    value: '#2f2cb7'
+  TAXONOMY:
+    value: '#1b96ff'
+  VISUALIZATION:
+    value: '#1b96ff'
+  WORKSPACE:
+    value: '#ff5d2d'

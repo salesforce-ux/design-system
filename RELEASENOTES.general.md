@@ -1,6 +1,13 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
+## 2.24.4 - Jun 13, 2024
+
+## Updated
+
+- Updated focus ring color for links to blue-40.
+
+
 ## 2.24.3 - Jun 6, 2024
 
 ## Updated

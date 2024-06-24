@@ -43,6 +43,15 @@
     - Added shared_folder
 
 ## Components
+### [Datepickers](https://www.lightningdesignsystem.com/components/datepickers)
+#### Added
+- Add inline date format `div` with content `mm/dd/yyyy` for all datepickers that are not in error state.
+- Add inline date format `div` with content `mm/dd/yyyy` for the date portion of all datetimepickers that are not in error state.
+## 2.24.0- Upcoming
+#### Fixed
+- Removed `aria-labelledby` from `<table />` element on the blueprint
+- Update `aria-live` from "assertive" to "polite" and `aria-atomic` from "true" to "false" for the month title `<h2>` in `DatepickerHeader` on the blueprint
+
 ### [Modals](https://www.lightningdesignsystem.com/components/modals)
 #### Updated
 - Updated background color of the Modal's close icon along with it's active state styling
@@ -353,8 +362,8 @@
 - Removed `aria-label` from table header to prevent from reading twice headers.
 
 ### [Datepickers](https://www.lightningdesignsystem.com/components/datepickers)
-#### Added 
-- Added datepicker example with field level tooltip  
+#### Added
+- Added datepicker example with field level tooltip
 
 ### [Datetime Picker](https://www.lightningdesignsystem.com/components/datetime-picker)
 #### Added 

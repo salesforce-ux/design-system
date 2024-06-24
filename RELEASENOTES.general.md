@@ -3,9 +3,6 @@
 
 ## 2.25.0 - Upcoming
 
-- Add inline date format `div` with content `mm/dd/yyyy` for all datepickers that are not in error state.
-- Add inline date format `div` with content `mm/dd/yyyy` for the date portion of all datetimepickers that are not in error state.
-
 - Updated icons to `v10.10.0`
   - Standard Set:
     - Added data_governance

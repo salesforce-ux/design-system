@@ -3,14 +3,25 @@
 # Datepickers Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.25.0
+
+### Added
+
+- Add inline date format `div` with content `mm/dd/yyyy` for all datepickers that are not in error state.
+- Add inline date format `div` with content `mm/dd/yyyy` for the date portion of all datetimepickers that are not in error state.
+
 ## 2.24.0- Upcoming
+
 ### Fixed
 - Removed `aria-labelledby` from `<table />` element on the blueprint
 - Update `aria-live` from "assertive" to "polite" and `aria-atomic` from "true" to "false" for the month title `<h2>` in `DatepickerHeader` on the blueprint
 
 ## 2.22.0
-### Added 
-- Added datepicker example with field level tooltip  
+
+### Added
+
+- Added datepicker example with field level tooltip
+
 ## 2.17.0
 
 ### Fixed

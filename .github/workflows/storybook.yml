@@ -396,3 +396,41 @@ jobs:
             "version":"'"${VERSION_FROM_TAG:1:20}"'",
             "salesforce_version": "'"$SALESFORCE_VERSION"'"
         }'
+
+  slack-broadcast:
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'release' }}
+    needs:
+      - attach-artifact
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # retrieve git history
+      - name: Get Salesforce and Package Versions
+        id: get-salesforce-versions
+        env:
+          VERSION_FROM_TAG: ${{ github.event.release.tag_name }}
+        run: |
+          SALESFORCE_VERSION=$(cat package.json | jq -r .slds.id)
+          echo "salesforce_version=${SALESFORCE_VERSION}" >> $GITHUB_OUTPUT
+          echo "version_from_tag=${VERSION_FROM_TAG}" >> $GITHUB_OUTPUT
+      - name: Compile slack message
+        id: compile-slack-msg-body
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          result-encoding: string
+          script: |
+            const releaseVersion = '${{ steps.get-salesforce-versions.outputs.salesforce_version }}';
+            const versionFromTag = '${{ steps.get-salesforce-versions.outputs.version_from_tag }}';
+            const [v, semVersion] = versionFromTag.split(/(?<=v)/);
+            const packageURL = `https://www.npmjs.com/package/@salesforce-ux/design-system/${v}/${semVersion}`;
+            const slackBody = `*Salesforce Release*: ${releaseVersion} | *Package Version*: ${versionFromTag} | <${packageURL}| ${packageURL}>`
+            return slackBody;
+      - name: Notify Slack
+        uses: ./.github/actions/send-slack-notifications
+        with:
+          slack-webhook-url: ${{ secrets.SLACK_DESIGN_SYSTEM_BROADCAST_WEBHOOK_URL }}
+          slack-title: 'A new version of *@salesforce-ux/design-system* package :package: was published :rocket:'
+          slack-body: ${{ steps.compile-slack-msg-body.outputs.result }}

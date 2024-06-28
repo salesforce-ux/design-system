@@ -61,6 +61,7 @@
 
     &.slds-is-today > .slds-day {
       background-color: var(--slds-g-color-neutral-base-95, #{$color-background-row-selected});
+      box-shadow: 0 0 0 1px var(--slds-g-color-border-base-4);
     }
 
     &:focus {

@@ -47,14 +47,17 @@
 #### Added
 - Add inline date format `div` with content `mm/dd/yyyy` for all datepickers that are not in error state.
 - Add inline date format `div` with content `mm/dd/yyyy` for the date portion of all datetimepickers that are not in error state.
-## 2.24.0- Upcoming
-#### Fixed
-- Removed `aria-labelledby` from `<table />` element on the blueprint
-- Update `aria-live` from "assertive" to "polite" and `aria-atomic` from "true" to "false" for the month title `<h2>` in `DatepickerHeader` on the blueprint
 
 ### [Modals](https://www.lightningdesignsystem.com/components/modals)
 #### Updated
 - Updated background color of the Modal's close icon along with it's active state styling
+
+## Release 2.24.5 - June 27, 2024
+
+## Components
+### [Datepickers](https://www.lightningdesignsystem.com/components/datepickers)
+#### Added
+- Added shadow for today's date to maintain accessibility
 
 ## Release 2.24.4 - Jun 13, 2024
 
@@ -139,6 +142,11 @@
 ### [Combobox](https://www.lightningdesignsystem.com/components/combobox)
 #### Changed
 - Updated Combobox blueprint to use `role="option"` on div wrapping loading spinner
+
+### [Datepickers](https://www.lightningdesignsystem.com/components/datepickers)
+#### Fixed
+- Removed `aria-labelledby` from `<table />` element on the blueprint
+- Update `aria-live` from "assertive" to "polite" and `aria-atomic` from "true" to "false" for the month title `<h2>` in `DatepickerHeader` on the blueprint
 
 ### [Modals](https://www.lightningdesignsystem.com/components/modals)
 ## Changed

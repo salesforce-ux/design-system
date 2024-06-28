@@ -4,11 +4,17 @@
 
 <!-- ## [Unreleased] -->
 
-# 2.24.0 - Upcoming
+## 2.25.0
 
- ## Changed
+### Changed
 
- - Introduced a new hidden element which helps screen reader announce its state when a cell content has been updated
+- Changed the hover color for the icons used in inline edit variant
+
+## 2.24.0
+
+### Changed
+
+- Introduced a new hidden element which helps screen reader announce its state when a cell content has been updated
 
 ## 2.22.0
 

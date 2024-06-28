@@ -43,6 +43,10 @@
     - Added shared_folder
 
 ## Components
+### [Data Tables](https://www.lightningdesignsystem.com/components/data-tables)
+#### Changed
+- Changed the hover color for the icons used in inline edit variant
+
 ### [Datepickers](https://www.lightningdesignsystem.com/components/datepickers)
 #### Added
 - Add inline date format `div` with content `mm/dd/yyyy` for all datepickers that are not in error state.
@@ -142,6 +146,10 @@
 ### [Combobox](https://www.lightningdesignsystem.com/components/combobox)
 #### Changed
 - Updated Combobox blueprint to use `role="option"` on div wrapping loading spinner
+
+### [Data Tables](https://www.lightningdesignsystem.com/components/data-tables)
+#### Changed
+- Introduced a new hidden element which helps screen reader announce its state when a cell content has been updated
 
 ### [Datepickers](https://www.lightningdesignsystem.com/components/datepickers)
 #### Fixed

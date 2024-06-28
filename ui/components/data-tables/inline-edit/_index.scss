@@ -335,24 +335,25 @@
 
     .slds-button__icon_edit,
     .slds-button__icon--edit {
-      opacity: 0.5;
+      fill: var(--slds-g-color-neutral-base-50, #{$color-text-icon-default});
+      opacity: 1;
 
       &:hover,
       &:focus {
         fill: var(--slds-g-color-brand-base-50, #{$color-text-brand});
-        opacity: 1;
       }
     }
 
     .slds-button__icon_lock,
     .slds-button__icon--lock {
-      opacity: 0.5;
+      fill: var(--slds-g-color-neutral-base-50, #{$color-text-icon-default});
+      opacity: 1;
     }
   }
 
   &.slds-has-focus .slds-button__icon_edit,
   &.slds-has-focus .slds-button__icon--edit {
-    fill: var(--slds-g-color-neutral-base-50, #{$color-text-icon-default});
+    fill: var(--slds-g-color-neutral-base-10, #{$color-text-default});
     opacity: 1;
   }
 }

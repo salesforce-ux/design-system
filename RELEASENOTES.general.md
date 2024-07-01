@@ -44,6 +44,11 @@
   - Doctype Set
     - Added shared_folder
 
+## 2.24.5 - June 27, 2024
+
+## Added 
+- Added shadow for today's date to maintain accessibility
+
 ## 2.24.4 - Jun 13, 2024
 
 ## Updated

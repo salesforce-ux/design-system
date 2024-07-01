@@ -58,6 +58,9 @@
 
 ## Release 2.24.5 - June 27, 2024
 
+## Added 
+- Added shadow for today's date to maintain accessibility
+
 ## Components
 ### [Datepickers](https://www.lightningdesignsystem.com/components/datepickers)
 #### Added

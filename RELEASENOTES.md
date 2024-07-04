@@ -56,7 +56,14 @@
 #### Updated
 - Updated background color of the Modal's close icon along with it's active state styling
 
-## Release 2.24.5 - June 27, 2024
+## Release 2.24.6 - July 1, 2024
+
+## Components
+### [Radio Group](https://www.lightningdesignsystem.com/components/radio-group)
+#### Added 
+- Added aria attributes for required variant
+
+## Release 2.24.5 - July 1, 2024
 
 ## Added 
 - Added shadow for today's date to maintain accessibility

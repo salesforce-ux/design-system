@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.24.6
+
+### Added 
+- Added aria attributes for required variant
+
+
 ## 2.18.0
 
 ### Added

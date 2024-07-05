@@ -70,6 +70,11 @@ The datepicker has the following markup requirements:
   - Keyboard user: only open the datepicker when a keyboard user presses `enter` or `space` on the datepicker button
     - Do not open the datepicker when user focus is on the input
 
+**Closing the Datepicker:**
+
+  - Keyboard user: after closing the calendar, the focus should go to the input. The focus on input directs screen reader to output the selected date. 
+    - The focus should not go on the calendar icon button that triggered the calendar to open.
+
 #### Keyboard Interactions
 
   - When the datepicker opens, place user focus on either the currently selected date in the grid or if no date is selected the current day

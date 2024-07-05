@@ -51,6 +51,7 @@
 #### Added
 - Add inline date format `div` with content `mm/dd/yyyy` for all datepickers that are not in error state.
 - Add inline date format `div` with content `mm/dd/yyyy` for the date portion of all datetimepickers that are not in error state.
+- Add in focus accessibility guideline when closing calendar.
 
 ### [Modals](https://www.lightningdesignsystem.com/components/modals)
 #### Updated

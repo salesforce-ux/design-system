@@ -43,6 +43,10 @@
     - Added shared_folder
 
 ## Components
+### [Combobox](https://www.lightningdesignsystem.com/components/combobox)
+#### Fixed
+- Fixed combobox from repeating selection twice in screen reader
+
 ### [Data Tables](https://www.lightningdesignsystem.com/components/data-tables)
 #### Changed
 - Changed the hover color for the icons used in inline edit variant
@@ -57,14 +61,14 @@
 #### Updated
 - Updated background color of the Modal's close icon along with it's active state styling
 
-## Release 2.24.6 - July 1, 2024
+## Release 2.24.6 - July 5, 2024
 
 ## Components
 ### [Radio Group](https://www.lightningdesignsystem.com/components/radio-group)
 #### Added 
 - Added aria attributes for required variant
 
-## Release 2.24.5 - July 1, 2024
+## Release 2.24.5 - June 27, 2024
 
 ## Added 
 - Added shadow for today's date to maintain accessibility

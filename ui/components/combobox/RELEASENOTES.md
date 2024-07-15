@@ -3,6 +3,12 @@
 # Combobox Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.25.0
+
+### Fixed
+
+- Fixed combobox from repeating selection twice in screen reader
+
 ## 2.24.0
 
 ### Changed

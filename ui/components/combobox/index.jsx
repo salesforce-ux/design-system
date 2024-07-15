@@ -99,7 +99,7 @@ const ComboboxInputFaux = ({
         value && 'slds-combobox__input-value'
       )}
       disabled={isDisabled}
-      {...labelId && id && { [`aria-labelledby`]: `${labelId} ${id}` }}
+      {...labelId && id && { [`aria-labelledby`]: `${labelId}` }}
       {...{ id, onBlur, onFocus }}
       {...aria}
     >

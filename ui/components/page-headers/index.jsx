@@ -6,6 +6,7 @@ import ButtonIcon from '../button-icons/';
 import { Trigger } from '../menus/dropdown/example';
 import MediaObject from '../../utilities/media-objects/index.react';
 import { StandardIcon } from '../icons/standard/example';
+import { Tooltip } from '../tooltips/base/example';
 
 const EntityIcon = props => (
   <StandardIcon
@@ -36,7 +37,8 @@ PageHeader.propTypes = {
   children: PropTypes.node,
   isRelatedList: PropTypes.bool,
   isVertical: PropTypes.bool,
-  isRecordHome: PropTypes.bool
+  isRecordHome: PropTypes.bool,
+  showTooltip: PropTypes.bool
 };
 
 export const PageHeaderRow = props => (
@@ -102,7 +104,7 @@ export const PageHeaderTitle = props => (
         </h1>
       </div>
       {props.hasSwitcher && (
-        <div className="slds-page-header__name-switcher">
+        <div className="slds-page-header__name-switcher slds-is-relative">
           <Trigger
             triggerIcon={
               <ButtonIcon
@@ -115,6 +117,21 @@ export const PageHeaderTitle = props => (
               />
             }
           />
+              <Tooltip
+                className={classNames(
+                  'slds-nubbin_bottom-left',
+                  !props.showTooltip && 'slds-fall-into-ground'
+                )}
+                id="dropdown-label"
+                style={{
+                  position: "absolute",
+                  left: "-12px",
+                  top: "-48px",
+                  width: "190px"
+                }}
+              >
+              {props.fieldLevelMessage || "Some helpful information."}
+              </Tooltip>
         </div>
       )}
     </div>

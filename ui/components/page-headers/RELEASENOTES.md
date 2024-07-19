@@ -3,6 +3,11 @@
 # Page Headers Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.25.0 - Upcoming
+
+### Added
+
+- Add tooltip for  dropdown button in `Object home` variant
 
 ## 2.15.0
 

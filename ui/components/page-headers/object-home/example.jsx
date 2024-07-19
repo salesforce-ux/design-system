@@ -30,6 +30,8 @@ export const ObjectHome = props => (
           objectName="Opportunities"
           titleText="Recently Viewed"
           hasSwitcher
+          showTooltip={props.showTooltip}
+          fieldLevelMessage={props.fieldLevelMessage}
         />
       </PageHeaderColumn>
       <PageHeaderColumn type="actions">
@@ -245,6 +247,13 @@ export let examples = [
           </PageHeaderColumn>
         </PageHeaderRow>
       </PageHeader>
+    )
+  },
+  {
+    id: 'base-with-tooltip-open',
+    label: 'Base with tooltip open',
+    element: (
+     <ObjectHome showTooltip fieldLevelMessage="Change View for the account"/>
     )
   },
   {

@@ -14,6 +14,7 @@ import Input from '../../input/';
 
 const dateInputId = 'date-input-id';
 const demoStyles = 'height: 25rem;';
+const demoStylesDropdownClosed = 'height: 6rem;';
 
 /* -----------------------------------------------------------------------------
     Private
@@ -447,7 +448,7 @@ export let DatePickerElement = props => (
   <FormElement
     formElementClassName={
       'slds-dropdown-trigger slds-dropdown-trigger_click' +
-      (props.isOpen && ' slds-is-open')
+      (props?.isOpen ? ' slds-is-open' : '')
     }
     labelContent={props.labelContent}
     inputId={props.dateInputId}
@@ -512,6 +513,20 @@ export default [
 ];
 
 export let states = [
+  {
+    id: 'default-dropdown-closed',
+    label: 'Base - dropdown closed',
+    demoStyles: demoStylesDropdownClosed,
+    element: (
+      <DatePickerElement
+        idPrefix="defaultPicker"
+        labelContent="Date"
+        dateInputId={dateInputId + '-dropdown-closed'}
+        todayActive
+        format="mm/dd/yyyy"
+      />
+    )
+  },
   {
     id: 'datepicker-day-selected',
     label: 'Date selected',

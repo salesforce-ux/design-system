@@ -222,6 +222,18 @@ export const examples = [
 ];
 
 export let states = [
+{
+    id: 'default-dropdown-closed',
+    label: 'Base - dropdown closed',
+    demoStyles: 'height: 6rem;',
+    element: (
+      <ExampleDatetimePicker
+        dropdown={null}
+        listboxData={PlainTimeOptions}
+        format="mm/dd/yyyy"
+      />
+    )
+  },
   {
     id: 'date-selection',
     label: 'Date selected',

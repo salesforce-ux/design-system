@@ -72,7 +72,7 @@ The datepicker has the following markup requirements:
 
 **Closing the Datepicker:**
 
-  - Keyboard user: after closing the calendar, the focus should go to the input. The focus on input directs screen reader to output the selected date. 
+  - Keyboard user: after closing the calendar, the focus should go to the input. The focus on input directs screen reader to output the selected date.
     - The focus should not go on the calendar icon button that triggered the calendar to open.
 
 #### Keyboard Interactions
@@ -89,6 +89,11 @@ The datepicker has the following markup requirements:
 ## Base
 <CodeView demoStyles={getDemoStylesById(Base.default)}>
   {getDisplayElementById(Base.default)}
+</CodeView>
+
+### Dropdown Closed
+<CodeView demoStyles={getDemoStylesById(Base.states, 'default-dropdown-closed')}>
+  {getDisplayElementById(Base.states, 'default-dropdown-closed')}
 </CodeView>
 
 ### States

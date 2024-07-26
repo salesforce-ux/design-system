@@ -9,6 +9,7 @@
 ### Changed
 
 - Changed the hover color for the icons used in inline edit variant
+- Changed the dropdown options color when disabled
 
 ## 2.24.0
 

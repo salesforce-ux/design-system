@@ -245,6 +245,10 @@
         background-color: transparent;
       }
 
+      &:focus {
+        box-shadow: none;
+      }
+
       .slds-icon {
         fill: var(--slds-g-color-neutral-base-80, #{$color-text-button-default-disabled});
       }

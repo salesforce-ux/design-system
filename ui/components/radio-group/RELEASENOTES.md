@@ -4,9 +4,9 @@
 
 <!-- ## [Unreleased] -->
 
-## 2.24.6
+## 2.25.0
 
-### Added 
+### Added
 - Added aria attributes for required variant
 
 

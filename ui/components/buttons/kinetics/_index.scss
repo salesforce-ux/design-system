@@ -5,6 +5,10 @@ $kx-button-gradient-size: 140px;
 
 // Kinetic styles for Base Button
 [kx-scope="button"][kx-type="underline"] {
+  --slds-kx-button-underline-scale-x: 0;
+  --slds-kx-button-underline-base-y: 600%; // CAUTION: magic number, 600% positions the underline to the button text baseline, no matter padding, margin or line-height applied.
+  --slds-kx-button-underline-offset-y: 0.25rem; // this will need to be reassigned if font-size is overridden
+  --slds-kx-button-underline-translate-y: calc(var(--slds-kx-button-underline-base-y) + var(--slds-kx-button-underline-offset-y));
   will-change: color, transform;
   transition: $kx-duration-normal $kx-ease-out;
   transition-property: transform, color;
@@ -21,13 +25,12 @@ $kx-button-gradient-size: 140px;
     will-change: transform-origin, transform;
     content: "";
     position: absolute;
-    // zero united value needed for calc to use the value in calculation
-    top: calc(var(--slds-c-button-spacing-block-start, var(--sds-c-button-spacing-block-start, 0rem)) + var(--slds-c-button-line-height, var(--sds-c-button-line-height, #{$line-height-button})) * 0.8); // stylelint-disable length-zero-no-unit
+    bottom: 50%; // 50% brings the underline to the relative middle of button, no matter padding, margin or line-height applied.
     height: rem(1px);
     width: calc(100% - var(--slds-c-button-spacing-inline-start, 0rem) - var(--slds-c-button-spacing-inline-end, 0rem));
     background: var(--slds-c-button-text-color-hover, var(--sds-c-button-text-color-hover, #{$brand-accessible-active}));
     background-position: left top;
-    transform: scaleX(0);
+    transform: scaleX(var(--slds-kx-button-underline-scale-x)) translateY(var(--slds-kx-button-underline-translate-y));
     transform-origin: var(--slds-kx-button-pointer-position-x, #{$kx-button-pointer-position}) 0;
     transition: transform $kx-duration-normal $kx-ease-out;
 
@@ -38,7 +41,7 @@ $kx-button-gradient-size: 140px;
 
   &:hover:after,
   &:focus:after {
-    transform: scaleX(1);
+    --slds-kx-button-underline-scale-x: 1;
   }
 
   &[disabled],

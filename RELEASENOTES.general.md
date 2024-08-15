@@ -1,7 +1,7 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
-## 2.25.0 - Upcoming
+## 2.25.0 - August 15, 2024
 
 - Updated icons to `v10.10.0`
   - Standard Set:
@@ -46,7 +46,7 @@
 
 ## 2.24.5 - June 27, 2024
 
-## Added 
+## Added
 - Added shadow for today's date to maintain accessibility
 
 ## 2.24.4 - Jun 13, 2024

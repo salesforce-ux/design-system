@@ -3,6 +3,11 @@
 # Buttons Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.25.0
+
+### Fixed
+
+- Refactored Kinetics Button Base underline to beBu more adaptive to overrides in padding, margin, and line-height
 
 ## 2.21.0
 

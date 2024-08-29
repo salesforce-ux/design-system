@@ -1,5 +1,5 @@
 {
-  "index_name": "winter-25",
+  "index_name": "spring-25",
   "start_urls": [
     {
       "url": "http://host.docker.internal/components/overview",

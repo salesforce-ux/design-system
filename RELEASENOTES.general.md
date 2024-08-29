@@ -1,5 +1,6 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
+## 2.26.0 - Upcoming
 
 ## 2.25.0 - August 15, 2024
 

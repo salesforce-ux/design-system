@@ -59,12 +59,19 @@
 ### [Datepickers](https://www.lightningdesignsystem.com/components/datepickers)
 #### Added
 - Add inline date format `div` with content `mm/dd/yyyy` for all datepickers that are not in error state.
-- Add inline date format `div` with content `mm/dd/yyyy` for the date portion of all datetimepickers that are not in error state.
+- Add inline date format `div` with content `mm/dd/yyyy` for the date portion of all datetime-pickers that are not in error state.
 - Add in focus accessibility guideline when closing calendar.
+#### Updated
+- Updated datepicker component blueprint with the required date input format to improve accessibility and meet Web Content Accessibility Guidelines (WCAG).
+
+### [Datetime Picker](https://www.lightningdesignsystem.com/components/datetime-picker)
+#### Updated
+- Updated datetime-picker component blueprint with the required date input format to improve accessibility and meet Web Content Accessibility Guidelines (WCAG).
 
 ### [Modals](https://www.lightningdesignsystem.com/components/modals)
 #### Updated
 - Updated background color of the Modal's close icon along with it's active state styling
+- Updated modal component blueprint to use a white background for the close button (X) to improve visibility for low vision users.
 
 ### [Radio Group](https://www.lightningdesignsystem.com/components/radio-group)
 #### Added
@@ -413,9 +420,9 @@
 - Added datepicker example with field level tooltip
 
 ### [Datetime Picker](https://www.lightningdesignsystem.com/components/datetime-picker)
-#### Added 
+#### Added
 - Tooltip option provided for Date/DateTime pickers.
-- Added `slds-datetimepicker_has-tooltip` class to fix the icon misalignment issue. 
+- Added `slds-datetimepicker_has-tooltip` class to fix the icon misalignment issue.
 
 ### [Expandable Section](https://www.lightningdesignsystem.com/components/expandable-section)
 #### Changed

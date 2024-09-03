@@ -8,8 +8,12 @@
 ### Added
 
 - Add inline date format `div` with content `mm/dd/yyyy` for all datepickers that are not in error state.
-- Add inline date format `div` with content `mm/dd/yyyy` for the date portion of all datetimepickers that are not in error state.
+- Add inline date format `div` with content `mm/dd/yyyy` for the date portion of all datetime-pickers that are not in error state.
 - Add in focus accessibility guideline when closing calendar.
+
+### Updated
+
+- Updated datepicker component blueprint with the required date input format to improve accessibility and meet Web Content Accessibility Guidelines (WCAG).
 
 ## 2.24.5
 

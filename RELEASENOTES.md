@@ -70,6 +70,20 @@
 #### Added
 - Added aria attributes for required variant
 
+## Release 2.24.6 - August 28, 2024
+
+## Updated
+ - Updated documentation in Styling Hooks table
+
+## Utilities
+### [Margin Utility](https://www.lightningdesignsystem.com/utilities/margin)
+#### Updated
+- Updated documentation regarding veriable density
+
+### [Padding Utility](https://www.lightningdesignsystem.com/utilities/padding)
+#### Updated
+- Updated documentation regarding veriable density
+
 ## Release 2.24.5 - June 27, 2024
 
 ## Added
@@ -80,7 +94,7 @@
 #### Added
 - Added shadow for today's date to maintain accessibility
 
-## Release 2.24.4 - Jun 13, 2024
+## Release 2.24.4 - June 13, 2024
 
 ## Updated
 - Updated focus ring color for links to blue-40.

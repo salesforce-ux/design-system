@@ -44,17 +44,22 @@
   - Doctype Set
     - Added shared_folder
 
+## 2.24.6 - August 28, 2024
+
+## Updated
+
+ - Updated documentation in Styling Hooks table
+
 ## 2.24.5 - June 27, 2024
 
 ## Added
 - Added shadow for today's date to maintain accessibility
 
-## 2.24.4 - Jun 13, 2024
+## 2.24.4 - June 13, 2024
 
 ## Updated
 
 - Updated focus ring color for links to blue-40.
-
 
 ## 2.24.3 - Jun 6, 2024
 

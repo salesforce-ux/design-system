@@ -14,6 +14,7 @@
 ## 2.24.5
 
 ### Added
+
 - Added shadow for today's date to maintain accessibility
 
 ## 2.24.0

@@ -1,7 +1,15 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
-## 2.24.4 - Jun 13, 2024
+## 2.24.6 - August 28, 2024
+
+## Updated
+
+ - Updated documentation in Styling Hooks table
+
+## 2.24.5 - June 27, 2024
+
+## 2.24.4 - June 13, 2024
 
 ## Updated
 

@@ -4,17 +4,24 @@
 
 <!-- ## [Unreleased] -->
 ## 2.24.5
-### Added 
+
+### Added
+
 - Added shadow for today's date to maintain accessibility
 
 ## 2.24.0
+
 ### Fixed
+
 - Removed `aria-labelledby` from `<table />` element on the blueprint
 - Update `aria-live` from "assertive" to "polite" and `aria-atomic` from "true" to "false" for the month title `<h2>` in `DatepickerHeader` on the blueprint
 
 ## 2.22.0
-### Added 
-- Added datepicker example with field level tooltip  
+
+### Added
+
+- Added datepicker example with field level tooltip
+
 ## 2.17.0
 
 ### Fixed

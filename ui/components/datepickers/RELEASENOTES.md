@@ -3,6 +3,13 @@
 # Datepickers Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.25.1
+
+### Added
+
+- Add outline for selected date
+- Add outline for selected range of dates
+
 ## 2.25.0
 
 ### Added

@@ -88,6 +88,7 @@
     &.slds-is-selected > .slds-day {
       background: $brand-accessible;
       color: var(--slds-g-color-neutral-base-100, #{$color-text-brand-primary});
+      box-shadow: 0 0 0 1px var(--slds-g-color-brand-base-20);
     }
 
     &.slds-is-selected:focus > .slds-day {
@@ -168,3 +169,4 @@
     }
   }
 }
+

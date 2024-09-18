@@ -194,10 +194,10 @@
   margin-left: auto;
   position: relative;
   bottom: $spacing-x-small;
-  background-color: var(--slds-g-color-neutral-base-100);
+  background-color: var(--slds-g-color-neutral-base-100, #{$palette-neutral-100});
 
   &:active {
-    background-color: var(--slds-g-color-neutral-base-95);
+    background-color: var(--slds-g-color-neutral-base-95, #{$palette-neutral-95});
     border: none;
   }
 }

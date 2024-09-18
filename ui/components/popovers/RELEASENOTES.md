@@ -2,6 +2,14 @@
 
 # Popovers Release Notes
 
+<!-- ## [Unreleased] -->
+
+## 2.26.0
+
+## Updated
+
+- Updated header error background color
+
 ## 2.24.2
 
 ## Updated

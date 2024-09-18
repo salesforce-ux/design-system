@@ -2,6 +2,10 @@
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 ## 2.26.0 - Upcoming
 
+## Updated
+
+- Updated popover header error background color.
+
 ## 2.25.0 - August 15, 2024
 
 - Updated icons to `v10.10.0`

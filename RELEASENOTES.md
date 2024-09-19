@@ -82,8 +82,8 @@
 
 ### [Modals](https://www.lightningdesignsystem.com/components/modals)
 #### Updated
-- Updated background color of the Modal's close icon along with it's active state styling
 - Updated modal component blueprint to use a white background for the close button (X) to improve visibility for low vision users.
+- Removed the `slds-button_icon-inverse` class from close button markup to improve visibility against the new white background.
 
 ### [Radio Group](https://www.lightningdesignsystem.com/components/radio-group)
 #### Added

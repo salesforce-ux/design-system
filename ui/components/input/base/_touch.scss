@@ -49,7 +49,8 @@
     height: $height-tappable;
   }
 
-  &[type='date'] {
+  &[type='date'],
+  &[type='datetime-local'] {
     white-space: nowrap;
   }
 }

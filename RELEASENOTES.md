@@ -3,9 +3,28 @@
 
 ## Release 2.26.0 - Upcoming
 
+## Updated
+- Updated popover header error background color.
+
 ## Components
 ### [Menus](https://www.lightningdesignsystem.com/components/menus)
 - Updated nubbin positions for Dropdown in RTL
+
+### [Popovers](https://www.lightningdesignsystem.com/components/popovers)
+## Updated
+- Updated header error background color
+
+## Release 2.25.1 - September 19, 2024
+
+## Components
+### [Datepickers](https://www.lightningdesignsystem.com/components/datepickers)
+#### Added
+- Add outline for selected date
+- Add outline for selected range of dates
+
+### [Input](https://www.lightningdesignsystem.com/components/input)
+#### Fixed
+- Fixed datetime-local input to prevent content cut off in iOS devices.
 
 ## Release 2.25.0 - August 15, 2024
 
@@ -65,16 +84,37 @@
 ### [Datepickers](https://www.lightningdesignsystem.com/components/datepickers)
 #### Added
 - Add inline date format `div` with content `mm/dd/yyyy` for all datepickers that are not in error state.
-- Add inline date format `div` with content `mm/dd/yyyy` for the date portion of all datetimepickers that are not in error state.
+- Add inline date format `div` with content `mm/dd/yyyy` for the date portion of all datetime-pickers that are not in error state.
 - Add in focus accessibility guideline when closing calendar.
+#### Updated
+- Updated datepicker component blueprint with the required date input format to improve accessibility and meet Web Content Accessibility Guidelines (WCAG).
+
+### [Datetime Picker](https://www.lightningdesignsystem.com/components/datetime-picker)
+#### Updated
+- Updated datetime-picker component blueprint with the required date input format to improve accessibility and meet Web Content Accessibility Guidelines (WCAG).
 
 ### [Modals](https://www.lightningdesignsystem.com/components/modals)
 #### Updated
-- Updated background color of the Modal's close icon along with it's active state styling
+- Updated modal component blueprint to use a white background for the close button (X) to improve visibility for low vision users.
+- Removed the `slds-button_icon-inverse` class from close button markup to improve visibility against the new white background.
 
 ### [Radio Group](https://www.lightningdesignsystem.com/components/radio-group)
 #### Added
 - Added aria attributes for required variant
+
+## Release 2.24.6 - August 28, 2024
+
+## Updated
+ - Updated documentation in Styling Hooks table
+
+## Utilities
+### [Margin Utility](https://www.lightningdesignsystem.com/utilities/margin)
+#### Updated
+- Updated documentation regarding veriable density
+
+### [Padding Utility](https://www.lightningdesignsystem.com/utilities/padding)
+#### Updated
+- Updated documentation regarding veriable density
 
 ## Release 2.24.5 - June 27, 2024
 
@@ -86,7 +126,7 @@
 #### Added
 - Added shadow for today's date to maintain accessibility
 
-## Release 2.24.4 - Jun 13, 2024
+## Release 2.24.4 - June 13, 2024
 
 ## Updated
 - Updated focus ring color for links to blue-40.
@@ -405,9 +445,9 @@
 - Added datepicker example with field level tooltip
 
 ### [Datetime Picker](https://www.lightningdesignsystem.com/components/datetime-picker)
-#### Added 
+#### Added
 - Tooltip option provided for Date/DateTime pickers.
-- Added `slds-datetimepicker_has-tooltip` class to fix the icon misalignment issue. 
+- Added `slds-datetimepicker_has-tooltip` class to fix the icon misalignment issue.
 
 ### [Expandable Section](https://www.lightningdesignsystem.com/components/expandable-section)
 #### Changed

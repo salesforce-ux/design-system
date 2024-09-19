@@ -3,6 +3,12 @@
 # Input Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.25.1
+
+### Fixed
+
+- Fixed datetime-local input to prevent content cut off in iOS devices.
+
 ## 2.23.0
 
 ### Fixed

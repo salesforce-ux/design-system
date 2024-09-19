@@ -6,6 +6,12 @@
 
 <!-- ## [VERSION] -->
 
+## 2.24.6
+
+### Updated
+
+- Updated documentation regarding veriable density
+
 ## 2.8.0
 
 ### Added

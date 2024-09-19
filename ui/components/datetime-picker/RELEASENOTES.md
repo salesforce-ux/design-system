@@ -3,17 +3,27 @@
 # Datetime Picker Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.25.0
+
+### Updated
+
+- Updated datetime-picker component blueprint with the required date input format to improve accessibility and meet Web Content Accessibility Guidelines (WCAG).
+
 ## 2.22.0
-### Added 
+
+### Added
+
 - Tooltip option provided for Date/DateTime pickers.
-- Added `slds-datetimepicker_has-tooltip` class to fix the icon misalignment issue. 
+- Added `slds-datetimepicker_has-tooltip` class to fix the icon misalignment issue.
 
 ## 2.17.0
+
 ### Fixed
 
 - Fixed missing attribute `required` on date input
 
 ## 2.16.0
+
 ### Added
 
 - Added `aria-label` to provide the full `DD MM YYYY` text of the date

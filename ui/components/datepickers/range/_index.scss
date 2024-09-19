@@ -25,11 +25,24 @@
    */
   .slds-has-multi-selection {
     // scss-lint:disable SelectorDepth
+
+    .slds-is-selected-multi > .slds-day{
+      box-shadow: none;
+    }
     // re-calculate for last child
     .slds-is-selected-multi:last-child > .slds-day:after {
       left: auto;
       right: 0;
       transform: translateX($spacing-xx-small);
+    }
+
+    :nth-child(1 of .slds-is-selected-multi) > .slds-day::before {
+      @include calendar-selection-outline;
+    }
+
+    :nth-last-child(1 of .slds-is-selected-multi) > .slds-day::after {
+      @include calendar-selection-outline;
+      transform: rotate(-180deg);
     }
   }
 
@@ -41,6 +54,10 @@
    */
   .slds-has-multi-row-selection {
     // scss-lint:disable SelectorDepth
+    .slds-is-selected-multi > .slds-day{
+      box-shadow: none;
+    }
+
     .slds-is-selected-multi:first-child > .slds-day:before,
     .slds-is-selected-multi:last-child > .slds-day:after {
       @include calendar-selection-fill;
@@ -55,6 +72,32 @@
       left: auto;
       right: 0;
       transform: translateX($spacing-xx-small);
+      z-index: -2;
+    }
+
+    &:nth-child(1 of .slds-has-multi-row-selection) {
+      :nth-child(1 of .slds-is-selected-multi) > .slds-day::before {
+        @include calendar-selection-outline;
+      }
+      .slds-is-selected-multi:first-child > .slds-day:before {
+        left: 2px;
+      }
+
+      // To handle the scenario where the date is both first & last
+      :nth-last-child(1 of .slds-is-selected-multi) > .slds-day::after {
+        width: $square-icon-utility-medium;
+      }
+    }
+
+    &:nth-last-child(1 of .slds-has-multi-row-selection) {
+      :nth-last-child(1 of .slds-is-selected-multi) > .slds-day::after {
+        @include calendar-selection-outline;
+      }
+
+      // To handle the scenario where the date is both first & last
+      :nth-child(1 of .slds-is-selected-multi) > .slds-day::before {
+        width: $square-icon-utility-medium;
+      }
     }
   }
 
@@ -79,3 +122,4 @@
     }
   }
 }
+

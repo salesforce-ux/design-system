@@ -200,6 +200,12 @@
     background-color: var(--slds-g-color-neutral-base-95, #{$palette-neutral-95});
     border: none;
   }
+
+  // Interim fix released to handle non compliant custom modal implementations. W-16663862
+  &.slds-button_icon-inverse, &.slds-button--icon-inverse, .slds-button_icon-inverse, .slds-button--icon-inverse {
+    color: var(--slds-g-color-neutral-base-50,#747474);
+    --slds-c-icon-color-foreground: var(--slds-g-color-neutral-base-50,#747474);
+  }
 }
 
 @mixin backdrop {

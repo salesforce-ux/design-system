@@ -631,16 +631,6 @@ export let states = [
 
 export let examples = [
   {
-    id: 'mobile',
-    label: 'Mobile',
-    demoStyles: demoStyles,
-    element: (
-      <FormElement labelContent="Date" inputId={dateInputId + '-mobile'}>
-        <Input id={dateInputId + '-mobile'} type="datetime-local" />
-      </FormElement>
-    )
-  },
-  {
     id: 'datepicker-in-datatable',
     label: 'Datepicker in a Data Table',
     demoStyles: demoStyles,

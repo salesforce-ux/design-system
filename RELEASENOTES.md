@@ -3,7 +3,7 @@
 
 ## Release 2.25.1 - September 19, 2024
 
-## Components
+## Component Blueprints
 ### [Datepickers](https://www.lightningdesignsystem.com/components/datepickers)
 #### Added
 - Add outline for selected date
@@ -12,6 +12,10 @@
 ### [Input](https://www.lightningdesignsystem.com/components/input)
 #### Fixed
 - Fixed datetime-local input to prevent content cut off in iOS devices.
+
+### [Modals](https://www.lightningdesignsystem.com/components/modals)
+#### Updated
+- Updated the modals blueprint to display a white background for the close button (X) to improve visibility for people with low vision. Specifically, we updated the close button (X) color from white to gray by removing the `slds-button_icon-inverse` class. To display the modal close button correctly, don’t use the `slds-button_icon-inverse` class for your close button markup.
 
 ## Release 2.25.0 - August 15, 2024
 
@@ -54,7 +58,7 @@
   - Doctype Set
     - Added shared_folder
 
-## Components
+## Component Blueprints
 ### [Buttons](https://www.lightningdesignsystem.com/components/buttons)
 #### Fixed
 - Refactored Kinetics Button Base underline to beBu more adaptive to overrides in padding, margin, and line-height
@@ -82,8 +86,7 @@
 
 ### [Modals](https://www.lightningdesignsystem.com/components/modals)
 #### Updated
-- Updated modal component blueprint to use a white background for the close button (X) to improve visibility for low vision users.
-- Removed the `slds-button_icon-inverse` class from close button markup to improve visibility against the new white background.
+- Updated background color of the Modal's close icon along with its active state styling
 
 ### [Radio Group](https://www.lightningdesignsystem.com/components/radio-group)
 #### Added
@@ -108,7 +111,7 @@
 ## Added
 - Added shadow for today's date to maintain accessibility
 
-## Components
+## Component Blueprints
 ### [Datepickers](https://www.lightningdesignsystem.com/components/datepickers)
 #### Added
 - Added shadow for today's date to maintain accessibility
@@ -118,7 +121,7 @@
 ## Updated
 - Updated focus ring color for links to blue-40.
 
-## Components
+## Component Blueprints
 ### [Tabs](https://www.lightningdesignsystem.com/components/tabs)
 ## Fixed
 - Added new focus style for tabs when `.slds-has-focus` class is getting added.
@@ -130,7 +133,7 @@
 
 ## Release 2.24.2 - May 2, 2024
 
-## Components
+## Component Blueprints
 ### [Accordion](https://www.lightningdesignsystem.com/components/accordion)
 ## Removed
 - Remove max-width prop from accordion on focus/hover
@@ -192,7 +195,7 @@
     - Added sync_in_progress
     - Added top_group_alignment
 
-## Components
+## Component Blueprints
 ### [Combobox](https://www.lightningdesignsystem.com/components/combobox)
 #### Changed
 - Updated Combobox blueprint to use `role="option"` on div wrapping loading spinner
@@ -207,7 +210,7 @@
 - Update `aria-live` from "assertive" to "polite" and `aria-atomic` from "true" to "false" for the month title `<h2>` in `DatepickerHeader` on the blueprint
 
 ### [Modals](https://www.lightningdesignsystem.com/components/modals)
-## Changed
+#### Changed
 - Added tabindex to the heading element to make it programmatically focussable.
 #### Fixed
 - Fixed modal by removing code explicitly scoped to patching internal, private implementations. Appropriate styles will be displayed again.
@@ -227,14 +230,14 @@
 
 - Moved global styling hooks from slds-wcag class selector to root selector scope.
 
-## Components
+## Component Blueprints
 ### [Modals](https://www.lightningdesignsystem.com/components/modals)
 #### Changed
 - Fixed token notation in header padding-right property
 
 ## Release 2.23.1 - January 16, 2024
 
-## Components
+## Component Blueprints
 ### [Pills](https://www.lightningdesignsystem.com/components/pills)
 ## Changed
 - Added Button element for `Pill` remove feature. Now remove button is focusable and can be clickable.
@@ -278,7 +281,7 @@
 - Updated RTL stylings for `setup-assistant` component
 - Added new shadow styling hook to implement new focus style.
 
-## Components
+## Component Blueprints
 ### [Checkbox Toggle](https://www.lightningdesignsystem.com/components/checkbox-toggle)
 #### Changed
 - Updated Checkbox Toggle Focus Style.
@@ -305,14 +308,14 @@
 
 ## Release 2.22.2 - November 9, 2023
 
-## Components
+## Component Blueprints
 ### [Setup Assistant](https://www.lightningdesignsystem.com/components/setup-assistant)
 #### Changed
 - Moved unscoped .slds-media__figure to setup-assistant rtl styles
 
 ## Release 2.22.1 - November 2, 2023
 
-## Components
+## Component Blueprints
 ### [App Launcher](https://www.lightningdesignsystem.com/components/app-launcher)
   ### Fixed
   - App Launcher button is visibility when Windows high-contrast mode is enabled.
@@ -399,7 +402,7 @@
   - Updated `delegated_account`
   - Updated `entitlement_policy`
 
-## Components
+## Component Blueprints
 ### [Activity Timeline](https://www.lightningdesignsystem.com/components/activity-timeline)
 #### Changed
 - Replaced aria-hidden with hidden attribute for components that show/hide content
@@ -468,7 +471,7 @@
 
 ## Release 2.21.5 - July 19, 2023
 
-## Components
+## Component Blueprints
 ### [Checkbox Toggle](https://www.lightningdesignsystem.com/components/checkbox-toggle)
 #### Changed
 - Updated disabled checkbox toggle button color.
@@ -542,7 +545,7 @@
     - Added `toggle_on`
     - Added `mulesoft`
 
-## Components
+## Component Blueprints
 ### [Buttons](https://www.lightningdesignsystem.com/components/buttons)
 #### Added
 - Configured `--slds-c-button-text-color-hover` Styling hook in Button with dual-stateful to accurately apply the text color on-hover
@@ -780,7 +783,7 @@ Added `aria-label` to meet accessibility requirements specifically for screen re
   - `PALETTE_PURPLE_80`: `#D7BFF2`
   - `PALETTE_VIOLET_20`: `#481A54`
 
-## Components
+## Component Blueprints
 ### [Dynamic Icons](https://www.lightningdesignsystem.com/components/dynamic-icons)
 #### Changed
 - Updated Global Action Help icon's `role` attribute from `presentation` to `img` for better accessibility compliance
@@ -823,7 +826,7 @@ Added `aria-label` to meet accessibility requirements specifically for screen re
     - Added `tableau`
     - Added `video_off`
 
-## Components
+## Component Blueprints
 ### [Accordion](https://www.lightningdesignsystem.com/components/accordion)
 #### Fixed
 - Fix for sass undefined operation compile error.
@@ -871,7 +874,7 @@ Added `aria-label` to meet accessibility requirements specifically for screen re
 
 - Updated design token `COLOR_BACKGROUND_DESTRUCTIVE_HOVER` so that it is a different color from `COLOR_BACKGROUND_DESTRUCTIVE`
 
-## Components
+## Component Blueprints
 ### [Checkbox](https://www.lightningdesignsystem.com/components/checkbox)
 #### Fixed
 - Reverted layout changes originally introduced in 2.17.0
@@ -886,7 +889,7 @@ Added `aria-label` to meet accessibility requirements specifically for screen re
 
 ## Release 2.17.4 - February 3, 2022
 
-## Components
+## Component Blueprints
 ### [Checkbox](https://www.lightningdesignsystem.com/components/checkbox)
 #### Fixed
 - Checkbox inputs will no longer collapse horizontally when a label with a large amount of text is used.
@@ -898,14 +901,14 @@ Added `aria-label` to meet accessibility requirements specifically for screen re
 
 ## Release 2.17.3 - January 27, 2022
 
-## Components
+## Component Blueprints
 ### [Combobox](https://www.lightningdesignsystem.com/components/combobox)
 ## Fixed
 - Fixed spacing/alignment issue in `.slds-input_faux > span` for select-only combobox without a placeholder.
 
 ## Release 2.17.2 - January 20, 2022
 
-## Components
+## Component Blueprints
 ### [Buttons](https://www.lightningdesignsystem.com/components/buttons)
 #### Added
 - Added `--slds-c-icon-color-foreground` Styling Hook to Button with Icon variant to accurately apply icon color updates
@@ -913,7 +916,7 @@ Added `aria-label` to meet accessibility requirements specifically for screen re
 
 ## Release 2.17.1 - January 6, 2022
 
-## Components
+## Component Blueprints
 ### [Cards](https://www.lightningdesignsystem.com/components/cards)
 #### Changed
 - Fixed annotation for Einstein themed cards (`.slds-einstein-header__figure`)
@@ -925,7 +928,7 @@ Added `aria-label` to meet accessibility requirements specifically for screen re
 - Updated Styling Hooks table on component pages to display `slds`-namespaced Hooks
 - Updated icons to v10.2.2
 
-## Components
+## Component Blueprints
 ### [Accordion](https://www.lightningdesignsystem.com/components/accordion)
 #### Added
 - Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks
@@ -1081,7 +1084,7 @@ Added `aria-label` to meet accessibility requirements specifically for screen re
 
 ## Release 2.16.2 - September 22, 2021
 
-## Components
+## Component Blueprints
 ### [Combobox](https://www.lightningdesignsystem.com/components/combobox)
 ## Removed
 - Removed `display: flex` property from `.slds-combobox__form-element` which was added recently for ARIA 1.2 guidance.
@@ -1109,7 +1112,7 @@ Added `aria-label` to meet accessibility requirements specifically for screen re
 - Added new standard color palette for neutral colors (black/white/grays)
 - Updated @salesforce-ux/icons to 10.1.1
 
-## Components
+## Component Blueprints
 ### [Accordion](https://www.lightningdesignsystem.com/components/accordion)
 #### Added
 - Added link to accessibility keyboard interaction guidelines.
@@ -1198,28 +1201,28 @@ Added `aria-label` to meet accessibility requirements specifically for screen re
 
 - Updated selected text highlight color token `COLOR_BACKGROUND_SELECTION` for better color contrast
 
-## Components
+## Component Blueprints
 ### [Vertical Navigation](https://www.lightningdesignsystem.com/components/vertical-navigation)
 #### Changed
 - Replaced checked radio group navigation item background token with `BRAND_BACKGROUND_PRIMARY` branding token.
 
 ## Release 2.15.7 - May 14, 2021
 
-## Components
+## Component Blueprints
 ### [Panels](https://www.lightningdesignsystem.com/components/panels)
 #### Added
 - Added `aria-pressed` attribute to Panel toggle button
 
 ## Release 2.15.6 - May 7, 2021
 
-## Components
+## Component Blueprints
 ### [Toast](https://www.lightningdesignsystem.com/components/toast)
 #### Fixed
 - Corrected accessibility information regarding the usage of the `role` attribute.
 
 ## Release 2.15.5 - April 29, 2021
 
-## Components
+## Component Blueprints
 ### [Buttons](https://www.lightningdesignsystem.com/components/buttons)
 #### Added
 - Added `aria-pressed` attribute to stateful Button variants
@@ -1230,14 +1233,14 @@ Added `aria-label` to meet accessibility requirements specifically for screen re
 
 ## Release 2.15.2 - April 13, 2021
 
-## Components
+## Component Blueprints
 ### [Data Tables](https://www.lightningdesignsystem.com/components/data-tables)
 #### Added
 - Added `aria-label`, and alternatively, `aria-labelledby` to allow adding additional table context for screen readers
 
 ## Release 2.15.1 - April 12, 2021
 
-## Components
+## Component Blueprints
 ### [Cards](https://www.lightningdesignsystem.com/components/cards)
 #### Added
 - Added annotations for Einstein themed cards
@@ -1259,7 +1262,7 @@ Added `aria-label` to meet accessibility requirements specifically for screen re
 - Removed Salesforce Sans as the default typeface and replaced it with OS-specific defaults.
 - Updated many of our design tokens and other colors to utilize the new Salesforce Color System. For more information, [read our article on Medium about this system](https://medium.com/salesforce-ux/the-salesforce-color-system-c7c6b5b9c577).
 
-## Components
+## Component Blueprints
 ### [Breadcrumbs](https://www.lightningdesignsystem.com/components/breadcrumbs)
 - Added Kinetic styles and demo functionality for Breadcrumbs
 
@@ -1367,7 +1370,7 @@ Added `aria-label` to meet accessibility requirements specifically for screen re
 
 ## Release 2.14.1 - January 8, 2021
 
-## Components
+## Component Blueprints
 ### [Datepickers](https://www.lightningdesignsystem.com/components/datepickers)
 #### Fixed
 - Fixed typo in CSS Class Overview table for .slds-datepicker__filter_month
@@ -1377,7 +1380,7 @@ Added `aria-label` to meet accessibility requirements specifically for screen re
 - Corrected the syntax for various stylesheet annotations so that they will properly appear in the Overview of CSS Classes section for their respective blueprint.
 - Updated to Icons v9.39.0 and added new icon design token colors
 
-## Components
+## Component Blueprints
 ### [Accordion](https://www.lightningdesignsystem.com/components/accordion)
 #### Added
 - Added Styling Hook for the background color of Accordion headings.
@@ -1489,14 +1492,14 @@ Refactored the component markup to function with or without theme utility classe
 
 ## Release 2.13.7 - October 21, 2020
 
-## Components
+## Component Blueprints
 ### [Form Element](https://www.lightningdesignsystem.com/components/form-element)
 #### Changed
 - Revert compound form to its existing behavior of not wrapping to prevent unwanted side-effects in existing layouts.
 
 ## Release 2.13.6 - October 14, 2020
 
-## Components
+## Component Blueprints
 ### [Trees](https://www.lightningdesignsystem.com/components/trees)
 #### Fixed
 - Fixed the issue with metatext not appearing disabled if the tree item was disabled.
@@ -1507,7 +1510,7 @@ Refactored the component markup to function with or without theme utility classe
 
 ## Release 2.13.3 - September 24, 2020
 
-## Components
+## Component Blueprints
 ### [Alert](https://www.lightningdesignsystem.com/components/alert)
 #### Changed
 - Treat Styling Hooks targeting text color as an element, previously referred to as a property. e.g. `--sds-c-alert-color-text` => `--sds-c-alert-text-color`.
@@ -1554,7 +1557,7 @@ Refactored the component markup to function with or without theme utility classe
 - Updated @salesforce-ux/icons to 9.38.0
 - Added proper font-size change to mobile demos on the site
 
-## Components
+## Component Blueprints
 ### [Buttons](https://www.lightningdesignsystem.com/components/buttons)
 #### Fixed
 - Added `background` shorthand and set to `initial` to recreate existing behavior that relied on the shorthand to apply initial values to unspecified values.
@@ -1641,7 +1644,7 @@ Refactored the component markup to function with or without theme utility classe
 
 - Added opacity override for placeholder text in inputs for Firefox browser
 
-## Components
+## Component Blueprints
 ### [Accordion](https://www.lightningdesignsystem.com/components/accordion)
 #### Added
 - Enabled styling hooks for accordion. See accordion's styling hooks overview table for a full listing of the currently available hooks.
@@ -1777,7 +1780,7 @@ Refactored the component markup to function with or without theme utility classe
 - Fixed broken links in earlier release notes
 - Updated Icons to 9.37.1
 
-## Components
+## Component Blueprints
 ### [Global Header](https://www.lightningdesignsystem.com/components/global-header)
 #### Changed
 - Added assistive text for the logo.
@@ -1788,7 +1791,7 @@ Refactored the component markup to function with or without theme utility classe
 
 ## Release 2.12.2 - June 11, 2020
 
-## Components
+## Component Blueprints
 ### [Combobox](https://www.lightningdesignsystem.com/components/combobox)
 #### Changed
 - Removed `<span class="slds-assistive-text">Current Selection:</span>` from Listbox options
@@ -1804,7 +1807,7 @@ Refactored the component markup to function with or without theme utility classe
 
 - Updated Icons to 9.36.1
 
-## Components
+## Component Blueprints
 ### [Data Tables](https://www.lightningdesignsystem.com/components/data-tables)
 #### Changed
 - Updated styles for resize handle if final column is resizable.
@@ -1813,7 +1816,7 @@ Refactored the component markup to function with or without theme utility classe
 
 - Updated Icons to 9.35.0
 
-## Components
+## Component Blueprints
 ### [Buttons](https://www.lightningdesignsystem.com/components/buttons)
 #### Changed
 - Set the inverse button text color to 50% opacity when the button is disabled.
@@ -1854,7 +1857,7 @@ Refactored the component markup to function with or without theme utility classe
 
 ## Release 2.11.8 - April 15, 2020
 
-## Components
+## Component Blueprints
 ### [Data Tables](https://www.lightningdesignsystem.com/components/data-tables)
 #### Changed
 - Adjusted positioning for `slds-th__action-button` for better vertical alignment and made additional
@@ -1864,7 +1867,7 @@ Refactored the component markup to function with or without theme utility classe
 
 - Moved font-size declaration on touch devices to the touch CSS file
 
-## Components
+## Component Blueprints
 ### [Accordion](https://www.lightningdesignsystem.com/components/accordion)
 #### Changed
 - Adapted line height on accordion buttons to function better with multi-line instances.
@@ -1937,7 +1940,7 @@ Refactored the component markup to function with or without theme utility classe
 
 ## Release 2.11.6 - March 11, 2020
 
-## Components
+## Component Blueprints
 ### [Button Icons](https://www.lightningdesignsystem.com/components/button-icons)
 #### Fixed
 - Sizing classes are now respected in mobile/touch context
@@ -1958,7 +1961,7 @@ Refactored the component markup to function with or without theme utility classe
 
 ## Release 2.11.5 - March 5, 2020
 
-## Components
+## Component Blueprints
 ### [Accordion](https://www.lightningdesignsystem.com/components/accordion)
 #### Changed
 - Replaced `slds-truncate` with specific selector `slds-accordion__summary-content` in Accordion title so content will only truncate for larger screens.
@@ -1984,7 +1987,7 @@ Refactored the component markup to function with or without theme utility classe
 
 ## Release 2.11.4 - February 12, 2020
 
-## Components
+## Component Blueprints
 ### [Spinners](https://www.lightningdesignsystem.com/components/spinners)
 - Moved the `will-change: transform` rule from the dots (pseudo-elements) to their parents (`.slds-spinner,
 .slds-spinner__dot-…`) to fix visual cropping of dots
@@ -2094,7 +2097,7 @@ Refactored the component markup to function with or without theme utility classe
   - `PALETTE_GRAY_12`: `#2B2826`
   - `PALETTE_GRAY_13`: `#080707`
 
-## Components
+## Component Blueprints
 ### [Badges](https://www.lightningdesignsystem.com/components/badges)
 #### Changed
 - Added `display: inline-flex` and `align-items: center` to badge to center content vertically
@@ -2173,7 +2176,7 @@ Refactored the component markup to function with or without theme utility classe
 
 ## Release 2.10.2 - October 10, 2019
 
-## Components
+## Component Blueprints
 ### [Input](https://www.lightningdesignsystem.com/components/input)
 #### Fixed
 - Resolved issue where Webkit-based browsers lost their platform-native styling
@@ -2194,7 +2197,7 @@ Refactored the component markup to function with or without theme utility classe
 ### Changed
 - Global tokens have been removed from this repository and are installed as a dependency from https://www.npmjs.com/package/@salesforce-ux/design-system-primitive-tokens
 
-## Components
+## Component Blueprints
 ### [Accordion](https://www.lightningdesignsystem.com/components/accordion)
 #### Added
 - Added right-to-left specific selector to `slds-accordion__summary-action-icon` to allow the icon to rotate in the proper direction in right-to-left languages.
@@ -2421,14 +2424,14 @@ Refactored the component markup to function with or without theme utility classe
 
 ## Release 2.9.5 - August 2, 2019
 
-## Components
+## Component Blueprints
 ### [Rich Text Editor](https://www.lightningdesignsystem.com/components/rich-text-editor)
 #### Fixed
 - Added text treatments for `<ins>` and `<del>`
 
 ## Release 2.9.4 - July 3, 2019
 
-## Components
+## Component Blueprints
 ### [Color Picker](https://www.lightningdesignsystem.com/components/color-picker)
 #### Changed
 - Moved the FormElement from inside the summary-input div to wrapped around the entire summary component
@@ -2477,7 +2480,7 @@ Refactored the component markup to function with or without theme utility classe
   - JAVASCRIPT_BUTTONS
   - SALES_CADENCE_TARGET
 
-## Components
+## Component Blueprints
 ### [Accordion](https://www.lightningdesignsystem.com/components/accordion)
 - Replaced `aria-hidden` with the HTML5 `hidden` attribute on closed `slds-accordion__section`s to hide content from both screen readers and browsers.
 
@@ -2521,7 +2524,7 @@ Refactored the component markup to function with or without theme utility classe
 
 ## Release 2.8.4 - February 21, 2019
 
-## Components
+## Component Blueprints
 ### [Breadcrumbs](https://www.lightningdesignsystem.com/components/breadcrumbs)
 #### Fixed
 - Adjusted typographic styling for breadcrumb items.
@@ -2532,7 +2535,7 @@ Refactored the component markup to function with or without theme utility classe
 
 ## Release 2.8.3 - February 4, 2019
 
-## Components
+## Component Blueprints
 ### [Global Navigation](https://www.lightningdesignsystem.com/components/global-navigation)
 #### Fixed
 - Fixed issue where a navigation item would lose its background color when active and/or hovered.
@@ -2543,14 +2546,14 @@ Refactored the component markup to function with or without theme utility classe
 
 ## Release 2.8.2 - February 1, 2019
 
-## Components
+## Component Blueprints
 ### [Files](https://www.lightningdesignsystem.com/components/files)
 #### Fixed
 - Adjusted `z-index` for hover and focus state to not overlap modal overlays and the global header.
 
 ## Release 2.8.1 - January 23, 2019
 
-## Components
+## Component Blueprints
 ### [Cards](https://www.lightningdesignsystem.com/components/cards)
 #### Fixed
 - Fixed collapsing issue when `slds-assistive-text` would be applied to `slds-card__header`
@@ -2569,7 +2572,7 @@ Refactored the component markup to function with or without theme utility classe
 
 ## Release 2.8.0 - January 4, 2019
 
-## Components
+## Component Blueprints
 ### [Accordion](https://www.lightningdesignsystem.com/components/accordion)
 #### Changed
 - Updated Accordion title to respond to user's densification settings.
@@ -2791,7 +2794,7 @@ Refactored the component markup to function with or without theme utility classe
 
 ## Release 2.7.5 - November 19, 2018
 
-## Components
+## Component Blueprints
 ### [Form Element](https://www.lightningdesignsystem.com/components/form-element)
 #### Changed
 - Form labels will now hyphenate when a word with no spaces exceeds the available space of the label container
@@ -2802,7 +2805,7 @@ Refactored the component markup to function with or without theme utility classe
 
 ## Release 2.7.4 - October 11, 2018
 
-## Components
+## Component Blueprints
 ### [Form Element](https://www.lightningdesignsystem.com/components/form-element)
 #### Added
 - Added `slds-form-element_address` for address specific compound form elements
@@ -2811,7 +2814,7 @@ Refactored the component markup to function with or without theme utility classe
 
 ## Release 2.7.3 - October 4, 2018
 
-## Components
+## Component Blueprints
 ### [Form Element](https://www.lightningdesignsystem.com/components/form-element)
 #### Fixed
 - Resolved issue where Rich Text content would overflow the container of a form element in IE11
@@ -2825,7 +2828,7 @@ Refactored the component markup to function with or without theme utility classe
 
 ## Release 2.7.1 - September 9, 2018
 
-## Components
+## Component Blueprints
 ### [Global Navigation](https://www.lightningdesignsystem.com/components/global-navigation)
 #### Fixed
 - Remove `font-weight: 300` from app title to increase legibility
@@ -2844,7 +2847,7 @@ Refactored the component markup to function with or without theme utility classe
 - Moved [Tree Grid](https://lightningdesignsystem.com/components/tree-grid/) to its own item, instead of being included in Trees
 - Added [variable spacing tokens](https://lightningdesignsystem.com/design-tokens/#category-spacing) to support new Densification settings
 
-## Components
+## Component Blueprints
 ### [Accordion](https://www.lightningdesignsystem.com/components/accordion)
 #### Removed
 - Removed hard coded text sizing utility class, `slds-text-heading_small`, from the `slds-accordion__summary-heading` element.

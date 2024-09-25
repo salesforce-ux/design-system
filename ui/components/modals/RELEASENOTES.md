@@ -3,16 +3,21 @@
 # Modals Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.25.1
+
+### Updated
+
+- Updated the modals blueprint to display a white background for the close button (X) to improve visibility for people with low vision. Specifically, we updated the close button (X) color from white to gray by removing the `slds-button_icon-inverse` class. To display the modal close button correctly, don’t use the `slds-button_icon-inverse` class for your close button markup.
+
 ## 2.25.0
 
 ### Updated
 
-- Updated modal component blueprint to use a white background for the close button (X) to improve visibility for low vision users.
-- Removed the `slds-button_icon-inverse` class from close button markup to improve visibility against the new white background.
+- Updated background color of the Modal's close icon along with its active state styling
 
 ## 2.24.0
 
-## Changed
+### Changed
 
 - Added tabindex to the heading element to make it programmatically focussable.
 

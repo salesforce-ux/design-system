@@ -11,7 +11,7 @@ const { parse: parseTokenNotes } = require('./tokens.js');
 
 const blueprintSpaces = [
   {
-    type: 'Components',
+    type: 'Component Blueprints',
     directory: 'ui/components',
     urlPath: '/components/'
   },

@@ -19,7 +19,7 @@
 
 ### Changed
 
-- Added tabindex to the heading element to make it programmatically focussable.
+- Added tabindex to the heading element to make it programmatically focusable.
 
 ### Fixed
 

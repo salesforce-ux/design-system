@@ -1,12 +1,7 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
-## 2.25.2 - Upcoming
-
-## Fixed
-
-- Fixed the incorrect text color for brand button variant when used in warning popover footer
-
+## 2.25.2 - September 26, 2024
 
 ## 2.25.1 - September 19, 2024
 

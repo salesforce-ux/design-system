@@ -206,6 +206,11 @@
     color: var(--slds-g-color-neutral-base-50,#747474);
     --slds-c-icon-color-foreground: var(--slds-g-color-neutral-base-50,#747474);
   }
+
+  // Interim fix part 2 released to handle non compliant custom aura modal implementations. W-16940743
+  &.slds-icon-utility-close, .slds-icon-utility-close {
+    --slds-c-icon-color-foreground: var(--slds-g-color-neutral-base-50,#747474);
+  }
 }
 
 @mixin backdrop {

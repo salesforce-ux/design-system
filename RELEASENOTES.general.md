@@ -1,6 +1,8 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
+## 2.25.3 - October 10, 2024
+
 ## 2.25.2 - September 26, 2024
 
 ## 2.25.1 - September 19, 2024

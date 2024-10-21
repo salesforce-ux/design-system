@@ -15,10 +15,10 @@
   position: relative;
   display: inline-flex;
   align-items: center;
-  padding-top: var(--slds-c-button-spacing-block-start, var(--sds-c-button-spacing-block-start, 0));
-  padding-right: var(--slds-c-button-spacing-inline-end, var(--sds-c-button-spacing-inline-end, 0));
-  padding-bottom: var(--slds-c-button-spacing-block-end, var(--sds-c-button-spacing-block-end, 0));
-  padding-left: var(--slds-c-button-spacing-inline-start, var(--sds-c-button-spacing-inline-start, 0));
+  padding-top: var(--slds-c-button-spacing-blockstart, var(--slds-c-button-spacing-block-start, var(--sds-c-button-spacing-block-start, 0)));
+  padding-right: var(--slds-c-button-spacing-inlineend, var(--slds-c-button-spacing-inline-end, var(--sds-c-button-spacing-inline-end, 0)));
+  padding-bottom: var(--slds-c-button-spacing-blockend, var(--slds-c-button-spacing-block-end, var(--sds-c-button-spacing-block-end, 0)));
+  padding-left: var(--slds-c-button-spacing-inlinestart, var(--slds-c-button-spacing-inline-start, var(--sds-c-button-spacing-inline-start, 0)));
   background: none; // Reset underlying styles like VF
   background-color: var(--slds-c-button-color-background, var(--sds-c-button-color-background, transparent));
   background-clip: border-box;

@@ -13,10 +13,10 @@
 */
 .slds-card {
   position: relative;
-  padding-top: var(--slds-c-card-spacing-block-start, var(--sds-c-card-spacing-block-start, var(--sds-c-card-spacing-block, 0)));
-  padding-right: var(--slds-c-card-spacing-inline-end, var(--sds-c-card-spacing-inline-end, var(--sds-c-card-spacing-inline, 0)));
-  padding-bottom: var(--slds-c-card-spacing-block-end, var(--sds-c-card-spacing-block-end, var(--sds-c-card-spacing-block, 0)));
-  padding-left: var(--slds-c-card-spacing-inline-start, var(--sds-c-card-spacing-inline-start, var(--sds-c-card-spacing-inline, 0)));
+  padding-top: var(--slds-c-card-spacing-blockstart, var(--slds-c-card-spacing-block-start, var(--sds-c-card-spacing-block-start, var(--sds-c-card-spacing-block, 0))));
+  padding-right: var(--slds-c-card-spacing-inlineend, var(--slds-c-card-spacing-inline-end, var(--sds-c-card-spacing-inline-end, var(--sds-c-card-spacing-inline, 0))));
+  padding-bottom: var(--slds-c-card-spacing-blockend, var(--slds-c-card-spacing-block-end, var(--sds-c-card-spacing-block-end, var(--sds-c-card-spacing-block, 0))));
+  padding-left: var(--slds-c-card-spacing-inlinestart, var(--slds-c-card-spacing-inline-start, var(--sds-c-card-spacing-inline-start, var(--sds-c-card-spacing-inline, 0))));
   background: var(--slds-c-card-color-background, var(--sds-c-card-color-background,
     var(--slds-g-color-neutral-base-100, #{$card-color-background})));
   border-width: var(--slds-c-card-sizing-border, var(--sds-c-card-sizing-border, $border-width-thin));
@@ -41,25 +41,29 @@
  */
 .slds-card__header {
   padding-top:
+    var(--slds-c-card-header-spacing-blockstart,
     var(--slds-c-card-header-spacing-block-start,
     var(--sds-c-card-header-spacing-block-start,
     var(--slds-c-card-header-spacing-block,
-    var(--sds-c-card-header-spacing-block, $var-spacing-vertical-small))));
+    var(--sds-c-card-header-spacing-block, $var-spacing-vertical-small)))));
   padding-right:
+    var(--slds-c-card-header-spacing-inlineend,
     var(--slds-c-card-header-spacing-inline-end,
     var(--sds-c-card-header-spacing-inline-end,
     var(--slds-c-card-header-spacing-inline,
-    var(--sds-c-card-header-spacing-inline, $var-spacing-horizontal-medium))));
+    var(--sds-c-card-header-spacing-inline, $var-spacing-horizontal-medium)))));
   padding-bottom:
+    var(--slds-c-card-header-spacing-blockend,
     var(--slds-c-card-header-spacing-block-end,
     var(--sds-c-card-header-spacing-block-end,
     var(--slds-c-card-header-spacing-block,
-    var(--sds-c-card-header-spacing-block, 0))));
+    var(--sds-c-card-header-spacing-block, 0)))));
   padding-left:
+    var(--slds-c-card-header-spacing-inlinestart,
     var(--slds-c-card-header-spacing-inline-start,
     var(--sds-c-card-header-spacing-inline-start,
     var(--slds-c-card-header-spacing-inline,
-    var(--sds-c-card-header-spacing-inline, $var-spacing-horizontal-medium))));
+    var(--sds-c-card-header-spacing-inline, $var-spacing-horizontal-medium)))));
   margin: 0 0 var(--slds-c-card-header-spacing-block-end, var(--sds-c-card-header-spacing-block-end, $var-spacing-vertical-small));
 }
 
@@ -92,25 +96,29 @@
  */
 .slds-card__body {
   margin-top:
+    var(--slds-c-card-body-spacing-blockstart,
     var(--slds-c-card-body-spacing-block-start,
     var(--sds-c-card-body-spacing-block-start,
     var(--slds-c-card-body-spacing-block,
-    var(--sds-c-card-body-spacing-block, $var-spacing-vertical-small))));
+    var(--sds-c-card-body-spacing-block, $var-spacing-vertical-small)))));
   margin-bottom:
+    var(--slds-c-card-body-spacing-blockend,
     var(--slds-c-card-body-spacing-block-end,
     var(--sds-c-card-body-spacing-block-end,
     var(--slds-c-card-body-spacing-block,
-    var(--sds-c-card-body-spacing-block, $var-spacing-vertical-small))));
+    var(--sds-c-card-body-spacing-block, $var-spacing-vertical-small)))));
   padding-right:
+    var(--slds-c-card-body-spacing-inlineend,
     var(--slds-c-card-body-spacing-inline-end,
     var(--sds-c-card-body-spacing-inline-end,
     var(--slds-c-card-body-spacing-inline,
-    var(--sds-c-card-body-spacing-inline))));
+    var(--sds-c-card-body-spacing-inline)))));
   padding-left:
+    var(--slds-c-card-body-spacing-inlinestart,
     var(--slds-c-card-body-spacing-inline-start,
     var(--sds-c-card-body-spacing-inline-start,
     var(--slds-c-card-body-spacing-inline,
-    var(--sds-c-card-body-spacing-inline))));
+    var(--sds-c-card-body-spacing-inline)))));
 }
 
 /**
@@ -121,10 +129,10 @@
 .slds-card__body_inner,
 .slds-card__body--inner {
   /*! @css-var-fallback padding-right */
-  --slds-c-card-body-spacing-inline-end: var(--sds-c-card-body-spacing-inline-end, var(--sds-c-card-body-spacing-inline, #{$var-spacing-horizontal-medium}));
+  --slds-c-card-body-spacing-inlineend: var(--slds-c-card-body-spacing-inline-end, var(--sds-c-card-body-spacing-inline-end, var(--sds-c-card-body-spacing-inline, #{$var-spacing-horizontal-medium})));
 
   /*! @css-var-fallback padding-left */
-  --slds-c-card-body-spacing-inline-start: var(--sds-c-card-body-spacing-inline-start, var(--sds-c-card-body-spacing-inline, #{$var-spacing-horizontal-medium}));
+  --slds-c-card-body-spacing-inlinestart: var(--slds-c-card-body-spacing-inline-start, var(--sds-c-card-body-spacing-inline-start, var(--sds-c-card-body-spacing-inline, #{$var-spacing-horizontal-medium})));
   padding-top: 0;
   padding-bottom: 0;
 }
@@ -141,26 +149,30 @@
  */
 .slds-card__footer {
   padding-top:
+    var(--slds-c-card-footer-spacing-blockstart,
     var(--slds-c-card-footer-spacing-block-start,
     var(--sds-c-card-footer-spacing-block-start,
     var(--slds-c-card-footer-spacing-block,
-    var(--sds-c-card-footer-spacing-block, $var-spacing-vertical-small))));
+    var(--sds-c-card-footer-spacing-block, $var-spacing-vertical-small)))));
   padding-right:
+    var(--slds-c-card-footer-spacing-inlineend,
     var(--slds-c-card-footer-spacing-inline-end,
     var(--sds-c-card-footer-spacing-inline-end,
     var(--slds-c-card-footer-spacing-inline,
-    var(--sds-c-card-footer-spacing-inline, $var-spacing-horizontal-medium))));
+    var(--sds-c-card-footer-spacing-inline, $var-spacing-horizontal-medium)))));
   padding-bottom:
+    var(--slds-c-card-footer-spacing-blockend,
     var(--slds-c-card-footer-spacing-block-end,
     var(--sds-c-card-footer-spacing-block-end,
     var(--slds-c-card-footer-spacing-block,
-    var(--sds-c-card-footer-spacing-block, $var-spacing-vertical-small))));
+    var(--sds-c-card-footer-spacing-block, $var-spacing-vertical-small)))));
   padding-left:
+    var(--slds-c-card-footer-spacing-inlinestart,
     var(--slds-c-card-footer-spacing-inline-start,
     var(--sds-c-card-footer-spacing-inline-start,
     var(--slds-c-card-footer-spacing-inline,
-    var(--sds-c-card-footer-spacing-inline, $var-spacing-horizontal-medium))));
-  margin-top: var(--slds-c-card-footer-spacing-block-start, var(--sds-c-card-footer-spacing-block-start, $var-spacing-vertical-small));
+    var(--sds-c-card-footer-spacing-inline, $var-spacing-horizontal-medium)))));
+  margin-top: var(--slds-c-card-footer-spacing-blockstart, var(--slds-c-card-footer-spacing-block-start, var(--sds-c-card-footer-spacing-block-start, $var-spacing-vertical-small)));
   text-align: var(--slds-c-card-footer-text-align, var(--sds-c-card-footer-text-align, $card-footer-text-align));
   font-size: var(--slds-c-card-footer-font-size, var(--sds-c-card-footer-font-size, $font-size-3));
   border-top-width: var(--slds-c-card-footer-sizing-border, var(--sds-c-card-footer-sizing-border, $border-width-thin));

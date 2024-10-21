@@ -2,6 +2,10 @@
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 ## 2.26.0 - Upcoming
 
+- Updated the deprecated hooks. This process was to update the deprecated component level hooks to latest ones.
+- We have added the latest hooks at the front and kept all the previously existed ones as fallback value to support backward compatibility
+- The components updated are - accordion, alert, avatar, breadcrumbs, buttons, card, input, modals, pills, tabs, textarea, toast, tooltips.
+
 ## Updated
 
 - Updated popover header error background color.

@@ -14,12 +14,12 @@
   // stylelint-disable property-no-vendor-prefix
   -webkit-appearance: none; // // Scope to WebKit UA styling to remove unwanted inner-shadow
   // stylelint-enable property-no-vendor-prefix
-  min-height: var(--slds-c-textarea-sizing-min-height, var(--sds-c-textarea-sizing-min-height));
+  min-height: var(--slds-c-textarea-sizing-height-min, var(--slds-c-textarea-sizing-min-height, var(--sds-c-textarea-sizing-min-height)));
   width: 100%;
-  padding-top: var(--slds-c-textarea-spacing-block-start, var(--sds-c-textarea-spacing-block-start, $spacing-x-small));
-  padding-right: var(--slds-c-textarea-spacing-inline-end, var(--sds-c-textarea-spacing-inline-end, $spacing-small));
-  padding-bottom: var(--slds-c-textarea-spacing-block-end, var(--sds-c-textarea-spacing-block-end, $spacing-x-small));
-  padding-left: var(--slds-c-textarea-spacing-inline-start, var(--sds-c-textarea-spacing-inline-start, $spacing-small));
+  padding-top: var(--slds-c-textarea-spacing-blockstart, var(--slds-c-textarea-spacing-block-start, var(--sds-c-textarea-spacing-block-start, $spacing-x-small)));
+  padding-right: var(--slds-c-textarea-spacing-inlineend, var(--slds-c-textarea-spacing-inline-end, var(--sds-c-textarea-spacing-inline-end, $spacing-small)));
+  padding-bottom: var(--slds-c-textarea-spacing-blockend, var(--slds-c-textarea-spacing-block-end, var(--sds-c-textarea-spacing-block-end, $spacing-x-small)));
+  padding-left: var(--slds-c-textarea-spacing-inlinestart, var(--slds-c-textarea-spacing-inline-start, var(--sds-c-textarea-spacing-inline-start, $spacing-small)));
   background-color: var(--slds-c-textarea-color-background, var(--sds-c-textarea-color-background, var(--slds-g-color-neutral-base-100, #{$color-background-input})));
   color: var(--slds-c-textarea-text-color, var(--sds-c-textarea-text-color));
   border: $border-width-thin solid var(--slds-c-textarea-color-border,

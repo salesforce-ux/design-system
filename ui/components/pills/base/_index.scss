@@ -16,10 +16,10 @@
   justify-content: space-between;
   line-height: var(--slds-c-pill-line-height, var(--sds-c-pill-line-height, $line-height-text));
   max-width: 100%; // Required to make the container shrink when truncated
-  padding-top: var(--slds-c-pill-spacing-block-start, var(--sds-c-pill-spacing-block-start, 0));
-  padding-right: var(--slds-c-pill-spacing-inline-end, var(--sds-c-pill-spacing-inline-end, 0));
-  padding-bottom: var(--slds-c-pill-spacing-block-end, var(--sds-c-pill-spacing-block-end, 0));
-  padding-left: var(--slds-c-pill-spacing-inline-start, var(--sds-c-pill-spacing-inline-start, $spacing-xxx-small));
+  padding-top: var(--slds-c-pill-spacing-blockstart, var(--slds-c-pill-spacing-block-start, var(--sds-c-pill-spacing-block-start, 0)));
+  padding-right: var(--slds-c-pill-spacing-inlineend, var(--slds-c-pill-spacing-inline-end, var(--sds-c-pill-spacing-inline-end, 0)));
+  padding-bottom: var(--slds-c-pill-spacing-blockend, var(--slds-c-pill-spacing-block-end, var(--sds-c-pill-spacing-block-end, 0)));
+  padding-left: var(--slds-c-pill-spacing-inlinestart, var(--slds-c-pill-spacing-inline-start, var(--sds-c-pill-spacing-inline-start, $spacing-xxx-small)));
   border-width: var(--slds-c-pill-sizing-border, var(--sds-c-pill-sizing-border, $border-width-thin));
   border-style: solid;
   border-color: var(--slds-c-pill-color-border, var(--sds-c-pill-color-border, var(--slds-g-color-border-base-4, #{$color-border})));
@@ -89,10 +89,10 @@
 .slds-pill_container {
   display: flex;
   min-height: calc(#{$height-input} + 2px);
-  padding-top: var(--slds-c-pill-container-spacing-block-start, var(--sds-c-pill-container-spacing-block-start, $spacing-xxx-small));
-  padding-right: var(--slds-c-pill-container-spacing-inline-end, var(--sds-c-pill-container-spacing-inline-end, $spacing-xxx-small));
-  padding-bottom: var(--slds-c-pill-container-spacing-block-end, var(--sds-c-pill-container-spacing-block-end, $spacing-xxx-small));
-  padding-left: var(--slds-c-pill-container-spacing-inline-start, var(--sds-c-pill-container-spacing-inline-start, $spacing-xxx-small));
+  padding-top: var(--slds-c-pill-container-spacing-blockstart, var(--slds-c-pill-container-spacing-block-start, var(--sds-c-pill-container-spacing-block-start, $spacing-xxx-small)));
+  padding-right: var(--slds-c-pill-container-spacing-inlineend, var(--slds-c-pill-container-spacing-inline-end, var(--sds-c-pill-container-spacing-inline-end, $spacing-xxx-small)));
+  padding-bottom: var(--slds-c-pill-container-spacing-blockend, var(--slds-c-pill-container-spacing-block-end, var(--sds-c-pill-container-spacing-block-end, $spacing-xxx-small)));
+  padding-left: var(--slds-c-pill-container-spacing-inlinestart, var(--slds-c-pill-container-spacing-inline-start, var(--sds-c-pill-container-spacing-inline-start, $spacing-xxx-small)));
   border-width: var(--slds-c-pill-sizing-border, var(--sds-c-pill-sizing-border, $border-width-thin));
   border-style: solid;
   border-color: var(--slds-c-pill-color-border, var(--sds-c-pill-color-border, var(--slds-g-color-border-base-4, #{$color-border})));
@@ -218,10 +218,17 @@
  * @restrict .slds-pill_link a
  */
 .slds-pill__action {
-  padding-top: var(--slds-c-pill-spacing-block-start, var(--sds-c-pill-spacing-block-start, $spacing-xxx-small));
-  padding-right: calc(#{$square-icon-xx-small-boundary} + var(--slds-c-pill-spacing-inline-end, var(--sds-c-pill-spacing-inline-end, #{$spacing-xxx-small})) + 6px);
-  padding-bottom: var(--slds-c-pill-spacing-block-end, var(--sds-c-pill-spacing-block-end, $spacing-xxx-small));
-  padding-left: var(--slds-c-pill-spacing-inline-start, var(--sds-c-pill-spacing-inline-start, $spacing-xxx-small));
+  /*
+  * In postcss calc function has a limitation that it can't take more than three variables 
+  * We are creating below variables to extract more than four variables into two to solve the issue temporally
+  * We may refactor this logic if we get a better solution by upgrading the versions or additional postcss plugin
+  */
+  --_slds-postcss-fix-calc-part-1: var(--slds-c-pill-spacing-inlineend, var(--slds-c-pill-spacing-inline-end));
+  --_slds-postcss-fix-calc-part-2: var(--sds-c-pill-spacing-inline-end, #{$spacing-xxx-small});
+  padding-right: calc(#{$square-icon-xx-small-boundary} +  var(--_slds-postcss-fix-calc-part-1, var(--_slds-postcss-fix-calc-part-2)) + 6px);
+  padding-top: var(--slds-c-pill-spacing-blockstart, var(--slds-c-pill-spacing-block-start, var(--sds-c-pill-spacing-block-start, $spacing-xxx-small)));
+  padding-bottom: var(--slds-c-pill-spacing-blockend, var(--slds-c-pill-spacing-block-end, var(--sds-c-pill-spacing-block-end, $spacing-xxx-small)));
+  padding-left: var(--slds-c-pill-spacing-inlinestart, var(--slds-c-pill-spacing-inline-start, var(--sds-c-pill-spacing-inline-start, $spacing-xxx-small)));
   border-width: var(--slds-c-pill-sizing-border, var(--sds-c-pill-sizing-border, $border-width-thin));
   border-style: solid;
   border-color: var(--slds-c-pill-color-border, var(--sds-c-pill-color-border, var(--slds-g-color-border-base-4, #{$color-border})));
@@ -253,12 +260,12 @@
 
   .slds-pill__label {
     font-weight: $font-weight-bold;
-    color: var(--slds-c-pill-error-text-color, var(--sds-c-pill-error-text-color,
-      var(--slds-g-color-error-base-40, #{$color-text-error})));
+    color: var(--slds-c-pill-text-color-error, var(--slds-c-pill-error-text-color, var(--sds-c-pill-error-text-color,
+      var(--slds-g-color-error-base-40, #{$color-text-error}))));
   }
 
   &:hover {
-    --slds-c-pill-error-text-color: var(--slds-g-color-error-base-30, #{$color-text-error});
+    --slds-c-pill-text-color-error: var(--slds-g-color-error-base-30, #{$color-text-error});
 
     .slds-pill__icon_container .slds-icon-text-error {
       --slds-c-icon-color-foreground: var(--slds-g-color-error-base-30, #{$color-text-error});

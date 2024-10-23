@@ -3,6 +3,13 @@
 # Form Element Release Notes
 
 <!-- ## [Unreleased] -->
+
+## 2.26.0
+
+### Fixed
+
+- Fixed (added) back bem syntax for backwards compatibility
+
 ## 2.22.0
 ### Changed
 - Added field level custom message option for tooltip 

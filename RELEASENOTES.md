@@ -7,12 +7,20 @@
 - Updated popover header error background color.
 
 ## Components
+### [Form Element](https://www.lightningdesignsystem.com/components/form-element)
+#### Fixed
+- Fixed (added) back bem syntax for backwards compatibility
+
 ### [Menus](https://www.lightningdesignsystem.com/components/menus)
 - Updated nubbin positions for Dropdown in RTL
 
 ### [Popovers](https://www.lightningdesignsystem.com/components/popovers)
 ## Updated
 - Updated header error background color
+
+### [Vertical Navigation](https://www.lightningdesignsystem.com/components/vertical-navigation)
+#### Fixed
+- Fixed (added) back bem syntax for backwards compatibility
 
 ## Release 2.25.1 - September 19, 2024
 

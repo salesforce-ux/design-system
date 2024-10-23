@@ -186,6 +186,7 @@
    * @restrict .slds-form-element__static
    * @deprecated
    */
+  &_edit,
   &--edit {
     width: calc(100% - #{$square-icon-small-boundary}); // Leave space for edit icon
   }

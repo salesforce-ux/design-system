@@ -4,7 +4,8 @@
 @include deprecate('4.0.0', 'Do not use slds-navigation-list--vertical anymore, please use newer version slds-nav-vertical') {
 
   .slds-navigation-list-vertical,
-  .slds-navigation-list--vertical {
+  .slds-navigation-list--vertical,
+  .slds-navigation-list_vertical {
     /**
      * Active item in vertical navigation list
      *
@@ -39,6 +40,7 @@
    */
   .slds-navigation-list-vertical_shade,
   .slds-navigation-list-vertical--shade,
+  .slds-navigation-list_vertical-inverse,
   .slds-navigation-list--vertical-inverse { // <= bad legacy
 
     .slds-is-active .slds-navigation-list-vertical__action,
@@ -55,7 +57,8 @@
    * @required
    */
   .slds-navigation-list-vertical__action,
-  .slds-navigation-list--vertical__action {
+  .slds-navigation-list--vertical__action,
+  .slds-navigation-list_vertical__action {
     display: block;
     border: {
       left: $spacing-xx-small solid transparent;

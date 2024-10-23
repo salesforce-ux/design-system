@@ -66,7 +66,7 @@
   color: var(--slds-c-accordion-heading-color, var(--slds-c-accordion-heading-text-color, var(--sds-c-accordion-heading-text-color,
   var(--slds-g-color-neutral-base-10, #{$color-text-default}))));
   font-size: var(--slds-c-accordion-heading-font-size, var(--sds-c-accordion-heading-font-size, $var-font-size-5));
-  line-height: var(--slds-c-accordion-heading-line-height, var(--sds-c-accordion-heading-line-height, $line-height-heading));
+  line-height: var(--slds-c-accordion-heading-font-lineheight, var(--slds-c-accordion-heading-line-height, var(--sds-c-accordion-heading-line-height, $line-height-heading)));
 
   .slds-button:focus {
     box-shadow: inset var(--slds-g-shadow-outline-focus-1);
@@ -130,7 +130,7 @@
  * @restrict .slds-accordion section
  */
 .slds-accordion__section {
-  padding-top: var( --slds-c-accordion-section-spacing-blockstart, var(--slds-c-accordion-section-spacing-block-start, var(--sds-c-accordion-section-spacing-block-start, $spacing-small)));
+  padding-top: var(--slds-c-accordion-section-spacing-blockstart, var(--slds-c-accordion-section-spacing-block-start, var(--sds-c-accordion-section-spacing-block-start, $spacing-small)));
   padding-right: var(--slds-c-accordion-section-spacing-inlineend, var(--slds-c-accordion-section-spacing-inline-end, var(--sds-c-accordion-section-spacing-inline-end, $spacing-small)));
   padding-bottom: var(--slds-c-accordion-section-spacing-blockend, var(--slds-c-accordion-section-spacing-block-end, var(--sds-c-accordion-section-spacing-block-end, $spacing-small)));
   padding-left: var(--slds-c-accordion-section-spacing-inlinestart, var(--slds-c-accordion-section-spacing-inline-start, var(--sds-c-accordion-section-spacing-inline-start, $spacing-small)));

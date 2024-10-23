@@ -39,12 +39,12 @@
     outline: 0;
     color: var(--slds-c-textarea-text-color-focus, var(--sds-c-textarea-text-color-focus));
     background-color: var(--slds-c-textarea-color-background-focus, var(--sds-c-textarea-color-background-focus, var(--slds-g-color-neutral-base-100, #{$color-background-input-active})));
-    border-color: var(--slds-c-textarea-color-border-focus, var(--sds-c-textarea-color-border-focus, var(--slds-g-color-brand-base-60, #{$color-border-input-active})));
+    border-color: var(--slds-s-input-color-border-focus, var(--slds-c-textarea-color-border-focus, var(--sds-c-textarea-color-border-focus, var(--slds-g-color-brand-base-60, #{$color-border-input-active}))));
     box-shadow: var(--slds-c-textarea-shadow-focus, var(--sds-c-textarea-shadow-focus, $shadow-button-focus));
   }
 
   &:focus {
-    border-color: var(--slds-g-color-border-base-4, #{$color-border-input});
+    border-color: var(--slds-s-input-color-border-focus, var(--slds-g-color-border-base-4, #{$color-border-input}));
     box-shadow: var(--slds-c-textarea-shadow-focus, var(--slds-g-shadow-outline-focus-1, #{$shadow-button-focus}));
   }
 

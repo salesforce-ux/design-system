@@ -81,7 +81,7 @@
         transform: translate3d(-50%, -50%, 0);
         border-radius: $border-radius-circle;
         background: none;
-        background-color: var(--slds-c-radio-mark-color-foreground, var(--sds-c-radio-mark-color-foreground, $brand-accessible));
+        background-color: var(--slds-s-mark-color-foreground-checked, var(--slds-c-radio-mark-color-foreground, var(--sds-c-radio-mark-color-foreground, $brand-accessible)));
       }
     }
 

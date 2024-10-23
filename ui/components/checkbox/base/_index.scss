@@ -89,10 +89,10 @@
         /*! @noflip */
         left: 50%;
         transform: translate3d(-50%, -50%, 0) rotate(-45deg);
-        border-bottom: $border-width-thick solid var(--slds-c-checkbox-mark-color-foreground, var(--sds-c-checkbox-mark-color-foreground, $brand-accessible));
+        border-bottom: $border-width-thick solid var(--slds-s-mark-color-foreground-checked, var(--slds-c-checkbox-mark-color-foreground, var(--sds-c-checkbox-mark-color-foreground, $brand-accessible)));
 
         /*! @noflip */
-        border-left: $border-width-thick solid var(--slds-c-checkbox-mark-color-foreground, var(--sds-c-checkbox-mark-color-foreground, $brand-accessible));
+        border-left: $border-width-thick solid var(--slds-s-mark-color-foreground-checked, var(--slds-c-checkbox-mark-color-foreground, var(--sds-c-checkbox-mark-color-foreground, $brand-accessible)));
       }
     }
 
@@ -168,7 +168,7 @@
       height: 2px;
       border: 0;
       transform: translate3d(-50%, -50%, 0);
-      background: var(--slds-c-checkbox-mark-color-foreground, var(--sds-c-checkbox-mark-color-foreground, $brand-accessible));
+      background: var(--slds-s-mark-color-foreground-checked, var(--slds-c-checkbox-mark-color-foreground, var(--sds-c-checkbox-mark-color-foreground, $brand-accessible)));
     }
 
     &[disabled] {

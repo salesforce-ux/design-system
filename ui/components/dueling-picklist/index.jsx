@@ -106,7 +106,7 @@ const MultiSelectLabel = props => {
       className="slds-form-element__label slds-form-element__legend"
     >
       {isRequired && (
-        <abbr className="slds-required" title="required">
+        <abbr className="slds-required" title="required" aria-hidden="true">
           *{' '}
         </abbr>
       )}

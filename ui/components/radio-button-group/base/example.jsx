@@ -54,7 +54,7 @@ const ExampleRadioButtonGroup = ({
     <Fieldset className={hasError && 'slds-has-error'}>
       <Legend>
         {required && (
-          <abbr className="slds-required" title="required">
+          <abbr className="slds-required" title="required" aria-hidden="true">
             *
           </abbr>
         )}

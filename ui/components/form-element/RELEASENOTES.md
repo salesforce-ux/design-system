@@ -10,6 +10,9 @@
 
 - Fixed (added) back bem syntax for backwards compatibility
 
+#### Added
+- Added `aria-hidden` attribute to required form element label asterisk to avoid being announced by screen reader to meet accessibility WCAG label criteria
+
 ## 2.22.0
 ### Changed
 - Added field level custom message option for tooltip 

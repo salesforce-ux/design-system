@@ -144,7 +144,7 @@ jobs:
     steps:
       - name: Get Applitools Latest Batch
         id: applitools_batch
-        run: echo "batches=$(curl -H "X-Eyes-Api-Key:${{ secrets.APPLITOOLS_API_KEY }}" -X GET "https://salesforceuxeyesapi.applitools.com/api/v1/batches" | jq -rc '.batches[0]')" >> $GITHUB_OUTPUT
+        run: echo "batches=$(curl -H "X-Eyes-Api-Key:${{ secrets.APPLITOOLS_API_KEY }}" -X GET "https://sfdceyesapi.applitools.com/api/v1/batches" | jq -rc '.batches[0]')" >> $GITHUB_OUTPUT
 
       - name: Show Applitools Latest Batch
         # single quotes are needed around the JSON string here to preserve the double quotes around the props and values

@@ -7,7 +7,9 @@
 ## 2.26.0
 
 ### Fixed
+- Changed the alignment of address form element. This fixes the alignment issue in cases where help text is present.
 
+### Fixed
 - Fixed (added) back bem syntax for backwards compatibility
 
 ## 2.22.0

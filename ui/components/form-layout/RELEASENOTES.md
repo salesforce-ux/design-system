@@ -4,6 +4,11 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.26.0
+
+### Fixed
+- Changed the alignment of address form element. This fixes the alignment issue in cases where help text is present.
+
 ## 2.19
 
 ### Added

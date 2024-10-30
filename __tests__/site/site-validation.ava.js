@@ -41,7 +41,7 @@ function eyesMacro() {
   });
 
   conf.setApiKey(process.env.APPLITOOLS_API_KEY);
-  conf.setServerUrl('https://salesforceuxeyesapi.applitools.com');
+  conf.setServerUrl('https://sfdceyesapi.applitools.com');
   conf.setBranchName(
     `localRun/release-process/${process.env.LOGNAME}/${currentBranch}`
   );

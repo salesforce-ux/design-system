@@ -63,7 +63,7 @@ jobs:
           echo "VRT_MODE=$(echo ${{ github.event.label.name }} | sed 's/\(.*\):\(.*\)-\(.*\)/\2/')" >> $GITHUB_ENV
 
       - name: Applitools
-        run: 'VRT_MODE=${{ env.VRT_MODE }} npx eyes-storybook'
+        run: 'APPLITOOLS_SHOW_LOGS=true VRT_MODE=${{ env.VRT_MODE }} npx eyes-storybook'
         timeout-minutes: 60
         env:
           NODE_OPTIONS: --openssl-legacy-provider # per https://candid.technology/error-error-0308010c-digital-envelope-routines-unsupported/
@@ -96,7 +96,7 @@ jobs:
           echo "VRT_MODE=$(echo ${{ github.event.label.name }} | sed 's/\(.*\):\(.*\)-\(.*\)/\2/')" >> $GITHUB_ENV
 
       - name: Applitools
-        run: 'STORYBOOK_SLDS_VERSION=legacy npx eyes-storybook --conf applitools.legacy.config.js' # -u https://${REVIEW_APP_NAME}.herokuapp.com
+        run: 'APPLITOOLS_SHOW_LOGS=true STORYBOOK_SLDS_VERSION=legacy npx eyes-storybook --conf applitools.legacy.config.js' # -u https://${REVIEW_APP_NAME}.herokuapp.com
         timeout-minutes: 60
         env:
           NODE_OPTIONS: --openssl-legacy-provider # per https://candid.technology/error-error-0308010c-digital-envelope-routines-unsupported/
@@ -129,7 +129,7 @@ jobs:
           echo "VRT_MODE=$(echo ${{ github.event.label.name }} | sed 's/\(.*\):\(.*\)-\(.*\)/\2/')" >> $GITHUB_ENV
 
       - name: Applitools
-        run: 'STORYBOOK_SLDS_VERSION=mobile npx eyes-storybook --conf applitools.mobile.config.js' # -u https://${REVIEW_APP_NAME}.herokuapp.com
+        run: 'APPLITOOLS_SHOW_LOGS=true STORYBOOK_SLDS_VERSION=mobile npx eyes-storybook --conf applitools.mobile.config.js' # -u https://${REVIEW_APP_NAME}.herokuapp.com
         timeout-minutes: 60
         env:
           NODE_OPTIONS: --openssl-legacy-provider # per https://candid.technology/error-error-0308010c-digital-envelope-routines-unsupported/

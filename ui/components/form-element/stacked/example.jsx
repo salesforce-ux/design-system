@@ -52,6 +52,20 @@ export let examples = [
       />
     ),
   },
+  // Note: This example activates the narrow 280px container query
+  {
+    id: 'stacked-single-column-in-narrow-container',
+    label: `${stackedContext} - 1 column - In narrow container`,
+    context: `${stackedContext}`,
+    demoStyles: 'max-width: 280px;',
+    storybookStyles: true,
+    element: (
+      <RecordDetail
+        direction="stacked"
+        snapshot={Snapshot.ObjectFieldTypes}
+      />
+    )
+  },
   {
     id: 'deprecated-view-stacked',
     label: `${stackedContext} - View Mode (Deprecated)`,

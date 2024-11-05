@@ -21,6 +21,8 @@
   flex-wrap: wrap;
   margin-left: ($spacing-small * -1);
   margin-right: ($spacing-small * -1);
+  // container-name: record-row;
+  container-type: inline-size;
 }
 
 /**
@@ -34,6 +36,18 @@
   min-width: 280px; // Since container is set to wrap, we'll use flexbox to mimic container query
   padding-left: $spacing-small;
   padding-right: $spacing-small;
+}
+
+/**
+ * Container 280px and under
+ * Makes form item width fluid
+*/
+@container (max-width: 280px) {
+  .slds-form__item {
+    min-width: 0;
+    width: 100%;
+    flex: unset;
+  }
 }
 
 /**

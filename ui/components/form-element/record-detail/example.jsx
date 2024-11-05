@@ -36,6 +36,18 @@ export let examples = [
       />
     ),
   },
+  // Note: This example activates the narrow 280px container query
+  {
+    id: 'stacked-single-column-in-narrow-container',
+    label: 'Stacked form layout - 1 column - In narrow container',
+    demoStyles: 'max-width: 280px;',
+    element: (
+      <RecordDetail
+        direction="stacked"
+        snapshot={Snapshot.ObjectFieldTypes}
+      />
+    )
+  },
   // Note: This example is the same as the Stacked 'edit-stacked' example, which is why it is not included in Storybook
   {
     id: 'edit-stacked',
@@ -69,16 +81,5 @@ export let examples = [
         isSingleColumn
       />
     ),
-  },
-  // Note: This example is the same as the Horizontal 'edit-horizontal' example, which is why it is not included in Storybook
-  {
-    id: 'edit-horizontal',
-    label: 'Horizontal form layout - Edit Mode',
-    element: (
-      <RecordDetail
-        direction="horizontal"
-        snapshot={Snapshot.ObjectFieldTypesHorizontal}
-      />
-    ),
-  },
+  }
 ];

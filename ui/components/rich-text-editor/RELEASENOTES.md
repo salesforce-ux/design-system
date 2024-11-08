@@ -2,6 +2,13 @@
 
 # Rich Text Editor Release Notes
 
+## 2.26.0
+
+### Updated
+
+- Fix sub-list sequence counter issue
+- Updated spacing for all the sub-list items
+
 ## 2.17.0
 
 ### Added

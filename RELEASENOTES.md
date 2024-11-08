@@ -2106,6 +2106,10 @@ Refactored the component markup to function with or without theme utility classe
 #### Added
 - Added documentation and examples for mobile/touch context
 
+### [Scoped Notifications](https://www.lightningdesignsystem.com/components/scoped-notifications)
+#### Fixed
+- Fixed color of links (Anchor tags) to meet minimum contrast requirements against light background.
+
 ## Release 2.11.5 - March 5, 2020
 
 ## Components

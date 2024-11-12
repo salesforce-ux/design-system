@@ -56,6 +56,9 @@ class StylingHooksTable extends Component {
       <div className="site">
         <div className="slds-m-bottom_large">
           <p className="doc">
+            <strong>The component styling hooks in this table are compatible with Lightning UI, but they aren’t compatible with Enhanced Lightning UI.</strong>
+          </p>
+          <p className="doc">
             Use these CSS Custom Properties as hooks to customize this SLDS
             component with your own style. For more information,{' '}
             <a href="/platforms/lightning/styling-hooks/">

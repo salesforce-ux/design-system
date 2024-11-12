@@ -120,6 +120,7 @@ cd __release
 
 # Clone site repository, main branch HEAD
 git clone --single-branch --branch main git@github.com:salesforce-ux/design-system-site.git .
+# git clone --single-branch --branch fix/remove-sketch-entirely git@github.com:salesforce-ux/design-system-site.git .
 
 #
 # Update CanIUse database

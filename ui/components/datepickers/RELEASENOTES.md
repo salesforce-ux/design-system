@@ -3,7 +3,11 @@
 # Datepickers Release Notes
 
 <!-- ## [Unreleased] -->
-## 2.24.0- Upcoming
+## 2.24.5
+### Added 
+- Added shadow for today's date to maintain accessibility
+
+## 2.24.0
 ### Fixed
 - Removed `aria-labelledby` from `<table />` element on the blueprint
 - Update `aria-live` from "assertive" to "polite" and `aria-atomic` from "true" to "false" for the month title `<h2>` in `DatepickerHeader` on the blueprint

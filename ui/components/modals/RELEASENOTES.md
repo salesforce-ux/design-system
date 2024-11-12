@@ -3,7 +3,14 @@
 # Modals Release Notes
 
 <!-- ## [Unreleased] -->
-## 2.24.0 - Upcoming
+## 2.25.0
+
+### Updated
+
+- Updated modal component blueprint to use a white background for the close button (X) to improve visibility for low vision users.
+- Removed the `slds-button_icon-inverse` class from close button markup to improve visibility against the new white background.
+
+## 2.24.0
 
 ## Changed
 

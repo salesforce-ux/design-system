@@ -163,7 +163,7 @@
     }
 
     &:focus {
-      box-shadow: var(--_slds-g-shadow-inset-focus, #{$shadow-button-focus});
+      box-shadow: var(--slds-g-shadow-inset-focus-1, #{$shadow-button-focus});
       outline: 0;
     }
 
@@ -221,14 +221,14 @@
     }
 
     &:focus {
-      box-shadow: var(--_slds-g-shadow-inset-focus, #{$shadow-button-focus});
+      box-shadow: var(--slds-g-shadow-inset-focus-1, #{$shadow-button-focus});
     }
 
     &.slds-has-success,
     &.slds-has-warning,
     &.slds-has-error {
       &:focus {
-        box-shadow: var(--_slds-g-shadow-inset-inverse-focus);
+        box-shadow: var(--slds-g-shadow-inset-inverse-focus-1);
       }
     }
 
@@ -243,6 +243,10 @@
 
       &:hover {
         background-color: transparent;
+      }
+
+      &:focus {
+        box-shadow: none;
       }
 
       .slds-icon {

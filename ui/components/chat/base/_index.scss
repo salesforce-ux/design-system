@@ -212,7 +212,7 @@
   }
 
   &:focus-within {
-    box-shadow: var(--_slds-g-shadow-outset-focus, #{$shadow-button-focus});
+    box-shadow: var(--slds-g-shadow-outset-focus-1, #{$shadow-button-focus});
   }
 }
 

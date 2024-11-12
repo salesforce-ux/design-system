@@ -45,7 +45,7 @@ $alert-gradient-size-background: 64px 64px;
     }
 
     &:focus {
-      box-shadow: var(--slds-c-alert-shadow, var(--_slds-g-shadow-outset-focus, #{$shadow-button-focus}));
+      box-shadow: var(--slds-c-alert-shadow, var(--slds-g-shadow-outset-focus-1, #{$shadow-button-focus}));
       border-width: var(--slds-c-alert-sizing-border, $border-width-thin);
       border-style: solid;
       border-color: var(--slds-c-alert-color-border, transparent);
@@ -87,7 +87,7 @@ $alert-gradient-size-background: 64px 64px;
   }
 
   .slds-button:focus {
-    box-shadow: var(--_slds-g-shadow-inset-focus);
+    box-shadow: var(--slds-g-shadow-inset-focus-1);
   }
 }
 

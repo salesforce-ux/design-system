@@ -31,7 +31,7 @@ jobs:
           echo "$GITHUB_CONTEXT"
       - run: printenv | sort
 
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           cache: 'npm'
@@ -42,7 +42,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           cache: 'npm'
@@ -74,7 +74,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           cache: 'npm'
@@ -107,7 +107,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           cache: 'npm'
@@ -167,7 +167,7 @@ jobs:
           GITHUB_CONTEXT: ${{ toJson(github) }}
         run: echo "$GITHUB_CONTEXT"
 
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - uses: actions/setup-node@v3
         with:
@@ -186,4 +186,4 @@ jobs:
           GH_APP_CLIENT_ID: ${{ secrets.DSE_CI_APP_ID }}
           GH_APP_CLIENT_SECRET: ${{ secrets.DSE_CI_CLIENT_SECRET }}
         # single quotes are needed around the JSON string here so that is can be parsed by the node script
-        run: batchesData='${{ steps.applitools_batch.outputs.batches }}' node scripts/ci/pr-checks
+        run: batchesData='${{ steps.applitools_batch.outputs.batches }}' node scripts/ci/pr-checks.mjs

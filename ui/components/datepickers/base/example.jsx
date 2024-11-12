@@ -14,6 +14,7 @@ import Input from '../../input/';
 
 const dateInputId = 'date-input-id';
 const demoStyles = 'height: 25rem;';
+const demoStylesDropdownClosed = 'height: 6rem;';
 
 /* -----------------------------------------------------------------------------
     Private
@@ -447,7 +448,7 @@ export let DatePickerElement = props => (
   <FormElement
     formElementClassName={
       'slds-dropdown-trigger slds-dropdown-trigger_click' +
-      (props.isOpen && ' slds-is-open')
+      (props?.isOpen ? ' slds-is-open' : '')
     }
     labelContent={props.labelContent}
     inputId={props.dateInputId}
@@ -458,6 +459,7 @@ export let DatePickerElement = props => (
     hasTooltip={props.hasTooltip}
     showTooltip={props.showTooltip}
     fieldLevelMessage={props.fieldLevelMessage}
+    inlineMessage={!props.hasError && props.format}
     dropdown={
       (!props.isDisabled &&
         <DatePicker
@@ -504,12 +506,27 @@ export default [
         dateInputId={dateInputId + '-default'}
         isOpen
         todayActive
+        format="mm/dd/yyyy"
       />
     )
   }
 ];
 
 export let states = [
+  {
+    id: 'default-dropdown-closed',
+    label: 'Base - dropdown closed',
+    demoStyles: demoStylesDropdownClosed,
+    element: (
+      <DatePickerElement
+        idPrefix="defaultPicker"
+        labelContent="Date"
+        dateInputId={dateInputId + '-dropdown-closed'}
+        todayActive
+        format="mm/dd/yyyy"
+      />
+    )
+  },
   {
     id: 'datepicker-day-selected',
     label: 'Date selected',
@@ -524,6 +541,7 @@ export let states = [
         dateSelected="single"
         dateRange="week-4"
         defaultValue="06/24/2021"
+        format="mm/dd/yyyy"
       />
     )
   },
@@ -554,6 +572,7 @@ export let states = [
         isOpen
         todayActive
         isRequired
+        format="mm/dd/yyyy"
       />
     )
   },
@@ -589,6 +608,7 @@ export let states = [
         fieldLevelMessage="Format: mmm d yyyy | ex: Jan 1 2023"
         hasTooltip
         showTooltip
+        format="mm/dd/yyyy"
       />
     )
   },
@@ -603,6 +623,7 @@ export let states = [
         labelContent="Date"
         dateInputId={dateInputId + '-table'}
         isDisabled
+        format="mm/dd/yyyy"
       />
     )
   }
@@ -631,6 +652,7 @@ export let examples = [
           dateInputId={dateInputId + '-table'}
           isOpen
           todayActive
+          format="mm/dd/yyyy"
         />
       </SimpleTable>
     )
@@ -650,6 +672,7 @@ export let examples = [
           dateSelected="single"
           dateRange="week-4"
           defaultValue="06/24/2021"
+          format="mm/dd/yyyy"
         />
       </SimpleTable>
     )

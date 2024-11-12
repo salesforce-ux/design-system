@@ -1,6 +1,51 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
+## 2.25.1 - September 19, 2024
+
+## 2.25.0 - August 15, 2024
+
+- Updated icons to `v10.10.0`
+  - Standard Set:
+    - Added data_governance
+    - Added data_lake_objects
+    - Added inbox
+    - Added metric
+    - Added metric_definition
+    - Added omni_channel
+    - Added operation_plan
+    - Added operation_plan_execution
+    - Added operation_plan_request
+    - Added operation_plan_step
+    - Added operation_plan_step_execution
+    - Added policy
+    - Added prep_flow
+    - Added query_editor
+    - Added robot
+    - Added taxonomy
+    - Added visualization
+    - Added workspace
+
+  - Utility Set:
+    - Added angle
+    - Added card_details
+    - Added circle
+    - Added cms
+    - Added contactless_pay
+    - Added format
+    - Added height
+    - Added highlight
+    - Added line_chart
+    - Added output
+    - Added replay
+    - Added robot
+    - Added sort_ascending
+    - Added width
+    - Added work_queue
+
+  - Doctype Set
+    - Added shared_folder
+
 ## 2.24.6 - August 28, 2024
 
 ## Updated
@@ -9,12 +54,14 @@
 
 ## 2.24.5 - June 27, 2024
 
+## Added
+- Added shadow for today's date to maintain accessibility
+
 ## 2.24.4 - June 13, 2024
 
 ## Updated
 
 - Updated focus ring color for links to blue-40.
-
 
 ## 2.24.3 - Jun 6, 2024
 

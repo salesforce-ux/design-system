@@ -44,7 +44,7 @@
   .slds-modal__header .slds-modal__close {
     position: absolute;
     top: ($square-icon-medium-boundary * -1.25);
-    right: ((($square-icon-medium-boundary - $square-icon-medium-content) * 0.5) * -1);
+    right: 0;
     margin-left: 0;
     bottom: 0;
   }

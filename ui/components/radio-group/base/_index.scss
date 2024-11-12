@@ -92,7 +92,7 @@
     &:focus + .slds-radio__label .slds-radio_faux,
     &:focus + .slds-radio__label .slds-radio--faux {
       border-color: var(--slds-c-radio-color-border-focus, var(--slds-c-radio-color-border-focus, var(--slds-g-color-border-base-4, #{$color-border-input})));
-      box-shadow: var(--slds-c-radio-shadow-focus, var(--sds-c-radio-shadow-focus, var(--_slds-g-shadow-outset-focus, #{$shadow-button-focus})));
+      box-shadow: var(--slds-c-radio-shadow-focus, var(--sds-c-radio-shadow-focus, var(--slds-g-shadow-outset-focus-1, #{$shadow-button-focus})));
       outline: 0;
     }
 

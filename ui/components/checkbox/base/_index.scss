@@ -112,7 +112,7 @@
         --slds-c-checkbox-color-border: var(--slds-c-checkbox-color-border-focus, var(--sds-c-checkbox-color-border-focus));
 
         /*! @css-var-fallback box-shadow */
-        --slds-c-checkbox-shadow: var(--slds-c-checkbox-shadow-focus, var(--sds-c-checkbox-shadow-focus, var(--_slds-g-shadow-outset-focus, #{$shadow-button-focus})));
+        --slds-c-checkbox-shadow: var(--slds-c-checkbox-shadow-focus, var(--sds-c-checkbox-shadow-focus, var(--slds-g-shadow-outset-focus-1, #{$shadow-button-focus})));
       }
 
       &:checked > .slds-checkbox_faux,

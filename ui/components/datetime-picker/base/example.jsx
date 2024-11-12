@@ -35,7 +35,8 @@ const ExampleDatetimePicker = ({
   hasTooltip,
   showTooltip,
   fieldLevelDateMessage,
-  fieldLevelTimeMessage
+  fieldLevelTimeMessage,
+  format
 }) => {
   const focusedRef = useRef();
   const [focusedId, setFocusedId] = useState('');
@@ -94,8 +95,9 @@ const ExampleDatetimePicker = ({
                 isRequired={isRequired}
                 showRequiredIndicator={showRequiredIndicator}
                 hasTooltip={hasTooltip && fieldLevelDateMessage ? hasTooltip : false}
-                showTooltip={showTooltip && fieldLevelDateMessage ? showTooltip: false}
+                showTooltip={showTooltip && fieldLevelDateMessage ? showTooltip : false}
                 fieldLevelMessage={fieldLevelDateMessage}
+                inlineMessage={!hasError && format}
               >
                 <Input
                   id={uniqueId}
@@ -124,8 +126,8 @@ const ExampleDatetimePicker = ({
                 inputIconPosition="right"
                 hasError={hasError}
                 isDisabled={isDisabled}
-                hasTooltip={hasTooltip && fieldLevelTimeMessage ? hasTooltip:null}
-                showTooltip={showTooltip && fieldLevelTimeMessage? showTooltip:null}
+                hasTooltip={hasTooltip && fieldLevelTimeMessage ? hasTooltip : null}
+                showTooltip={showTooltip && fieldLevelTimeMessage ? showTooltip : null}
                 fieldLevelMessage={fieldLevelTimeMessage}
                 isOpen={isOpen}
                 // TODO: Combobox and Listbox do not currently have aria-describedby
@@ -185,7 +187,8 @@ ExampleDatetimePicker.propTypes = {
   listboxData: PropTypes.object.isRequired,
   dateDefaultValue: PropTypes.string,
   showRequiredIndicator: PropTypes.bool,
-  isDisabled: PropTypes.bool
+  isDisabled: PropTypes.bool,
+  format: PropTypes.string
 };
 
 ExampleDatetimePicker.defaultProps = {
@@ -212,12 +215,25 @@ export const examples = [
       <ExampleDatetimePicker
         dropdownIsOpen={false}
         listboxData={PlainTimeOptions}
+        format="mm/dd/yyyy"
       />
     )
   }
 ];
 
 export let states = [
+{
+    id: 'default-dropdown-closed',
+    label: 'Base - dropdown closed',
+    demoStyles: 'height: 6rem;',
+    element: (
+      <ExampleDatetimePicker
+        dropdown={null}
+        listboxData={PlainTimeOptions}
+        format="mm/dd/yyyy"
+      />
+    )
+  },
   {
     id: 'date-selection',
     label: 'Date selected',
@@ -228,6 +244,7 @@ export let states = [
         }
         dateDefaultValue="06/24/2021"
         listboxData={PlainTimeOptions}
+        format="mm/dd/yyyy"
       />
     )
   },
@@ -251,6 +268,7 @@ export let states = [
         isOpen
         hasFocus
         listboxData={PlainTimeOptionsSelected}
+        format="mm/dd/yyyy"
       />
     )
   },
@@ -263,6 +281,7 @@ export let states = [
         dropdownIsOpen={false}
         isRequired
         listboxData={PlainTimeOptions}
+        format="mm/dd/yyyy"
       />
     )
   },
@@ -304,6 +323,7 @@ export let states = [
         hasTooltip
         showTooltip
         fieldLevelDateMessage="Format: mmm d yyyy | ex: Jan 1 2023"
+        format="mm/dd/yyyy"
       />
     )
   },
@@ -329,6 +349,7 @@ export let states = [
         showTooltip
         listboxData={PlainTimeOptionsSelected}
         fieldLevelTimeMessage="Format: hh:mm a | ex: 12:00 AM"
+        format="mm/dd/yyyy"
       />
     )
   },
@@ -342,6 +363,7 @@ export let states = [
         dropdownIsOpen={false}
         listboxData={PlainTimeOptions}
         isDisabled
+        format="mm/dd/yyyy"
       />
     )
   }

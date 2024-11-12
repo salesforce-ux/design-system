@@ -68,7 +68,7 @@
       outline: 0;
 
       > .slds-day {
-        box-shadow: var(--_slds-g-shadow-inset-inverse-focus);
+        box-shadow: var(--slds-g-shadow-inset-inverse-focus-1);
       }
     }
 
@@ -88,11 +88,12 @@
     &.slds-is-selected > .slds-day {
       background: $brand-accessible;
       color: var(--slds-g-color-neutral-base-100, #{$color-text-brand-primary});
+      box-shadow: 0 0 0 1px var(--slds-g-color-brand-base-20);
     }
 
     &.slds-is-selected:focus > .slds-day {
       background: $brand-accessible-active;
-      box-shadow: var(--_slds-g-shadow-outset-focus, #{$shadow-button-focus});
+      box-shadow: var(--slds-g-shadow-outset-focus-1, #{$shadow-button-focus});
       outline: 0;
       color: var(--slds-g-color-neutral-base-100, #{$color-text-brand-primary});
     }
@@ -152,6 +153,10 @@
   color: var(--slds-g-color-neutral-base-50, #{$datepicker-color-text-day-adjacent-month});
 }
 
+.slds-form-element__help:has(+ .slds-datepicker) {
+  position: absolute;
+}
+
 .slds-table {
 
   .slds-datepicker {
@@ -164,3 +169,4 @@
     }
   }
 }
+

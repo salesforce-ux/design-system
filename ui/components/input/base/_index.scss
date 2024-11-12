@@ -22,7 +22,7 @@
   }
 
   &:focus {
-    --slds-c-input-shadow: var(--slds-c-input-shadow-focus, var(--_slds-g-shadow-outline-focus, #{$shadow-button-focus}));
+    --slds-c-input-shadow: var(--slds-c-input-shadow-focus, var(--slds-g-shadow-outline-focus-1, #{$shadow-button-focus}));
     --slds-c-input-color-border: inherit;
     outline: 0;
   }
@@ -106,7 +106,7 @@
   }
 
   &:focus {
-    box-shadow: var(--_slds-g-shadow-inset-inverse-focus, #{$shadow-button-focus});
+    box-shadow: var(--slds-g-shadow-inset-inverse-focus-1, #{$shadow-button-focus});
     outline: 0;
   }
 }
@@ -357,7 +357,7 @@
   }
 
   &:focus {
-    --slds-c-input-shadow: var(--slds-g-color-error-base-40, #{$color-border-error}) 0 0 0 #{$border-width-thin} inset, var(--_slds-g-shadow-outline-focus, #{$shadow-button-focus});
+    --slds-c-input-shadow: var(--slds-g-color-error-base-40, #{$color-border-error}) 0 0 0 #{$border-width-thin} inset, var(--slds-g-shadow-outline-focus-1, #{$shadow-button-focus});
     --slds-c-input-color-border: var(--slds-g-color-error-base-40, #{$color-border-error});
     outline: 0;
   }

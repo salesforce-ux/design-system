@@ -104,7 +104,7 @@
     &:focus ~ .slds-radio--faux,
     &:focus + .slds-radio_button__label,
     &:focus + .slds-radio--button__label {
-      box-shadow: var(--_slds-g-shadow-inset-focus, #{$shadow-button-focus});
+      box-shadow: var(--slds-g-shadow-inset-focus-1, #{$shadow-button-focus});
       z-index: $z-index-default; // Raises box shadow above adjacent buttons
     }
 

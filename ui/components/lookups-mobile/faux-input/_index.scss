@@ -20,7 +20,7 @@
   &:focus {
     outline: 0;
     background-color: var(--slds-g-color-neutral-base-100, #{$color-background-input-active});
-    box-shadow: var(--_slds-g-shadow-outline-focus, #{$shadow-button-focus});
+    box-shadow: var(--slds-g-shadow-outline-focus-1, #{$shadow-button-focus});
   }
 }
 

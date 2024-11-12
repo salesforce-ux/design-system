@@ -13,14 +13,15 @@ import ButtonIcon from '../../button-icons/';
 /// ////////////////////////////////////////
 
 export let Fieldset = props => (
-  <fieldset className={classNames('slds-form-element', props.className)}>
+  <fieldset className={classNames('slds-form-element', props.className)} role="radiogroup" aria-required={props.isRequired}>
     {props.children}
   </fieldset>
 );
 
 Fieldset.propTypes = {
   className: PropTypes.string,
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
+  isRequired: PropTypes.bool
 };
 
 export let Legend = props => (
@@ -150,7 +151,7 @@ export let states = [
     id: 'required',
     label: 'Required',
     element: (
-      <Fieldset>
+      <Fieldset isRequired>
         <Legend>
           <abbr className="slds-required" title="required">
             *

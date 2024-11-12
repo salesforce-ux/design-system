@@ -3,6 +3,25 @@
 # Datepickers Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.25.1
+
+### Added
+
+- Add outline for selected date
+- Add outline for selected range of dates
+
+## 2.25.0
+
+### Added
+
+- Add inline date format `div` with content `mm/dd/yyyy` for all datepickers that are not in error state.
+- Add inline date format `div` with content `mm/dd/yyyy` for the date portion of all datetime-pickers that are not in error state.
+- Add in focus accessibility guideline when closing calendar.
+
+### Updated
+
+- Updated datepicker component blueprint with the required date input format to improve accessibility and meet Web Content Accessibility Guidelines (WCAG).
+
 ## 2.24.5
 
 ### Added

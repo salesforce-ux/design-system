@@ -150,7 +150,7 @@
 }
 
 .slds-is-resizable .slds-th__action:focus {
-  box-shadow: var(--_slds-g-shadow-inset-focus, #{$shadow-button-focus});
+  box-shadow: var(--slds-g-shadow-inset-focus-1, #{$shadow-button-focus});
 }
 
 /**
@@ -164,7 +164,7 @@
 
   &.slds-has-focus { // This is the focused state
     background-color: var(--slds-g-color-neutral-base-100, #{$color-background-alt});
-    box-shadow: var(--_slds-g-shadow-inset-inverse-focus, #{$shadow-button-focus});
+    box-shadow: var(--slds-g-shadow-inset-inverse-focus-1, #{$shadow-button-focus});
 
     .slds-button__icon_edit,
     .slds-button__icon--edit,
@@ -335,24 +335,25 @@
 
     .slds-button__icon_edit,
     .slds-button__icon--edit {
-      opacity: 0.5;
+      fill: var(--slds-g-color-neutral-base-50, #{$color-text-icon-default});
+      opacity: 1;
 
       &:hover,
       &:focus {
         fill: var(--slds-g-color-brand-base-50, #{$color-text-brand});
-        opacity: 1;
       }
     }
 
     .slds-button__icon_lock,
     .slds-button__icon--lock {
-      opacity: 0.5;
+      fill: var(--slds-g-color-neutral-base-50, #{$color-text-icon-default});
+      opacity: 1;
     }
   }
 
   &.slds-has-focus .slds-button__icon_edit,
   &.slds-has-focus .slds-button__icon--edit {
-    fill: var(--slds-g-color-neutral-base-50, #{$color-text-icon-default});
+    fill: var(--slds-g-color-neutral-base-10, #{$color-text-default});
     opacity: 1;
   }
 }

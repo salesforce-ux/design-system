@@ -146,7 +146,7 @@
   }
 
   &:focus {
-    box-shadow: var(--_slds-g-shadow-inset-focus, #{$shadow-button-focus}); 
+    box-shadow: var(--slds-g-shadow-inset-focus-1, #{$shadow-button-focus}); 
   }
 
   &[aria-current="page"] {

@@ -366,5 +366,14 @@ export let states = [
         format="mm/dd/yyyy"
       />
     )
-  }
+  },
+  {
+    id: 'mobile',
+    label: 'Mobile',
+    element: (
+      <FormElement labelContent="Date" inputId='date-input-id-mobile'>
+        <Input id='date-input-id-mobile' type="datetime-local" />
+      </FormElement>
+    )
+  },
 ];

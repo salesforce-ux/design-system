@@ -170,7 +170,7 @@
 ///
 @mixin warning-buttons {
 
-  button {
+  button:has(.slds-button__icon) {
     color: var(--slds-g-color-neutral-base-30, #{$color-gray-10});
     text-decoration: underline;
 

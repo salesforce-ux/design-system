@@ -8,24 +8,13 @@
 
 ### Added
 
-- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
 - Added reassignment of Styling Hooks for component states.
 
 ## 2.14.0
 
-### Fixed
-
-- Fix incorrect Styling Hook name for `--sds-c-alert-text-color-warning`.
-
 ### Removed
 
 - Removed component level styling hooks for status states.
-
-## 2.13.3
-
-### Changed
-
-- Treat Styling Hooks targeting text color as an element, previously referred to as a property. e.g. `--sds-c-alert-color-text` => `--sds-c-alert-text-color`.
 
 ## 2.14.0
 

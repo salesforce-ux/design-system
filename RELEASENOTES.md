@@ -1076,29 +1076,19 @@ Added `aria-label` to meet accessibility requirements specifically for screen re
 - Updated icons to v10.2.2
 
 ## Components
-### [Accordion](https://www.lightningdesignsystem.com/components/accordion)
-#### Added
-- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks
 
 ### [Alert](https://www.lightningdesignsystem.com/components/alert)
 #### Added
-- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
 - Added reassignment of Styling Hooks for component states.
 
 ### [Avatar](https://www.lightningdesignsystem.com/components/avatar)
 #### Added
-- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks
 - Added CSS Custom Property reassignments for variants
 <!-- ## [Unreleased] -->
 
 ### [Badges](https://www.lightningdesignsystem.com/components/badges)
 #### Added
-- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
 - Added CSS Custom Property reassignments for variants and states (e.g., focus, active, hover).
-
-### [Breadcrumbs](https://www.lightningdesignsystem.com/components/breadcrumbs)
-#### Added
-- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
 
 ### [Buttons](https://www.lightningdesignsystem.com/components/buttons)
 #### Added
@@ -1107,21 +1097,18 @@ Added `aria-label` to meet accessibility requirements specifically for screen re
 
 ### [Cards](https://www.lightningdesignsystem.com/components/cards)
 #### Added
-- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
 - Added reassignment of Styling Hooks for component states.
 - Added clarification about card header icon assistive text.
 - Added clarification about card heading levels for accessibility.
 
 ### [Checkbox](https://www.lightningdesignsystem.com/components/checkbox)
 #### Added
-- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
 - Added CSS Custom Property reassignments for variants and states
 #### Changed
 - Labels will no longer wrap below the checkbox. When the label text wraps, it will now go directly under the previous line.
 
 ### [Checkbox Toggle](https://www.lightningdesignsystem.com/components/checkbox-toggle)
 #### Added
-- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
 - Added reassignment of Styling Hooks for component states.
 #### Fixed
 - Fixed spacing between checkbox toggle label and input on mobile.
@@ -1150,19 +1137,16 @@ Added `aria-label` to meet accessibility requirements specifically for screen re
 #### Removed
 - Removed outdated documentation about changing background color, as this contradicts current Design System guidelines.
 #### Added
-- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
 - Added CSS Custom Property reassignments for variants and states
 
 ### [Input](https://www.lightningdesignsystem.com/components/input)
 #### Added
-- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
 - Added reassignment of Styling Hooks for component states.
 #### Changed
 - `.slds-input_borders` now follows the prescribed usage guidelines and is only allowed on `readonly` Inputs.
 
 ### [Modals](https://www.lightningdesignsystem.com/components/modals)
 #### Added
-- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
 - Added CSS Custom Property reassignments for variants and states.
 - Added clarifying notes around modal focus for accessibility.
 - Added `.slds-modal__content_headless` and `slds-modal__content_footless` classes for styling modal content.
@@ -1180,7 +1164,6 @@ Added `aria-label` to meet accessibility requirements specifically for screen re
 
 ### [Pills](https://www.lightningdesignsystem.com/components/pills)
 #### Added
-- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
 - Added reassignment of Styling Hooks for component states.
 
 ### [Progress Ring](https://www.lightningdesignsystem.com/components/progress-ring)
@@ -1189,45 +1172,21 @@ Added `aria-label` to meet accessibility requirements specifically for screen re
 
 ### [Radio Group](https://www.lightningdesignsystem.com/components/radio-group)
 #### Added
-- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
 - Added CSS Custom Property reassignments for variants and states
 #### Changed
 - Labels will no longer wrap below the radio button. When the label text wraps, it will now go directly under the previous line.
 
-### [Rich Text Editor](https://www.lightningdesignsystem.com/components/rich-text-editor)
-#### Added
-- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
-
-### [Select](https://www.lightningdesignsystem.com/components/select)
-#### Added
-- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
-
 ### [Slider](https://www.lightningdesignsystem.com/components/slider)
 #### Added
-- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
 - Added CSS Custom Property reassignments for variants and states (e.g., focus, active, hover).
 
 ### [Tabs](https://www.lightningdesignsystem.com/components/tabs)
 #### Added
-- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
 - Added reassignment of Styling Hooks for component states.
 
 ### [Textarea](https://www.lightningdesignsystem.com/components/textarea)
 #### Added
-- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
 - Added CSS Custom Property reassignments for variants and states
-
-### [Toast](https://www.lightningdesignsystem.com/components/toast)
-#### Added
-- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
-
-### [Tooltips](https://www.lightningdesignsystem.com/components/tooltips)
-#### Added
-- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
-
-### [Trees](https://www.lightningdesignsystem.com/components/trees)
-#### Added
-- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
 
 ## Release 2.16.2 - September 22, 2021
 
@@ -1266,7 +1225,6 @@ Added `aria-label` to meet accessibility requirements specifically for screen re
 
 ### [Buttons](https://www.lightningdesignsystem.com/components/buttons)
 #### Added
-- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks
 - Added CSS Custom Property reassignments for variants and states (e.g., focus, active, hover)
 
 ### [Combobox](https://www.lightningdesignsystem.com/components/combobox)
@@ -1438,8 +1396,6 @@ Added `aria-label` to meet accessibility requirements specifically for screen re
 ### [Buttons](https://www.lightningdesignsystem.com/components/buttons)
 #### Added
 - Added Kinetic styles and demo functionality for Button Base, Brand, Neutral, Inverse, Outline Brand, Destructive and Success
-#### Changed
-- Changed `line-height` assignment in touch styles to use Styling Hook assignment of `--sds-c-button-line-height`.
 
 ### [Drop Zone](https://www.lightningdesignsystem.com/components/drop-zone)
 #### Changed
@@ -1536,8 +1492,7 @@ Added `aria-label` to meet accessibility requirements specifically for screen re
 - The Accordion heading button will now take up all available space, allowing for a larger hit target to toggle the Accordion functionality.
 
 ### [Alert](https://www.lightningdesignsystem.com/components/alert)
-#### Fixed
-- Fix incorrect Styling Hook name for `--sds-c-alert-text-color-warning`.
+
 #### Removed
 - Removed component level styling hooks for status states.
 
@@ -1556,7 +1511,6 @@ Refactored the component markup to function with or without theme utility classe
 - Added Styling Hook for block level padding
 #### Removed
 - Removed component-level styling hooks for disabled states. These will be handled at the global level.
-- Removed `--sds-c-button-inverse-color-border-focus`.
 
 ### [Cards](https://www.lightningdesignsystem.com/components/cards)
 #### Added
@@ -1629,10 +1583,6 @@ Refactored the component markup to function with or without theme utility classe
 #### Added
 - Enabled styling hooks for textarea. See textarea's styling hooks overview table for a full listing of the currently available hooks.
 
-### [Toast](https://www.lightningdesignsystem.com/components/toast)
-#### Added
-- Added `--sds-c-toast-text-color` which allows you to customize the text color.
-
 ### [Visual Picker](https://www.lightningdesignsystem.com/components/visual-picker)
 #### Fixed
 - Changed checkmark vertical positioning
@@ -1658,41 +1608,10 @@ Refactored the component markup to function with or without theme utility classe
 ## Release 2.13.3 - September 24, 2020
 
 ## Components
-### [Alert](https://www.lightningdesignsystem.com/components/alert)
-#### Changed
-- Treat Styling Hooks targeting text color as an element, previously referred to as a property. e.g. `--sds-c-alert-color-text` => `--sds-c-alert-text-color`.
-
-### [Avatar](https://www.lightningdesignsystem.com/components/avatar)
-#### Changed
-- Treat Styling Hooks targeting text color as an element, previously referred to as a property. e.g. `--sds-c-avatar-initials-color-text` => `--sds-c-avatar-initials-text-color`.
-
-### [Badges](https://www.lightningdesignsystem.com/components/badges)
-#### Changed
-- Treat Styling Hooks targeting text color as an element, previously referred to as a property. e.g. `--sds-c-badge-color-text` => `--sds-c-badge-text-color`.
-
-### [Buttons](https://www.lightningdesignsystem.com/components/buttons)
-#### Changed
-- Treat Styling Hooks targeting text color as an element, previously referred to as a property. e.g. `--sds-c-button-color-text` => `--sds-c-button-text-color`.
 
 ### [Modals](https://www.lightningdesignsystem.com/components/modals)
 #### Fixed
 - Fixed incorrect styling hooks on footer.
-
-### [Pills](https://www.lightningdesignsystem.com/components/pills)
-#### Changed
-- Treat Styling Hooks targeting text color as an element, previously referred to as a property. e.g. `--sds-c-pill-color-text` => `--sds-c-pill-text-color`.
-
-### [Scoped Tabs](https://www.lightningdesignsystem.com/components/scoped-tabs)
-#### Changed
-- Treat Styling Hooks targeting text color as an element, previously referred to as a property. e.g. `--sds-c-tabs-scoped-color-text` => `--sds-c-tabs-scoped-text-color`.
-
-### [Tabs](https://www.lightningdesignsystem.com/components/tabs)
-#### Changed
-- Treat Styling Hooks targeting text color as an element, previously referred to as a property. e.g. `--sds-c-tabs-item-color-text` => `--sds-c-tabs-item-text-color`.
-
-### [Tooltips](https://www.lightningdesignsystem.com/components/tooltips)
-#### Changed
-- Treat Styling Hooks targeting text color as an element, previously referred to as a property. e.g. `--sds-c-tooltip-color-text` => `--sds-c-tooltip-text-color`.
 
 ## Release 2.13.2 - September 23, 2020
 

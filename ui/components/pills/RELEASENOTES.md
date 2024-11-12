@@ -25,7 +25,6 @@
 
 ### Added
 
-- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
 - Added reassignment of Styling Hooks for component states.
 
 ## 2.14.0
@@ -33,12 +32,6 @@
 ### Changed
 
 - Fixed incorrect styling hooks on focus state, suffix is now using `-focus` vs `-active`.
-
-## 2.13.3
-
-### Changed
-
-- Treat Styling Hooks targeting text color as an element, previously referred to as a property. e.g. `--sds-c-pill-color-text` => `--sds-c-pill-text-color`.
 
 ## 2.13.0
 

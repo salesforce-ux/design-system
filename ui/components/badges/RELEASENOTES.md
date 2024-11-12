@@ -8,14 +8,7 @@
 
 ### Added
 
-- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
 - Added CSS Custom Property reassignments for variants and states (e.g., focus, active, hover).
-
-## 2.13.3
-
-### Changed
-
-- Treat Styling Hooks targeting text color as an element, previously referred to as a property. e.g. `--sds-c-badge-color-text` => `--sds-c-badge-text-color`.
 
 ## 2.13.0
 

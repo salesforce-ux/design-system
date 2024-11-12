@@ -121,6 +121,11 @@
 #### Fixed
 - Fixed (added) back bem syntax for backwards compatibility
 
+
+### [Path](https://www.lightningdesignsystem.com/components/path)
+### Fixed
+- Fixed text color of lost stage that also fixes minimum contrast ratio requirements.
+
 ### [Form Layout](https://www.lightningdesignsystem.com/components/form-layout)
 #### Fixed
 - Changed the alignment of address form element. This fixes the alignment issue in cases where help text is present.

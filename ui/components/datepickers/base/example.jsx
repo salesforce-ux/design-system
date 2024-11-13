@@ -16,6 +16,9 @@ const dateInputId = 'date-input-id';
 const demoStyles = 'height: 25rem;';
 const demoStylesDropdownClosed = 'height: 6rem;';
 
+export const DATE_EXAMPLE = '12/31/2024'
+export const DATE_FORMAT_TEXT = `Format: ${DATE_EXAMPLE}`
+
 /* -----------------------------------------------------------------------------
     Private
 ----------------------------------------------------------------------------- */
@@ -459,7 +462,8 @@ export let DatePickerElement = props => (
     hasTooltip={props.hasTooltip}
     showTooltip={props.showTooltip}
     fieldLevelMessage={props.fieldLevelMessage}
-    inlineMessage={!props.hasError && props.format}
+    inlineMessage={!props.hasError && props.dateFormat}
+    hasHiddenInlineMessage={!props.showDateFormat}
     dropdown={
       (!props.isDisabled &&
         <DatePicker
@@ -506,27 +510,13 @@ export default [
         dateInputId={dateInputId + '-default'}
         isOpen
         todayActive
-        format="mm/dd/yyyy"
+        dateFormat={DATE_FORMAT_TEXT}
       />
     )
   }
 ];
 
 export let states = [
-  {
-    id: 'default-dropdown-closed',
-    label: 'Base - dropdown closed',
-    demoStyles: demoStylesDropdownClosed,
-    element: (
-      <DatePickerElement
-        idPrefix="defaultPicker"
-        labelContent="Date"
-        dateInputId={dateInputId + '-dropdown-closed'}
-        todayActive
-        format="mm/dd/yyyy"
-      />
-    )
-  },
   {
     id: 'datepicker-day-selected',
     label: 'Date selected',
@@ -541,7 +531,7 @@ export let states = [
         dateSelected="single"
         dateRange="week-4"
         defaultValue="06/24/2021"
-        format="mm/dd/yyyy"
+        dateFormat={DATE_FORMAT_TEXT}
       />
     )
   },
@@ -572,7 +562,7 @@ export let states = [
         isOpen
         todayActive
         isRequired
-        format="mm/dd/yyyy"
+        dateFormat={DATE_FORMAT_TEXT}
       />
     )
   },
@@ -608,7 +598,7 @@ export let states = [
         fieldLevelMessage="Format: mmm d yyyy | ex: Jan 1 2023"
         hasTooltip
         showTooltip
-        format="mm/dd/yyyy"
+        dateFormat={DATE_FORMAT_TEXT}
       />
     )
   },
@@ -623,23 +613,27 @@ export let states = [
         labelContent="Date"
         dateInputId={dateInputId + '-table'}
         isDisabled
-        format="mm/dd/yyyy"
+        dateFormat={DATE_FORMAT_TEXT}
+      />
+    )
+  },
+  {
+    id: 'date-format-visible',
+    label: 'Date Picker - date format visible',
+    demoStyles: demoStylesDropdownClosed,
+    element: (
+      <DatePickerElement
+        idPrefix="pickerDateFormatVisible"
+        labelContent="Date"
+        dateInputId={dateInputId + '-date-format-visible'}
+        dateFormat={DATE_FORMAT_TEXT}
+        showDateFormat
       />
     )
   }
 ];
 
 export let examples = [
-  {
-    id: 'mobile',
-    label: 'Mobile',
-    demoStyles: demoStyles,
-    element: (
-      <FormElement labelContent="Date" inputId={dateInputId + '-mobile'}>
-        <Input id={dateInputId + '-mobile'} type="datetime-local" />
-      </FormElement>
-    )
-  },
   {
     id: 'datepicker-in-datatable',
     label: 'Datepicker in a Data Table',
@@ -652,7 +646,7 @@ export let examples = [
           dateInputId={dateInputId + '-table'}
           isOpen
           todayActive
-          format="mm/dd/yyyy"
+          dateFormat={DATE_FORMAT_TEXT}
         />
       </SimpleTable>
     )
@@ -672,7 +666,7 @@ export let examples = [
           dateSelected="single"
           dateRange="week-4"
           defaultValue="06/24/2021"
-          format="mm/dd/yyyy"
+          dateFormat={DATE_FORMAT_TEXT}
         />
       </SimpleTable>
     )

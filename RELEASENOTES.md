@@ -113,7 +113,7 @@
 ## Updated
 - Updated popover header error background color.
 
-## Components Blueprints
+## Component Blueprints
 ### [Data Tables](https://www.lightningdesignsystem.com/components/data-tables)
 #### Added
 - Added `aria-hidden` attribute to required input label asterisk on edit cell popover to avoid being announced by screen reader to meet accessibility WCAG label criteria

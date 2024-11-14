@@ -1233,19 +1233,19 @@ props:
     value: '#2f2cb7'
   SUB_METRIC:
     value: '#5c5c5c'
-  SUMMARY_LIABLE:
-    value: '#5a1ba9'
-  SUMMARY_USAGE:
-    value: '#06a59a'
   TABLE:
     value: '#ff5d2d'
   TRANSACTION_USAGE_ENTITLEMENT:
     value: '#ff538a'
+  USAGE_BILLING_PERIOD_ITEM:
+    value: '#5a1ba9'
   USAGE_ENTITLEMENT_ACCOUNT:
     value: '#ff5d2d'
   USAGE_ENTITLEMENT_BUCKET:
     value: '#5867e8'
   USAGE_ENTITLEMENT_ENTRY:
     value: '#056764'
-  USAGE_RATEABLE_SUMMARY:
+  USAGE_RATABLE_SUMMARY:
     value: '#2f2cb7'
+  USAGE_SUMMARY:
+    value: '#06a59a'

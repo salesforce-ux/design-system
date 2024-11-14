@@ -49,11 +49,6 @@ The datetime picker has the following markup requirements:
   {getDisplayElementById(DateTimeExamples.default)}
 </CodeView>
 
-### Dropdown Closed
-<CodeView demoStyles="height: 6rem;">
-  {getDisplayElementById(DateTimeExamples.states, 'default-dropdown-closed')}
-</CodeView>
-
 ## States
 Adding `slds-datetimepicker_has-tooltip` to the element with `slds-form-element_compound` aligns the legend properly when there is an info tooltip.
 
@@ -67,4 +62,17 @@ Adding `slds-datetimepicker_has-tooltip` to the element with `slds-form-element_
 
 <CodeView demoStyles="height: 28rem;">
   {getDisplayElementById(DateTimeExamples.states, 'time-selection')}
+</CodeView>
+
+### Date Example Text Visible
+<CodeView demoStyles="height: 6rem;">
+  {getDisplayElementById(DateTimeExamples.states, 'date-example-text-visible')}
+</CodeView>
+
+### Mobile
+
+Mobile example should be viewed in mobile devices for accurate visual representation. It should be noted that due to native device styling, the width of the input will not expand 100% on iOS devices. Learn more about mobile datetime picker in the [mobile implementation](/components/datetime-picker/#Implementation) section above.
+
+<CodeView demoStyles="height: 5rem;">
+  {getDisplayElementById(DateTimeExamples.states, 'mobile')}
 </CodeView>

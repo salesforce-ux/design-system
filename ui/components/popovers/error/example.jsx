@@ -4,6 +4,7 @@
 import React from 'react';
 import { UtilityIcon } from '../../icons/base/example';
 import { Popover } from '../base-legacy/example';
+import { Button } from '../../buttons/base/example';
 import classNames from 'classnames';
 import _ from '../../../shared/helpers';
 
@@ -39,7 +40,7 @@ export const FeedbackHeader = props => (
 
 export let FeedbackFooter = props => (
   <div className="slds-grid slds-grid_vertical-align-center slds-grid_align-end">
-    <button className="slds-button slds-button_neutral">Learn More</button>
+    <Button {...props}>Learn More</Button>
   </div>
 );
 
@@ -122,7 +123,7 @@ export let examples = [
             symbol="error"
           />
         }
-        footer={<FeedbackFooter />}
+        footer={<FeedbackFooter isNeutral />}
         closeButton
         inverse
       >
@@ -151,7 +152,7 @@ export let examples = [
             symbol="error"
           />
         }
-        footer={<FeedbackFooter />}
+        footer={<FeedbackFooter isNeutral />}
         closeButton
         inverse
       >

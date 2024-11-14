@@ -91,7 +91,37 @@ export let examples = [
             iconDefault
           />
         }
-        footer={<FeedbackFooter />}
+        footer={<FeedbackFooter isNeutral />}
+        closeButton
+      >
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore.{' '}
+          <a href="#" onClick={e => e.preventDefault()} title="Learn More">
+            Learn More
+          </a>
+        </p>
+      </Popover>
+    )
+  },
+  {
+    context: 'Warning',
+    id: 'with-footer-brand-button',
+    label: 'Warning With Footer containing Brand button',
+    element: (
+      <Popover
+        className="slds-popover_warning slds-nubbin_bottom-left"
+        bodyClassName="slds-popover_warning__body"
+        headingId={headingUniqueId}
+        header={
+          <FeedbackHeader
+            headingId={headingUniqueId}
+            title="Just a heads up&hellip;"
+            symbol="warning"
+            iconDefault
+          />
+        }
+        footer={<FeedbackFooter isBrand />}
         closeButton
       >
         <p>

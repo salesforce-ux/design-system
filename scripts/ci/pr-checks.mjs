@@ -56,7 +56,7 @@ const appOctokit = new Octokit({
       repo,
       sha,
       state: failed + unresolved + vrtNew === 0 ? "success" : "failure",
-      target_url: `https://salesforceuxeyes.applitools.com/app/test-results/${id}`,
+      target_url: `https://sfdceyes.applitools.com/app/test-results/${id}`,
       description: `${failed} Failed / ${unresolved} Unresolved / ${vrtNew} New / ${passed} Passed`,
       context: "Applitools (VRT)",
     }

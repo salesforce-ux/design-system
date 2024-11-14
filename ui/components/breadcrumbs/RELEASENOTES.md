@@ -4,12 +4,6 @@
 
 <!-- ## [Unreleased] -->
 
-## 2.17.0
-
-### Added
-
-- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
-
 ## 2.15.0
 
 - Added Kinetic styles and demo functionality for Breadcrumbs

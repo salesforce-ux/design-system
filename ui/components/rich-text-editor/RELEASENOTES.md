@@ -2,10 +2,12 @@
 
 # Rich Text Editor Release Notes
 
-## 2.17.0
+## 2.26.0
 
-### Added
-- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
+### Updated
+
+- Fix sub-list sequence counter issue
+- Updated spacing for all the sub-list items
 
 ## 2.16.0
 

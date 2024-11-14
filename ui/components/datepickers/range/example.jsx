@@ -2,7 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import React from 'react';
-import { DatePickerElement, SimpleTable } from '../base/example';
+import { DatePickerElement, SimpleTable, DATE_FORMAT_TEXT } from '../base/example';
 
 /* -----------------------------------------------------------------------------
     Variables
@@ -51,13 +51,13 @@ export default [
           dateInputId={`${dateRangeInputId01}-default`}
           isOpen
           todayActive
-          format="mm/dd/yyyy"
+          dateFormat={DATE_FORMAT_TEXT}
         />
         <DatePickerElement
           idPrefix="rangeDefault_end"
           labelContent="End Date"
           dateInputId={`${dateRangeInputId02}-default`}
-          format="mm/dd/yyyy"
+          dateFormat={DATE_FORMAT_TEXT}
         />
       </CompoundFormElement>
     )
@@ -80,13 +80,13 @@ export let states = [
           dateSelected="single"
           dateRange="week-4"
           defaultValue="06/24/2021"
-          format="mm/dd/yyyy"
+          dateFormat={DATE_FORMAT_TEXT}
         />
         <DatePickerElement
           idPrefix="rangeSelected_end"
           labelContent="End Date"
           dateInputId={`${dateRangeInputId02}-start_selected`}
-          format="mm/dd/yyyy"
+          dateFormat={DATE_FORMAT_TEXT}
         />
       </CompoundFormElement>
     )
@@ -102,7 +102,7 @@ export let states = [
           labelContent="Start Date"
           dateInputId={`${dateRangeInputId01}-end_selected`}
           defaultValue="06/24/2021"
-          format="mm/dd/yyyy"
+          dateFormat={DATE_FORMAT_TEXT}
         />
         <DatePickerElement
           idPrefix="rangeWeekSame_end"
@@ -113,7 +113,7 @@ export let states = [
           dateSelected
           dateRange="week-4"
           defaultValue="06/27/2020"
-          format="mm/dd/yyyy"
+          dateFormat={DATE_FORMAT_TEXT}
         />
       </CompoundFormElement>
     )
@@ -129,7 +129,7 @@ export let states = [
           labelContent="Start Date"
           dateInputId={`${dateRangeInputId01}-end_selected_diff_week`}
           defaultValue="06/24/2021"
-          format="mm/dd/yyyy"
+          dateFormat={DATE_FORMAT_TEXT}
         />
         <DatePickerElement
           idPrefix="rangeWeekDiff_end"
@@ -141,7 +141,7 @@ export let states = [
           dateRange="week-4-5"
           dateRangeMulti
           defaultValue="06/30/2020"
-          format="mm/dd/yyyy"
+          dateFormat={DATE_FORMAT_TEXT}
         />
       </CompoundFormElement>
     )
@@ -157,7 +157,7 @@ export let states = [
           labelContent="Start Date"
           dateInputId={`${dateRangeInputId01}-today_in_range`}
           defaultValue="06/24/2021"
-          format="mm/dd/yyyy"
+          dateFormat={DATE_FORMAT_TEXT}
         />
         <DatePickerElement
           idPrefix="rangeToday_end"
@@ -169,7 +169,7 @@ export let states = [
           dateRange="week-4-5"
           dateRangeMulti
           defaultValue="06/30/2020"
-          format="mm/dd/yyyy"
+          dateFormat={DATE_FORMAT_TEXT}
         />
       </CompoundFormElement>
     )
@@ -185,7 +185,7 @@ export let states = [
           labelContent="Start Date"
           dateInputId={`${dateRangeInputId01}-adjacent_month`}
           defaultValue="06/28/2020"
-          format="mm/dd/yyyy"
+          dateFormat={DATE_FORMAT_TEXT}
         />
         <DatePickerElement
           idPrefix="rangeSpanMonth_end"
@@ -195,7 +195,7 @@ export let states = [
           dateSelected
           dateRange="week-5"
           defaultValue="07/04/2020"
-          format="mm/dd/yyyy"
+          dateFormat={DATE_FORMAT_TEXT}
         />
       </CompoundFormElement>
     )
@@ -216,13 +216,13 @@ export let examples = [
             dateInputId={`${dateRangeInputId01}-default`}
             isOpen
             todayActive
-            format="mm/dd/yyyy"
+            dateFormat={DATE_FORMAT_TEXT}
           />
           <DatePickerElement
             idPrefix="tableRangeDefault_end"
             labelContent="End Date"
             dateInputId={`${dateRangeInputId02}-default`}
-            format="mm/dd/yyyy"
+            dateFormat={DATE_FORMAT_TEXT}
           />
         </SimpleTable>
       </CompoundFormElement>
@@ -244,13 +244,13 @@ export let examples = [
             dateSelected="single"
             dateRange="week-4"
             defaultValue="06/24/2021"
-            format="mm/dd/yyyy"
+            dateFormat={DATE_FORMAT_TEXT}
           />
           <DatePickerElement
             idPrefix="tableRangeSelected_end"
             labelContent="End Date"
             dateInputId={`${dateRangeInputId02}-table-start_selected`}
-            format="mm/dd/yyyy"
+            dateFormat={DATE_FORMAT_TEXT}
           />
         </SimpleTable>
       </CompoundFormElement>
@@ -268,7 +268,7 @@ export let examples = [
             labelContent="Start Date"
             dateInputId={`${dateRangeInputId01}-table-end_selected`}
             defaultValue="06/24/2021"
-            format="mm/dd/yyyy"
+            dateFormat={DATE_FORMAT_TEXT}
           />
           <DatePickerElement
             idPrefix="tableRangeWeekSame_end"
@@ -279,7 +279,7 @@ export let examples = [
             dateSelected
             dateRange="week-4"
             defaultValue="06/27/2020"
-            format="mm/dd/yyyy"
+            dateFormat={DATE_FORMAT_TEXT}
           />
         </SimpleTable>
       </CompoundFormElement>
@@ -297,7 +297,7 @@ export let examples = [
             labelContent="Start Date"
             dateInputId={`${dateRangeInputId01}-table-end_selected_diff_week`}
             defaultValue="06/24/2021"
-            format="mm/dd/yyyy"
+            dateFormat={DATE_FORMAT_TEXT}
           />
           <DatePickerElement
             idPrefix="tableRangeWeekDiff_end"
@@ -309,7 +309,7 @@ export let examples = [
             dateRange="week-4-5"
             dateRangeMulti
             defaultValue="06/30/2020"
-            format="mm/dd/yyyy"
+            dateFormat={DATE_FORMAT_TEXT}
           />
         </SimpleTable>
       </CompoundFormElement>
@@ -327,7 +327,7 @@ export let examples = [
             labelContent="Start Date"
             dateInputId={`${dateRangeInputId01}-table-today_in_range`}
             defaultValue="06/24/2021"
-            format="mm/dd/yyyy"
+            dateFormat={DATE_FORMAT_TEXT}
           />
           <DatePickerElement
             idPrefix="tableRangeToday_end"
@@ -339,7 +339,7 @@ export let examples = [
             dateRange="week-4-5"
             dateRangeMulti
             defaultValue="06/30/2020"
-            format="mm/dd/yyyy"
+            dateFormat={DATE_FORMAT_TEXT}
           />
         </SimpleTable>
       </CompoundFormElement>
@@ -357,7 +357,7 @@ export let examples = [
             labelContent="Start Date"
             dateInputId={`${dateRangeInputId01}-table-adjacent_month`}
             defaultValue="06/28/2020"
-            format="mm/dd/yyyy"
+            dateFormat={DATE_FORMAT_TEXT}
           />
           <DatePickerElement
             idPrefix="tableRangeSpanMonth_end"
@@ -367,7 +367,7 @@ export let examples = [
             dateSelected
             dateRange="week-5"
             defaultValue="07/04/2020"
-            format="mm/dd/yyyy"
+            dateFormat={DATE_FORMAT_TEXT}
           />
         </SimpleTable>
       </CompoundFormElement>

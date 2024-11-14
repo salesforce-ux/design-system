@@ -66,13 +66,27 @@ const extractVarsFromSLDS = (props = {}) => {
 };
 
 /**
+ * Preprocess CSS to comment out container queries.
+ * This function comments out any container queries found in the CSS string
+ * to avoid syntax errors during parsing, as the current CSS parser does not
+ * support container queries.
+ *
+ * @param {string} css - The input CSS string.
+ * @return {string} - The preprocessed CSS string with container queries commented out.
+ */
+function preprocessCSS(css) {
+  return css.replace(/@container[^{]*\{[^}]*\}/g, '/* $& */');
+}
+
+/**
  * Extracts CSS vars and their fallback values from a CSS string and
  * returns it as an object
  * @param {string} cssData
  * @returns {object}
  */
 const extractVarsFromCSS = (cssContent, options = {}) => {
-  const ast = css.parse(cssContent);
+  const preprocessedCSS = preprocessCSS(cssContent);
+  const ast = css.parse(preprocessedCSS);
   const rules = ast.stylesheet.rules.filter((rule) => rule.type === 'rule');
   const { allowPattern } = options;
   let list = {};

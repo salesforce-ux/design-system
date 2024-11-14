@@ -2,6 +2,11 @@
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 ## 2.26.0 - Upcoming
 
+- Update icons to `v10.11.1`
+  - Renamed summary_usage to usage_summary
+  - Renamed summary_liable to usage_billing_period_item
+  - Renamed usage_rateable_summary to usage_ratable_summary
+
 - Update icons to `v10.11.0`
   - Standard Set:
     - Added ad_event_action
@@ -115,6 +120,16 @@
 ## Updated
 
 - Updated popover header error background color.
+
+
+## 2.25.4 - November 14, 2024
+
+## 2.25.3 - October 10, 2024
+
+## Fixed
+ - Updated neutral-50 color to close icon when the '.slds-button_icon-inverse' class is not present beside/under the .slds-modal__close selector
+
+## 2.25.2 - September 26, 2024
 
 ## 2.25.1 - September 19, 2024
 

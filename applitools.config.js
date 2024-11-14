@@ -49,8 +49,8 @@ module.exports = {
   // saveDebugData: false,
   exitcode: false,
   testConcurrency: 100,
-  serverUrl: "https://salesforceuxeyesapi.applitools.com",
-  testBlueprintPattern: ".*",
+  serverUrl: "https://sfdceyesapi.applitools.com",
+  testBlueprintPattern: '.*',
   testNamePattern: "^(?:.+|) ?Sink",
   include: function ({ kind, name }) {
     return (

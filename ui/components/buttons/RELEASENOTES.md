@@ -38,7 +38,6 @@
 
 ### Added
 
-- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks
 - Added CSS Custom Property reassignments for variants and states (e.g., focus, active, hover)
 
 ## 2.15.5
@@ -53,10 +52,6 @@
 
 - Added Kinetic styles and demo functionality for Button Base, Brand, Neutral, Inverse, Outline Brand, Destructive and Success
 
-### Changed
-
-- Changed `line-height` assignment in touch styles to use Styling Hook assignment of `--sds-c-button-line-height`.
-
 ## 2.14.0
 
 ### Added
@@ -67,13 +62,6 @@
 ### Removed
 
 - Removed component-level styling hooks for disabled states. These will be handled at the global level.
-- Removed `--sds-c-button-inverse-color-border-focus`.
-
-## 2.13.3
-
-### Changed
-
-- Treat Styling Hooks targeting text color as an element, previously referred to as a property. e.g. `--sds-c-button-color-text` => `--sds-c-button-text-color`.
 
 ## 2.13.1
 

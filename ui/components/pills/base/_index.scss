@@ -35,12 +35,12 @@
 
   &:hover {
     /*! @css-var-fallback background-color */
-    --slds-c-pill-color-background: var(--sds-c-pill-color-background-hover, var(--slds-g-color-neutral-base-95, #{$color-background-button-default-hover}));
+    --slds-c-pill-color-background: var(--slds-c-pill-color-background-hover, var(--sds-c-pill-color-background-hover, var(--slds-g-color-neutral-base-95, #{$color-background-button-default-hover})));
   }
 
   &:focus {
     /*! @css-var-fallback box-shadow */
-    --slds-c-pill-shadow: var(--sds-c-pill-shadow-focus, var(--slds-g-shadow-outset-focus-1, #{$shadow-button-focus}));
+    --slds-c-pill-shadow: var(--slds-c-pill-shadow-focus, var(--sds-c-pill-shadow-focus, var(--slds-g-shadow-outset-focus-1, #{$shadow-button-focus})));
 
     outline: 0;
   }
@@ -76,7 +76,7 @@
 
   &:hover {
     /*! @css-var-fallback background-color */
-    --sds-c-pill-color-background-hover: transparent;
+    --slds-c-pill-color-background-hover: transparent;
   }
 }
 

@@ -3,6 +3,10 @@
 
 ## Release 2.26.0 - Upcoming
 
+- Update icons to `v10.11.1`
+  - Renamed summary_usage to usage_summary
+  - Renamed summary_liable to usage_billing_period_item
+  - Renamed usage_rateable_summary to usage_ratable_summary
 - Update icons to `v10.11.0`
   - Standard Set:
     - Added ad_event_action

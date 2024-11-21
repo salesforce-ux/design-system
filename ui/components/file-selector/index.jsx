@@ -20,6 +20,8 @@ const FileSelector = props => {
           'slds-has-error': props.error
         }
       )}
+      role="group"
+      aria-labelledby={primaryLabelId}
     >
       <span className="slds-form-element__label" id={primaryLabelId}>
         Attachment
@@ -44,7 +46,6 @@ const FileSelector = props => {
               id={fileUploadInputId}
               disabled={props.dragoverError}
               aria-describedby={props.error ? errorId : null}
-              aria-labelledby={classNames(primaryLabelId, secondaryLabelId)}
             />
             <label
               className="slds-file-selector__body"

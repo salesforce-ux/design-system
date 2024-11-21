@@ -118,6 +118,11 @@
 - Updated popover header error background color.
 
 ## Component Blueprints
+
+### [File Selector](https://www.lightningdesignsystem.com/components/file-selector)
+#### Changed
+- `aria-labelledby` attribute is removed from HTML input file and added to the wrapper div along with `role='group'` as per accessibility requirements in File selector component.
+
 ### [Form Element](https://www.lightningdesignsystem.com/components/form-element)
 #### Fixed
 - Changed the alignment of address form element. This fixes the alignment issue in cases where help text is present.

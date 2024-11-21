@@ -17,7 +17,7 @@ env:
 jobs:
   vrt-init:
     if: startsWith(github.event.label.name, 'vrt:')
-    runs-on: ubuntu-latest
+    runs-on: salesforce-ux-emu-Ubuntu
 
     steps:
       - name: Set VRT Mode parameter
@@ -39,7 +39,7 @@ jobs:
   vrt-desktop:
     if: contains(fromJSON('["vrt:full-ready", "vrt:chrome-ready"]'), github.event.label.name)
     needs: vrt-init
-    runs-on: ubuntu-latest
+    runs-on: salesforce-ux-emu-Ubuntu
 
     steps:
       - uses: actions/checkout@v3
@@ -71,7 +71,7 @@ jobs:
   vrt-legacy:
     if: contains(fromJSON('["vrt:legacy-ready"]'), github.event.label.name)
     needs: vrt-init
-    runs-on: ubuntu-latest
+    runs-on: salesforce-ux-emu-Ubuntu
 
     steps:
       - uses: actions/checkout@v3
@@ -104,7 +104,7 @@ jobs:
   vrt-mobile:
     if: contains(fromJSON('["vrt:full-ready", "vrt:mobile-ready"]'), github.event.label.name)
     needs: vrt-init
-    runs-on: ubuntu-latest
+    runs-on: salesforce-ux-emu-Ubuntu
 
     steps:
       - uses: actions/checkout@v3
@@ -137,7 +137,7 @@ jobs:
   vrt-wrap:
     needs: [vrt-desktop, vrt-legacy, vrt-mobile]
     if: startsWith(github.event.label.name, 'vrt:') && always() && !cancelled() && !contains(needs.*.result, 'failure')
-    runs-on: ubuntu-latest
+    runs-on: salesforce-ux-emu-Ubuntu
     env:
       APPLITOOLS_API_KEY: ${{ secrets.APPLITOOLS_API_KEY }}
 
@@ -153,7 +153,7 @@ jobs:
       - uses: tibdex/github-app-token@v1
         id: get_installation_token
         with:
-          app_id: 244972
+          app_id: 1060982
           private_key: ${{ secrets.DSE_CI_APP_KEY }}
 
       - name: Dump GitHub context event
@@ -180,7 +180,7 @@ jobs:
         env:
           THE_SHA: ${{ github.event.pull_request.head.sha }}
           OCTOKIT_PAT: ${{ steps.get_installation_token.outputs.token }}
-          GH_APP_ID: 244972
+          GH_APP_ID: 1060982
           GH_APP_INSTALLATION_ID: 29956208
           GH_APP_PRIVATE_KEY: ${{ secrets.DSE_CI_APP_KEY }}
           GH_APP_CLIENT_ID: ${{ secrets.DSE_CI_APP_ID }}

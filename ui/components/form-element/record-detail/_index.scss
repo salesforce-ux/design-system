@@ -21,8 +21,6 @@
   flex-wrap: wrap;
   margin-left: ($spacing-small * -1);
   margin-right: ($spacing-small * -1);
-  // container-name: record-row;
-  container-type: inline-size;
 }
 
 /**
@@ -38,16 +36,13 @@
   padding-right: $spacing-small;
 }
 
-/**
- * Container 280px and under
- * Makes form item width fluid
-*/
-@container (max-width: 280px) {
+// min-width of input 280px + 24px left/right padding of the layout = 304px
+@media (max-width: 304px) {
   .slds-form__item {
-    min-width: 0;
-    width: 100%;
-    flex: unset;
-  }
+   min-width: 0;
+   width: 100%;
+   flex: unset;
+ }
 }
 
 /**

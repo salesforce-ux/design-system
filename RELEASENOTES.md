@@ -120,9 +120,9 @@
 ## Component Blueprints
 ### [Form Element](https://www.lightningdesignsystem.com/components/form-element)
 #### Fixed
+- Fixed input dropdown visibility issue in ff and safari caused by container query in a previous fix
 - Changed the alignment of address form element. This fixes the alignment issue in cases where help text is present.
 - Record form .slds-form__item width is now fluid when parent container is less than 280px
-#### Fixed
 - Fixed (added) back bem syntax for backwards compatibility
 
 

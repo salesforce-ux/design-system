@@ -252,8 +252,11 @@ jobs:
         run: tar -xvf workspace/artifact/metadata.tar
 
       - run: npm ci
+
       - name: Do build-dist
         run: npm run build-dist
+        env: # adding this back to fix build-dist error even though removing it was a fix in #5245
+          NODE_OPTIONS: --openssl-legacy-provider # per https://candid.technology/error-error-0308010c-digital-envelope-routines-unsupported/
 
       - name: Compress .dist
         run: |-

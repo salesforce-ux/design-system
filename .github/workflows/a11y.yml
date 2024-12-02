@@ -4,12 +4,16 @@ on: pull_request
 
 jobs:
   prepare-a11y-testing:
-    runs-on: ubuntu-latest
+    runs-on: salesforce-ux-emu-Ubuntu
+    env:
+      NODE_OPTIONS: --openssl-legacy-provider
 
     steps:
       - uses: actions/checkout@v3
 
       - uses: actions/setup-node@v3
+        with:
+          cache: 'npm'
       # I wanted to use an action, but the action recommends not using itself because
       # Since v1.8.0 Playwright includes CLI that installs all required browser dependencies.
       - name: Install Playwright dependencies
@@ -46,7 +50,7 @@ jobs:
       matrix:
         test-file-bunch: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
         ignore-error: [true]
-    runs-on: ubuntu-latest
+    runs-on: salesforce-ux-emu-Ubuntu
     env:
       NODE_ENV: development
       A11Y_SERVER: http://localhost:9002

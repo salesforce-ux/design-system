@@ -10,8 +10,8 @@ import ButtonIcon from '../../button-icons/';
 import WaffleIcon from '../../dynamic-icons/waffle';
 import _ from '../../../shared/helpers';
 
-// Context Item Dropdown
-const contextDropdown = () => {
+// Context Item Dropdown Menu
+const ContextDropdownMenu = () => {
   const menuGroupUniqueId = _.uniqueId('menu-group-id-');
 
   return (
@@ -73,7 +73,7 @@ export const NavBarItem = props => {
       {hasNavMenu && (
         <React.Fragment>
           <OverflowMenuButton onClick={props.onClick} />
-          {hasMenuDropdown && contextDropdown()}
+          {hasMenuDropdown && <ContextDropdownMenu />}
         </React.Fragment>
       )}
     </li>

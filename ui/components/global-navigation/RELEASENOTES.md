@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.26.0
+
+## Fixed
+
+- Fixed issue in grouped menu subheadings not being announced in screen reader
+
 ## 2.21.0
 
 ### Added

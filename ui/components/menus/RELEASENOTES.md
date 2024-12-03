@@ -6,6 +6,10 @@
 
 ## 2.26.0
 
+## Fixed
+
+- Fixed issue in grouped menu subheadings not being announced in screen reader
+
 - Updated nubbin positions for Dropdown in RTL
 
 ## 2.23.0

@@ -118,6 +118,15 @@
 - Updated popover header error background color.
 
 ## Component Blueprints
+
+### [Menus](https://www.lightningdesignsystem.com/components/menus)
+#### Fixed
+- Fixed issue in grouped menu subheadings not being announced in screen reader
+
+### [Global Navigation](https://www.lightningdesignsystem.com/components/global-navigation)
+#### Fixed
+- Fixed issue in grouped menu subheadings not being announced in screen reader
+
 ### [Form Element](https://www.lightningdesignsystem.com/components/form-element)
 #### Fixed
 - Fixed input dropdown visibility issue in ff and safari caused by container query in a previous fix

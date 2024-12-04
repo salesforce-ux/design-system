@@ -1,5 +1,4 @@
-name: Make Review Apps & Validate chromatic
-
+name: Make Review Apps
 on:
   release:
     types: [released, prereleased]
@@ -16,7 +15,6 @@ env:
   # DSE_API_RELEASE_TOKEN:
   # GITHUB_PACKAGES_TOKEN:
   HEROKU_API_KEY: ${{ secrets.DSE_INFRA_HEROKU_API_KEY }}
-  CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN_DSE }}
 
 jobs:
   init:
@@ -221,73 +219,6 @@ jobs:
             export SITE_URL=$(echo ${row} | base64 --decode | jq -r ".url")
             gh api ${STATUS_URL} -f state=success -f environment_url=${SITE_URL} -H "Accept: application/vnd.github.ant-man-preview+json"
           done
-
-  vrt-chromatic:
-    # if: ${{ (1 < 0) }}
-    runs-on: salesforce-ux-emu-Ubuntu
-    needs:
-      - init
-      - prepare
-      - build-storybook
-      - publish-storybook
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0 # retrieve git history
-
-      - uses: actions/setup-node@v3
-        with:
-          cache: "npm"
-
-      - uses: actions/download-artifact@v3
-        with:
-          path: workspace
-
-      - name: Display structure of downloaded files
-        run: ls -R
-        working-directory: workspace
-
-      - name: Decompress storybook
-        working-directory: workspace
-        run: |
-          mkdir -p chromatic/
-          tar -xvf artifact/storybook.tar.gz --directory chromatic
-
-      - name: Display structure of files
-        working-directory: workspace/chromatic
-        run: ls -la
-
-      - name: Publish dse-system-internal to chromatic
-        id: chromatic
-        uses: chromaui/action@v10
-        with:
-          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN_DSE }}
-          storybookBuildDir: workspace/chromatic/.www
-          exitZeroOnChanges: true
-          exitOnceUploaded: true
-          onlyChanged: true
-          traceChanged: true
-
-      - name: Find Chromatic Comment
-        uses: salesforce-ux-emu/find-comment@v1.0.0
-        id: find-chromatic-comment
-        with:
-          issue-number: ${{ github.event.pull_request.number }}
-          comment-author: "github-actions[bot]"
-          body-includes: Chromatic Results for
-
-      - name: Publish Chromatic results to GitHub
-        uses: salesforce-ux-emu/create-or-update-comment@v1.0.0
-        id: post-chromatic-comment
-        with:
-          comment-id: ${{ steps.find-chromatic-comment.outputs.comment-id }}
-          issue-number: ${{ github.event.pull_request.number }}
-          body: |
-            ### Chromatic Results for PR #${{ github.event.pull_request.number }} :rocket:
-            - Build URL :  ${{ steps.chromatic.outputs.buildUrl }}
-            - Storybook Preview : ${{ steps.chromatic.outputs.storybookUrl }}
-            - Component Count : ${{ steps.chromatic.outputs.componentCount }}
-          edit-mode: replace
 
   framework-build:
     # if: ${{ (1 < 0) }}

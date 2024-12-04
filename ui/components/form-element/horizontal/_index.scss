@@ -14,6 +14,7 @@
 .slds-form_horizontal .slds-form-element,
 .slds-form_stacked .slds-form-element_horizontal {
   display: block;
+  clear: both;
 
   &:not(.slds-form-element_readonly) {
     margin-bottom: $spacing-x-small;

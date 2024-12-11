@@ -118,6 +118,10 @@
 - Updated popover header error background color.
 
 ## Component Blueprints
+### [Color Picker](https://www.lightningdesignsystem.com/components/color-picker)
+#### Changed
+- Added border to color-picker swatch
+
 ### [Form Element](https://www.lightningdesignsystem.com/components/form-element)
 #### Fixed
 - Fixed input dropdown visibility issue in ff and safari caused by container query in a previous fix

@@ -166,6 +166,10 @@
 #### Fixed
 - Fixed color of links (Anchor tags) to meet minimum contrast requirements against light background.
 
+### [Tooltips](https://www.lightningdesignsystem.com/components/tooltips)
+#### Added
+- Added 160px max-width to `.slds-popover_tooltip, .slds-popover--tooltip` for screen sizes up to 480px, to ensure tooltips do not overflow on small and mobile screens.
+
 ### [Vertical Navigation](https://www.lightningdesignsystem.com/components/vertical-navigation)
 #### Fixed
 - Fixed (added) back bem syntax for backwards compatibility

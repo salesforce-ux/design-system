@@ -159,6 +159,7 @@
   @include rtl() {
     /*! @noflip */
     margin-right: 0;
+    /*! @noflip */
     margin-left: $spacing-x-small;
   }
 }

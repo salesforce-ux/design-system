@@ -118,17 +118,16 @@
 - Updated popover header error background color.
 
 ## Component Blueprints
+### [Checkbox Toggle](https://www.lightningdesignsystem.com/components/checkbox-toggle)
+#### Changed
+- Added no flip rule to the checkbox-toggle, faux border style to fix rtl bug
+
 ### [Form Element](https://www.lightningdesignsystem.com/components/form-element)
 #### Fixed
 - Fixed input dropdown visibility issue in ff and safari caused by container query in a previous fix
 - Changed the alignment of address form element. This fixes the alignment issue in cases where help text is present.
 - Record form .slds-form__item width is now fluid when parent container is less than 280px
 - Fixed (added) back bem syntax for backwards compatibility
-
-
-### [Path](https://www.lightningdesignsystem.com/components/path)
-### Fixed
-- Fixed text color of lost stage that also fixes minimum contrast ratio requirements.
 
 ### [Form Layout](https://www.lightningdesignsystem.com/components/form-layout)
 #### Fixed
@@ -153,9 +152,17 @@
 ### [Menus](https://www.lightningdesignsystem.com/components/menus)
 - Updated nubbin positions for Dropdown in RTL
 
+### [Path](https://www.lightningdesignsystem.com/components/path)
+#### Fixed
+- Fixed text color of lost stage that also fixes minimum contrast ratio requirements.
+
 ### [Popovers](https://www.lightningdesignsystem.com/components/popovers)
 ## Updated
 - Updated header error background color
+
+### [Radio Group](https://www.lightningdesignsystem.com/components/radio-group)
+#### Added
+- Added no flip rule for the radio-group to fix rtl bug
 
 ### [Rich Text Editor](https://www.lightningdesignsystem.com/components/rich-text-editor)
 #### Updated

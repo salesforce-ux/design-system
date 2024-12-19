@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.26.0
+
+### Added
+
+- Added no flip rule for the radio-group to fix rtl bug
+
 ## 2.25.0
 
 ### Added

@@ -2,6 +2,8 @@
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 ## 2.26.0 - Upcoming
 
+- Added no flip rule to the checkbox-toggle, faux border style to fix rtl bug
+
 - Update icons to `v10.11.1`
   - Renamed summary_usage to usage_summary
   - Renamed summary_liable to usage_billing_period_item

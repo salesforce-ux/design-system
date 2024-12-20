@@ -118,6 +118,10 @@
 - Updated popover header error background color.
 
 ## Component Blueprints
+### [Button Icons](https://www.lightningdesignsystem.com/components/button-icons)
+#### Added
+- Added bordered transparent - with dropdown example
+
 ### [Checkbox Toggle](https://www.lightningdesignsystem.com/components/checkbox-toggle)
 #### Changed
 - Added no flip rule to the checkbox-toggle, faux border style to fix rtl bug

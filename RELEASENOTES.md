@@ -131,6 +131,9 @@
 #### Changed
 - Added no flip rule to the checkbox-toggle, faux border style to fix rtl bug
 
+### [Datepickers](https://www.lightningdesignsystem.com/components/datepickers)
+- Added focus styles to slds-select within datepicker, in error state.
+
 ### [Form Element](https://www.lightningdesignsystem.com/components/form-element)
 #### Fixed
 - Fixed input dropdown visibility issue in ff and safari caused by container query in a previous fix

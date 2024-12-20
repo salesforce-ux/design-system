@@ -118,6 +118,11 @@
 - Updated popover header error background color.
 
 ## Component Blueprints
+
+### [Color Picker](https://www.lightningdesignsystem.com/components/color-picker)
+#### Fixed
+- Fixes the color picker inputs alignment
+
 ### [Button Icons](https://www.lightningdesignsystem.com/components/button-icons)
 #### Added
 - Added bordered transparent - with dropdown example

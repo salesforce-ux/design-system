@@ -301,10 +301,6 @@
   display: flex;
   padding-top: $spacing-x-small;
 
-  .slds-form-element {
-    flex: flex-grow;
-  }
-
   .slds-form-element:not(:first-child) {
     margin-left: $spacing-xx-small;
   }
@@ -319,7 +315,7 @@
   }
 }
 
-.slds-color-picker__input-custom-hex {
+.slds-color-picker__custom-inputs .slds-form-element.slds-color-picker__input-custom-hex {
   flex: none;
   width: $color-picker-input-custom-hex-width;
 

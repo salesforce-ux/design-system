@@ -118,6 +118,29 @@
 - Updated popover header error background color.
 
 ## Component Blueprints
+### [Data Tables](https://www.lightningdesignsystem.com/components/data-tables)
+#### Added
+- Added `aria-hidden` attribute to required input label asterisk on edit cell popover to avoid being announced by screen reader to meet accessibility WCAG label criteria
+
+### [Checkbox](https://www.lightningdesignsystem.com/components/checkbox)
+#### Added
+- Added `aria-hidden` attribute to required checkbox label asterisk to avoid being announced by screen reader to meet accessibility WCAG label criteria
+
+### [Dueling Picklist](https://www.lightningdesignsystem.com/components/dueling-picklist)
+#### Added
+- Added `aria-hidden` attribute to required select option label asterisk to avoid being announced by screen reader to meet accessibility WCAG label criteria
+
+### [Datetime Picker](https://www.lightningdesignsystem.com/components/datetime-picker)
+#### Added
+- Added `aria-hidden` attribute to required datetime picker label asterisk to avoid being announced by screen reader to meet accessibility WCAG label criteria
+
+### [Radio Button Group](https://www.lightningdesignsystem.com/components/radio-button-group)
+#### Added
+- Added `aria-hidden` attribute to required radio button group label asterisk to avoid being announced by screen reader to meet accessibility WCAG label criteria
+
+### [Radio Group](https://www.lightningdesignsystem.com/components/radio-group)
+#### Added
+- Added `aria-hidden` attribute to required radio group label asterisk to avoid being announced by screen reader to meet accessibility WCAG label criteria
 
 ### [Color Picker](https://www.lightningdesignsystem.com/components/color-picker)
 #### Fixed
@@ -140,6 +163,8 @@
 - Changed the alignment of address form element. This fixes the alignment issue in cases where help text is present.
 - Record form .slds-form__item width is now fluid when parent container is less than 280px
 - Fixed (added) back bem syntax for backwards compatibility
+#### Added
+- Added `aria-hidden` attribute to required form element label asterisk to avoid being announced by screen reader to meet accessibility WCAG label criteria
 
 ### [Form Layout](https://www.lightningdesignsystem.com/components/form-layout)
 #### Fixed

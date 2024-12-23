@@ -3,6 +3,10 @@
 # Data Tables Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.26.0
+
+#### Added
+- Added `aria-hidden` attribute to required input label asterisk on edit cell popover to avoid being announced by screen reader to meet accessibility WCAG label criteria
 
 ## 2.25.0
 

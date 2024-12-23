@@ -153,7 +153,7 @@ export let states = [
     element: (
       <Fieldset isRequired>
         <Legend>
-          <abbr className="slds-required" title="required">
+          <abbr className="slds-required" title="required" aria-hidden="true">
             *
           </abbr>{' '}
           Radio Group Label
@@ -171,7 +171,7 @@ export let states = [
     element: (
       <Fieldset className="slds-has-error">
         <Legend>
-          <abbr className="slds-required" title="required">
+          <abbr className="slds-required" title="required" aria-hidden="true">
             *
           </abbr>{' '}
           Radio Group Label
@@ -197,7 +197,7 @@ export let states = [
     element: (
       <Fieldset>
         <Legend>
-          <abbr className="slds-required" title="required">
+          <abbr className="slds-required" title="required" aria-hidden="true">
             *
           </abbr>{' '}
           Radio Group Label
@@ -223,7 +223,7 @@ export let states = [
     element: (
       <Fieldset>
         <Legend>
-          <abbr className="slds-required" title="required">
+          <abbr className="slds-required" title="required" aria-hidden="true">
             *
           </abbr>{' '}
           Radio Group Label
@@ -258,7 +258,7 @@ export let states = [
       <div dir="rtl">
         <Fieldset>
           <Legend>
-            <abbr className="slds-required" title="required">
+            <abbr className="slds-required" title="required" aria-hidden="true">
               *
             </abbr>{' '}
             Radio Group Label
@@ -338,7 +338,7 @@ export const examples = [
     element: (
       <Fieldset className="slds-has-error">
         <Legend>
-          <abbr className="slds-required" title="required">
+          <abbr className="slds-required" title="required" aria-hidden="true">
             *
           </abbr>{' '}
           Radio Group Label
@@ -387,7 +387,7 @@ export const examples = [
     element: (
       <Fieldset>
         <Legend>
-          <abbr className="slds-required" title="required">
+          <abbr className="slds-required" title="required" aria-hidden="true">
             *
           </abbr>{' '}
           Radio Group Label

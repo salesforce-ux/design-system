@@ -188,7 +188,9 @@
           /* stylelint-disable comment-empty-line-before */
           /*! @noflip */
           border-right-width: $border-width-thick;
+          /*! @noflip */
           border-right-style: solid;
+          /*! @noflip */
           border-right-color: var(--slds-c-checkbox-toggle-mark-color-foreground, var(--sds-c-checkbox-toggle-mark-color-foreground, var(--slds-g-color-neutral-base-100, #{$color-border-toggle-checked})));
           transform: rotate(45deg);
         }

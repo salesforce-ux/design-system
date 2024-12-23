@@ -463,6 +463,16 @@
    */
   .slds-is-lost {
     @include is-lost();
+
+    .slds-path__link {
+      color: var(--slds-g-color-neutral-base-100, #{$color-text-inverse});
+    }
+
+    &:hover {
+      .slds-path__link {
+        color: var(--slds-g-color-neutral-base-100, #{$color-text-inverse});
+      }
+    }
   }
 
   /**

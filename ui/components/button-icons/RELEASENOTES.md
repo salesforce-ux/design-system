@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.26.0
+
+### Added
+
+- Added bordered transparent - with dropdown example
+
 ## 2.18.0
 
 ### Added

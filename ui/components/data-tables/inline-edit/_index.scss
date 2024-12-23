@@ -15,7 +15,7 @@
       bottom: 0;
       left: 0;
       z-index: $z-index-default;
-      background-color: var(--slds-g-color-neutral-base-95, #{$color-background-backdrop-tint});
+      background-color: transparent;
       box-shadow: 0 0 0 4px var(--slds-g-color-border-brand-2, #{$color-border-brand}) inset;
     }
 

@@ -8,6 +8,12 @@
 #### Added
 - Added `aria-hidden` attribute to required radio group label asterisk to avoid being announced by screen reader to meet accessibility WCAG label criteria
 
+## 2.26.0
+
+### Added
+
+- Added no flip rule for the radio-group to fix rtl bug
+
 ## 2.25.0
 
 ### Added

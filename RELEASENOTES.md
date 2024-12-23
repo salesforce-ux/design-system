@@ -142,6 +142,21 @@
 #### Added
 - Added `aria-hidden` attribute to required radio group label asterisk to avoid being announced by screen reader to meet accessibility WCAG label criteria
 
+### [Color Picker](https://www.lightningdesignsystem.com/components/color-picker)
+#### Fixed
+- Fixes the color picker inputs alignment
+
+### [Button Icons](https://www.lightningdesignsystem.com/components/button-icons)
+#### Added
+- Added bordered transparent - with dropdown example
+
+### [Checkbox Toggle](https://www.lightningdesignsystem.com/components/checkbox-toggle)
+#### Changed
+- Added no flip rule to the checkbox-toggle, faux border style to fix rtl bug
+
+### [Datepickers](https://www.lightningdesignsystem.com/components/datepickers)
+- Added focus styles to slds-select within datepicker, in error state.
+
 ### [Form Element](https://www.lightningdesignsystem.com/components/form-element)
 #### Fixed
 - Fixed input dropdown visibility issue in ff and safari caused by container query in a previous fix
@@ -174,9 +189,17 @@
 ### [Menus](https://www.lightningdesignsystem.com/components/menus)
 - Updated nubbin positions for Dropdown in RTL
 
+### [Path](https://www.lightningdesignsystem.com/components/path)
+#### Fixed
+- Fixed text color of lost stage that also fixes minimum contrast ratio requirements.
+
 ### [Popovers](https://www.lightningdesignsystem.com/components/popovers)
 ## Updated
 - Updated header error background color
+
+### [Radio Group](https://www.lightningdesignsystem.com/components/radio-group)
+#### Added
+- Added no flip rule for the radio-group to fix rtl bug
 
 ### [Rich Text Editor](https://www.lightningdesignsystem.com/components/rich-text-editor)
 #### Updated
@@ -186,6 +209,10 @@
 ### [Scoped Notifications](https://www.lightningdesignsystem.com/components/scoped-notifications)
 #### Fixed
 - Fixed color of links (Anchor tags) to meet minimum contrast requirements against light background.
+
+### [Tooltips](https://www.lightningdesignsystem.com/components/tooltips)
+#### Added
+- Added 160px max-width to `.slds-popover_tooltip, .slds-popover--tooltip` for screen sizes up to 480px, to ensure tooltips do not overflow on small and mobile screens.
 
 ### [Vertical Navigation](https://www.lightningdesignsystem.com/components/vertical-navigation)
 #### Fixed

@@ -43,6 +43,21 @@ export let states = [
 
 export let examples = [
   {
+    id: 'with-dropdown',
+    label: 'Bordered Transparent - With dropdown',
+    demoStyles: exampleDemoStyles,
+    storybookStyles: true,
+    element: (
+      <ButtonIcon
+        theme="transparent"
+        hasDropdown
+        className="slds-button_icon-border"
+        assistiveText="More options"
+        title="More Options"
+      />
+    )
+  },
+  {
     id: 'hint-hover',
     label: 'Bordered Transparent - Hint on hover',
     demoStyles: exampleDemoStyles,

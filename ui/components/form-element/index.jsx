@@ -99,7 +99,7 @@ export const FormElementLabel = props => {
     >
       {(isRequired && showRequiredIndicator) &&
         (
-          <abbr className="slds-required" title="required">
+          <abbr className="slds-required" title="required" aria-hidden="true">
             *{' '}
           </abbr>
         )}
@@ -129,7 +129,7 @@ export const FormElementSpanFauxLabel = props => {
     <span id={labelId} className="slds-form-element__label">
       {(isRequired && showRequiredIndicator) &&
         (
-          <abbr className="slds-required" title="required">
+          <abbr className="slds-required" title="required" aria-hidden="true">
             *{' '}
           </abbr>
         )}
@@ -290,7 +290,7 @@ export const Legend = props => {
         )}
       >
         {isRequired && (
-          <abbr className="slds-required" title="required">
+          <abbr className="slds-required" title="required" aria-hidden="true">
             *{' '}
           </abbr>
         )}

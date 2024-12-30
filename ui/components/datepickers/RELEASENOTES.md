@@ -3,6 +3,10 @@
 # Datepickers Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.26.0
+
+- Added focus styles to slds-select within datepicker, in error state.
+
 ## 2.25.4
 
 ### Updated

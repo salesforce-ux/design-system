@@ -849,7 +849,7 @@ export const EditPopover = (props) => (
         htmlFor="company-01"
       >
         {props.isRequired ? (
-          <abbr className="slds-required" title="required">
+          <abbr className="slds-required" title="required" aria-hidden="true">
             *
           </abbr>
         ) : null}

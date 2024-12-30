@@ -123,12 +123,53 @@
 #### Changed
 - `aria-labelledby` attribute is removed from HTML input file and added to the wrapper div along with `role='group'` as per accessibility requirements in File selector component.
 
+### [Data Tables](https://www.lightningdesignsystem.com/components/data-tables)
+#### Added
+- Added `aria-hidden` attribute to required input label asterisk on edit cell popover to avoid being announced by screen reader to meet accessibility WCAG label criteria
+
+### [Checkbox](https://www.lightningdesignsystem.com/components/checkbox)
+#### Added
+- Added `aria-hidden` attribute to required checkbox label asterisk to avoid being announced by screen reader to meet accessibility WCAG label criteria
+
+### [Dueling Picklist](https://www.lightningdesignsystem.com/components/dueling-picklist)
+#### Added
+- Added `aria-hidden` attribute to required select option label asterisk to avoid being announced by screen reader to meet accessibility WCAG label criteria
+
+### [Datetime Picker](https://www.lightningdesignsystem.com/components/datetime-picker)
+#### Added
+- Added `aria-hidden` attribute to required datetime picker label asterisk to avoid being announced by screen reader to meet accessibility WCAG label criteria
+
+### [Radio Button Group](https://www.lightningdesignsystem.com/components/radio-button-group)
+#### Added
+- Added `aria-hidden` attribute to required radio button group label asterisk to avoid being announced by screen reader to meet accessibility WCAG label criteria
+
+### [Radio Group](https://www.lightningdesignsystem.com/components/radio-group)
+#### Added
+- Added `aria-hidden` attribute to required radio group label asterisk to avoid being announced by screen reader to meet accessibility WCAG label criteria
+
+### [Color Picker](https://www.lightningdesignsystem.com/components/color-picker)
+#### Fixed
+- Fixes the color picker inputs alignment
+
+### [Button Icons](https://www.lightningdesignsystem.com/components/button-icons)
+#### Added
+- Added bordered transparent - with dropdown example
+
+### [Checkbox Toggle](https://www.lightningdesignsystem.com/components/checkbox-toggle)
+#### Changed
+- Added no flip rule to the checkbox-toggle, faux border style to fix rtl bug
+
+### [Datepickers](https://www.lightningdesignsystem.com/components/datepickers)
+- Added focus styles to slds-select within datepicker, in error state.
+
 ### [Form Element](https://www.lightningdesignsystem.com/components/form-element)
 #### Fixed
 - Fixed input dropdown visibility issue in ff and safari caused by container query in a previous fix
 - Changed the alignment of address form element. This fixes the alignment issue in cases where help text is present.
 - Record form .slds-form__item width is now fluid when parent container is less than 280px
 - Fixed (added) back bem syntax for backwards compatibility
+#### Added
+- Added `aria-hidden` attribute to required form element label asterisk to avoid being announced by screen reader to meet accessibility WCAG label criteria
 
 ### [Form Layout](https://www.lightningdesignsystem.com/components/form-layout)
 #### Fixed
@@ -153,9 +194,17 @@
 ### [Menus](https://www.lightningdesignsystem.com/components/menus)
 - Updated nubbin positions for Dropdown in RTL
 
+### [Path](https://www.lightningdesignsystem.com/components/path)
+#### Fixed
+- Fixed text color of lost stage that also fixes minimum contrast ratio requirements.
+
 ### [Popovers](https://www.lightningdesignsystem.com/components/popovers)
 ## Updated
 - Updated header error background color
+
+### [Radio Group](https://www.lightningdesignsystem.com/components/radio-group)
+#### Added
+- Added no flip rule for the radio-group to fix rtl bug
 
 ### [Rich Text Editor](https://www.lightningdesignsystem.com/components/rich-text-editor)
 #### Updated
@@ -165,6 +214,10 @@
 ### [Scoped Notifications](https://www.lightningdesignsystem.com/components/scoped-notifications)
 #### Fixed
 - Fixed color of links (Anchor tags) to meet minimum contrast requirements against light background.
+
+### [Tooltips](https://www.lightningdesignsystem.com/components/tooltips)
+#### Added
+- Added 160px max-width to `.slds-popover_tooltip, .slds-popover--tooltip` for screen sizes up to 480px, to ensure tooltips do not overflow on small and mobile screens.
 
 ### [Vertical Navigation](https://www.lightningdesignsystem.com/components/vertical-navigation)
 #### Fixed

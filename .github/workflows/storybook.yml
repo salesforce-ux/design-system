@@ -1,12 +1,11 @@
 name: Make Review Apps
-
 on:
   release:
     types: [released, prereleased]
   pull_request:
-    branches: [ '**' ]
+    branches: ["**"]
   push:
-    branches: [ '2[0-9][02468]-*-2[0-9]' ]
+    branches: ["2[0-9][02468]-*-2[0-9]"]
 
 env:
   # APPLITOOLS_API_KEY:
@@ -15,53 +14,51 @@ env:
   # AWS_SECRET_ACCESS_KEY:
   # DSE_API_RELEASE_TOKEN:
   # GITHUB_PACKAGES_TOKEN:
-  # GITHUB_TOKEN: ${{ github.token }}
   HEROKU_API_KEY: ${{ secrets.DSE_INFRA_HEROKU_API_KEY }}
 
 jobs:
   init:
     runs-on: salesforce-ux-emu-Ubuntu
-
     steps:
-    - uses: tibdex/github-app-token@v1
-      id: get_installation_token
-      with:
-        app_id: 1060982
-        private_key: ${{ secrets.DSE_CI_APP_KEY }}
+      - uses: tibdex/github-app-token@v1
+        id: get_installation_token
+        with:
+          app_id: 1060982
+          private_key: ${{ secrets.DSE_CI_APP_KEY }}
 
-    - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-    - run: printenv | sort
+      - run: printenv | sort
 
-    - name: Show GitHub context
-      env:
-        GITHUB_CONTEXT: ${{ toJson(github) }}
-      run: echo "$GITHUB_CONTEXT"
+      - name: Show GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo "$GITHUB_CONTEXT"
 
-    - run: mkdir -p workspace
+      - run: mkdir -p workspace
 
-    - name: Retrieve Github deployments
-      env:
-        GITHUB_TOKEN: ${{ steps.get_installation_token.outputs.token }}
+      - name: Retrieve Github deployments
+        env:
+          GITHUB_TOKEN: ${{ steps.get_installation_token.outputs.token }}
 
-      run: 'gh api /repos/salesforce-ux-emu/design-system-internal/deployments --field ref=${{ github.event.pull_request.head.sha }} --method GET | jq "map({ status: .statuses_url, url: .payload.web_url})" > workspace/gh-deployments.json'
+        run: 'gh api /repos/salesforce-ux-emu/design-system-internal/deployments --field ref=${{ github.event.pull_request.head.sha }} --method GET | jq "map({ status: .statuses_url, url: .payload.web_url})" > workspace/gh-deployments.json'
 
-    - name: View deployments
-      run: cat workspace/gh-deployments.json
+      - name: View deployments
+        run: cat workspace/gh-deployments.json
 
-    - name: Set Github deployments to "in progress"
-      env:
-        GITHUB_TOKEN: ${{ steps.get_installation_token.outputs.token }}
-      run: |-
-        for row in $(jq -r '.[] | @base64' workspace/gh-deployments.json); do
-          export STATUS_URL=$(echo ${row} | base64 --decode | jq -r ".status" | sed 's/https:\/\/api.github.com//')
-          gh api ${STATUS_URL} -f state=in_progress -H "Accept: application/vnd.github.flash-preview+json"
-        done
+      - name: Set Github deployments to "in progress"
+        env:
+          GITHUB_TOKEN: ${{ steps.get_installation_token.outputs.token }}
+        run: |-
+          for row in $(jq -r '.[] | @base64' workspace/gh-deployments.json); do
+            export STATUS_URL=$(echo ${row} | base64 --decode | jq -r ".status" | sed 's/https:\/\/api.github.com//')
+            gh api ${STATUS_URL} -f state=in_progress -H "Accept: application/vnd.github.flash-preview+json"
+          done
 
-    - uses: actions/upload-artifact@v3
-      with:
-        path: |-
-          workspace/gh-deployments.json
+      - uses: actions/upload-artifact@v3
+        with:
+          path: |-
+            workspace/gh-deployments.json
 
   prepare:
     runs-on: salesforce-ux-emu-Ubuntu
@@ -73,50 +70,50 @@ jobs:
       - init
 
     steps:
-    - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-    - uses: actions/setup-node@v3
-      with:
-        cache: 'npm'
+      - uses: actions/setup-node@v3
+        with:
+          cache: "npm"
 
-    - uses: actions/download-artifact@v3
-      with:
-        path: workspace
+      - uses: actions/download-artifact@v3
+        with:
+          path: workspace
 
-    - name: Determine Heroku App
-      uses: "./.github/actions/set-heroku-app-name"
-      id: which-heroku-app
+      - name: Determine Heroku App
+        uses: "./.github/actions/set-heroku-app-name"
+        id: which-heroku-app
 
-    - run: npm ci
+      - run: npm ci
 
-    - uses: "./.github/actions/build-tokens"
+      - uses: "./.github/actions/build-tokens"
 
-    - uses: "./.github/actions/copy-tokens-to-workspace"
+      - uses: "./.github/actions/copy-tokens-to-workspace"
 
-    - name: Print destination app names
-      run: |
-        HEROKU_APP_NAME=${{ steps.which-heroku-app.outputs.HEROKU_APP_NAME }}
-        HEROKU_RELEASE_STORYBOOK_APP_NAME=${{ steps.which-heroku-app.outputs.HEROKU_RELEASE_STORYBOOK_APP_NAME }}
-        echo "=============================="
-        echo $HEROKU_APP_NAME
-        echo $HEROKU_RELEASE_STORYBOOK_APP_NAME
-        # if HEROKU_RELEASE_STORYBOOK_APP_NAME is "true", then we are in a PR
-        echo "=============================="
+      - name: Print destination app names
+        run: |
+          HEROKU_APP_NAME=${{ steps.which-heroku-app.outputs.HEROKU_APP_NAME }}
+          HEROKU_RELEASE_STORYBOOK_APP_NAME=${{ steps.which-heroku-app.outputs.HEROKU_RELEASE_STORYBOOK_APP_NAME }}
+          echo "=============================="
+          echo $HEROKU_APP_NAME
+          echo $HEROKU_RELEASE_STORYBOOK_APP_NAME
+          # if HEROKU_RELEASE_STORYBOOK_APP_NAME is "true", then we are in a PR
+          echo "=============================="
 
-    - name: Compile styles
-      run: npm run gulp -- styles
-    - name: Compress styles
-      run: tar -cvf workspace/styles.tar assets/styles/
-    - name: Compress generated metadata
-      run: tar -cvf workspace/metadata.tar .generated/metadata/
-    - uses: actions/upload-artifact@v3
-      with:
-        path: |-
-          workspace/design-tokens.tar
-          workspace/styles.tar
-          workspace/metadata.tar
-          workspace/heroku-app-name.txt
-          workspace/heroku-release-storybook-app-name.txt
+      - name: Compile styles
+        run: npm run gulp -- styles
+      - name: Compress styles
+        run: tar -cvf workspace/styles.tar assets/styles/
+      - name: Compress generated metadata
+        run: tar -cvf workspace/metadata.tar .generated/metadata/
+      - uses: actions/upload-artifact@v3
+        with:
+          path: |-
+            workspace/design-tokens.tar
+            workspace/styles.tar
+            workspace/metadata.tar
+            workspace/heroku-app-name.txt
+            workspace/heroku-release-storybook-app-name.txt
 
   build-storybook:
     if: ${{ !contains('refs/heads//^v\d+\.\d+\.\d+-.+$/', github.ref) }}
@@ -125,38 +122,38 @@ jobs:
       - prepare
 
     steps:
-    - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-    - uses: actions/setup-node@v3
-      with:
-        cache: 'npm'
+      - uses: actions/setup-node@v3
+        with:
+          cache: "npm"
 
-    - uses: actions/download-artifact@v3
-      with:
-        path: workspace
+      - uses: actions/download-artifact@v3
+        with:
+          path: workspace
 
-    - name: Display structure of downloaded files
-      run: ls -R
-      working-directory: workspace
+      - name: Display structure of downloaded files
+        run: ls -R
+        working-directory: workspace
 
-    - uses: "./.github/actions/copy-tokens-from-workspace"
+      - uses: "./.github/actions/copy-tokens-from-workspace"
 
-    - name: Install and Build task
-      run: |
-        npm ci
-        npm run build
+      - name: Install and Build task
+        run: |
+          npm ci
+          npm run build
 
-    - name: Build static Storybook
-      run: npm run storybook:build
-      env:
-        NODE_OPTIONS: --openssl-legacy-provider # per https://candid.technology/error-error-0308010c-digital-envelope-routines-unsupported/
+      - name: Build static Storybook
+        run: npm run storybook:build
+        env:
+          NODE_OPTIONS: --openssl-legacy-provider # per https://candid.technology/error-error-0308010c-digital-envelope-routines-unsupported/
 
-    - name: Archive static Storybook
-      run: tar -czvf workspace/storybook.tar.gz .www/ Procfile config/nginx.conf.erb heroku-start.sh app.json
+      - name: Archive static Storybook
+        run: tar -czvf workspace/storybook.tar.gz .www/ Procfile config/nginx.conf.erb heroku-start.sh app.json
 
-    - uses: actions/upload-artifact@v3
-      with:
-        path: workspace/storybook.tar.gz
+      - uses: actions/upload-artifact@v3
+        with:
+          path: workspace/storybook.tar.gz
 
   publish-storybook:
     if: ${{ needs.prepare.outputs.HEROKU_RELEASE_STORYBOOK_APP_NAME != 'false' }}
@@ -167,61 +164,61 @@ jobs:
       - build-storybook
 
     steps:
-    - uses: actions/download-artifact@v3
-      with:
-        path: workspace
+      - uses: actions/download-artifact@v3
+        with:
+          path: workspace
 
-    - name: Display structure of downloaded files
-      run: ls -R
-      working-directory: workspace
+      - name: Display structure of downloaded files
+        run: ls -R
+        working-directory: workspace
 
-    - name: Install Heroku CLI
-      run: |-
-        if [[ $(command -v heroku) == "" ]]; then
-          curl https://cli-assets.heroku.com/install.sh | sh
-        else
-          echo "Heroku is already installed. No operation was performed."
-        fi
+      - name: Install Heroku CLI
+        run: |-
+          if [[ $(command -v heroku) == "" ]]; then
+            curl https://cli-assets.heroku.com/install.sh | sh
+          else
+            echo "Heroku is already installed. No operation was performed."
+          fi
 
-    - name: Install Heroku Build CLI plugin
-      run: heroku plugins:install heroku-builds
+      - name: Install Heroku Build CLI plugin
+        run: heroku plugins:install heroku-builds
 
-    - name: Deploy to Heroku
-      run: |-
-        HEROKU_APP_NAME=${{ needs.prepare.outputs.HEROKU_APP_NAME }}
-        HEROKU_RELEASE_STORYBOOK_APP_NAME=${{ needs.prepare.outputs.HEROKU_RELEASE_STORYBOOK_APP_NAME }}
-        export PR_NUMBER=${{ github.event.pull_request.number }}
-        export REVIEW_APP_NAME=slds-storybook-pr-${PR_NUMBER}
-        echo $HEROKU_APP_NAME
-        echo $HEROKU_RELEASE_STORYBOOK_APP_NAME
-        echo $PR_NUMBER
-        echo REVIEW_APP_NAME
-        if [[ ${HEROKU_RELEASE_STORYBOOK_APP_NAME} != "false" && ${PR_NUMBER} == "" ]]; then
-        export PUBLISH_STORYBOOK_TO=${HEROKU_RELEASE_STORYBOOK_APP_NAME}
-        else
-        export PUBLISH_STORYBOOK_TO=${REVIEW_APP_NAME}
-        fi
-        echo "=============================="
-        echo ${PUBLISH_STORYBOOK_TO}
-        echo "=============================="
-        heroku buildpacks -a ${PUBLISH_STORYBOOK_TO} | grep "https://github.com/salesforce-ux/heroku-buildpack-nginx.git#dse" || heroku buildpacks:set https://github.com/salesforce-ux/heroku-buildpack-nginx.git#dse -a ${PUBLISH_STORYBOOK_TO}
-        heroku builds:create --source-tar workspace/artifact/storybook.tar.gz -a ${PUBLISH_STORYBOOK_TO}
+      - name: Deploy to Heroku
+        run: |-
+          HEROKU_APP_NAME=${{ needs.prepare.outputs.HEROKU_APP_NAME }}
+          HEROKU_RELEASE_STORYBOOK_APP_NAME=${{ needs.prepare.outputs.HEROKU_RELEASE_STORYBOOK_APP_NAME }}
+          export PR_NUMBER=${{ github.event.pull_request.number }}
+          export REVIEW_APP_NAME=slds-storybook-pr-${PR_NUMBER}
+          echo $HEROKU_APP_NAME
+          echo $HEROKU_RELEASE_STORYBOOK_APP_NAME
+          echo $PR_NUMBER
+          echo REVIEW_APP_NAME
+          if [[ ${HEROKU_RELEASE_STORYBOOK_APP_NAME} != "false" && ${PR_NUMBER} == "" ]]; then
+          export PUBLISH_STORYBOOK_TO=${HEROKU_RELEASE_STORYBOOK_APP_NAME}
+          else
+          export PUBLISH_STORYBOOK_TO=${REVIEW_APP_NAME}
+          fi
+          echo "=============================="
+          echo ${PUBLISH_STORYBOOK_TO}
+          echo "=============================="
+          heroku buildpacks -a ${PUBLISH_STORYBOOK_TO} | grep "https://github.com/salesforce-ux/heroku-buildpack-nginx.git#dse" || heroku buildpacks:set https://github.com/salesforce-ux/heroku-buildpack-nginx.git#dse -a ${PUBLISH_STORYBOOK_TO}
+          heroku builds:create --source-tar workspace/artifact/storybook.tar.gz -a ${PUBLISH_STORYBOOK_TO}
 
-    - uses: tibdex/github-app-token@v1
-      id: get_installation_token
-      with:
-        app_id: 1060982
-        private_key: ${{ secrets.DSE_CI_APP_KEY }}
+      - uses: tibdex/github-app-token@v1
+        id: get_installation_token
+        with:
+          app_id: 1060982
+          private_key: ${{ secrets.DSE_CI_APP_KEY }}
 
-    - name: Set Github deployments to "success"
-      env:
-        GITHUB_TOKEN: ${{ steps.get_installation_token.outputs.token }}
-      run: |-
-        for row in $(jq -r '.[] | select(.url | contains("storybook")) | @base64' workspace/artifact/gh-deployments.json); do
-          export STATUS_URL=$(echo ${row} | base64 --decode | jq -r ".status" | sed 's/https:\/\/api.github.com//')
-          export SITE_URL=$(echo ${row} | base64 --decode | jq -r ".url")
-          gh api ${STATUS_URL} -f state=success -f environment_url=${SITE_URL} -H "Accept: application/vnd.github.ant-man-preview+json"
-        done
+      - name: Set Github deployments to "success"
+        env:
+          GITHUB_TOKEN: ${{ steps.get_installation_token.outputs.token }}
+        run: |-
+          for row in $(jq -r '.[] | select(.url | contains("storybook")) | @base64' workspace/artifact/gh-deployments.json); do
+            export STATUS_URL=$(echo ${row} | base64 --decode | jq -r ".status" | sed 's/https:\/\/api.github.com//')
+            export SITE_URL=$(echo ${row} | base64 --decode | jq -r ".url")
+            gh api ${STATUS_URL} -f state=success -f environment_url=${SITE_URL} -H "Accept: application/vnd.github.ant-man-preview+json"
+          done
 
   framework-build:
     # if: ${{ (1 < 0) }}
@@ -234,8 +231,8 @@ jobs:
 
       - uses: actions/setup-node@v3
         with:
-          cache: 'npm'
-          node-version: '<=18.17.1'
+          cache: "npm"
+          node-version: "<=18.17.1"
 
       - uses: actions/download-artifact@v3
         with:
@@ -305,7 +302,7 @@ jobs:
 
       - uses: actions/setup-node@v3
         with:
-          cache: 'npm'
+          cache: "npm"
       - run: npm ci
       - shell: bash
         run: |-
@@ -350,34 +347,34 @@ jobs:
     needs:
       - framework-build
     steps:
-    - uses: tibdex/github-app-token@v1
-      id: get_installation_token
-      with:
-        app_id: 1060982
-        private_key: ${{ secrets.DSE_CI_APP_KEY }}
-    - uses: actions/checkout@v3
+      - uses: tibdex/github-app-token@v1
+        id: get_installation_token
+        with:
+          app_id: 1060982
+          private_key: ${{ secrets.DSE_CI_APP_KEY }}
+      - uses: actions/checkout@v3
 
-    - uses: actions/download-artifact@v3
-      with:
-        path: workspace
+      - uses: actions/download-artifact@v3
+        with:
+          path: workspace
 
-    - name: 'Github: attach artifact to release'
-      env:
-        DSE_API_RELEASE_TOKEN: ${{ secrets.DSE_API_RELEASE_TOKEN }}
-        VERSION_FROM_TAG: ${{ github.event.release.tag_name }}
-        GITHUB_TOKEN: ${{ steps.get_installation_token.outputs.token }}
-      run: |-
-        gh release view ${VERSION_FROM_TAG} | grep ${VERSION_FROM_TAG}
+      - name: "Github: attach artifact to release"
+        env:
+          DSE_API_RELEASE_TOKEN: ${{ secrets.DSE_API_RELEASE_TOKEN }}
+          VERSION_FROM_TAG: ${{ github.event.release.tag_name }}
+          GITHUB_TOKEN: ${{ steps.get_installation_token.outputs.token }}
+        run: |-
+          gh release view ${VERSION_FROM_TAG} | grep ${VERSION_FROM_TAG}
 
-        if [ $? -eq 0 ]; then
-          cp workspace/artifact/dist.zip workspace/slds-${VERSION_FROM_TAG}.zip
-          echo "=============================="
-          echo "» Attaching artifact to release ${VERSION_FROM_TAG}"
-          gh release upload ${VERSION_FROM_TAG} workspace/slds-${VERSION_FROM_TAG}.zip#"SLDS ${VERSION_FROM_TAG}" --clobber
-        else
-          echo "=============================="
-          echo "» ERROR: release ${VERSION_FROM_TAG} not found on Github"
-        fi
+          if [ $? -eq 0 ]; then
+            cp workspace/artifact/dist.zip workspace/slds-${VERSION_FROM_TAG}.zip
+            echo "=============================="
+            echo "» Attaching artifact to release ${VERSION_FROM_TAG}"
+            gh release upload ${VERSION_FROM_TAG} workspace/slds-${VERSION_FROM_TAG}.zip#"SLDS ${VERSION_FROM_TAG}" --clobber
+          else
+            echo "=============================="
+            echo "» ERROR: release ${VERSION_FROM_TAG} not found on Github"
+          fi
 
   update-database:
     runs-on: salesforce-ux-emu-Ubuntu
@@ -385,20 +382,20 @@ jobs:
     needs:
       - attach-artifact
     steps:
-    - uses: actions/checkout@v3
-    - name: Trigger database update via API
-      env:
-        DSE_API_RELEASE_TOKEN: ${{ secrets.DSE_API_RELEASE_TOKEN }}
-        VERSION_FROM_TAG: ${{ github.event.release.tag_name }}
-      run: |-
-        export SALESFORCE_VERSION=$(cat package.json | jq -r .slds.id)
-        curl --location --request PATCH 'https://api.lightningdesignsystem.com/v1/release' \
-        --header 'Content-Type: application/json' \
-        --header 'Authorization: Bearer '"$DSE_API_RELEASE_TOKEN"'' \
-        --data-raw '{
-            "version":"'"${VERSION_FROM_TAG:1:20}"'",
-            "salesforce_version": "'"$SALESFORCE_VERSION"'"
-        }'
+      - uses: actions/checkout@v3
+      - name: Trigger database update via API
+        env:
+          DSE_API_RELEASE_TOKEN: ${{ secrets.DSE_API_RELEASE_TOKEN }}
+          VERSION_FROM_TAG: ${{ github.event.release.tag_name }}
+        run: |-
+          export SALESFORCE_VERSION=$(cat package.json | jq -r .slds.id)
+          curl --location --request PATCH 'https://api.lightningdesignsystem.com/v1/release' \
+          --header 'Content-Type: application/json' \
+          --header 'Authorization: Bearer '"$DSE_API_RELEASE_TOKEN"'' \
+          --data-raw '{
+              "version":"'"${VERSION_FROM_TAG:1:20}"'",
+              "salesforce_version": "'"$SALESFORCE_VERSION"'"
+          }'
 
   slack-broadcast:
     runs-on: salesforce-ux-emu-Ubuntu
@@ -435,5 +432,5 @@ jobs:
         uses: ./.github/actions/send-slack-notifications
         with:
           slack-webhook-url: ${{ secrets.SLACK_DESIGN_SYSTEM_BROADCAST_WEBHOOK_URL }}
-          slack-title: 'A new version of *@salesforce-ux/design-system* package :package: was published :rocket:'
+          slack-title: "A new version of *@salesforce-ux/design-system* package :package: was published :rocket:"
           slack-body: ${{ steps.compile-slack-msg-body.outputs.result }}

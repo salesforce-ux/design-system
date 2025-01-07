@@ -27,6 +27,10 @@
     font-size: var(--slds-c-tooltip-font-size, var(--sds-c-tooltip-font-size, $font-size-2));
     color: var(--slds-c-tooltip-text-color, var(--sds-c-tooltip-text-color, var(--slds-g-color-neutral-base-100, #{$color-text-inverse})));
   }
+
+  @media (max-width: map-get($breakpoints, 'small')) {
+    max-width: 160px;
+  }
 }
 
 a:has(+ .slds-popover.slds-popover_tooltip):focus {

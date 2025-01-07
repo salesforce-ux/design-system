@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.26.0
+
+### Fixed
+
+- Fixes the color picker inputs alignment
+
 ## 2.23.0
 
 ### Changed

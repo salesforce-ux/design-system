@@ -141,6 +141,16 @@
 .slds-has-error .slds-datepicker__filter .slds-select {
   border: $border-width-thin solid var(--slds-g-color-border-base-4, #{$color-border-input});
   box-shadow: none;
+
+  &:active {
+    border-color: var(--slds-g-color-brand-base-60, #{$color-border-input-active});
+    box-shadow: $shadow-button-focus;
+  }
+
+  &:focus {
+    border-color: var(--slds-g-color-border-base-4, #{$color-border-input});
+    box-shadow: var(--slds-g-shadow-outline-focus-1, #{$shadow-button-focus});
+  }
 }
 
 /**

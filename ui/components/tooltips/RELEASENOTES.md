@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.26.0
+
+### Added
+
+- Added 160px max-width to `.slds-popover_tooltip, .slds-popover--tooltip` for screen sizes up to 480px, to ensure tooltips do not overflow on small and mobile screens.
+
 ## 2.24.0
 
 ### Changed

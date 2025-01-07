@@ -118,6 +118,11 @@
 - Updated popover header error background color.
 
 ## Component Blueprints
+
+### [File Selector](https://www.lightningdesignsystem.com/components/file-selector)
+#### Changed
+- `aria-labelledby` attribute is removed from HTML input file and added to the wrapper div along with `role='group'` as per accessibility requirements in File selector component.
+
 ### [Data Tables](https://www.lightningdesignsystem.com/components/data-tables)
 #### Added
 - Added `aria-hidden` attribute to required input label asterisk on edit cell popover to avoid being announced by screen reader to meet accessibility WCAG label criteria

@@ -22,7 +22,8 @@ import * as Integrated from './integrated/example';
 When implementing this component, pay special attention to the following:
 
 #### Markup
-- `aria-labelledby` is placed on the HTML `input` to form an "Accessible Label" from 2 separate visible text labels, by referencing their `id` attributes
+
+- The `role='group'` attribute groups the form element label and the form control file input together. The `aria-labelledby` attribute provides an accessible label for the group, while the HTML input type file is labeled using a standard `id/for` attribute relationship.
 
 ## Base
 <CodeView>

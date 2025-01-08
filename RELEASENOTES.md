@@ -199,6 +199,8 @@
 - Fixed text color of lost stage that also fixes minimum contrast ratio requirements.
 
 ### [Popovers](https://www.lightningdesignsystem.com/components/popovers)
+## Added
+- Added examples with a dark background for the feature and walkthrough popover variants.
 ## Updated
 - Updated header error background color
 

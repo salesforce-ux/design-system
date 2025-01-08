@@ -6,6 +6,10 @@
 
 ## 2.26.0
 
+## Added
+
+- Added examples with a dark background for the feature and walkthrough popover variants.
+
 ## Updated
 
 - Updated header error background color

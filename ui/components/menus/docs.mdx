@@ -53,8 +53,11 @@ The main thing that distinguishes menus from other popover blocks is keyboard na
 
 ## With Subheaders
 
-<Blockquote type="a11y" header="Accessible Role">
+<Blockquote type="a11y" header="Accessibility Note">
   <p>
+    The <code>role="group"</code> on nested <code>&lt;ul&gt;</code> elements groups subheadings with their submenu items and 
+    the <code>aria-labelledby</code> attribute on these nested <code>&lt;ul&gt;</code> elements references the <code>id</code> of the 
+    corresponding subheading.
     A subheading must have <code>role="presentation"</code> on the{' '}
     <code>&lt;li&gt;</code> and the content inside the <code>&lt;li&gt;</code>{' '}
     should be in a <code>&lt;span&gt;</code>.
@@ -65,7 +68,7 @@ The main thing that distinguishes menus from other popover blocks is keyboard na
   <li
     className="slds-dropdown__header slds-truncate"
     title="Menu Sub Heading"
-    role="separator"
+    role="presentation"
   >
     <span>Menu Sub Heading</span>
   </li>

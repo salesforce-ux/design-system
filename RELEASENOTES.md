@@ -119,6 +119,14 @@
 
 ## Component Blueprints
 
+### [Menus](https://www.lightningdesignsystem.com/components/menus)
+#### Fixed
+- Fixed issue in grouped menu subheadings not being announced in screen reader
+
+### [Global Navigation](https://www.lightningdesignsystem.com/components/global-navigation)
+#### Fixed
+- Fixed issue in grouped menu subheadings not being announced in screen reader
+
 ### [File Selector](https://www.lightningdesignsystem.com/components/file-selector)
 #### Changed
 - `aria-labelledby` attribute is removed from HTML input file and added to the wrapper div along with `role='group'` as per accessibility requirements in File selector component.

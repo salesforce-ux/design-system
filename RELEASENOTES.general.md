@@ -1,7 +1,7 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
-## 2.25.6 - December 4, 2024
+## 2.25.6 - January 16, 2024
 
 ## 2.25.5 - December 2, 2024
 

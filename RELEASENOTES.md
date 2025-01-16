@@ -114,6 +114,7 @@
 - Updated the deprecated hooks. This process was to update the deprecated component level hooks to latest ones.
 - We have added the latest hooks at the front and kept all the previously existed ones as fallback value to support backward compatibility
 - The components updated are - accordion, alert, avatar, breadcrumbs, buttons, card, input, modals, pills, tabs, textarea, toast, tooltips.
+
 ## Updated
 - Updated popover header error background color.
 
@@ -132,22 +133,6 @@
 ### [Form Layout](https://www.lightningdesignsystem.com/components/form-layout)
 #### Fixed
 - Changed the alignment of address form element. This fixes the alignment issue in cases where help text is present.
-## 2.19
-#### Added
-- Spacing Styling Hooks for Compound `Form`
-  - `--slds-c-form-compound-spacing-block-start` to customize `margin top`
-  - `--slds-c-form-compound-spacing-block-end` to customize `margin bottom`
-  - `--slds-c-form-compound-spacing-block` to customize `margin top & bottom`
-  - `--slds-c-form-compound-spacing-inline-start` to customize `margin left`
-  - `--slds-c-form-compound-spacing-inline-end` to customize `margin right`
-  - `--slds-c-form-compound-spacing-inline` to customize `margin left & right`
-- Spacing Styling Hooks for `Form Element` Row
-  - `--slds-c-form-row-spacing-block-start` to customize `margin top`
-  - `--slds-c-form-row-spacing-block-end` to customize `margin bottom`
-  - `--slds-c-form-row-spacing-block` to customize `margin top & bottom`
-  - `--slds-c-form-row-spacing-inline-start` to customize `margin left`
-  - `--slds-c-form-row-spacing-inline-end` to customize `margin right`
-  - `--slds-c-form-row-spacing-inline` to customize `margin left & right`
 
 ### [Menus](https://www.lightningdesignsystem.com/components/menus)
 - Updated nubbin positions for Dropdown in RTL
@@ -168,6 +153,19 @@
 ### [Vertical Navigation](https://www.lightningdesignsystem.com/components/vertical-navigation)
 #### Fixed
 - Fixed (added) back bem syntax for backwards compatibility
+
+## Release 2.25.6 - January 16, 2024
+
+## Component Blueprints
+### [Form Element](https://www.lightningdesignsystem.com/components/form-element)
+#### Fixed
+- Fixed form element label alignment for Horizontal layout when labels have multiple words in small screens.
+
+## Release 2.25.5 - December 2, 2024
+
+- Updated icons to `v10.10.1`
+  - Utility Set:
+    - Added agent_astro
 
 ## Release 2.25.4 - November 14, 2024
 
@@ -612,7 +610,7 @@
 - Fixed `NVDA` checkbox toggle is announced twice removed aria-live="assertive"
 
 ### [Combobox](https://www.lightningdesignsystem.com/components/combobox)
-#### Added 
+#### Added
 - Tooltip option provided for Date/DateTime pickers.
 - Updated from tabindex to tabIndex.
 
@@ -640,7 +638,7 @@
 
 ### [Form Element](https://www.lightningdesignsystem.com/components/form-element)
 #### Changed
-- Added field level custom message option for tooltip 
+- Added field level custom message option for tooltip
 
 ### [Modals](https://www.lightningdesignsystem.com/components/modals)
 #### Changed
@@ -653,7 +651,7 @@
 
 ### [Progress Ring](https://www.lightningdesignsystem.com/components/progress-ring)
 #### Fixed
-- Fixed duplicate IDs by adding helper method 
+- Fixed duplicate IDs by adding helper method
 
 ### [Split View](https://www.lightningdesignsystem.com/components/split-view)
 #### Changed
@@ -757,7 +755,7 @@ Added `aria-label` to meet accessibility requirements specifically for screen re
 
 ### [Global Navigation](https://www.lightningdesignsystem.com/components/global-navigation)
 #### Added
-- Added `role="presentation"` for globlal navigation's overflow tab item 
+- Added `role="presentation"` for globlal navigation's overflow tab item
 
 ### [Menus](https://www.lightningdesignsystem.com/components/menus)
 ## Fixed
@@ -1041,7 +1039,7 @@ Added `aria-label` to meet accessibility requirements specifically for screen re
 
 ### [Form Element](https://www.lightningdesignsystem.com/components/form-element)
 #### Fixed
-- Fixed form element label to support RTL layout by removing left aligned spacing and placing it back on the opposite side. 
+- Fixed form element label to support RTL layout by removing left aligned spacing and placing it back on the opposite side.
 
 ### [Modals](https://www.lightningdesignsystem.com/components/modals)
 #### Changed

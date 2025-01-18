@@ -3,6 +3,14 @@
 # Datetime Picker Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.25.4
+
+### Updated
+
+- Date format is now hidden via `.slds-assistive-text` by default. This remains hidden when there are errors present on the input.
+- Date format becomes visible when the input has focus by removing `.slds-assistive-text`.
+- Date format is shown as an example date prefixed with "Format: " (e.g., Format: 12/31/2024).
+
 ## 2.25.0
 
 ### Updated

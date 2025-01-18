@@ -12,7 +12,7 @@ import {
   PlainTimeOptionsSelected
 } from '../../combobox/snapshots.data';
 import { UtilityIcon } from '../../icons/base/example';
-import { DatePicker } from '../../datepickers/base/example';
+import { DatePicker, DATE_FORMAT_TEXT } from '../../datepickers/base/example';
 import ButtonIcon from '../../button-icons/';
 import { FormElement } from '../../form-element';
 import Input from '../../input/';
@@ -22,6 +22,7 @@ import Input from '../../input/';
 ----------------------------------------------------------------------------- */
 
 const ExampleDatetimePicker = ({
+  dateFormat,
   dropdown,
   dropdownIsOpen,
   hasFocus,
@@ -36,7 +37,7 @@ const ExampleDatetimePicker = ({
   showTooltip,
   fieldLevelDateMessage,
   fieldLevelTimeMessage,
-  format
+  showDateFormat
 }) => {
   const focusedRef = useRef();
   const [focusedId, setFocusedId] = useState('');
@@ -97,7 +98,8 @@ const ExampleDatetimePicker = ({
                 hasTooltip={hasTooltip && fieldLevelDateMessage ? hasTooltip : false}
                 showTooltip={showTooltip && fieldLevelDateMessage ? showTooltip : false}
                 fieldLevelMessage={fieldLevelDateMessage}
-                inlineMessage={!hasError && format}
+                inlineMessage={!hasError && dateFormat}
+                hasHiddenInlineMessage={!showDateFormat}
               >
                 <Input
                   id={uniqueId}
@@ -203,7 +205,7 @@ ExampleDatetimePicker.defaultProps = {
 ----------------------------------------------------------------------------- */
 
 // Default
-export default <ExampleDatetimePicker listboxData={PlainTimeOptions} />;
+export default <ExampleDatetimePicker dateFormat={DATE_FORMAT_TEXT} listboxData={PlainTimeOptions} />;
 
 export const examples = [
   {
@@ -215,7 +217,7 @@ export const examples = [
       <ExampleDatetimePicker
         dropdownIsOpen={false}
         listboxData={PlainTimeOptions}
-        format="mm/dd/yyyy"
+        dateFormat={DATE_FORMAT_TEXT}
       />
     )
   }
@@ -223,14 +225,15 @@ export const examples = [
 
 export let states = [
 {
-    id: 'default-dropdown-closed',
-    label: 'Base - dropdown closed',
+    id: 'date-example-text-visible',
+    label: 'Date and Time - date example text visible',
     demoStyles: 'height: 6rem;',
     element: (
       <ExampleDatetimePicker
         dropdown={null}
         listboxData={PlainTimeOptions}
-        format="mm/dd/yyyy"
+        dateFormat={DATE_FORMAT_TEXT}
+        showDateFormat
       />
     )
   },
@@ -244,7 +247,7 @@ export let states = [
         }
         dateDefaultValue="06/24/2021"
         listboxData={PlainTimeOptions}
-        format="mm/dd/yyyy"
+        dateFormat={DATE_FORMAT_TEXT}
       />
     )
   },
@@ -268,7 +271,7 @@ export let states = [
         isOpen
         hasFocus
         listboxData={PlainTimeOptionsSelected}
-        format="mm/dd/yyyy"
+        dateFormat={DATE_FORMAT_TEXT}
       />
     )
   },
@@ -281,7 +284,7 @@ export let states = [
         dropdownIsOpen={false}
         isRequired
         listboxData={PlainTimeOptions}
-        format="mm/dd/yyyy"
+        dateFormat={DATE_FORMAT_TEXT}
       />
     )
   },
@@ -323,7 +326,7 @@ export let states = [
         hasTooltip
         showTooltip
         fieldLevelDateMessage="Format: mmm d yyyy | ex: Jan 1 2023"
-        format="mm/dd/yyyy"
+        dateFormat={DATE_FORMAT_TEXT}
       />
     )
   },
@@ -349,7 +352,7 @@ export let states = [
         showTooltip
         listboxData={PlainTimeOptionsSelected}
         fieldLevelTimeMessage="Format: hh:mm a | ex: 12:00 AM"
-        format="mm/dd/yyyy"
+        dateFormat={DATE_FORMAT_TEXT}
       />
     )
   },
@@ -363,7 +366,7 @@ export let states = [
         dropdownIsOpen={false}
         listboxData={PlainTimeOptions}
         isDisabled
-        format="mm/dd/yyyy"
+        dateFormat={DATE_FORMAT_TEXT}
       />
     )
   },

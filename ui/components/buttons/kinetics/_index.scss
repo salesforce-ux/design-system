@@ -27,7 +27,7 @@ $kx-button-gradient-size: 140px;
     position: absolute;
     bottom: 50%; // 50% brings the underline to the relative middle of button, no matter padding, margin or line-height applied.
     height: rem(1px);
-    width: calc(100% - var(--slds-c-button-spacing-inline-start, 0rem) - var(--slds-c-button-spacing-inline-end, 0rem));
+    width: calc(100% - var(--slds-c-button-spacing-inlinestart, var(--slds-c-button-spacing-inline-start, 0rem)) - var(--slds-c-button-spacing-inlineend, var(--slds-c-button-spacing-inline-end, 0rem)));
     background: var(--slds-c-button-text-color-hover, var(--sds-c-button-text-color-hover, #{$brand-accessible-active}));
     background-position: left top;
     transform: scaleX(var(--slds-kx-button-underline-scale-x)) translateY(var(--slds-kx-button-underline-translate-y));

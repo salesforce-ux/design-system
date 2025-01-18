@@ -2,12 +2,19 @@
 
 # Popovers Release Notes
 
+<!-- ## [Unreleased] -->
+
+## 2.26.0
+
+## Updated
+
+- Updated header error background color
+
 ## 2.25.2
 
 ## Fixed
 
 - Fixed the incorrect text color for brand button variant when used in warning popover footer
-
 
 ## 2.24.2
 

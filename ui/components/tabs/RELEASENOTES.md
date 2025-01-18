@@ -32,7 +32,6 @@
 
 ### Added
 
-- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
 - Added reassignment of Styling Hooks for component states.
 ## 2.15.0
 
@@ -45,12 +44,6 @@
 - Adjusted color of unsaved tab indicator asterisk to comply with accessibility color contrast rules for active tabs and tabs with notification.
 - Removed white `background-color` from `.slds-tabs_default` to expose surface color of the tabs parent container.
 - The `back` icon present in tabs on mobile has been replaced by `chevronleft`. This is an inherited change from panels and it makes the icon consistent between the drilled-in states.
-
-## 2.13.3
-
-### Changed
-
-- Treat Styling Hooks targeting text color as an element, previously referred to as a property. e.g. `--sds-c-tabs-item-color-text` => `--sds-c-tabs-item-text-color`.
 
 ## 2.13.0
 

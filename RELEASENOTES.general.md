@@ -1,7 +1,127 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
+## 2.26.0 - January 16, 2025
 
-## 2.25.6 - December 4, 2024
+- Update icons to `v10.11.1`
+  - Renamed summary_usage to usage_summary
+  - Renamed summary_liable to usage_billing_period_item
+  - Renamed usage_rateable_summary to usage_ratable_summary
+
+- Update icons to `v10.11.0`
+  - Standard Set:
+    - Added ad_event_action
+    - Added ad_event_cause
+    - Added ad_event_effect
+    - Added ad_event_factor
+    - Added ad_event_info
+    - Added ad_event_outcome
+    - Added ad_event_party
+    - Added adverse_event
+    - Added billing
+    - Added calculated_dimension
+    - Added calculated_measure
+    - Added disease_defintion_criteria
+    - Added disese_investigation
+    - Added disease_outbreak
+    - Added edit_form
+    - Added enrollee_status
+    - Added eval_result
+    - Added event_ext
+    - Added life_sciences
+    - Added map_line_item
+    - Added medication_administration
+    - Added member_period
+    - Updated metric
+    - Added patient_service
+    - Added procedure_output_resolution
+    - Added program_detail
+    - Added program_site
+    - Added program_status
+    - Added prospect
+    - Added replace
+    - Added reset_password
+    - Added send_log
+    - Added study
+    - Added study_candidate
+    - Added study_related
+    - Added sub_metric
+    - Added summary_liable
+    - Added summary_usage
+    - Added table
+    - Added transaction_usage_entitlement
+    - Added usage_entitlement_account
+    - Added usage_entitlement_bucket
+    - Added usage_entitlement_entry
+    - Added usage_ratable_summary
+
+  - Utility Set:
+    - Added agent_astro
+    - Added applied_amount
+    - Added billing
+    - Added border_all
+    - Added border_bottom
+    - Added border_left
+    - Added border_right
+    - Added border_top
+    - Added co_ins_infusion
+    - Added co_insurance
+    - Added copay
+    - Added copay_infusion
+    - Added coverage_type
+    - Added deductible
+    - Added deductible_met
+    - Added deny_access_field
+    - Added deny_access_object
+    - Added deny_access_row
+    - Added donut_chart
+    - Added emoji_above_average.svg
+    - Added emoji_average.svg
+    - Added emoji_bad.svg
+    - Added emoji_below_average.svg
+    - Added emoji_excellent.svg
+    - Added emoji_good.svg
+    - Added emoji_outstanding.svg
+    - Added emoji_very_bad.svg
+    - Added emoji_very_good.svg
+    - Added emoji_worst.svg
+    - Added expense
+    - Added expense_report
+    - Added field_currency_calc
+    - Added field_date_calc
+    - Added field_date_time_calc
+    - Added field_dimension_calc
+    - Added field_measure_calc
+    - Added list_email
+    - Added lt_max
+    - Added lt_remaining
+    - Added mask_field
+    - Added messaging_conversation
+    - Added oop_annual
+    - Added oop_applied
+    - Added oop_max
+    - Added oop_total
+    - Added partner_fund_request
+    - Added paused_call
+    - Added people_score
+    - Added policy
+    - Added pre_auth
+    - Added pro_network
+    - Added regenerate
+    - Added response_date
+    - Added sales_channel
+    - Added status_code
+    - Added suggested_for_you
+    - Updated textbox
+
+- Updated the deprecated hooks. This process was to update the deprecated component level hooks to latest ones.
+- We have added the latest hooks at the front and kept all the previously existed ones as fallback value to support backward compatibility
+- The components updated are - accordion, alert, avatar, breadcrumbs, buttons, card, input, modals, pills, tabs, textarea, toast, tooltips.
+
+## Updated
+
+- Updated popover header error background color.
+
+## 2.25.6 - January 16, 2024
 
 ## 2.25.5 - December 2, 2024
 

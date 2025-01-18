@@ -14,7 +14,6 @@
 
 ### Added
 
-- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
 - Added reassignment of Styling Hooks for component states.
 - Added clarification about card header icon assistive text.
 - Added clarification about card heading levels for accessibility.

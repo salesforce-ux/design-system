@@ -36,6 +36,15 @@
   padding-right: $spacing-small;
 }
 
+// min-width of input 280px + 24px left/right padding of the layout = 304px
+@media (max-width: 304px) {
+  .slds-form__item {
+   min-width: 0;
+   width: 100%;
+   flex: unset;
+ }
+}
+
 /**
  * @summary Indicates if a form element has been edited, but unsaved
  * @selector .slds-is-edited

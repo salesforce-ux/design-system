@@ -89,63 +89,73 @@
 
     .slds-card__header {
       padding-top:
+        var(--slds-c-card-header-spacing-blockstart,
         var(--slds-c-card-header-spacing-block-start,
         var(--sds-c-card-header-spacing-block-start,
         var(--slds-c-card-header-spacing-block,
-        var(--sds-c-card-header-spacing-block, $var-spacing-vertical-small))));
+        var(--sds-c-card-header-spacing-block, $var-spacing-vertical-small)))));
       padding-right:
+        var(--slds-c-card-header-spacing-inlineend,
         var(--slds-c-card-header-spacing-inline-end,
         var(--sds-c-card-header-spacing-inline-end,
         var(--slds-c-card-header-spacing-inline,
-        var(--sds-c-card-header-spacing-inline, $var-spacing-horizontal-medium))));
+        var(--sds-c-card-header-spacing-inline, $var-spacing-horizontal-medium)))));
       padding-bottom:
+        var(--slds-c-card-header-spacing-blockend,
         var(--slds-c-card-header-spacing-block-end,
         var(--sds-c-card-header-spacing-block-end,
         var(--slds-c-card-header-spacing-block,
-        var(--sds-c-card-header-spacing-block, 0))));
+        var(--sds-c-card-header-spacing-block, 0)))));
       padding-left:
+        var(--slds-c-card-header-spacing-inlinestart,
         var(--slds-c-card-header-spacing-inline-start,
         var(--sds-c-card-header-spacing-inline-start,
         var(--slds-c-card-header-spacing-inline,
-        var(--sds-c-card-header-spacing-inline, $var-spacing-horizontal-medium))));
+        var(--sds-c-card-header-spacing-inline, $var-spacing-horizontal-medium)))));
     }
 
     .slds-card__body_inner,
     .slds-card__body--inner {
       padding: 0;
       padding-right:
+        var(--slds-c-card-body-spacing-inlineend,
         var(--slds-c-card-body-spacing-inline-end,
         var(--sds-c-card-body-spacing-inline-end,
         var(--slds-c-card-body-spacing-inline,
-        var(--sds-c-card-body-spacing-inline, $var-spacing-horizontal-medium))));
+        var(--sds-c-card-body-spacing-inline, $var-spacing-horizontal-medium)))));
       padding-left:
+        var(--slds-c-card-body-spacing-inlinestart,
         var(--slds-c-card-body-spacing-inline-start,
         var(--sds-c-card-body-spacing-inline-start,
         var(--slds-c-card-body-spacing-inline,
-        var(--sds-c-card-body-spacing-inline, $var-spacing-horizontal-medium))));
+        var(--sds-c-card-body-spacing-inline, $var-spacing-horizontal-medium)))));
     }
 
     .slds-card__footer {
       padding-top:
+        var(--slds-c-card-footer-spacing-blockstart,
         var(--slds-c-card-footer-spacing-block-start,
         var(--sds-c-card-footer-spacing-block-start,
         var(--slds-c-card-footer-spacing-block,
-        var(--sds-c-card-footer-spacing-block, $var-spacing-vertical-small))));
+        var(--sds-c-card-footer-spacing-block, $var-spacing-vertical-small)))));
       padding-right:
+        var(--slds-c-card-footer-spacing-inlineend,
         var(--slds-c-card-footer-spacing-inline-end,
         var(--sds-c-card-footer-spacing-inline-end,
         var(--slds-c-card-footer-spacing-inline,
-        var(--sds-c-card-footer-spacing-inline, $var-spacing-horizontal-medium))));
+        var(--sds-c-card-footer-spacing-inline, $var-spacing-horizontal-medium)))));
       padding-bottom:
+        var(--slds-c-card-footer-spacing-blockend,
         var(--slds-c-card-footer-spacing-block-end,
         var(--sds-c-card-footer-spacing-block-end,
         var(--slds-c-card-footer-spacing-block,
-        var(--sds-c-card-footer-spacing-block, $var-spacing-vertical-small))));
+        var(--sds-c-card-footer-spacing-block, $var-spacing-vertical-small)))));
       padding-left:
+        var(--slds-c-card-footer-spacing-inlinestart,
         var(--slds-c-card-footer-spacing-inline-start,
         var(--sds-c-card-footer-spacing-inline-start,
         var(--slds-c-card-footer-spacing-inline,
-        var(--sds-c-card-footer-spacing-inline, $var-spacing-horizontal-medium))));
+        var(--sds-c-card-footer-spacing-inline, $var-spacing-horizontal-medium)))));
     }
   }
 }

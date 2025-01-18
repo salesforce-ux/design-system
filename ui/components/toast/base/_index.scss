@@ -37,11 +37,11 @@
   color: var(--slds-c-toast-text-color, var(--sds-c-toast-text-color));
   border-radius: var(--slds-c-toast-radius-border, var(--sds-c-toast-radius-border, $border-radius-medium));
   margin: $spacing-x-small;
-  padding-top: var(--slds-c-toast-spacing-block-start, var(--sds-c-toast-spacing-block-start, $spacing-small));
-  padding-right: var(--slds-c-toast-spacing-inline-end, var(--sds-c-toast-spacing-inline-end, $spacing-xx-large));
-  padding-bottom: var(--slds-c-toast-spacing-block-end, var(--sds-c-toast-spacing-block-end, $spacing-small));
-  padding-left: var(--slds-c-toast-spacing-inline-start, var(--sds-c-toast-spacing-inline-start, $spacing-large));
-  min-width: var(--slds-c-toast-sizing-min-width, var(--sds-c-toast-sizing-min-width, rem(480px)));
+  padding-top: var(--slds-c-toast-spacing-blockstart, var(--slds-c-toast-spacing-block-start, var(--sds-c-toast-spacing-block-start, $spacing-small)));
+  padding-right: var(--slds-c-toast-spacing-inlineend, var(--slds-c-toast-spacing-inline-end, var(--sds-c-toast-spacing-inline-end, $spacing-xx-large)));
+  padding-bottom: var(--slds-c-toast-spacing-blockend, var(--slds-c-toast-spacing-block-end, var(--sds-c-toast-spacing-block-end, $spacing-small)));
+  padding-left: var(--slds-c-toast-spacing-inlinestart, var(--slds-c-toast-spacing-inline-start, var(--sds-c-toast-spacing-inline-start, $spacing-large)));
+  min-width: var(--slds-c-toast-sizing-width-min, var(--slds-c-toast-sizing-min-width, var(--sds-c-toast-sizing-min-width, rem(480px))));
   text-align: left;
   justify-content: flex-start;
 

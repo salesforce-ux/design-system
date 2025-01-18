@@ -12,16 +12,9 @@
 
 ### Added
 
-- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks
 - Added CSS Custom Property reassignments for variants
 
 <!-- ## [Unreleased] -->
-
-## 2.13.3
-
-### Changed
-
-- Treat Styling Hooks targeting text color as an element, previously referred to as a property. e.g. `--sds-c-avatar-initials-color-text` => `--sds-c-avatar-initials-text-color`.
 
 ## 2.13.0
 

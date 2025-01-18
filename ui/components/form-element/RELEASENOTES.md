@@ -4,6 +4,14 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.26.0
+
+### Fixed
+- Fixed input dropdown visibility issue in ff and safari caused by container query in a previous fix
+- Changed the alignment of address form element. This fixes the alignment issue in cases where help text is present.
+- Record form .slds-form__item width is now fluid when parent container is less than 280px
+- Fixed (added) back bem syntax for backwards compatibility
+
 ## 2.25.6
 
 ### Fixed

@@ -37,6 +37,7 @@
 
   &:before,
   &:after {
+    /*! @noflip */
     left: $spacing-large;
     top: (($nubbin-size-default * 0.5) * -1);
   }
@@ -61,9 +62,12 @@
 
   &:before,
   &:after {
+    /*! @noflip */
     left: auto;
+    /*! @noflip */
     right: $spacing-large;
     top: (($nubbin-size-default * 0.5) * -1);
+    /*! @noflip */
     margin-right: (($nubbin-size-default * 0.5) * -1);
   }
 }
@@ -104,6 +108,7 @@
 
   &:before,
   &:after {
+    /*! @noflip */
     left: $spacing-large;
     top: 100%;
     margin-top: (($nubbin-size-default * 0.5) * -1);
@@ -129,10 +134,13 @@
 
   &:before,
   &:after {
+    /*! @noflip */
     left: auto;
+    /*! @noflip */
     right: $spacing-large;
     top: 100%;
     margin-top: (($nubbin-size-default * 0.5) * -1);
+    /*! @noflip */
     margin-right: (($nubbin-size-default * 0.5) * -1);
   }
 }
@@ -285,6 +293,7 @@
 
   &:before,
   &:after {
+    /*! @noflip */
     left: $spacing-small;
   }
 }
@@ -301,6 +310,7 @@
 
   &:before,
   &:after {
+    /*! @noflip */
     left: $spacing-small;
   }
 }
@@ -317,6 +327,7 @@
 
   &:before,
   &:after {
+    /*! @noflip */
     right: $spacing-small;
   }
 }
@@ -333,6 +344,7 @@
 
   &:before,
   &:after {
+    /*! @noflip */
     right: $spacing-small;
   }
 }

@@ -1,6 +1,5 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
-
 /**
  * @summary Initializes an accordion list with more than one section that will have its display toggled by invoking an interaction on the summary title
  *
@@ -20,9 +19,9 @@
  * @restrict .slds-accordion li
  */
 .slds-accordion__list-item {
-  border-top-width: var(--slds-c-accordion-sizing-border, var(--sds-c-accordion-sizing-border, $border-width-thin));
+  border-top-width: var(--slds-c-accordion-section-sizing-border, var(--slds-c-accordion-sizing-border, var(--sds-c-accordion-sizing-border, $border-width-thin)));
   border-top-style: solid;
-  border-top-color: var(--slds-c-accordion-color-border, var(--sds-c-accordion-color-border, var(--slds-g-color-border-base-1, #{$color-border})));
+  border-top-color: var(--slds-c-accordion-section-color-border, var(--slds-c-accordion-color-border, var(--sds-c-accordion-color-border, var(--slds-g-color-border-base-1, #{$color-border}))));
 
   &:first-child {
     border-top: 0;
@@ -35,28 +34,101 @@
  * @restrict .slds-accordion__section div
  */
 .slds-accordion__summary {
+  /**
+   * This is specific to the margin properties below as a workaround to address an issue with the parser in production.
+   * (Having 5 or more arguments breaks the parser)
+   *
+   * We tried alternatives (e.g., mixin), but the `scss-parser-aura` could not resolve the old fallback tokens.
+   * See:
+   * - Mixin workaround that did not work: https://github.com/salesforce-ux/design-system-internal/pull/5398
+   * - Bug report: https://gus.lightning.force.com/lightning/r/ADM_Work__c/a07EE000025IvUEYA0/view
+   */
+  --_slds-c-accordion-section-spacing-block-start-deprecated: var(
+    --slds-c-accordion-section-spacing-block-start,
+    var(--sds-c-accordion-section-spacing-block-start)
+  );
+  --_slds-c-accordion-section-spacing-inline-end-deprecated: var(
+    --slds-c-accordion-section-spacing-inline-end,
+    var(--sds-c-accordion-section-spacing-inline-end)
+  );
+  --_slds-c-accordion-section-spacing-block-end-deprecated: var(
+    --slds-c-accordion-section-spacing-block-end,
+    var(--sds-c-accordion-section-spacing-block-end)
+  );
+  --_slds-c-accordion-section-spacing-inline-start-deprecated: var(
+    --slds-c-accordion-section-spacing-inline-start,
+    var(--sds-c-accordion-section-spacing-inline-start)
+  );
+
   display: flex;
   margin-top: calc(
-    var(--slds-c-accordion-section-spacing-block-start,
-    var(--sds-c-accordion-section-spacing-block-start,
-    #{$spacing-small})) * -1);
+    var(
+        --slds-c-accordion-section-spacing-blockstart,
+        var(
+          --_slds-c-accordion-section-spacing-block-start-deprecated,
+          #{$spacing-small}
+        )
+      ) * -1
+  );
   margin-right: calc(
-    var(--slds-c-accordion-section-spacing-inline-end,
-    var(--sds-c-accordion-section-spacing-inline-end,
-    #{$spacing-small})) * -1);
+    var(
+        --slds-c-accordion-section-spacing-inlineend,
+        var(
+          --_slds-c-accordion-section-spacing-inline-end-deprecated,
+          #{$spacing-small}
+        )
+      ) * -1
+  );
   margin-bottom: calc(
-    var(--slds-c-accordion-section-spacing-block-end,
-    var(--sds-c-accordion-section-spacing-block-end,
-    #{$spacing-small})) * -1);
+    var(
+        --slds-c-accordion-section-spacing-blockend,
+        var(
+          --_slds-c-accordion-section-spacing-block-end-deprecated,
+          #{$spacing-small}
+        )
+      ) * -1
+  );
   margin-left: calc(
-    var(--slds-c-accordion-section-spacing-inline-start,
-    var(--sds-c-accordion-section-spacing-inline-start,
-    #{$spacing-small})) * -1);
-  padding-top: var(--slds-c-accordion-section-spacing-block-start, var(--sds-c-accordion-section-spacing-block-start, #{$spacing-small}));
-  padding-right: var(--slds-c-accordion-section-spacing-inline-end, var(--sds-c-accordion-section-spacing-inline-end, #{$spacing-small}));
-  padding-bottom: var(--slds-c-accordion-section-spacing-block-end, var(--sds-c-accordion-section-spacing-block-end, #{$spacing-small}));
-  padding-left: var(--slds-c-accordion-section-spacing-inline-start, var(--sds-c-accordion-section-spacing-inline-start, #{$spacing-small}));
-  background-color: var(--slds-c-accordion-summary-color-background, var(--sds-c-accordion-summary-color-background, transparent));
+    var(
+        --slds-c-accordion-section-spacing-inlinestart,
+        var(
+          --_slds-c-accordion-section-spacing-inline-start-deprecated,
+          #{$spacing-small}
+        )
+      ) * -1
+  );
+  padding-top: var(
+    --slds-c-accordion-section-spacing-blockstart,
+    var(
+      --slds-c-accordion-section-spacing-block-start,
+      var(--sds-c-accordion-section-spacing-block-start, #{$spacing-small})
+    )
+  );
+  padding-right: var(
+    --slds-c-accordion-section-spacing-inlineend,
+    var(
+      --slds-c-accordion-section-spacing-inline-end,
+      var(--sds-c-accordion-section-spacing-inline-end, #{$spacing-small})
+    )
+  );
+  padding-bottom: var(
+    --slds-c-accordion-section-spacing-blockend,
+    var(
+      --slds-c-accordion-section-spacing-block-end,
+      var(--sds-c-accordion-section-spacing-block-end, #{$spacing-small})
+    )
+  );
+  padding-left: var(
+    --slds-c-accordion-section-spacing-inlinestart,
+    var(
+      --slds-c-accordion-section-spacing-inline-start,
+      var(--sds-c-accordion-section-spacing-inline-start, #{$spacing-small})
+    )
+  );
+  background-color: var(
+    --slds-c-accordion-summary-color-background,
+    var(--sds-c-accordion-summary-color-background, transparent)
+  );
 
   // For Action Overflow Menu variant
   .slds-dropdown-trigger .slds-button {
@@ -73,10 +145,10 @@
   display: flex;
   flex-grow: 1;
   min-width: 0;
-  color: var(--slds-c-accordion-heading-text-color, var(--sds-c-accordion-heading-text-color,
-    var(--slds-g-color-neutral-base-10, #{$color-text-default})));
+  color: var(--slds-c-accordion-heading-color, var(--slds-c-accordion-heading-text-color, var(--sds-c-accordion-heading-text-color,
+  var(--slds-g-color-neutral-base-10, #{$color-text-default}))));
   font-size: var(--slds-c-accordion-heading-font-size, var(--sds-c-accordion-heading-font-size, $var-font-size-5));
-  line-height: var(--slds-c-accordion-heading-line-height, var(--sds-c-accordion-heading-line-height, $line-height-heading));
+  line-height: var(--slds-c-accordion-heading-font-lineheight, var(--slds-c-accordion-heading-line-height, var(--sds-c-accordion-heading-line-height, $line-height-heading)));
 
   .slds-button:focus {
     box-shadow: inset var(--slds-g-shadow-outline-focus-1);
@@ -89,34 +161,104 @@
  * @restrict .slds-accordion__summary button
  */
 .slds-accordion__summary-action {
+  /**
+   * This is specific to the margin properties below as a workaround to address an issue with the parser in production.
+   * (Having 5 or more arguments breaks the parser)
+   *
+   * We tried alternatives (e.g., mixin), but the `scss-parser-aura` could not resolve the old fallback tokens.
+   * See:
+   * - Mixin workaround that did not work: https://github.com/salesforce-ux/design-system-internal/pull/5398
+   * - Bug report: https://gus.lightning.force.com/lightning/r/ADM_Work__c/a07EE000025IvUEYA0/view
+   */
+  --_slds-c-accordion-section-spacing-block-start-deprecated: var(
+    --slds-c-accordion-section-spacing-block-start,
+    var(--sds-c-accordion-section-spacing-block-start)
+  );
+  --_slds-c-accordion-section-spacing-inline-end-deprecated: var(
+    --slds-c-accordion-section-spacing-inline-end,
+    var(--sds-c-accordion-section-spacing-inline-end)
+  );
+  --_slds-c-accordion-section-spacing-block-end-deprecated: var(
+    --slds-c-accordion-section-spacing-block-end,
+    var(--sds-c-accordion-section-spacing-block-end)
+  );
+  --_slds-c-accordion-section-spacing-inline-start-deprecated: var(
+    --slds-c-accordion-section-spacing-inline-start,
+    var(--sds-c-accordion-section-spacing-inline-start)
+  );
+
   display: inline-flex;
   flex-grow: 1;
   align-items: center;
   min-width: 0;
   margin-top: calc(
-    var(--slds-c-accordion-section-spacing-block-start,
-    var(--sds-c-accordion-section-spacing-block-start,
-    #{$spacing-small})) * -1);
+    var(
+        --slds-c-accordion-section-spacing-blockstart,
+        var(
+          --_slds-c-accordion-section-spacing-block-start-deprecated,
+          #{$spacing-small}
+        )
+      ) * -1
+  );
   margin-right: calc(
-    var(--slds-c-accordion-section-spacing-inline-end,
-    var(--sds-c-accordion-section-spacing-inline-end,
-    #{$spacing-small})) * -1);
+    var(
+        --slds-c-accordion-section-spacing-inlineend,
+        var(
+          --_slds-c-accordion-section-spacing-inline-end-deprecated,
+          #{$spacing-small}
+        )
+      ) * -1
+  );
   margin-bottom: calc(
-    var(--slds-c-accordion-section-spacing-block-end,
-    var(--sds-c-accordion-section-spacing-block-end,
-    #{$spacing-small})) * -1);
+    var(
+        --slds-c-accordion-section-spacing-blockend,
+        var(
+          --_slds-c-accordion-section-spacing-block-end-deprecated,
+          #{$spacing-small}
+        )
+      ) * -1
+  );
   margin-left: calc(
-    var(--slds-c-accordion-section-spacing-inline-start,
-    var(--sds-c-accordion-section-spacing-inline-start,
-    #{$spacing-small})) * -1);
-  padding-top: var(--slds-c-accordion-section-spacing-block-start, var(--sds-c-accordion-section-spacing-block-start, $spacing-small));
-  padding-right: var(--slds-c-accordion-section-spacing-inline-end, var(--sds-c-accordion-section-spacing-inline-end, $spacing-small));
-  padding-bottom: var(--slds-c-accordion-section-spacing-block-end, var(--sds-c-accordion-section-spacing-block-end, $spacing-small));
-  padding-left: var(--slds-c-accordion-section-spacing-inline-start, var(--sds-c-accordion-section-spacing-inline-start, $spacing-small));
+    var(
+        --slds-c-accordion-section-spacing-inlinestart,
+        var(
+          --_slds-c-accordion-section-spacing-inline-start-deprecated,
+          #{$spacing-small}
+        )
+      ) * -1
+  );
+  padding-top: var(
+    --slds-c-accordion-section-spacing-blockstart,
+    var(
+      --slds-c-accordion-section-spacing-block-start,
+      var(--sds-c-accordion-section-spacing-block-start, $spacing-small)
+    )
+  );
+  padding-right: var(
+    --slds-c-accordion-section-spacing-inlineend,
+    var(
+      --slds-c-accordion-section-spacing-inline-end,
+      var(--sds-c-accordion-section-spacing-inline-end, $spacing-small)
+    )
+  );
+  padding-bottom: var(
+    --slds-c-accordion-section-spacing-blockend,
+    var(
+      --slds-c-accordion-section-spacing-block-end,
+      var(--sds-c-accordion-section-spacing-block-end, $spacing-small)
+    )
+  );
+  padding-left: var(
+    --slds-c-accordion-section-spacing-inlinestart,
+    var(
+      --slds-c-accordion-section-spacing-inline-start,
+      var(--sds-c-accordion-section-spacing-inline-start, $spacing-small)
+    )
+  );
 
   &:hover,
   &:focus {
-    color: var(--sds-c-accordion-heading-text-color-hover, var(--sds-c-accordion-heading-text-color-hover, $brand-accessible-active));
+    color: var(--slds-c-accordion-heading-text-color-hover, var(--sds-c-accordion-heading-text-color-hover, $brand-accessible-active));
   }
 }
 
@@ -151,10 +293,10 @@
  * @restrict .slds-accordion section
  */
 .slds-accordion__section {
-  padding-top: var(--slds-c-accordion-section-spacing-block-start, var(--sds-c-accordion-section-spacing-block-start, $spacing-small));
-  padding-right: var(--slds-c-accordion-section-spacing-inline-end, var(--sds-c-accordion-section-spacing-inline-end, $spacing-small));
-  padding-bottom: var(--slds-c-accordion-section-spacing-block-end, var(--sds-c-accordion-section-spacing-block-end, $spacing-small));
-  padding-left: var(--slds-c-accordion-section-spacing-inline-start, var(--sds-c-accordion-section-spacing-inline-start, $spacing-small));
+  padding-top: var(--slds-c-accordion-section-spacing-blockstart, var(--slds-c-accordion-section-spacing-block-start, var(--sds-c-accordion-section-spacing-block-start, $spacing-small)));
+  padding-right: var(--slds-c-accordion-section-spacing-inlineend, var(--slds-c-accordion-section-spacing-inline-end, var(--sds-c-accordion-section-spacing-inline-end, $spacing-small)));
+  padding-bottom: var(--slds-c-accordion-section-spacing-blockend, var(--slds-c-accordion-section-spacing-block-end, var(--sds-c-accordion-section-spacing-block-end, $spacing-small)));
+  padding-left: var(--slds-c-accordion-section-spacing-inlinestart, var(--slds-c-accordion-section-spacing-inline-start, var(--sds-c-accordion-section-spacing-inline-start, $spacing-small)));
 }
 
 /**

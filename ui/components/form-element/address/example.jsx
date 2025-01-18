@@ -246,6 +246,7 @@ export let states = [
             <FormElement
               labelContent="Billing State/Province"
               inputId="form-element-id-18"
+              inlineMessage="This field is required"
             >
               <Input id="form-element-id-18" defaultValue="NC" required />
             </FormElement>

@@ -17,12 +17,6 @@
 - Fix for sass undefined operation compile error.
 - Fix wrong computed css margin rules.
 
-## 2.17.0
-
-### Added
-
-- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks
-
 ## 2.16.0
 
 ### Added

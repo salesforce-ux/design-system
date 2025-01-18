@@ -4,23 +4,11 @@
 
 <!-- ## [Unreleased] -->
 
-## 2.17.0
-
-### Added
-
-- Added `slds` as the default namespace with `sds` fallbacks for Styling Hooks.
-
 ## 2.15.6
 
 ### Fixed
 
 - Corrected accessibility information regarding the usage of the `role` attribute.
-
-## 2.14.0
-
-### Added
-
-- Added `--sds-c-toast-text-color` which allows you to customize the text color.
 
 ## 2.13.0
 

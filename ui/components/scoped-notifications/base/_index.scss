@@ -38,6 +38,17 @@
  */
 .slds-scoped-notification_light {
   background-color: var(--slds-g-color-neutral-base-95, #{$color-background});
+  color: var(--slds-g-color-neutral-base-10, #{$color-text-default});
+
+  a {
+    color: var(--slds-g-color-neutral-base-10, #{$color-text-default});
+    text-decoration: underline;
+
+    &:hover,
+    &:active {
+      text-decoration: none;
+    }
+  }
 }
 
 /**

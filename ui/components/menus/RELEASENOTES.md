@@ -2,6 +2,12 @@
 
 # Menus Release Notes
 
+<!-- ## [Unreleased] -->
+
+## 2.26.0
+
+- Updated nubbin positions for Dropdown in RTL
+
 ## 2.23.0
 
 ### Changed
@@ -13,8 +19,6 @@
 ## Fixed
 
 - Fixed invalid aria roles issue in subheadings with `role=presentation`
-
-<!-- ## [Unreleased] -->
 
 ## 2.15.1
 

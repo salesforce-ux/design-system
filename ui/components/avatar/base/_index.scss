@@ -223,13 +223,13 @@
  */
 .slds-avatar__initials_inverse {
   /*! @css-var-fallback color */
-  --slds-c-avatar-initials-text-color: var(--slds-c-avatar-initials-inverse-text-color, var(--slds-g-color-neutral-base-30, #{$color-text-weak}));
+  --slds-c-avatar-initials-text-color: var(--slds-c-avatar-inverse-text-color, var(--slds-c-avatar-initials-inverse-text-color, var(--slds-g-color-neutral-base-30, #{$color-text-weak})));
   background-color: var(--slds-g-color-neutral-base-95, #{$color-background});
   text-shadow: none;
 
   // combat abbr override styling in avatar
   &:hover {
     /*! @css-var-fallback color */
-    --slds-c-avatar-initials-text-color-hover: var(--slds-c-avatar-initials-inverse-text-color-hover, var(--slds-g-color-neutral-base-30, #{$color-text-weak}));
+    --slds-c-avatar-initials-text-color-hover: var(--slds-c-avatar-inverse-text-color, var(--slds-c-avatar-initials-inverse-text-color-hover, var(--slds-g-color-neutral-base-30, #{$color-text-weak})));
   }
 }

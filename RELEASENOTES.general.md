@@ -1,6 +1,11 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
+## 2.25.5 - December 2, 2024
+
+- Updated icons to `v10.10.1`
+  - Utility Set:
+    - Added agent_astro
 
 ## 2.25.4 - November 14, 2024
 

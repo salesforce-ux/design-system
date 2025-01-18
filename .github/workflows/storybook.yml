@@ -20,13 +20,13 @@ env:
 
 jobs:
   init:
-    runs-on: ubuntu-latest
+    runs-on: salesforce-ux-emu-Ubuntu
 
     steps:
     - uses: tibdex/github-app-token@v1
       id: get_installation_token
       with:
-        app_id: 244972
+        app_id: 1060982
         private_key: ${{ secrets.DSE_CI_APP_KEY }}
 
     - uses: actions/checkout@v3
@@ -44,7 +44,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ steps.get_installation_token.outputs.token }}
 
-      run: 'gh api /repos/salesforce-ux/design-system-internal/deployments --field ref=${{ github.event.pull_request.head.sha }} --method GET | jq "map({ status: .statuses_url, url: .payload.web_url})" > workspace/gh-deployments.json'
+      run: 'gh api /repos/salesforce-ux-emu/design-system-internal/deployments --field ref=${{ github.event.pull_request.head.sha }} --method GET | jq "map({ status: .statuses_url, url: .payload.web_url})" > workspace/gh-deployments.json'
 
     - name: View deployments
       run: cat workspace/gh-deployments.json
@@ -64,7 +64,7 @@ jobs:
           workspace/gh-deployments.json
 
   prepare:
-    runs-on: ubuntu-latest
+    runs-on: salesforce-ux-emu-Ubuntu
     outputs:
       HEROKU_APP_NAME: ${{ steps.which-heroku-app.outputs.HEROKU_APP_NAME }}
       HEROKU_RELEASE_STORYBOOK_APP_NAME: ${{ steps.which-heroku-app.outputs.HEROKU_RELEASE_STORYBOOK_APP_NAME }}
@@ -120,7 +120,7 @@ jobs:
 
   build-storybook:
     if: ${{ !contains('refs/heads//^v\d+\.\d+\.\d+-.+$/', github.ref) }}
-    runs-on: ubuntu-latest
+    runs-on: salesforce-ux-emu-Ubuntu
     needs:
       - prepare
 
@@ -160,7 +160,7 @@ jobs:
 
   publish-storybook:
     if: ${{ needs.prepare.outputs.HEROKU_RELEASE_STORYBOOK_APP_NAME != 'false' }}
-    runs-on: ubuntu-latest
+    runs-on: salesforce-ux-emu-Ubuntu
     needs:
       - init
       - prepare
@@ -210,7 +210,7 @@ jobs:
     - uses: tibdex/github-app-token@v1
       id: get_installation_token
       with:
-        app_id: 244972
+        app_id: 1060982
         private_key: ${{ secrets.DSE_CI_APP_KEY }}
 
     - name: Set Github deployments to "success"
@@ -225,7 +225,7 @@ jobs:
 
   framework-build:
     # if: ${{ (1 < 0) }}
-    runs-on: ubuntu-latest
+    runs-on: salesforce-ux-emu-Ubuntu
     needs:
       - prepare
 
@@ -252,8 +252,11 @@ jobs:
         run: tar -xvf workspace/artifact/metadata.tar
 
       - run: npm ci
+
       - name: Do build-dist
         run: npm run build-dist
+        env: # adding this back to fix build-dist error even though removing it was a fix in #5245
+          NODE_OPTIONS: --openssl-legacy-provider # per https://candid.technology/error-error-0308010c-digital-envelope-routines-unsupported/
 
       - name: Compress .dist
         run: |-
@@ -266,7 +269,7 @@ jobs:
             workspace/dist.zip
 
   publish-site:
-    runs-on: ubuntu-latest
+    runs-on: salesforce-ux-emu-Ubuntu
     needs:
       - framework-build
 
@@ -274,13 +277,13 @@ jobs:
       - uses: tibdex/github-app-token@v1
         id: get_installation_token
         with:
-          app_id: 244972
+          app_id: 1060982
           private_key: ${{ secrets.DSE_CI_APP_KEY }}
 
       - name: Checkout design-system-site
         uses: actions/checkout@v3
         with:
-          repository: salesforce-ux/design-system-site
+          repository: salesforce-ux-emu/design-system-site
           ref: main
           token: ${{ steps.get_installation_token.outputs.token }}
 
@@ -342,7 +345,7 @@ jobs:
           done
 
   attach-artifact:
-    runs-on: ubuntu-latest
+    runs-on: salesforce-ux-emu-Ubuntu
     if: ${{ github.event_name == 'release' }}
     needs:
       - framework-build
@@ -350,7 +353,7 @@ jobs:
     - uses: tibdex/github-app-token@v1
       id: get_installation_token
       with:
-        app_id: 244972
+        app_id: 1060982
         private_key: ${{ secrets.DSE_CI_APP_KEY }}
     - uses: actions/checkout@v3
 
@@ -377,7 +380,7 @@ jobs:
         fi
 
   update-database:
-    runs-on: ubuntu-latest
+    runs-on: salesforce-ux-emu-Ubuntu
     if: ${{ github.event_name == 'release' }}
     needs:
       - attach-artifact
@@ -398,7 +401,7 @@ jobs:
         }'
 
   slack-broadcast:
-    runs-on: ubuntu-latest
+    runs-on: salesforce-ux-emu-Ubuntu
     if: ${{ github.event_name == 'release' }}
     needs:
       - attach-artifact

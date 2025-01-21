@@ -9,6 +9,7 @@
 ### Fixed
 
 - Fixed (added) back bem syntax for backwards compatibility
+- Added fallback value for focus style of nav item
 
 ## 2.21.0
 

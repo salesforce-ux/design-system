@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.26.0
+
+## Fixed
+
+- Added fallback value to focus style for tabs.
+
 ## 2.24.4
 
 ## Fixed

@@ -58,7 +58,7 @@
   margin-bottom: calc(var(--slds-c-tabs-list-sizing-border, var(--sds-c-tabs-list-sizing-border, #{$border-width-thin})) * -1);
 
   &:has(:focus-visible) {
-    outline: 2px solid var(--slds-g-color-brand-base-40);
+    outline: 2px solid var(--slds-g-color-brand-base-40, #{$palette-blue-40});
     outline-offset: rem(-6px);
   }
 

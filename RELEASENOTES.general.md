@@ -1,6 +1,6 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
-## 2.26.0 - Upcoming
+## 2.26.0 - January 16, 2025
 
 - Update icons to `v10.11.1`
   - Renamed summary_usage to usage_summary
@@ -121,6 +121,13 @@
 
 - Updated popover header error background color.
 
+## 2.25.6 - January 16, 2024
+
+## 2.25.5 - December 2, 2024
+
+- Updated icons to `v10.10.1`
+  - Utility Set:
+    - Added agent_astro
 
 ## 2.25.4 - November 14, 2024
 

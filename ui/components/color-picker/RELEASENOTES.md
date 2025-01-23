@@ -10,6 +10,10 @@
 
 - Fixes the color picker inputs alignment
 
+### Changed
+
+- Added border to color-picker swatch
+
 ## 2.23.0
 
 ### Changed

@@ -15,20 +15,30 @@
 #### Added
 - Added `aria-hidden` attribute to required form element label asterisk to avoid being announced by screen reader to meet accessibility WCAG label criteria
 
+## 2.25.6
+
+### Fixed
+
+- Fixed form element label alignment for Horizontal layout when labels have multiple words in small screens.
+
 ## 2.22.0
+
 ### Changed
-- Added field level custom message option for tooltip 
+
+- Added field level custom message option for tooltip
 
 ## 2.18.0
 
 ### Fixed
-- Fixed form element label to support RTL layout by removing left aligned spacing and placing it back on the opposite side. 
+
+- Fixed form element label to support RTL layout by removing left aligned spacing and placing it back on the opposite side.
 
 ## 2.16.0
 
 ### Fixed
 
 - Correctly position help text under the corresponding input when in horizontal layout.
+
 ## 2.14.0
 
 ### Fixed
@@ -61,6 +71,7 @@
 ## 2.12.2
 
 ### Fixed
+
 - For touch devices, fixed an issue with button icons being the incorrect height if using custom elements.
 
 ## 2.11.7

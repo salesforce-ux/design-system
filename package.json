@@ -49,7 +49,7 @@
     "@salesforce-ux/design-system-markup": "^2.0.4",
     "@salesforce-ux/design-system-parser": "^1.1.1",
     "@salesforce-ux/design-system-primitive-tokens": "0.3.6",
-    "@salesforce-ux/icons": "10.11.1",
+    "@salesforce-ux/icons": "10.11.2",
     "@salesforce-ux/instant-vrt": "2.0.0",
     "@salesforce-ux/postcss-annotations-parser": "0.1.1",
     "@salesforce-ux/postcss-css-variable-value": "0.2.0",

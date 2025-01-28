@@ -1185,6 +1185,8 @@ props:
     value: '#1b96ff'
   CALCULATED_MEASURE:
     value: '#06a59a'
+  CHANGES:
+    value: '#06a59a'
   DISEASE_DEFINITION_CRITERIA:
     value: '#ff5d2d'
   DISEASE_INVESTIGATION:

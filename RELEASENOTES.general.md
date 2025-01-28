@@ -1,5 +1,16 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
+
+## Upcoming
+
+- Update icons to `v10.11.2`
+  - Standard Set:
+    - Added changes
+
+  - Utility Set:
+    - Updated border_all svg
+    - Added changes 
+
 ## 2.26.0 - January 16, 2025
 
 - Update icons to `v10.11.1`

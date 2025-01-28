@@ -14,7 +14,6 @@
 .slds-form_horizontal .slds-form-element,
 .slds-form_stacked .slds-form-element_horizontal {
   display: block;
-  clear: both;
 
   &:not(.slds-form-element_readonly) {
     margin-bottom: $spacing-x-small;
@@ -59,6 +58,12 @@
   }
 
   @include mq-medium-min {
+
+    // Ensure the form element is cleared to reset the float of the label
+    // Note: Avoid a bug where longer length labels may overlap with form element below
+    .slds-form-element.slds-form-element_horizontal {
+      clear: both;
+    }
 
     // Handle label - default behavior
     .slds-form-element__label {

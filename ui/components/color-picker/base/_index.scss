@@ -351,4 +351,5 @@
   width: $color-picker-swatch-size;
   border-radius: $border-radius-small;
   box-shadow: var(--slds-g-color-neutral-base-10, #{$color-picker-swatch-shadow});
+  border: 1px solid var(--slds-g-color-border-base-4, #{$palette-neutral-50});
 }

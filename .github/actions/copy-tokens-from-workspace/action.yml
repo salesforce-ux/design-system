@@ -3,5 +3,5 @@ runs:
   using: composite
   steps:
   - name: Decompress design-tokens
-    run: tar -xvf workspace/artifact/design-tokens.tar
+    run: tar -xvf workspace/design-tokens.tar
     shell: bash

@@ -58,13 +58,6 @@
   }
 
   @include mq-medium-min {
-
-    // Ensure the form element is cleared to reset the float of the label
-    // Note: Avoid a bug where longer length labels may overlap with form element below
-    .slds-form-element.slds-form-element_horizontal {
-      clear: both;
-    }
-
     // Handle label - default behavior
     .slds-form-element__label {
       float: left;
@@ -144,5 +137,16 @@
   // Position the inline help text correctly when in horizontal/compact layout
   .slds-form-element__help {
     margin-left: 33%;
+  }
+}
+
+// Bugfix: Avoid a bug where longer length labels may overlap with form element below
+// - Ensure the form element is cleared to reset the `float: left` of the label within the form element
+// - Cannot use `&.slds-form-element` in the main block above, because of `.slds-form_horizontal .slds-form-element,`
+.slds-form-element_horizontal.slds-form-element,
+.slds-form_horizontal .slds-form-element,
+.slds-form_stacked .slds-form-element_horizontal.slds-form-element {
+  @include mq-medium-min {
+    @include clearfix;
   }
 }

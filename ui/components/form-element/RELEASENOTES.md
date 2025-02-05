@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.26.2
+
+### Fixed
+
+- Move clear fix from 2.26.1 to target specific selectors, use clearfix mixin to avoid more edge cases (e.g. background colors)
+
 ## 2.26.1
 
 ### Fixed
@@ -13,6 +19,7 @@
 ## 2.26.0
 
 ### Fixed
+
 - Fixed input dropdown visibility issue in ff and safari caused by container query in a previous fix
 - Changed the alignment of address form element. This fixes the alignment issue in cases where help text is present.
 - Record form .slds-form__item width is now fluid when parent container is less than 280px

@@ -1,6 +1,8 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
+## 2.26.2 - February 6, 2025
+
 ## 2.26.1 - January 30, 2025
 
 - Update icons to `v10.11.2`

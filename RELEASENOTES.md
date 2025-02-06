@@ -8,7 +8,7 @@
 #### Fixed
 - Resolved an issue where a white background box appeared on mouseover of a wrapped cell. This fix applies only to any cell with the `slds-cell-wrap` class.
 
-## Release 2.26.2 - February 10, 2025
+## Release 2.26.2 - February 6, 2025
 
 ## Component Blueprints
 ### [Form Element](https://www.lightningdesignsystem.com/components/form-element)

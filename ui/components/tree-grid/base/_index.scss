@@ -28,6 +28,24 @@
     }
   }
 
+  /**
+   * Bugfix for W-15643934
+   * Notes: 
+   * - This changes will only be effective in the context of any row cell content wraps
+   * - The LBC counterpart differs from the blueprint and this fix won't have any effect,
+   *   because LBC adds an additional div around the cell content.
+   */
+  tr:has(.slds-cell-wrap) .slds-tree__item {
+    display: table-cell;
+    vertical-align: top;
+
+    // the height of the button inherited as same as the line-height of the tree item th
+    & > .slds-button {
+      float: left;
+      height: ($line-height-text * 1rem);
+    }
+  }
+
   .slds-button {
     align-self: center;
 

@@ -3,6 +3,12 @@
 # Tree Grid Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.27.0
+
+### Fixed
+
+- Resolved an issue where a white background box appeared on mouseover of a wrapped cell. This fix applies only to any cell with the `slds-cell-wrap` class.
+
 
 ## 2.7.0
 

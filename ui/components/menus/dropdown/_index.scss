@@ -114,11 +114,17 @@
   border: $border-width-thin solid var(--slds-g-color-border-base-4, #{$color-border});
   border-radius: $border-radius-medium;
   padding: $spacing-xx-small 0;
-  font-size: $font-size-2;
+  font-family: var(--slds-c-dropdown-font-family);
+  font-size: var(--slds-c-dropdown-font-size, $font-size-2);
+  font-weight: var(--slds-c-dropdown-font-weight);
+  font-style: var(--slds-c-dropdown-font-style);
+  text-decoration: var(--slds-c-dropdown-font-decoration);
+  line-height: var(--slds-c-dropdown-font-lineheight);
+  letter-spacing: var(--slds-c-dropdown-letter-spacing);
   background: var(--slds-g-color-neutral-base-100, #{$color-background-alt});
   box-shadow: $shadow-drop-down;
   transform: translateX(-50%);
-  color: var(--slds-g-color-neutral-base-10, #{$color-text-default});
+  color: var(--slds-c-dropdown-color, var(--slds-g-color-neutral-base-10, #{$color-text-default}));
 
   // Typeahead stuff
   mark {

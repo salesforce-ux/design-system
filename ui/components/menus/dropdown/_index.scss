@@ -209,7 +209,8 @@
     justify-content: space-between;
     align-items: center;
     padding: $spacing-x-small $spacing-small;
-    color: var(--slds-g-color-neutral-base-10, #{$color-text-default});
+    background-color: var(--slds-c-dropdown-item-color-background);
+    color: var(--slds-c-dropdown-item-color, var(--slds-g-color-neutral-base-10, #{$color-text-default}));
     white-space: nowrap;
     cursor: pointer;
 
@@ -217,16 +218,23 @@
     &:focus {
       outline: 0;
       text-decoration: none;
-      background-color: var(--slds-g-color-neutral-base-95, #{$color-background-row-hover});
+    }
+
+    &:hover {
+      background-color: var(--slds-c-dropdown-item-color-background-hover, var(--slds-g-color-neutral-base-95, #{$color-background-row-hover}));
+      color: var(--slds-c-dropdown-item-color-hover);
     }
 
     &:focus {
+      background-color: var(--slds-c-dropdown-item-color-background-focus, var(--slds-g-color-neutral-base-95, #{$color-background-row-hover}));
       box-shadow: var(--slds-g-shadow-inset-focus-1, #{$shadow-button-focus});
+      color: var(--slds-c-dropdown-item-color-focus);
     }
 
     &.slds-has-success,
     &.slds-has-warning,
     &.slds-has-error {
+
       &:focus {
         box-shadow: var(--slds-g-shadow-inset-inverse-focus-1);
       }
@@ -234,15 +242,19 @@
 
     &:active {
       text-decoration: none;
-      background-color: var(--slds-g-color-neutral-base-95, #{$color-background-row-active});
+      background-color: var(--slds-c-dropdown-item-color-background-active, var(--slds-g-color-neutral-base-95, #{$color-background-row-active}));
+      color: var(--slds-c-dropdown-item-color-active);
     }
 
     &[aria-disabled="true"] {
-      color: var(--slds-g-color-neutral-base-80, #{$color-text-button-default-disabled});
       cursor: default;
 
-      &:hover {
-        background-color: transparent;
+      &,
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: var(--slds-c-dropdown-item-color-background-disabled, transparent);
+        color: var(--slds-c-dropdown-item-color-disabled, var(--slds-g-color-neutral-base-80, #{$color-text-button-default-disabled}));
       }
 
       &:focus {
@@ -393,8 +405,10 @@
     @include rtl() {
       /*! @noflip */
       right: auto;
+
       /*! @noflip */
       left: $spacing-large;
+
       /*! @noflip */
       margin-left: (($nubbin-size-default * 0.5) * -1);
     }

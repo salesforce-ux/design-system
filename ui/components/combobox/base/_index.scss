@@ -35,6 +35,10 @@
     .slds-combobox__input-value:focus {
       box-shadow: 0 0 0 2px var(--slds-g-color-neutral-base-100, #{$color-gray-1}) inset, 0 0 0 3px var(--slds-g-color-border-base-1, #{$color-border}) inset;
     }
+
+    .slds-combobox__input-value:focus {
+      outline: 2px solid var(--slds-g-color-brand-base-40);
+    }
   }
 
   /**

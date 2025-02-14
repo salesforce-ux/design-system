@@ -40,7 +40,7 @@
 
   &:focus {
     /*! @css-var-fallback box-shadow */
-    --slds-c-pill-shadow: var(--slds-c-pill-shadow-focus, var(--sds-c-pill-shadow-focus, var(--slds-g-shadow-outset-focus-1, #{$shadow-button-focus})));
+    --slds-c-pill-shadow: var(--slds-c-pill-shadow-focus, var(--sds-c-pill-shadow-focus, var(--slds-g-shadow-outline-focus-1, #{$shadow-button-focus})));
 
     outline: 0;
   }
@@ -110,7 +110,7 @@
 
     .slds-pill__action:focus,
     .slds-pill:focus {
-      box-shadow: var(--slds-g-shadow-inset-focus-1);
+      box-shadow: var(--slds-g-shadow-inset-inverse-focus-1);
     }
 
     .slds-pill.slds-pill_bare:focus {
@@ -120,7 +120,7 @@
 }
 
 .slds-listbox_selection-group .slds-listbox-item .slds-pill:focus {
-  box-shadow: var(--slds-g-shadow-inset-focus-1);
+  box-shadow: var(--slds-g-shadow-inset-inverse-focus-1);
 }
 
 /**
@@ -239,7 +239,7 @@
   flex-grow: 1;
 
   &:focus {
-    box-shadow: var(--slds-c-pill-action-shadow, var(--sds-c-pill-action-shadow, var(--slds-g-shadow-outset-focus-1, #{$shadow-button-focus})));
+    box-shadow: var(--slds-c-pill-action-shadow, var(--sds-c-pill-action-shadow, var(--slds-g-shadow-outline-focus-1, #{$shadow-button-focus})));
     outline: 0;
   }
 }

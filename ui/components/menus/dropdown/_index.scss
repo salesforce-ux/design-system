@@ -197,6 +197,11 @@
 .slds-dropdown__header {
   @include text-title;
   padding: $spacing-x-small $spacing-small;
+
+  &:focus {
+    box-shadow: var(--slds-g-shadow-inset-focus-1);
+    outline: 0;
+  }
 }
 
 /**

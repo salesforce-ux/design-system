@@ -4,6 +4,39 @@
 
 ## 2.27.0 - Upcoming
 
+- Update icons to `v10.12.1`
+  - Utility set
+    - Added ai_search
+
+- Update icons to `v10.12.0`
+  - Standard set
+    - Added entity_milestone_time
+    - Added entity_milestone_date
+    - Added outcome_timebound
+    - Added outcome_datebound
+    - Added submit_for_approval
+    - Updated flow
+    - Updated apex
+    - Updated apex_plugin
+    - Updated assignment
+    - Updated decision
+    - Updated loop
+
+  - Utility set
+    - Added ai_app
+    - Added submit_for_approval
+    - Added slack_user_add
+    - Added slack_thread
+    - Added slack_mentions
+    - Added slack_formatting
+    - Added slack_ai_summary
+    - Added slack_add_reaction
+    - Added slack_lock
+    - Added slack_channel
+    - Added slack_user
+    - Added slack_notifications_on
+    - Added slack_notifications_off
+
 ## 2.26.2 - February 6, 2025
 
 ## 2.26.1 - January 30, 2025

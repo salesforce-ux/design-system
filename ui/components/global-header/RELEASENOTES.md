@@ -2,6 +2,13 @@
 
 # Global Header Release Notes
 
+<!-- ## [Unreleased] -->
+## 2.27.0
+
+#### Changed
+
+- Updated focus state style of the avatar
+
 ## 2.19
 
 ### Fixed

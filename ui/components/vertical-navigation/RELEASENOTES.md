@@ -4,12 +4,17 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.27.0
+
+### Added
+
+- Added fallback value for focus style of nav item
+
 ## 2.26.0
 
 ### Fixed
 
 - Fixed (added) back bem syntax for backwards compatibility
-- Added fallback value for focus style of nav item
 
 ## 2.21.0
 

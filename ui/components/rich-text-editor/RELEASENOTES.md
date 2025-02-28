@@ -2,6 +2,13 @@
 
 # Rich Text Editor Release Notes
 
+<!-- ## [Unreleased] -->
+## 2.27.0
+
+#### Changed
+
+- Updated focus state style of the RTE container
+
 ## 2.26.0
 
 ### Updated

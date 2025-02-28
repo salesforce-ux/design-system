@@ -3,6 +3,12 @@
 # Combobox Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.27.0
+
+#### Fixed
+
+- Fixed lookup variant focus style
+
 ## 2.25.0
 
 ### Fixed

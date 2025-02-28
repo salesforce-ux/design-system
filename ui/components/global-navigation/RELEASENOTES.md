@@ -4,7 +4,7 @@
 
 <!-- ## [Unreleased] -->
 
-## 2.26.0
+## 2.27.0
 
 ## Fixed
 
@@ -14,7 +14,7 @@
 
 ### Added
 
-- Added `role="presentation"` for globlal navigation's overflow tab item 
+- Added `role="presentation"` for globlal navigation's overflow tab item
 
 ## 2.19.0
 

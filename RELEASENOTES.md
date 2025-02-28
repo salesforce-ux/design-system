@@ -4,9 +4,65 @@
 ## Release 2.27.0 - Upcoming
 
 ## Component Blueprints
+### [Button Icons](https://www.lightningdesignsystem.com/components/button-icons)
+#### Added
+- Added bordered transparent - with dropdown example
+
+### [Checkbox Toggle](https://www.lightningdesignsystem.com/components/checkbox-toggle)
+#### Changed
+- Added no flip rule to the checkbox-toggle, faux border style to fix rtl bug
+
+### [Color Picker](https://www.lightningdesignsystem.com/components/color-picker)
+#### Fixed
+- Fixes the color picker inputs alignment
+#### Changed
+- Added border to color-picker swatch
+
+### [Datepickers](https://www.lightningdesignsystem.com/components/datepickers)
+- Added focus styles to slds-select within datepicker, in error state.
+
+### [File Selector](https://www.lightningdesignsystem.com/components/file-selector)
+#### Changed
+- `aria-labelledby` attribute is removed from HTML input file and added to the wrapper div along with `role='group'` as per accessibility requirements.
+
+### [Global Navigation](https://www.lightningdesignsystem.com/components/global-navigation)
+## Fixed
+- Fixed issue in grouped menu subheadings not being announced in screen reader
+
+### [Menus](https://www.lightningdesignsystem.com/components/menus)
+## Fixed
+- Fixed issue in grouped menu subheadings not being announced in screen reader
+- Updated nubbin positions for Dropdown in RTL
+
+### [Path](https://www.lightningdesignsystem.com/components/path)
+#### Fixed
+- Fixed text color of lost stage that also fixes minimum contrast ratio requirements.
+
+### [Popovers](https://www.lightningdesignsystem.com/components/popovers)
+## Added
+- Added examples with a dark background for the feature and walkthrough popover variants.
+## Updated
+- Updated header error background color
+
+### [Radio Group](https://www.lightningdesignsystem.com/components/radio-group)
+#### Added
+- Added `aria-hidden` attribute to required radio group label asterisk to avoid being announced by screen reader to meet accessibility WCAG label criteria
+
+### [Tabs](https://www.lightningdesignsystem.com/components/tabs)
+## Fixed
+- Added fallback value to focus style for tabs.
+
+### [Tooltips](https://www.lightningdesignsystem.com/components/tooltips)
+#### Added
+- Added 160px max-width to `.slds-popover_tooltip, .slds-popover--tooltip` for screen sizes up to 480px, to ensure tooltips do not overflow on small and mobile screens.
+
 ### [Tree Grid](https://www.lightningdesignsystem.com/components/tree-grid)
 #### Fixed
 - Resolved an issue where a white background box appeared on mouseover of a wrapped cell. This fix applies only to any cell with the `slds-cell-wrap` class.
+
+### [Vertical Navigation](https://www.lightningdesignsystem.com/components/vertical-navigation)
+#### Added
+- Added fallback value for focus style of nav item
 
 ## Release 2.26.2 - February 6, 2025
 
@@ -146,30 +202,13 @@
 - Updated popover header error background color.
 
 ## Component Blueprints
-### [Button Icons](https://www.lightningdesignsystem.com/components/button-icons)
-#### Added
-- Added bordered transparent - with dropdown example
-
 ### [Checkbox](https://www.lightningdesignsystem.com/components/checkbox)
 #### Added
 - Added `aria-hidden` attribute to required checkbox label asterisk to avoid being announced by screen reader to meet accessibility WCAG label criteria
 
-### [Checkbox Toggle](https://www.lightningdesignsystem.com/components/checkbox-toggle)
-#### Changed
-- Added no flip rule to the checkbox-toggle, faux border style to fix rtl bug
-
-### [Color Picker](https://www.lightningdesignsystem.com/components/color-picker)
-#### Fixed
-- Fixes the color picker inputs alignment
-#### Changed
-- Added border to color-picker swatch
-
 ### [Data Tables](https://www.lightningdesignsystem.com/components/data-tables)
 #### Added
 - Added `aria-hidden` attribute to required input label asterisk on edit cell popover to avoid being announced by screen reader to meet accessibility WCAG label criteria
-
-### [Datepickers](https://www.lightningdesignsystem.com/components/datepickers)
-- Added focus styles to slds-select within datepicker, in error state.
 
 ### [Datetime Picker](https://www.lightningdesignsystem.com/components/datetime-picker)
 #### Added
@@ -178,10 +217,6 @@
 ### [Dueling Picklist](https://www.lightningdesignsystem.com/components/dueling-picklist)
 #### Added
 - Added `aria-hidden` attribute to required select option label asterisk to avoid being announced by screen reader to meet accessibility WCAG label criteria
-
-### [File Selector](https://www.lightningdesignsystem.com/components/file-selector)
-#### Changed
-- `aria-labelledby` attribute is removed from HTML input file and added to the wrapper div along with `role='group'` as per accessibility requirements.
 
 ### [Form Element](https://www.lightningdesignsystem.com/components/form-element)
 #### Fixed
@@ -196,32 +231,9 @@
 #### Fixed
 - Changed the alignment of address form element. This fixes the alignment issue in cases where help text is present.
 
-### [Global Navigation](https://www.lightningdesignsystem.com/components/global-navigation)
-## Fixed
-- Fixed issue in grouped menu subheadings not being announced in screen reader
-
-### [Menus](https://www.lightningdesignsystem.com/components/menus)
-## Fixed
-- Fixed issue in grouped menu subheadings not being announced in screen reader
-- Updated nubbin positions for Dropdown in RTL
-
-### [Path](https://www.lightningdesignsystem.com/components/path)
-#### Fixed
-- Fixed text color of lost stage that also fixes minimum contrast ratio requirements.
-
-### [Popovers](https://www.lightningdesignsystem.com/components/popovers)
-## Added
-- Added examples with a dark background for the feature and walkthrough popover variants.
-## Updated
-- Updated header error background color
-
 ### [Radio Button Group](https://www.lightningdesignsystem.com/components/radio-button-group)
 #### Added
 - Added `aria-hidden` attribute to required radio button group label asterisk to avoid being announced by screen reader to meet accessibility WCAG label criteria
-
-### [Radio Group](https://www.lightningdesignsystem.com/components/radio-group)
-#### Added
-- Added `aria-hidden` attribute to required radio group label asterisk to avoid being announced by screen reader to meet accessibility WCAG label criteria
 
 ### [Radio Group](https://www.lightningdesignsystem.com/components/radio-group)
 #### Added
@@ -236,18 +248,9 @@
 #### Fixed
 - Fixed color of links (Anchor tags) to meet minimum contrast requirements against light background.
 
-### [Tabs](https://www.lightningdesignsystem.com/components/tabs)
-## Fixed
-- Added fallback value to focus style for tabs.
-
-### [Tooltips](https://www.lightningdesignsystem.com/components/tooltips)
-#### Added
-- Added 160px max-width to `.slds-popover_tooltip, .slds-popover--tooltip` for screen sizes up to 480px, to ensure tooltips do not overflow on small and mobile screens.
-
 ### [Vertical Navigation](https://www.lightningdesignsystem.com/components/vertical-navigation)
 #### Fixed
 - Fixed (added) back bem syntax for backwards compatibility
-- Added fallback value for focus style of nav item
 
 ## Release 2.25.6 - January 16, 2024
 
@@ -850,7 +853,7 @@ Added `aria-label` to meet accessibility requirements specifically for screen re
 
 ### [Global Navigation](https://www.lightningdesignsystem.com/components/global-navigation)
 #### Added
-- Added `role="presentation"` for globlal navigation's overflow tab item 
+- Added `role="presentation"` for globlal navigation's overflow tab item
 
 ### [Menus](https://www.lightningdesignsystem.com/components/menus)
 ## Fixed

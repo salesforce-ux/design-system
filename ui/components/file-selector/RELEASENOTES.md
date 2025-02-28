@@ -3,7 +3,7 @@
 # File Selector Release Notes
 
 <!-- ## [Unreleased] -->
-## 2.26.0
+## 2.27.0
 
 ### Changed
 

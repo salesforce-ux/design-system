@@ -3,6 +3,10 @@
 # Form Element Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.27.0
+
+#### Added
+- Added `aria-hidden` attribute to required form element label asterisk to avoid being announced by screen reader to meet accessibility WCAG label criteria
 
 ## 2.26.2
 
@@ -24,9 +28,6 @@
 - Changed the alignment of address form element. This fixes the alignment issue in cases where help text is present.
 - Record form .slds-form__item width is now fluid when parent container is less than 280px
 - Fixed (added) back bem syntax for backwards compatibility
-
-#### Added
-- Added `aria-hidden` attribute to required form element label asterisk to avoid being announced by screen reader to meet accessibility WCAG label criteria
 
 ## 2.25.6
 

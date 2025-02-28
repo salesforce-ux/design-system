@@ -3,10 +3,49 @@
 
 ## Release 2.27.0 - Upcoming
 
+- Update icons to `v10.12.1`
+  - Utility set
+    - Added ai_search
+- Update icons to `v10.12.0`
+  - Standard set
+    - Added entity_milestone_time
+    - Added entity_milestone_date
+    - Added outcome_timebound
+    - Added outcome_datebound
+    - Added submit_for_approval
+    - Updated flow
+    - Updated apex
+    - Updated apex_plugin
+    - Updated assignment
+    - Updated decision
+    - Updated loop
+  - Utility set
+    - Added ai_app
+    - Added submit_for_approval
+    - Added slack_user_add
+    - Added slack_thread
+    - Added slack_mentions
+    - Added slack_formatting
+    - Added slack_ai_summary
+    - Added slack_add_reaction
+    - Added slack_lock
+    - Added slack_channel
+    - Added slack_user
+    - Added slack_notifications_on
+    - Added slack_notifications_off
+
 ## Component Blueprints
+### [Avatar](https://www.lightningdesignsystem.com/components/avatar)
+#### Added
+- Added focus style to avatar
+
 ### [Button Icons](https://www.lightningdesignsystem.com/components/button-icons)
 #### Added
 - Added bordered transparent - with dropdown example
+
+### [Checkbox](https://www.lightningdesignsystem.com/components/checkbox)
+#### Added
+- Added `aria-hidden` attribute to required checkbox label asterisk to avoid being announced by screen reader to meet accessibility WCAG label criteria
 
 ### [Checkbox Toggle](https://www.lightningdesignsystem.com/components/checkbox-toggle)
 #### Changed
@@ -18,12 +57,36 @@
 #### Changed
 - Added border to color-picker swatch
 
+### [Combobox](https://www.lightningdesignsystem.com/components/combobox)
+#### Fixed
+- Fixed lookup variant focus style
+
+### [Data Tables](https://www.lightningdesignsystem.com/components/data-tables)
+#### Added
+- Added `aria-hidden` attribute to required input label asterisk on edit cell popover to avoid being announced by screen reader to meet accessibility WCAG label criteria
+
 ### [Datepickers](https://www.lightningdesignsystem.com/components/datepickers)
 - Added focus styles to slds-select within datepicker, in error state.
+
+### [Datetime Picker](https://www.lightningdesignsystem.com/components/datetime-picker)
+#### Added
+- Added `aria-hidden` attribute to required datetime picker label asterisk to avoid being announced by screen reader to meet accessibility WCAG label criteria
+
+### [Dueling Picklist](https://www.lightningdesignsystem.com/components/dueling-picklist)
+#### Added
+- Added `aria-hidden` attribute to required select option label asterisk to avoid being announced by screen reader to meet accessibility WCAG label criteria
 
 ### [File Selector](https://www.lightningdesignsystem.com/components/file-selector)
 #### Changed
 - `aria-labelledby` attribute is removed from HTML input file and added to the wrapper div along with `role='group'` as per accessibility requirements.
+
+### [Form Element](https://www.lightningdesignsystem.com/components/form-element)
+#### Added
+- Added `aria-hidden` attribute to required form element label asterisk to avoid being announced by screen reader to meet accessibility WCAG label criteria
+
+### [Global Header](https://www.lightningdesignsystem.com/components/global-header)
+#### Changed
+- Updated focus state style of the avatar
 
 ### [Global Navigation](https://www.lightningdesignsystem.com/components/global-navigation)
 ## Fixed
@@ -33,10 +96,16 @@
 ## Fixed
 - Fixed issue in grouped menu subheadings not being announced in screen reader
 - Updated nubbin positions for Dropdown in RTL
+#### Added
+- Added focus style to menu item sub-header
 
 ### [Path](https://www.lightningdesignsystem.com/components/path)
 #### Fixed
 - Fixed text color of lost stage that also fixes minimum contrast ratio requirements.
+
+### [Pills](https://www.lightningdesignsystem.com/components/pills)
+#### Changed
+- Updated focus state style of all the Pill variants
 
 ### [Popovers](https://www.lightningdesignsystem.com/components/popovers)
 ## Added
@@ -44,9 +113,17 @@
 ## Updated
 - Updated header error background color
 
+### [Radio Button Group](https://www.lightningdesignsystem.com/components/radio-button-group)
+#### Added
+- Added `aria-hidden` attribute to required radio button group label asterisk to avoid being announced by screen reader to meet accessibility WCAG label criteria
+
 ### [Radio Group](https://www.lightningdesignsystem.com/components/radio-group)
 #### Added
 - Added `aria-hidden` attribute to required radio group label asterisk to avoid being announced by screen reader to meet accessibility WCAG label criteria
+
+### [Rich Text Editor](https://www.lightningdesignsystem.com/components/rich-text-editor)
+#### Changed
+- Updated focus state style of the RTE container
 
 ### [Tabs](https://www.lightningdesignsystem.com/components/tabs)
 ## Fixed
@@ -202,38 +279,16 @@
 - Updated popover header error background color.
 
 ## Component Blueprints
-### [Checkbox](https://www.lightningdesignsystem.com/components/checkbox)
-#### Added
-- Added `aria-hidden` attribute to required checkbox label asterisk to avoid being announced by screen reader to meet accessibility WCAG label criteria
-
-### [Data Tables](https://www.lightningdesignsystem.com/components/data-tables)
-#### Added
-- Added `aria-hidden` attribute to required input label asterisk on edit cell popover to avoid being announced by screen reader to meet accessibility WCAG label criteria
-
-### [Datetime Picker](https://www.lightningdesignsystem.com/components/datetime-picker)
-#### Added
-- Added `aria-hidden` attribute to required datetime picker label asterisk to avoid being announced by screen reader to meet accessibility WCAG label criteria
-
-### [Dueling Picklist](https://www.lightningdesignsystem.com/components/dueling-picklist)
-#### Added
-- Added `aria-hidden` attribute to required select option label asterisk to avoid being announced by screen reader to meet accessibility WCAG label criteria
-
 ### [Form Element](https://www.lightningdesignsystem.com/components/form-element)
 #### Fixed
 - Fixed input dropdown visibility issue in ff and safari caused by container query in a previous fix
 - Changed the alignment of address form element. This fixes the alignment issue in cases where help text is present.
 - Record form .slds-form__item width is now fluid when parent container is less than 280px
 - Fixed (added) back bem syntax for backwards compatibility
-#### Added
-- Added `aria-hidden` attribute to required form element label asterisk to avoid being announced by screen reader to meet accessibility WCAG label criteria
 
 ### [Form Layout](https://www.lightningdesignsystem.com/components/form-layout)
 #### Fixed
 - Changed the alignment of address form element. This fixes the alignment issue in cases where help text is present.
-
-### [Radio Button Group](https://www.lightningdesignsystem.com/components/radio-button-group)
-#### Added
-- Added `aria-hidden` attribute to required radio button group label asterisk to avoid being announced by screen reader to meet accessibility WCAG label criteria
 
 ### [Radio Group](https://www.lightningdesignsystem.com/components/radio-group)
 #### Added
@@ -505,6 +560,13 @@
 - Added tabindex to the heading element to make it programmatically focusable.
 #### Fixed
 - Fixed modal by removing code explicitly scoped to patching internal, private implementations. Appropriate styles will be displayed again.
+
+### [Pills](https://www.lightningdesignsystem.com/components/pills)
+## Changed
+- Fixed tap target size of close icon in Pill to meet 24x24.
+## Added
+- Added new truncated state for Pill as a tooltip.
+- Updated focus style.
 
 ### [Progress Indicator](https://www.lightningdesignsystem.com/components/progress-indicator)
 #### Changed
@@ -1074,6 +1136,10 @@ Added `aria-label` to meet accessibility requirements specifically for screen re
   - `PALETTE_VIOLET_20`: `#481A54`
 
 ## Component Blueprints
+### [Avatar](https://www.lightningdesignsystem.com/components/avatar)
+#### Fixed
+- Fixed base group image, group image medium and group image small hardcoded image paths
+
 ### [Dynamic Icons](https://www.lightningdesignsystem.com/components/dynamic-icons)
 #### Changed
 - Updated Global Action Help icon's `role` attribute from `presentation` to `img` for better accessibility compliance
@@ -1094,6 +1160,11 @@ Added `aria-label` to meet accessibility requirements specifically for screen re
   - `--slds-c-form-row-spacing-inline-start` to customize `margin left`
   - `--slds-c-form-row-spacing-inline-end` to customize `margin right`
   - `--slds-c-form-row-spacing-inline` to customize `margin left & right`
+
+### [Global Header](https://www.lightningdesignsystem.com/components/global-header)
+#### Fixed
+- Fixed hardcoded base global header logo image path
+<!-- ## [Unreleased] -->
 
 ### [Global Navigation](https://www.lightningdesignsystem.com/components/global-navigation)
 #### Added

@@ -10,7 +10,7 @@
 
 - Updated focus state style of all the Pill variants
 
-## 2.24.0 - Upcoming
+## 2.24.0
 
 ## Changed
 

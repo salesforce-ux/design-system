@@ -9,7 +9,7 @@
 
 - Updated focus state style of the avatar
 
-## 2.19
+## 2.19.0
 
 ### Fixed
 

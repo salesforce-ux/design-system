@@ -9,7 +9,7 @@
 
 - Added focus style to avatar
 
-## 2.19
+## 2.19.0
 
 ### Fixed
 

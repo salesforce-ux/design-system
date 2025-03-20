@@ -1,0 +1,209 @@
+{
+  "global": {
+    "namespace": "sds",
+    "scope": "shared",
+    "group": "buttons"
+  },
+  "props": [
+    {
+      "name": "button-color-background",
+      "value": null,
+      "type": "color",
+      "category": "color",
+      "syntax": "<color>",
+      "inherits": false,
+      "cssProperties": ["background-color"],
+      "comment": "Shared background color for all components similarily semantic to a button."
+    },
+    {
+      "name": "button-color-background-hover",
+      "value": null,
+      "type": "color",
+      "category": "color",
+      "syntax": "<color>",
+      "inherits": false,
+      "cssProperties": ["background-color"],
+      "comment": "Shared background color on hover for all components similarily semantic to a button."
+    },
+    {
+      "name": "button-color-background-focus",
+      "value": null,
+      "type": "color",
+      "category": "color",
+      "syntax": "<color>",
+      "inherits": false,
+      "cssProperties": ["background-color"],
+      "comment": "Shared background color on focus for all components similarily semantic to a button."
+    },
+    {
+      "name": "button-color-background-active",
+      "value": null,
+      "type": "color",
+      "category": "color",
+      "syntax": "<color>",
+      "inherits": false,
+      "cssProperties": ["background-color"],
+      "comment": "Shared background color on active for all components similarily semantic to a button."
+    },
+    {
+      "name": "button-text-color",
+      "value": null,
+      "type": "color",
+      "category": "color",
+      "syntax": "<color>",
+      "inherits": false,
+      "cssProperties": ["color"],
+      "comment": "Shared text color for all components similarily semantic to a button. Required to be layered upon the shared button background color."
+    },
+    {
+      "name": "button-text-color-hover",
+      "value": null,
+      "type": "color",
+      "category": "color",
+      "syntax": "<color>",
+      "inherits": false,
+      "cssProperties": ["color"],
+      "comment": "Shared text color on hover for all components similarily semantic to a button. Required to be layered upon the shared button background color."
+    },
+    {
+      "name": "button-text-color-focus",
+      "value": null,
+      "type": "color",
+      "category": "color",
+      "syntax": "<color>",
+      "inherits": false,
+      "cssProperties": ["color"],
+      "comment": "Shared text color on focus for all components similarily semantic to a button. Required to be layered upon the shared button background color."
+    },
+    {
+      "name": "button-text-color-active",
+      "value": null,
+      "type": "color",
+      "category": "color",
+      "syntax": "<color>",
+      "inherits": false,
+      "cssProperties": ["color"],
+      "comment": "Shared text color on active for all components similarily semantic to a button. Required to be layered upon the shared button background color."
+    },
+    {
+      "name": "button-color-border",
+      "value": null,
+      "type": "color",
+      "category": "color",
+      "syntax": "<color>",
+      "inherits": false,
+      "cssProperties": ["border-color"],
+      "comment": "Shared border color on active for all components similarily semantic to a button."
+    },
+    {
+      "name": "button-color-border-hover",
+      "value": null,
+      "type": "color",
+      "category": "color",
+      "syntax": "<color>",
+      "inherits": false,
+      "cssProperties": ["border-color"],
+      "comment": "Shared border color on hover for all components similarily semantic to a button."
+    },
+    {
+      "name": "button-color-border-focus",
+      "value": null,
+      "type": "color",
+      "category": "color",
+      "syntax": "<color>",
+      "inherits": false,
+      "cssProperties": ["border-color"],
+      "comment": "Shared border color on focus for all components similarily semantic to a button."
+    },
+    {
+      "name": "button-color-border-active",
+      "value": null,
+      "type": "color",
+      "category": "color",
+      "syntax": "<color>",
+      "inherits": false,
+      "cssProperties": ["border-color"],
+      "comment": "Shared border color on active for all components similarily semantic to a button."
+    },
+    {
+      "name": "button-sizing-border",
+      "value": null,
+      "type": "number",
+      "category": "sizing",
+      "syntax": "<length>",
+      "inherits": false,
+      "cssProperties": ["border-width"],
+      "comment": "Shared border size for all components similarily semantic to a button."
+    },
+    {
+      "name": "button-radius-border",
+      "value": null,
+      "type": "number",
+      "category": "radius",
+      "syntax": "<length>",
+      "inherits": false,
+      "cssProperties": ["border-radius"],
+      "comment": "Shared border radius for all components similarily semantic to a button."
+    },
+    {
+      "name": "button-shadow",
+      "value": null,
+      "type": "color",
+      "category": "color",
+      "syntax": "<color>",
+      "inherits": false,
+      "cssProperties": ["box-shadow"],
+      "comment": "Shared shadow for all components similarily semantic to a button."
+    },
+    {
+      "name": "button-shadow-hover",
+      "value": null,
+      "type": "color",
+      "category": "color",
+      "syntax": "<color>",
+      "inherits": false,
+      "cssProperties": ["box-shadow"],
+      "comment": "Shared shadow on hover for all components similarily semantic to a button."
+    },
+    {
+      "name": "button-shadow-focus",
+      "value": null,
+      "type": "color",
+      "category": "color",
+      "syntax": "<color>",
+      "inherits": false,
+      "cssProperties": ["box-shadow"],
+      "comment": "Shared shadow on focus for all components similarily semantic to a button."
+    },
+    {
+      "name": "button-shadow-active",
+      "value": null,
+      "type": "color",
+      "category": "color",
+      "syntax": "<color>",
+      "inherits": false,
+      "cssProperties": ["box-shadow"],
+      "comment": "Shared shadow on active for all components similarily semantic to a button."
+    },
+    {
+      "name": "button-spacing-block",
+      "value": null,
+      "type": "number",
+      "category": "spacing",
+      "syntax": "<length>",
+      "inherits": false,
+      "cssProperties": ["padding", "margin", "top", "bottom"],
+      "comment": "Shared spacing on the block axis for all components similarily semantic to a button."
+    },
+    {
+      "name": "button-spacing-inline",
+      "value": null,
+      "type": "number",
+      "category": "spacing",
+      "syntax": "<length>",
+      "inherits": false,
+      "cssProperties": ["padding", "margin", "right", "left"],
+      "comment": "Shared spacing on the inline axis for all components similarily semantic to a button."
+    }
+  ]
+}

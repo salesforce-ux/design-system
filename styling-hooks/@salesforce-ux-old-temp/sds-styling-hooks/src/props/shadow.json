@@ -1,0 +1,42 @@
+{
+  "global": {
+    "namespace": "sds",
+    "category": "shadow",
+    "scope": "global",
+    "cssProperties": ["box-shadow"]
+  },
+  "props": [
+    {
+      "name": "shadow-1",
+      "value": "0 0 2px 0 #18181814, 0 2px 4px 1px #18181828",
+      "type": "raw",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Shadow depth 1"
+    },
+    {
+      "name": "shadow-2",
+      "value": "0 2px 8px -2px #18181814, 0 8px 12px -2px #18181828",
+      "type": "raw",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Shadow depth 2"
+    },
+    {
+      "name": "shadow-3",
+      "value": "0 12px 24px -4px #18181814, 0 16px 32px -4px #18181828",
+      "type": "raw",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Shadow depth 3"
+    },
+    {
+      "name": "shadow-4",
+      "value": "0 24px 48px -4px #18181833",
+      "type": "raw",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Shadow depth 4"
+    }
+  ]
+}

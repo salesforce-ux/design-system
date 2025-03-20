@@ -1,0 +1,89 @@
+{
+  "global": {
+    "namespace": "sds",
+    "scope": "shared",
+    "group": "containers"
+  },
+  "props": [
+    {
+      "name": "container-color-background",
+      "value": null,
+      "type": "color",
+      "category": "color",
+      "syntax": "<color>",
+      "inherits": false,
+      "cssProperties": ["background-color"],
+      "comment": "Shared background color for all components visually represent a container. The container should contain content and is most likely layered on top of a contrasting background color. Not limited to in-flow content, can be used for out-of-flow content such as popups."
+    },
+    {
+      "name": "container-text-color",
+      "value": null,
+      "type": "color",
+      "category": "color",
+      "syntax": "<color>",
+      "inherits": false,
+      "cssProperties": ["color"],
+      "comment": "Shared text color for all components visually represent a container. The text must sit on top of `*-s-container-background-color`"
+    },
+    {
+      "name": "container-color-border",
+      "value": null,
+      "type": "color",
+      "category": "color",
+      "syntax": "<color>",
+      "inherits": false,
+      "cssProperties": ["border-color"],
+      "comment": "Shared border color for all components visually represent a container. The border color must be coupled with `*-s-container-background-color`"
+    },
+    {
+      "name": "container-sizing-border",
+      "value": null,
+      "type": "number",
+      "category": "sizing",
+      "syntax": "<length>",
+      "inherits": false,
+      "cssProperties": ["border-width"],
+      "comment": "Shared border size for all components visually represent a container."
+    },
+    {
+      "name": "container-radius-border",
+      "value": null,
+      "type": "number",
+      "category": "border-radius",
+      "syntax": "<length>",
+      "inherits": false,
+      "cssProperties": ["border-radius"],
+      "comment": "Shared border radius for all components visually represent a container."
+    },
+    {
+      "name": "container-shadow",
+      "value": null,
+      "type": "raw",
+      "category": "shadow",
+      "syntax": "<color>",
+      "inherits": false,
+      "cssProperties": ["box-shadow"],
+      "comment": "Shared shadow for all components visually represent a container."
+    },
+    {
+      "name": "container-spacing-inline",
+      "value": null,
+      "type": "number",
+      "category": "spacing",
+      "syntax": "<length>",
+      "inherits": false,
+      "cssProperties": ["padding-inline", "margin-inline"],
+      "comment": "Shared inline spacing for all components visually represent a container."
+    },
+    {
+      "name": "container-spacing-block",
+      "value": null,
+      "type": "number",
+      "category": "spacing",
+      "syntax": "<length>",
+      "inherits": false,
+      "cssProperties": ["padding-block", "margin-block"],
+      "comment": "Shared block spacing for all components visually represent a container."
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "global": {
+    "namespace": "sds",
+    "scope": "shared",
+    "group": "links"
+  },
+  "props": [
+    {
+      "name": "link-font-decoration",
+      "value": null,
+      "type": "any",
+      "category": "font",
+      "syntax": "<custom-ident>",
+      "inherits": true,
+      "cssProperties": ["text-decoration"],
+      "comment": "Default text decoration for hyperlinks."
+    },
+    {
+      "name": "link-font-decoration-hover",
+      "value": null,
+      "type": "any",
+      "category": "font",
+      "syntax": "<custom-ident>",
+      "inherits": true,
+      "cssProperties": ["text-decoration"],
+      "comment": "Default text decoration on hover for hyperlinks."
+    },
+    {
+      "name": "link-font-decoration-focus",
+      "value": null,
+      "type": "any",
+      "category": "font",
+      "syntax": "<custom-ident>",
+      "inherits": true,
+      "cssProperties": ["text-decoration"],
+      "comment": "Default text decoration on focus for hyperlinks."
+    }
+  ]
+}

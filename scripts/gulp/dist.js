@@ -2,6 +2,7 @@
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
 import del from 'del';
+import glob from 'glob';
 import gulp from 'gulp';
 import gulpInsert from 'gulp-insert';
 import gulpRename from 'gulp-rename';
@@ -32,6 +33,13 @@ import {
   writeSanitizedComponentCss,
   writeCommonCss,
 } from './generate/sanitized';
+
+// Helpers for injecting styling hooks from sds-styling-hooks package
+import {
+  injectStylingHooks,
+  sdsStylingHooksBasePath,
+  sdsStylingHooksSourceFiles
+} from '../helpers/styling-hooks';
 
 const distPath = path.resolve.bind(path, paths.dist);
 
@@ -234,6 +242,95 @@ export const cssOffline = () =>
       })
     )
     .pipe(gulp.dest(distPath('assets/styles/')));
+
+/*
+ * ==================
+ * Injects sds-styling-hooks with custom scope in monolithic SLDS
+ * ==================
+ *
+ * This function:
+ * 1. Identifies target CSS files (both regular and minified versions)
+ * 2. Reads and injects styling hooks from the sds-styling-hooks package
+ * 3. Modifies the CSS scope to include custom elements and a catch-all styling hooks class
+ * 4. Handles minification for minified target files
+ * 5. Removes comments from the processed files
+ * 6. Writes the updated files back to the .dist directory
+ *
+ * Uses Gulp for file processing and returns a Promise for async operation.
+ */
+export const injectSldsStylingHooks = () => {
+  // Define target files (regular)
+  const targetFiles = [
+    `${MODULE_NAME}.css`,
+    `${MODULE_NAME}.sanitized.css`,
+    `${MODULE_NAME}-offline.css`,
+  ];
+
+  // Define target files (minified)
+  const targetFilesMinified = [
+    `${MODULE_NAME}.min.css`,
+    `${MODULE_NAME}-offline.min.css`,
+  ];
+
+  // List of all target files (both regular and minified)
+  const allTargetFiles = [...targetFiles, ...targetFilesMinified];
+  // Glob pattern to find target files in the .dist directory
+  const globPattern = distPath(`assets/styles/{${allTargetFiles.join(",")}}`);
+  // Actual file paths found in the .dist directory
+  const cssFilePaths = glob.sync(globPattern);
+
+  if (cssFilePaths.length === 0) {
+    throw new Error("No CSS files found matching the pattern");
+  }
+
+  return new Promise((resolve, reject) => {
+    gulp
+      .src(cssFilePaths, { base: distPath() })
+      // Process each file in the stream
+      .pipe(
+        through.obj(function (file, enc, cb) {
+          try {
+            // Read the file contents
+            const content = file.contents.toString();
+
+            // Determine if the current file is a minified version
+            const isMinified = targetFilesMinified.includes(
+              path.basename(file.relative)
+            );
+
+            /*
+             * Inject styling hooks from sds-styling-hooks package
+             * The injectStylingHooks function handles:
+             * 1. Reading hooks from sdsStylingHooksSourceFiles
+             * 2. Modifying CSS scope for custom elements and catch-all class
+             * 3. Minifying the injected hooks if the target file is minified
+             */
+            const newContent = injectStylingHooks(
+              content,
+              sdsStylingHooksBasePath,
+              sdsStylingHooksSourceFiles,
+              isMinified
+            );
+
+            // Update the file contents with the new, processed CSS
+            file.contents = Buffer.from(newContent);
+            cb(null, file);
+          } catch (error) {
+            // If an error occurs, attach the filename to the error message
+            error.message = `Error processing ${file.relative}: ${error.message}`;
+            cb(error);
+          }
+        })
+      )
+      // Remove comments from the processed CSS
+      .pipe(gulpHelpers.writePostCss([discardComments()]))
+      // Write the updated files back to the .dist directory
+      .pipe(gulp.dest(distPath()))
+      // Handle the completion of the Gulp stream
+      .on("end", resolve)
+      .on("error", reject);
+  });
+};
 
 /*
  * ==================

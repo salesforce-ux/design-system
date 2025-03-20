@@ -1,0 +1,50 @@
+{
+  "global": {
+    "namespace": "sds",
+    "category": "ratio",
+    "scope": "global",
+    "cssProperties": ["aspect-ratio"]
+  },
+  "props": [
+    {
+      "name": "ratio-square",
+      "value": "1",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Square aspect ratio."
+    },
+    {
+      "name": "ratio-landscape",
+      "value": "4/3",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Landscape aspect ratio."
+    },
+    {
+      "name": "ratio-portrait",
+      "value": "3/4",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Portrait aspect ratio."
+    },
+    {
+      "name": "ratio-wide",
+      "value": "16/9",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Widescreen aspect ratio."
+    },
+    {
+      "name": "ratio-ultrawide",
+      "value": "18/5",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Ultra Widescreen aspect ratio."
+    }
+  ]
+}

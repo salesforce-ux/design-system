@@ -4,6 +4,10 @@
 
 ## 2.27.0 - Upcoming
 
+- Styling Hooks
+  - Include a new set of global and shared hooks in the dist CSS for "default", "sanitized", "offline", and "minified" versions.
+  - For this release, the new hooks are scoped exclusively to a predefined list of Lightning Web Component primitives and a catch-all class. (This is set to change in the future.)
+
 - Update icons to `v10.12.1`
   - Utility set
     - Added ai_search

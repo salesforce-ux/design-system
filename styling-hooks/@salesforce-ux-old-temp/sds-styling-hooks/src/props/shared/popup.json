@@ -1,0 +1,89 @@
+{
+  "global": {
+    "namespace": "sds",
+    "scope": "shared",
+    "group": "popups"
+  },
+  "props": [
+    {
+      "name": "popup-color-background",
+      "value": null,
+      "type": "color",
+      "category": "color",
+      "syntax": "<color>",
+      "inherits": false,
+      "cssProperties": ["background-color"],
+      "comment": "Shared background color for all components similarily semantic to a popup."
+    },
+    {
+      "name": "popup-text-color",
+      "value": null,
+      "type": "color",
+      "category": "color",
+      "syntax": "<color>",
+      "inherits": false,
+      "cssProperties": ["color"],
+      "comment": "Shared text color for all components visually represent a popup. The text must sit on top of `*-s-popup-color-background`"
+    },
+    {
+      "name": "popup-color-border",
+      "value": null,
+      "type": "color",
+      "category": "color",
+      "syntax": "<color>",
+      "inherits": false,
+      "cssProperties": ["border-color"],
+      "comment": "Shared border color for all components visually represent a popup. The border color must be coupled with `*-s-popup-color-background`"
+    },
+    {
+      "name": "popup-sizing-border",
+      "value": null,
+      "type": "number",
+      "category": "sizing",
+      "syntax": "<length>",
+      "inherits": false,
+      "cssProperties": ["border-width"],
+      "comment": "Shared border size for all components visually represent a popup."
+    },
+    {
+      "name": "popup-radius-border",
+      "value": null,
+      "type": "number",
+      "category": "border-radius",
+      "syntax": "<length>",
+      "inherits": false,
+      "cssProperties": ["border-radius"],
+      "comment": "Shared border radius for all components visually represent a popup."
+    },
+    {
+      "name": "popup-shadow",
+      "value": null,
+      "type": "raw",
+      "category": "shadow",
+      "syntax": "<color>",
+      "inherits": false,
+      "cssProperties": ["box-shadow"],
+      "comment": "Shared shadow for all components visually represent a popup."
+    },
+    {
+      "name": "popup-spacing-inline",
+      "value": null,
+      "type": "number",
+      "category": "spacing",
+      "syntax": "<length>",
+      "inherits": false,
+      "cssProperties": ["padding-inline", "margin-inline"],
+      "comment": "Shared inline spacing for all components visually represent a popup."
+    },
+    {
+      "name": "popup-spacing-block",
+      "value": null,
+      "type": "number",
+      "category": "spacing",
+      "syntax": "<length>",
+      "inherits": false,
+      "cssProperties": ["padding-block", "margin-block"],
+      "comment": "Shared block spacing for all components visually represent a popup."
+    }
+  ]
+}

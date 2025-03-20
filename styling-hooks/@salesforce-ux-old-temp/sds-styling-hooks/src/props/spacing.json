@@ -1,0 +1,106 @@
+{
+  "global": {
+    "namespace": "sds",
+    "category": "spacing",
+    "scope": "global",
+    "cssProperties": ["padding", "margin", "top", "right", "bottom", "left"]
+  },
+  "props": [
+    {
+      "name": "spacing-1",
+      "value": "0.25rem",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Spacing size 1."
+    },
+    {
+      "name": "spacing-2",
+      "value": "0.5rem",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Spacing size 2."
+    },
+    {
+      "name": "spacing-3",
+      "value": "0.75rem",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Spacing size 3."
+    },
+    {
+      "name": "spacing-4",
+      "value": "1rem",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Spacing size 4."
+    },
+    {
+      "name": "spacing-5",
+      "value": "1.5rem",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Spacing size 5."
+    },
+    {
+      "name": "spacing-6",
+      "value": "2rem",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Spacing size 6."
+    },
+    {
+      "name": "spacing-7",
+      "value": "2.5rem",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Spacing size 7."
+    },
+    {
+      "name": "spacing-8",
+      "value": "3rem",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Spacing size 8."
+    },
+    {
+      "name": "spacing-9",
+      "value": "3.5rem",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Spacing size 9."
+    },
+    {
+      "name": "spacing-10",
+      "value": "4rem",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Spacing size 10."
+    },
+    {
+      "name": "spacing-11",
+      "value": "4.5rem",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Spacing size 11."
+    },
+    {
+      "name": "spacing-12",
+      "value": "5rem",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Spacing size 12."
+    }
+  ]
+}

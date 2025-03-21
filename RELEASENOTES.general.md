@@ -4,6 +4,12 @@
 
 ## 2.27.0 - Upcoming
 
+- Update icons to `v10.12.2`
+  - Standard set
+    - Added it_service_management
+  - Utility set
+    - Added it_service_management
+
 - Styling Hooks
   - Include a new set of global and shared hooks in the dist CSS for "default", "sanitized", "offline", and "minified" versions.
   - For this release, the new hooks are scoped exclusively to a predefined list of Lightning Web Component primitives and a catch-all class. (This is set to change in the future.)

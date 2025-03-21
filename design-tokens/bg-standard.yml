@@ -1261,3 +1261,5 @@ props:
     value: '#FF5D2D'
   SUBMIT_FOR_APPROVAL:
     value: '#032D60'
+  IT_SERVICE_MANAGEMENT:
+    value: '#B60554'

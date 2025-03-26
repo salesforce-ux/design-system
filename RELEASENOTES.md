@@ -43,6 +43,10 @@
     - Added slack_notifications_off
 
 ## Component Blueprints
+### [Activity Timeline](https://www.lightningdesignsystem.com/components/activity-timeline)
+#### Added
+- Adds _touch.scss to fix the css issue for touch devices
+
 ### [Avatar](https://www.lightningdesignsystem.com/components/avatar)
 #### Added
 - Added focus style to avatar

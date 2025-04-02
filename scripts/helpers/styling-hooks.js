@@ -25,15 +25,12 @@ const path = require("path");
 // CSS class used as a catch-all for styling hooks
 const stylingHooksClass = ".slds-styling-hooks";
 
-// Wrapper element for the side panel
-// Note: Adding this to be extra safe, but we may need to remove if issues with Cosmos uplift
-const sidePanelWrapper = 'runtime_thp_learning-side-panel';
-
-// Copilot elements
+// Copilot elements (Agentforce)
 const copilotElements = [
+  'runtime_copilot-assistant-panel-home-view',
   'runtime_copilot-multi-agent-selector',
   'runtime_copilot_base-copilot-disclaimer',
-  'runtime_thp_learning-side-panel-einstein-assistant',
+  'runtime_copilot-reset-session',
 ];
 
 /* List of Lightning Base Components derived from SDS Primitives
@@ -132,7 +129,7 @@ function modifyCssScope(
   lightningPrimitiveComponents
 ) {
   const selector = ":where\\(html\\)";
-  const newSelector = `:where(${stylingHooksClass}, ${sidePanelWrapper}, ${copilotElements}, ${lightningPrimitiveComponents.join(
+  const newSelector = `:where(${stylingHooksClass}, ${copilotElements}, ${lightningPrimitiveComponents.join(
     ", "
   )})`;
   return content.replace(new RegExp(selector, "g"), newSelector);

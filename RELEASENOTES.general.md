@@ -2,6 +2,8 @@
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
 
+## 2.28.0 - Upcoming
+
 ## 2.27.0 - Upcoming
 
 - Update icons to `v10.12.2`

@@ -141,6 +141,10 @@
 ## Fixed
 - Added fallback value to focus style for tabs.
 
+### [Toast](https://www.lightningdesignsystem.com/components/toast)
+#### Changed
+- Updated the toast close button icon to its default size (14x14) by removing the `slds-button__icon_large` class.
+
 ### [Tooltips](https://www.lightningdesignsystem.com/components/tooltips)
 #### Added
 - Added 160px max-width to `.slds-popover_tooltip, .slds-popover--tooltip` for screen sizes up to 480px, to ensure tooltips do not overflow on small and mobile screens.

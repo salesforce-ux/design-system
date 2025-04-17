@@ -3,6 +3,11 @@
 # Toast Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.27.0
+
+### Changed
+
+- Updated the toast close button icon to its default size (14x14) by removing the `slds-button__icon_large` class.
 
 ## 2.15.6
 

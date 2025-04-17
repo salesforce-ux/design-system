@@ -2,7 +2,7 @@
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
 
-## 2.27.0 - Upcoming
+## 2.27.0 - April 17, 2025
 
 - Update icons to `v10.12.2`
   - Standard set

@@ -13,10 +13,10 @@
 */
 .slds-card {
   position: relative;
-  padding-top: var(--slds-c-card-spacing-blockstart, var(--slds-c-card-spacing-block-start, var(--sds-c-card-spacing-block-start, var(--sds-c-card-spacing-block, 0))));
-  padding-right: var(--slds-c-card-spacing-inlineend, var(--slds-c-card-spacing-inline-end, var(--sds-c-card-spacing-inline-end, var(--sds-c-card-spacing-inline, 0))));
-  padding-bottom: var(--slds-c-card-spacing-blockend, var(--slds-c-card-spacing-block-end, var(--sds-c-card-spacing-block-end, var(--sds-c-card-spacing-block, 0))));
-  padding-left: var(--slds-c-card-spacing-inlinestart, var(--slds-c-card-spacing-inline-start, var(--sds-c-card-spacing-inline-start, var(--sds-c-card-spacing-inline, 0))));
+  padding-top: var(--slds-c-card-spacing-blockstart, var(--slds-c-card-spacing-block-start,var(--slds-c-card-spacing-block,var(--sds-c-card-spacing-block-start, var(--sds-c-card-spacing-block, 0)))));
+  padding-right: var(--slds-c-card-spacing-inlineend, var(--slds-c-card-spacing-inline-end,var(--slds-c-card-spacing-inline, var(--sds-c-card-spacing-inline-end, var(--sds-c-card-spacing-inline, 0)))));
+  padding-bottom: var(--slds-c-card-spacing-blockend, var(--slds-c-card-spacing-block-end,var(--slds-c-card-spacing-block ,var(--sds-c-card-spacing-block-end, var(--sds-c-card-spacing-block, 0)))));
+  padding-left: var(--slds-c-card-spacing-inlinestart, var(--slds-c-card-spacing-inline-start,var(--slds-c-card-spacing-inline, var(--sds-c-card-spacing-inline-start, var(--sds-c-card-spacing-inline, 0)))));
   background: var(--slds-c-card-color-background, var(--sds-c-card-color-background,
     var(--slds-g-color-neutral-base-100, #{$card-color-background})));
   border-width: var(--slds-c-card-sizing-border, var(--sds-c-card-sizing-border, $border-width-thin));

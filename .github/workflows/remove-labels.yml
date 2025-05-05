@@ -10,6 +10,4 @@ jobs:
       - uses: actions-ecosystem/action-remove-labels@v1
         with:
           labels: |
-            vrt:chrome-ready
-            vrt:mobile-ready
-            vrt:full-ready
+            vrt:chromatic

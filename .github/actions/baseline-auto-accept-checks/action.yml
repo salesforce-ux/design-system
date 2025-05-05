@@ -1,0 +1,52 @@
+name: 'Check Auto Merge Status'
+description: 'checks if baseline VRTs can be auto-merged using the github variable from the repo'
+
+inputs:
+  auto-accept-branches:
+    description: 'Branches where baselines can be automerged'
+    required: true
+
+outputs:
+  result:
+    description: 'Returns a boolean when changes if the baselines can be automerged'
+    value: ${{ steps.check-automerge-status.outputs.result }}
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Check if baseline can be auto merged
+      id: check-automerge-status
+      run: |
+        # get the allowed branches and split using a comma
+        allowed_branches=$(echo ${{ inputs.auto-accept-branches }} | tr ',' '\n')
+        echo "allowed branches : $allowed_branches"
+        current_branch=${{ github.ref }}
+        echo "current branches : $current_branch"
+
+        allow_automerge=false
+
+        # regex for dse-internal develop branches
+        branch_pattern='^([1-9]|[1-9][02468])-(summer|winter|spring)-[0-9]{2}$'
+
+        # check if event type is push & check if its allowed in the github variable
+        echo "Github Event Name : ${{ github.event_name }}"
+        if [ "${{ github.event_name }}" == "push" ]; then
+          for branch in $allowed_branches; do
+            if [[ "$current_branch" == "refs/heads/$branch" ]]; then
+              echo "baselines can be auto-merged"
+              allow_automerge=true
+              break
+            fi
+          done
+
+          # check branch_pattern regex
+          if [[ "$allow_automerge" == "false" && "$current_branch" =~ $branch_pattern ]]; then
+            echo "Branch matches regex pattern: $current_branch"
+            allow_automerge=true
+          fi
+        fi
+
+        # set the output value
+        echo "final value for auto-accept: $allow_automerge"
+        echo "result=$allow_automerge" >> $GITHUB_OUTPUT
+      shell: bash

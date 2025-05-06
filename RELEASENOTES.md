@@ -3,7 +3,11 @@
 
 ## Release 2.28.0 - Upcoming
 
-## Release 2.27.0 - Upcoming
+### [Progress Indicator](https://v1.lightningdesignsystem.com/components/progress-indicator/)
+#### Fixed
+- Fixed default state color of progress indicator to meet contrast ratio accessibility requirements.
+
+## Release 2.27.0
 
 - Update icons to `v10.12.2`
   - Standard set

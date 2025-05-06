@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.28.0 - Upcoming
+
+### Fixed
+
+- Fixed default state color of progress indicator to meet contrast ratio accessibility requirements.
+
 ## 2.24.0
 
 ### Changed

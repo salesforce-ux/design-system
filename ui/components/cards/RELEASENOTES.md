@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.27.1
+
+### Fixed
+
+- Add missing `--slds` component hooks fallbacks to match existing `--sds` hooks
+
 ## 2.17.1
 
 ### Changed

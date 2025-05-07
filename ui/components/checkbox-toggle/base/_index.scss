@@ -144,7 +144,7 @@
         --slds-c-checkbox-toggle-color-border: var(--slds-c-checkbox-toggle-color-border-checked, var(--sds-c-checkbox-toggle-color-border-checked, #{$brand-accessible}));
         // @todo consider shared hooks for inputs
         /*! @css-var-fallback background-color */
-        --slds-c-checkbox-toggle-color-background: var(--sds-c-checkbox-toggle-color-background-checked, #{$brand-accessible});
+        --slds-c-checkbox-toggle-color-background: var(--slds-c-checkbox-toggle-color-background-checked, var(--sds-c-checkbox-toggle-color-background-checked, #{$brand-accessible}));
 
         &:hover,
         &:focus {

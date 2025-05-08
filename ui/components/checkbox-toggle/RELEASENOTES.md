@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.28.0
+
+### Added
+
+- Added `role="switch"` to input element to ensure accessibility.
+
 ## 2.27.0
 
 ### Changed

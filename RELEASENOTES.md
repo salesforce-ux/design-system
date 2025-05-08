@@ -3,6 +3,11 @@
 
 ## Release 2.28.0 - Upcoming
 
+## Component Blueprints
+### [Checkbox Toggle](https://www.lightningdesignsystem.com/components/checkbox-toggle)
+#### Added
+- Added `role="switch"` to input element to ensure accessibility.
+
 ### [Progress Indicator](https://v1.lightningdesignsystem.com/components/progress-indicator/)
 #### Fixed
 - Fixed default state color of progress indicator to meet contrast ratio accessibility requirements.

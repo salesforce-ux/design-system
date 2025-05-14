@@ -1,6 +1,7 @@
 import CodeView from '../../../shared/components/CodeView';
 import CodeBlock from '../../../shared/components/CodeBlock';
 import Blockquote from '../../../shared/components/Blockquote';
+import RequiredLabelExample from '../../../shared/components/RequiredLabelExample';
 import * as InputExamples from './base/example';
 import { getDisplayElementById } from '../../shared/helpers';
 import { MobileNotice, MobileBlurb } from '../../shared/doc-text';
@@ -27,6 +28,11 @@ In order to have an actionable SVG within the input, like a clear or increment/d
 You can see examples of the correct markup in the [Left Icon & Clear Button example](#Icon-and-clear-button) or the [Counter component](/components/counter/).
 
 ### Accessibility
+
+All input fields marked as required with an * must have an accompanying legend.
+
+Example:
+<RequiredLabelExample/>
 
 Inputs with errors should have `aria-describedby` to insure that the associated field level error message is read by assistive technology.
 

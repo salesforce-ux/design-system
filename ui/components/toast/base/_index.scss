@@ -56,7 +56,7 @@
     top: $spacing-small;
     right: $spacing-small;
     margin-left: $spacing-xx-small;
-    transform: translateY($spacing-xxx-small * -1);
+    transform: none;
   }
 
   .slds-notify__content a:focus {

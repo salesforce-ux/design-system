@@ -1,6 +1,7 @@
 import CodeView from '../../../shared/components/CodeView';
 import CodeBlock from '../../../shared/components/CodeBlock';
 import Blockquote from '../../../shared/components/Blockquote';
+import RequiredLabelExample from '../../../shared/components/RequiredLabelExample';
 import { getDisplayElementById } from '../../shared/helpers';
 import { MobileNotice, MobileBlurb } from '../../shared/doc-text';
 import * as RadioButtonGroupExamples from './base/example';
@@ -14,6 +15,13 @@ import * as RadioButtonGroupExamples from './base/example';
 ## Default
 
 <CodeView>{getDisplayElementById(RadioButtonGroupExamples.default)}</CodeView>
+
+### Accessibility
+
+All form elements marked as required with an * must have an accompanying legend.
+
+Example:
+<RequiredLabelExample/>
 
 ### Mobile
 

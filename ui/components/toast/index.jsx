@@ -21,7 +21,6 @@ const Toast = props => {
         <div className="slds-notify__close">
           <ButtonIcon
             className="slds-button_icon-inverse"
-            iconClassName="slds-button__icon_large"
             symbol="close"
             assistiveText="Close"
             title="Close"

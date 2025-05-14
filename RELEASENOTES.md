@@ -3,16 +3,29 @@
 
 ## Release 2.28.0 - Upcoming
 
+- Updated `@salesforce-ux/design-system-primitive-tokens` to version `0.3.7` to apply BLUE_40 as the link text color.
+
 ## Component Blueprints
 ### [Checkbox Toggle](https://www.lightningdesignsystem.com/components/checkbox-toggle)
 #### Added
 - Added `role="switch"` to input element to ensure accessibility.
 
-### [Progress Indicator](https://v1.lightningdesignsystem.com/components/progress-indicator/)
-#### Fixed
-- Fixed default state color of progress indicator to meet contrast ratio accessibility requirements.
+## Release 2.27.1 - May 7, 2025
 
-## Release 2.27.0
+## Component Blueprints
+### [Cards](https://www.lightningdesignsystem.com/components/cards)
+#### Fixed
+- Add missing `--slds` component hooks fallbacks to match existing `--sds` hooks
+
+### [Checkbox Toggle](https://www.lightningdesignsystem.com/components/checkbox-toggle)
+#### Fixed
+- Add missing `--slds` component hooks fallbacks to match existing `--sds` hooks
+
+### [Tabs](https://www.lightningdesignsystem.com/components/tabs)
+#### Fixed
+- Add missing `--slds` component hooks fallbacks to match existing `--sds` hooks
+
+## Release 2.27.0 - April 17, 2025
 
 - Update icons to `v10.12.2`
   - Standard set
@@ -152,6 +165,10 @@
 ## Fixed
 - Added fallback value to focus style for tabs.
 
+### [Toast](https://www.lightningdesignsystem.com/components/toast)
+#### Changed
+- Updated the toast close button icon to its default size (14x14) by removing the `slds-button__icon_large` class.
+
 ### [Tooltips](https://www.lightningdesignsystem.com/components/tooltips)
 #### Added
 - Added 160px max-width to `.slds-popover_tooltip, .slds-popover--tooltip` for screen sizes up to 480px, to ensure tooltips do not overflow on small and mobile screens.
@@ -167,9 +184,17 @@
 ## Release 2.26.2 - February 6, 2025
 
 ## Component Blueprints
+### [Combobox](https://www.lightningdesignsystem.com/components/combobox)
+#### Removed
+- In February 2025, we removed the `slds-truncate` class to address an issue with obscured text. The label text of list items can now wrap in combobox components.
+
 ### [Form Element](https://www.lightningdesignsystem.com/components/form-element)
 #### Fixed
 - Move clear fix from 2.26.1 to target specific selectors, use clearfix mixin to avoid more edge cases (e.g. background colors)
+
+### [Menus](https://www.lightningdesignsystem.com/components/menus)
+#### Removed
+- In February 2025, we removed the `slds-truncate` class to address an issue with obscured text. The label text of list items can now wrap in combobox components.
 
 ## Release 2.26.1 - January 30, 2025
 
@@ -793,7 +818,7 @@
 - Fixed `NVDA` checkbox toggle is announced twice removed aria-live="assertive"
 
 ### [Combobox](https://www.lightningdesignsystem.com/components/combobox)
-#### Added 
+#### Added
 - Tooltip option provided for Date/DateTime pickers.
 - Updated from tabindex to tabIndex.
 

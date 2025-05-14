@@ -175,9 +175,17 @@
 ## Release 2.26.2 - February 6, 2025
 
 ## Component Blueprints
+### [Combobox](https://www.lightningdesignsystem.com/components/combobox)
+#### Removed
+- In February 2025, we removed the `slds-truncate` class to address an issue with obscured text. The label text of list items can now wrap in combobox components.
+
 ### [Form Element](https://www.lightningdesignsystem.com/components/form-element)
 #### Fixed
 - Move clear fix from 2.26.1 to target specific selectors, use clearfix mixin to avoid more edge cases (e.g. background colors)
+
+### [Menus](https://www.lightningdesignsystem.com/components/menus)
+#### Removed
+- In February 2025, we removed the `slds-truncate` class to address an issue with obscured text. The label text of list items can now wrap in combobox components.
 
 ## Release 2.26.1 - January 30, 2025
 
@@ -801,7 +809,7 @@
 - Fixed `NVDA` checkbox toggle is announced twice removed aria-live="assertive"
 
 ### [Combobox](https://www.lightningdesignsystem.com/components/combobox)
-#### Added 
+#### Added
 - Tooltip option provided for Date/DateTime pickers.
 - Updated from tabindex to tabIndex.
 

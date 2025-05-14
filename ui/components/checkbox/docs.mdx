@@ -2,6 +2,7 @@ import CodeView from '../../../shared/components/CodeView';
 import CodeBlock from '../../../shared/components/CodeBlock';
 import Blockquote from '../../../shared/components/Blockquote';
 import StylingHooksTable from '../../../shared/components/StylingHooksTable';
+import RequiredLabelExample from '../../../shared/components/RequiredLabelExample';
 import * as CheckboxExamples from './base/example';
 import * as CheckboxFormElementExamples from './form-element/example';
 import { getDisplayElementById } from '../../shared/helpers';
@@ -27,6 +28,9 @@ Custom checkboxes are created by applying the `.slds-checkbox` class to a `<labe
 When a single checkbox is required, `<div class="slds-checkbox">` should get `<abbr class="required" title="required" aria-hidden="true">*</abbr>` added to the DOM, directly before the `<input type="checkbox" />` for visual indication that the checkbox is required.
 
 When a checkbox group is required, the `<fieldset>` should receive the class `.slds-is-required`. The `<legend>` should then get `<abbr class="required" title="required" aria-hidden="true">*</abbr>` added to the DOM for visual indication that the checkbox group is required.
+
+Example:
+<RequiredLabelExample/>
 
 As SLDS checkboxes rely on the `:checked` pseudo selector, and the indeterminate state is only accessible via JavaScript, the use of a CSS class on the input will be necessary to implement this in SLDS. Use JavaScript to add the class when the indeterminate property is set to true on the input.
 

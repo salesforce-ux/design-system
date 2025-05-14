@@ -5,7 +5,7 @@
 ## 2.28.0 - Upcoming
 
 - Updated `@salesforce-ux/design-system-primitive-tokens` to version `0.3.7` to apply BLUE_40 as the link text color.
-  
+
 - Styling Hooks
   - Include a new scope for global and shared hooks targeting Agentic Setup elements. This is a continuation from the changes included in 2.27.0.
 

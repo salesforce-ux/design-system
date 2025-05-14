@@ -48,7 +48,6 @@
 ## 2.22.0
 
 ### Added
-
 - Tooltip option provided for Date/DateTime pickers.
 - Updated from tabindex to tabIndex.
 

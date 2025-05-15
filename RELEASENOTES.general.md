@@ -6,7 +6,9 @@
 
 - Updated `@salesforce-ux/design-system-primitive-tokens` to version `0.3.7` to apply BLUE_40 as the link text color.
 
-## 2.27.0 - Upcoming
+## 2.27.1 - May 7, 2025
+
+## 2.27.0 - April 17, 2025
 
 - Update icons to `v10.12.2`
   - Standard set

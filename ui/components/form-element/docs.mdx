@@ -1,6 +1,7 @@
 import CodeView from '../../../shared/components/CodeView';
 import CodeBlock from '../../../shared/components/CodeBlock';
 import Example from '../../../shared/components/Example';
+import RequiredLabelExample from '../../../shared/components/RequiredLabelExample';
 import Blockquote from '../../../shared/components/Blockquote';
 import ButtonIcon from '../button-icons/';
 import { FormElement, FormElementStatic, Fieldset } from './';
@@ -65,6 +66,11 @@ A form control is a `div` with the class `slds-form-element__control`. The contr
 There are many types of input elements that can be used in the Form Element, including [inputs](/components/input), [text areas](/components/textarea), [checkboxes](/components/checkbox), and [radio buttons](/components/radio-group). Visit the individual component pages for in-depth details of their specific states and visuals.
 
 ### Accessibility
+
+All form elements marked as required with an * must have an accompanying legend.
+
+Example:
+<RequiredLabelExample/>
 
 Labels must have the `for` attribute applied, and its value must match the ID of the associated form element, like `<input id="unique-id-of-input" />`. This association ensures that assistive technology informs users about what information to enter where.
 

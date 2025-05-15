@@ -2,6 +2,7 @@ import CodeView from '../../../shared/components/CodeView';
 import DisplayColumn from '../../../shared/components/DisplayColumn';
 import DisplayGrid from '../../../shared/components/DisplayGrid';
 import Blockquote from '../../../shared/components/Blockquote';
+import RequiredLabelExample from '../../../shared/components/RequiredLabelExample';
 import { getDisplayElementById, getDemoStylesById } from '../../shared/helpers';
 import * as Base from './base/example';
 import * as Range from './range/example';
@@ -45,11 +46,16 @@ The datepicker has the following markup requirements:
 
 ### Accessibility
 
+To display the datepicker text input field and calendar date picker with maximum accessibility, datepicker should be empty to start. When a user begins typing, text input is activated, and the full date format for the user’s locale, such as text DD MM YYYY in the en_US_locale.
+
 #### Markup
 
 **Dialog:**
 
   - Should act as a focus trap so the user only cycles through the datepicker `dialog` when the datepicker is open
+  - A Date Format Visible variation displays a message about the expected date format. When the date field receives focus, a message appears under the field to show the expected date format. When focus is removed from the date field, the message is hidden and available as assistive text.
+  - All datepicker fields marked as required with an * must have an accompanying legend. Example:
+    <RequiredLabelExample/>
 
 **Grid:**
 

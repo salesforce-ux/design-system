@@ -9,6 +9,12 @@
 
 - Fixed lookup variant focus style
 
+## 2.26.2
+
+### Removed
+
+- In February 2025, we removed the `slds-truncate` class to address an issue with obscured text. The label text of list items can now wrap in combobox components.
+
 ## 2.25.0
 
 ### Fixed
@@ -28,7 +34,7 @@
 - Updated Combobox disabled color
 
 ## 2.22.0
-### Added 
+### Added
 - Tooltip option provided for Date/DateTime pickers.
 - Updated from tabindex to tabIndex.
 ## 2.21.0

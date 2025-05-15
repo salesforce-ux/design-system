@@ -1,5 +1,6 @@
 import CodeView from '../../../shared/components/CodeView';
 import Blockquote from '../../../shared/components/Blockquote';
+import RequiredLabelExample from '../../../shared/components/RequiredLabelExample';
 import * as DateTimeExamples from './base/example';
 import { getDisplayElementById } from '../../shared/helpers';
 
@@ -42,6 +43,18 @@ The datetime picker has the following markup requirements:
 - When switching `input type="text"` to `input type="datetime-local"` for mobile, we need to remove the ARIA attributes. The native rendering doesn't require these.
   - On the element with the class `slds-combobox`, please remove `role="combobox"`, `aria-expanded`, and `aria-haspopup`.
   - On the `input` that we just added `type="datetime-local"` to, please remove `aria-controls`, `aria-autocomplete`, and `role="textbox"`.
+
+### Accessibility
+
+To display the datetime picker with maximum accessibility, the datetime field should be empty to start. When a user clicks, text input is activated, and the full date or time selector displays.
+
+#### Markup
+
+**Dialog:**
+
+  - A Date Format Visible variation displays a message about the expected date format. When the date field receives focus, a message appears under the field to show the expected date format. When focus is removed from the date field, the message is hidden and available as assistive text.
+  - All datepicker fields marked as required with an * must have an accompanying legend. Example:
+    <RequiredLabelExample/>
 
 ## Base
 

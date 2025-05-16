@@ -3,6 +3,13 @@
 # Modals Release Notes
 
 <!-- ## [Unreleased] -->
+
+## 2.28.0
+
+### Fixed
+
+- Fixed close button focus indicator color to meet contrast ratio accessibility requirements.
+
 ## 2.25.1
 
 ### Updated

@@ -10,6 +10,10 @@
 #### Added
 - Added `role="switch"` to input element to ensure accessibility.
 
+### [Modals](https://www.lightningdesignsystem.com/components/modals)
+#### Fixed
+- Fixed close button focus indicator color to meet contrast ratio accessibility requirements.
+
 ## Release 2.27.1 - May 7, 2025
 
 ## Component Blueprints

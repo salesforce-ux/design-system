@@ -263,7 +263,7 @@ export const Option = props => (
     ) : (
       <span className="slds-media__body">
         <span
-          className={classNames('slds-truncate', {
+          className={classNames({
             'slds-m-bottom_xxx-small': props.plainMeta
           })}
           title={

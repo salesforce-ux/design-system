@@ -109,6 +109,7 @@
   float: left;
   min-width: $size-xx-small;
   max-width: $size-medium;
+  width: max-content; /* This is needed as replacement for legacy `white-space: nowrap;` from the inner menu-item */
   margin-top: $spacing-xxx-small;
   margin-bottom: $spacing-xxx-small;
   border: $border-width-thin solid var(--slds-g-color-border-base-4, #{$color-border});
@@ -222,7 +223,6 @@
     padding: $spacing-x-small $spacing-small;
     background-color: var(--slds-c-dropdown-item-color-background);
     color: var(--slds-c-dropdown-item-color, var(--slds-g-color-neutral-base-10, #{$color-text-default}));
-    white-space: nowrap;
     cursor: pointer;
 
     &:hover,

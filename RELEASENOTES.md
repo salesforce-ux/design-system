@@ -10,6 +10,11 @@
 #### Added
 - Added `role="switch"` to input element to ensure accessibility.
 
+### [Combobox](https://www.lightningdesignsystem.com/components/combobox)
+#### Fixed
+- Fixed a11y concern with truncated menu options for longer text. The text for each option now wraps by default.
+- Update examples to remove `slds-truncate` class from options. The `slds-truncate` class can still be used to achieve the previous behavior.
+
 ### [Modals](https://www.lightningdesignsystem.com/components/modals)
 #### Fixed
 - Fixed close button focus indicator color to meet contrast ratio accessibility requirements.

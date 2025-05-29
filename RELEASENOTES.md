@@ -12,6 +12,7 @@
 
 ### [Combobox](https://www.lightningdesignsystem.com/components/combobox)
 #### Fixed
+- Adds css to fix the height of empty list option in cases where `slds-truncate` class is not present
 - Fixed a11y concern with truncated menu options for longer text. The text for each option now wraps by default.
 - Update examples to remove `slds-truncate` class from options. The `slds-truncate` class can still be used to achieve the previous behavior.
 

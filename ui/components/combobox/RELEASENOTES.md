@@ -6,6 +6,10 @@
 
 ## 2.28.0
 
+#### Fixed
+
+- Adds css to fix the height of empty list option in cases where `slds-truncate` class is not present
+
 ### Fixed
 
 - Fixed a11y concern with truncated menu options for longer text. The text for each option now wraps by default.

@@ -201,7 +201,13 @@ input[readonly][role="combobox"] {
     background-color: var(--slds-c-listbox-option-color-background-focus);
   }
 
-  .slds-truncate {
+  /**
+   * If the listbox option is empty and slds-truncate is not present this fix the height of the option
+   *
+   * @selector .slds-media__body > span
+   * @restrict .slds-listbox__option
+   */
+  .slds-truncate, .slds-media__body > span {
     display: inline-block;
     vertical-align: middle;
   }

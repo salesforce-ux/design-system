@@ -33,6 +33,11 @@ const copilotElements = [
   'runtime_copilot-reset-session',
 ];
 
+// Agentic Setup elements (agenticSetupBroker)
+const agenticSetupElements = [
+  'runtime_copilot-agentic-shell'
+];
+
 /* List of Lightning Base Components derived from SDS Primitives
  * These are used to modify the CSS scope
  *
@@ -120,6 +125,7 @@ function readStylingHooksContent(hooksDir, hookFiles) {
  * @param {string} stylingHooksClass - CSS catch-all class for styling hooks
  * @param {string} sidePanelWrapper - Wrapper element for the Copilot side panel
  * @param {string[]} copilotElements - Array of Copilot elements
+ * @param {string[]} agenticSetupElements - Array of Agentic Setup elements
  * @param {string[]} lightningPrimitiveComponents - Array of Lightning primitive component names
  * @returns {string} - Modified CSS content
  */
@@ -129,7 +135,7 @@ function modifyCssScope(
   lightningPrimitiveComponents
 ) {
   const selector = ":where\\(html\\)";
-  const newSelector = `:where(${stylingHooksClass}, ${copilotElements}, ${lightningPrimitiveComponents.join(
+  const newSelector = `:where(${stylingHooksClass}, ${copilotElements}, ${agenticSetupElements}, ${lightningPrimitiveComponents.join(
     ", "
   )})`;
   return content.replace(new RegExp(selector, "g"), newSelector);

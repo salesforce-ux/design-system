@@ -160,10 +160,9 @@ const ColorPickerCustom = props => {
         className="slds-color-picker__custom-range"
         style={{ background: 'hsl(220, 100%, 50%)' }}
       >
-        <a
+        <button
           className="slds-color-picker__range-indicator"
           style={{ bottom: '45%', left: '46%' }}
-          href="#"
           aria-live="assertive"
           aria-atomic="true"
           aria-describedby="color-picker-instructions"
@@ -171,7 +170,7 @@ const ColorPickerCustom = props => {
           <span className="slds-assistive-text">
             hex #5679C0
           </span>
-        </a>
+        </button>
       </div>
 
       <div className="slds-color-picker__hue-and-preview">

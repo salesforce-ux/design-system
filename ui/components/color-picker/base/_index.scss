@@ -181,6 +181,8 @@
   width: $color-picker-range-indicator-size;
   border: $border-width-thick solid $color-background-alt;
   border-radius: $border-radius-circle;
+  background-color: transparent;
+  padding: 0;
 
   &:focus {
     box-shadow: var(--slds-g-shadow-outline-focus-1);

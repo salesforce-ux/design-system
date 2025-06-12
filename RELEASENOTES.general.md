@@ -9,6 +9,8 @@
 - Styling Hooks
   - Include a new scope for global and shared hooks targeting Agentic Setup elements. This is a continuation from the changes included in 2.27.0.
 
+- Updated color picker range indicator from <a> to a <button>
+
 ## 2.27.1 - May 7, 2025
 
 ## 2.27.0 - April 17, 2025

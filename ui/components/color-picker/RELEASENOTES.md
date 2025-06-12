@@ -4,6 +4,10 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.28.0 - Upcoming
+
+- Updated color picker range indicator from <a> to a <button>
+
 ## 2.27.0
 
 ### Fixed

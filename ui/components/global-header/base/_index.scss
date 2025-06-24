@@ -52,9 +52,11 @@
       padding-left: ($spacing-large * 2);
     }
 
-    .slds-input__icon_left,
-    .slds-input__icon--left {
-      left: ($spacing-medium + $spacing-xx-small);
+    &.slds-input-has-icon {
+      .slds-input__icon_left,
+      .slds-input__icon--left {
+        left: ($spacing-medium + $spacing-xx-small);
+      }
     }
 
     .slds-icon {

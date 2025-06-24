@@ -979,25 +979,90 @@ export const ObjectFieldTypesHorizontalWithError = {
           label: 'SLA Expiration Date',
           value: '1/1/2018',
           component: (
-            <FormElement
-              isHorizontal
+            <CompoundFormElement
+              labelContent="Date and Time"
+              isAddress
               isEditing
-              formElementClassName="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open"
-              labelContent="Date"
-              inputId="horizontal-form-element-id-03"
-              hasRightIcon
+              isRequired
+              isHorizontal
+              hasError
             >
-              <Input
-                id="horizontal-form-element-id-03"
-                defaultValue="1/1/2018"
-              />
-              <ButtonIcon
-                className="slds-input__icon slds-input__icon_right"
-                symbol="event"
-                assistiveText="Select a date"
-                title="Select a date"
-              />
-            </FormElement>
+              <CompoundFormRow>
+                <div className="slds-size_3-of-6">
+                  <FormElement
+                    isEditing
+                    labelContent="Date"
+                    inputId="horizontal-form-element-id-03"
+                    hasRightIcon
+                    hasError
+                    errorId="horizontal-form-element-error-id-04"
+                    inlineMessage="Complete this field"
+                  >
+                    <Input
+                      id="horizontal-form-element-id-03"
+                    />
+                    <ButtonIcon
+                      className="slds-input__icon slds-input__icon_right"
+                      symbol="event"
+                      assistiveText="Select a date"
+                      title="Select a date"
+                    />
+                  </FormElement>
+                </div>
+                <div className="slds-size_3-of-6">
+                  <Combobox
+                    id="horizontal-combobox-id-03"
+                    aria-controls="stacked-listbox-id-03"
+                    autocomplete
+                    label="Time"
+                    placeholder="Select a time…"
+                    inputIconPosition="right"
+                    hasError={true}
+                    rightInputIcon={
+                      <UtilityIcon
+                        symbol="clock"
+                        className="slds-icon slds-icon_x-small slds-icon-text-default slds-icon-text-error"
+                        containerClassName="slds-input__icon slds-input__icon_right"
+                        assistiveText={false}
+                        title={false}
+                      />
+                    }
+                    results={
+                      <Listbox
+                        className="slds-dropdown_fluid slds-dropdown_left"
+                        id="stacked-listbox-id-03"
+                        snapshot={{
+                          option1: {
+                            name: '7:00am'
+                          },
+                          option2: {
+                            name: '8:00am'
+                          },
+                          option3: {
+                            name: '9:00am'
+                          },
+                          option4: {
+                            name: '10:00am'
+                          },
+                          option5: {
+                            name: '11:00am'
+                          },
+                          option6: {
+                            name: '12:00pm'
+                          }
+                        }}
+                        type="plain"
+                        count={6}
+                        visualSelection
+                      />
+                    }
+                    resultsType="listbox"
+                    hasInteractions
+                    hasFocus={false}
+                  />
+                </div>
+              </CompoundFormRow>
+            </CompoundFormElement>
           )
         }
       ]
@@ -1024,6 +1089,177 @@ export const ObjectFieldTypesHorizontalWithError = {
                 defaultValue="Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam porta sem malesuada magna mollis euismod."
               />
             </FormElement>
+          )
+        }
+      ]
+    },
+    {
+      fields: [
+        {
+          type: 'address',
+          label: 'Billing Address',
+          value: ['525 S. Lexington Ave', 'Burlington, NC 27215', 'USA'],
+          link: true,
+          isRequired: true,
+          hasTooltip: true,
+          component: (
+            <CompoundFormElement
+              labelContent="Billing Address"
+              isAddress
+              isEditing
+              isRequired
+              hasTooltip
+              isHorizontal
+            >
+              <CompoundFormRow>
+                <div className="slds-size_1-of-1">
+                  <FormElement
+                    labelContent="Billing Street"
+                    inputId="horizontal-form-element-id-04"
+                  >
+                    <Textarea
+                      id="horizontal-form-element-id-04"
+                      defaultValue="525 S. Lexington Ave"
+                      required
+                    />
+                  </FormElement>
+                </div>
+              </CompoundFormRow>
+              <CompoundFormRow>
+                <div className="slds-size_3-of-6">
+                  <FormElement
+                    labelContent="Billing City"
+                    inputId="horizontal-form-element-id-05"
+                    hasError
+                    errorId="horizontal-form-element-error-id-02"
+                    inlineMessage="Complete this field"
+                  >
+                    <Input
+                      id="horizontal-form-element-id-05"
+                      required
+                    />
+                  </FormElement>
+                </div>
+                <div className="slds-size_3-of-6">
+                  <FormElement
+                    labelContent="Billing State/Province"
+                    inputId="horizontal-form-element-id-06"
+                    hasError
+                    errorId="horizontal-form-element-error-id-03"
+                    inlineMessage="Complete this field"
+                  >
+                    <Input
+                      id="horizontal-form-element-id-06"
+                      required
+                    />
+                  </FormElement>
+                </div>
+              </CompoundFormRow>
+              <CompoundFormRow>
+                <div className="slds-size_3-of-6">
+                  <FormElement
+                    labelContent="Billing Zip/Postal Code"
+                    inputId="horizontal-form-element-id-07"
+                  >
+                    <Input
+                      id="horizontal-form-element-id-07"
+                      defaultValue="27215"
+                      required
+                    />
+                  </FormElement>
+                </div>
+                <div className="slds-size_3-of-6">
+                  <FormElement
+                    labelContent="Billing Country"
+                    inputId="horizontal-form-element-id-08"
+                    hasError
+                    errorId="horizontal-form-element-error-id-04"
+                    inlineMessage="Complete this field"
+                  >
+                    <Input
+                      id="horizontal-form-element-id-08"
+                      required
+                    />
+                  </FormElement>
+                </div>
+              </CompoundFormRow>
+            </CompoundFormElement>
+          )
+        },
+        {
+          type: 'address',
+          label: 'Shipping Address',
+          value: ['312 Constitution Place', 'Austin, TX 78767', 'USA'],
+          link: true,
+          component: (
+            <CompoundFormElement
+              labelContent="Shipping Address"
+              isAddress
+              isEditing
+              isHorizontal
+            >
+              <CompoundFormRow>
+                <div className="slds-size_1-of-1">
+                  <FormElement
+                    labelContent="Shipping Street"
+                    inputId="horizontal-form-element-id-09"
+                  >
+                    <Textarea
+                      id="horizontal-form-element-id-09"
+                      defaultValue="312 Constitution Place"
+                    />
+                  </FormElement>
+                </div>
+              </CompoundFormRow>
+              <CompoundFormRow>
+                <div className="slds-size_4-of-6">
+                  <FormElement
+                    labelContent="Shipping City"
+                    inputId="horizontal-form-element-id-10"
+                  >
+                    <Input
+                      id="horizontal-form-element-id-10"
+                      defaultValue="Austin"
+                    />
+                  </FormElement>
+                </div>
+                <div className="slds-size_2-of-6">
+                  <FormElement
+                    labelContent="Shipping State/Province"
+                    inputId="horizontal-form-element-id-11"
+                  >
+                    <Input
+                      id="horizontal-form-element-id-11"
+                      defaultValue="TX"
+                    />
+                  </FormElement>
+                </div>
+              </CompoundFormRow>
+              <CompoundFormRow>
+                <div className="slds-size_4-of-6">
+                  <FormElement
+                    labelContent="Shipping Zip/Postal Code"
+                    inputId="horizontal-form-element-id-12"
+                  >
+                    <Input
+                      id="horizontal-form-element-id-12"
+                      defaultValue="78767"
+                    />
+                  </FormElement>
+                </div>
+                <div className="slds-size_2-of-6">
+                  <FormElement
+                    labelContent="Shipping Country"
+                    inputId="horizontal-form-element-id-13"
+                  >
+                    <Input
+                      id="horizontal-form-element-id-13"
+                      defaultValue="USA"
+                    />
+                  </FormElement>
+                </div>
+              </CompoundFormRow>
+            </CompoundFormElement>
           )
         }
       ]

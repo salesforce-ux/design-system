@@ -150,3 +150,16 @@
     @include clearfix;
   }
 }
+
+
+.slds-form-element__control:has(.slds-form-element__control) {
+  .slds-form-element__help {
+    margin-left: 0;
+  }
+
+  @include mq-medium-min {
+    .slds-input-has-icon_left .slds-input__icon {
+      left: $spacing-small;
+    }
+  }
+}

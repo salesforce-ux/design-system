@@ -4,9 +4,11 @@
 ## Release 2.28.0 - Upcoming
 
 - Updated `@salesforce-ux/design-system-primitive-tokens` to version `0.3.7` to apply BLUE_40 as the link text color.
-- Styling Hooks
-  - Include a new scope for global and shared hooks targeting Agentic Setup elements. This is a continuation from the changes included in 2.27.0.
 - Updated color picker range indicator from <a> to a <button>
+  
+- Styling Hooks
+  - Removed custom scope from styling hooks. The limited scope was introduced in 2.27.0, but it's now applied broadly (new scope `:where(html)`).
+  - This change simplifies the styling hooks implementation and provides broader CSS scope as originally intended by the `sds-styling-hooks` package.
 
 ## Component Blueprints
 ### [Checkbox Toggle](https://www.lightningdesignsystem.com/components/checkbox-toggle)

@@ -26,6 +26,17 @@
 #### Fixed
 - Fixed close button focus indicator color to meet contrast ratio accessibility requirements.
 
+## Release 2.27.2 - June 25, 2025
+
+## Component Blueprints
+### [Form Element](https://www.lightningdesignsystem.com/components/form-element)
+#### Fixed
+- Fixed error help text to be aligned with appropriate form control
+
+### [Global Header](https://www.lightningdesignsystem.com/components/global-header)
+#### Fixed
+- Fixed specificity for left-side icon in input field
+
 ## Release 2.27.1 - May 7, 2025
 
 ## Component Blueprints

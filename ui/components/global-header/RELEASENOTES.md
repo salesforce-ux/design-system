@@ -3,9 +3,15 @@
 # Global Header Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.27.2
+
+### Fixed
+
+- Fixed specificity for left-side icon in input field
+
 ## 2.27.0
 
-#### Changed
+### Changed
 
 - Updated focus state style of the avatar
 

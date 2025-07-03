@@ -158,7 +158,7 @@ a.slds-button--inverse:focus {
     var(--slds-g-color-neutral-base-100, #{$color-border-button-focus-inverse})));
 
   /*! @css-var-fallback box-shadow */
-  --slds-c-button-shadow: var(--slds-s-button-shadow-focus-inverse, var(--slds-c-button-inverse-shadow-focus, var(--sds-c-button-inverse-shadow-focus, #{$shadow-button-focus-inverse})));
+  --slds-c-button-shadow: var(--slds-c-button-inverse-shadow-focus, var(--sds-c-button-inverse-shadow-focus, var(--slds-s-button-shadow-focus-inverse, #{$shadow-button-focus-inverse})));
   outline: none;
 }
 

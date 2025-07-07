@@ -120,7 +120,7 @@ props:
   PRICEBOOK:
     value: '#9050E9'
   FEED:
-    value: '#1B96FF'
+    value: '#084968'
   FEEDBACK:
     value: '#1B96FF'
   FILE:
@@ -1263,3 +1263,27 @@ props:
     value: '#032D60'
   IT_SERVICE_MANAGEMENT:
     value: '#B60554'
+  SECONDARY_INDEX:
+    value: '#107CAD'
+  SPARKLES:
+    value: '#9050E9'
+  ACTION_OVERRIDE:
+    value: '#7E2600'
+  CUSTOM_ENTITY:
+    value: '#5867E8'
+  CUSTOM_TEXTBOX:
+    value: '#5867E8'
+  TABSET:
+    value: '#7E2600'
+  AGENT_ASTRO:
+    value: '#032D60'
+  PUSH:
+    value: '#939393'
+  BUSINESS_UNIT:
+    value: '#5867E8'
+  DX_PIPELINE:
+    value: '#FF5D2D'
+  COLLECTION_ALT:
+    value: '#7E2600'
+  DATABASE:
+    value: '#FF538A'

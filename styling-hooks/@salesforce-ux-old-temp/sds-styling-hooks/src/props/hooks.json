@@ -1,0 +1,12 @@
+{
+  "imports": [
+    "./colors.json",
+    "./palettes.json",
+    "./spacing.json",
+    "./font.json",
+    "./radius.json",
+    "./ratio.json",
+    "./shadow.json",
+    "./sizing.json"
+  ]
+}

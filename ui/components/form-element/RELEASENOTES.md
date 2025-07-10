@@ -3,6 +3,16 @@
 # Form Element Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.27.0
+
+#### Added
+- Added `aria-hidden` attribute to required form element label asterisk to avoid being announced by screen reader to meet accessibility WCAG label criteria
+
+## 2.26.2
+
+### Fixed
+
+- Move clear fix from 2.26.1 to target specific selectors, use clearfix mixin to avoid more edge cases (e.g. background colors)
 
 ## 2.26.2
 

@@ -3,7 +3,11 @@
 # Path Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.27.0
 
+### Fixed
+
+- Fixed text color of lost stage that also fixes minimum contrast ratio requirements.
 
 ## 2.21.0
 

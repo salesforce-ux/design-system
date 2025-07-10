@@ -1,0 +1,32 @@
+{
+  "global": {
+    "namespace": "sds",
+    "scope": "shared",
+    "group": "headings"
+  },
+  "props": [
+    {
+      "name": "heading-font-family",
+      "value": null,
+      "type": "raw",
+      "category": "font",
+      "syntax": "<length>",
+      "inherits": true,
+      "scope": "shared",
+      "cssProperties": ["font-family"],
+      "group": "h1-h6",
+      "comment": "Font stack for your heading elements."
+    },
+    {
+      "name": "heading-font-weight",
+      "value": null,
+      "type": "any",
+      "category": "font",
+      "syntax": "<custom-ident>",
+      "inherits": false,
+      "cssProperties": ["font-weight"],
+      "group": "h1-h6",
+      "comment": "Shared font-weight between heading elements, h1-h6"
+    }
+  ]
+}

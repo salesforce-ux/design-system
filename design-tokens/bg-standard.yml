@@ -15,7 +15,7 @@ props:
   ENVIRONMENT_HUB:
     value: '#107CAD'
   FLOW:
-    value: '#107CAD'
+    value: '#032D60'
   SOSSESSION:
     value: '#107CAD'
   PROCESS:
@@ -444,7 +444,7 @@ props:
   SCREEN:
     value: '#1B96FF'
   APEX_PLUGIN:
-    value: '#107CAD'
+    value: '#032D60'
   RECORD_UPDATE:
     value: '#FF538A'
   COLLECTION_VARIABLE:
@@ -456,19 +456,19 @@ props:
   DYNAMIC_RECORD_CHOICE:
     value: '#107CAD'
   LOOP:
-    value: '#FF5D2D'
+    value: '#DD7A01'
   TEXT_TEMPLATE:
     value: '#107CAD'
   ASSIGNMENT:
-    value: '#FF5D2D'
+    value: '#DD7A01'
   APEX:
-    value: '#107CAD'
+    value: '#032D60'
   CONSTANT:
     value: '#107CAD'
   RECORD_DELETE:
     value: '#FF538A'
   DECISION:
-    value: '#FF5D2D'
+    value: '#DD7A01'
   WAITS:
     value: '#FF5D2D'
   VARIABLE:
@@ -1251,3 +1251,15 @@ props:
     value: '#2f2cb7'
   USAGE_SUMMARY:
     value: '#06a59a'
+  ENTITY_MILESTONE_TIME:
+    value: '#FF5D2D'
+  ENTITY_MILESTONE_DATE:
+    value: '#FF5D2D'
+  OUTCOME_TIMEBOUND:
+    value: '#FF5D2D'
+  OUTCOME_DATEBOUND:
+    value: '#FF5D2D'
+  SUBMIT_FOR_APPROVAL:
+    value: '#032D60'
+  IT_SERVICE_MANAGEMENT:
+    value: '#B60554'

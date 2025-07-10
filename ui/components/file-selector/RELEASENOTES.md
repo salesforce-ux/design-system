@@ -3,6 +3,11 @@
 # File Selector Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.27.0
+
+### Changed
+
+- `aria-labelledby` attribute is removed from HTML input file and added to the wrapper div along with `role='group'` as per accessibility requirements.
 
 ## 2.10.0
 

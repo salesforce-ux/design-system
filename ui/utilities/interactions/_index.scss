@@ -91,7 +91,7 @@
   }
 
   &:focus {
-    box-shadow: var(--slds-g-shadow-outset-focus-1, #{$shadow-button-focus});
+    box-shadow: var(--slds-g-shadow-outline-focus-1, #{$shadow-button-focus});
     outline: 0;
   }
 }
@@ -106,5 +106,5 @@
   outline: 0;
   border-color: var(--slds-g-color-brand-base-60, #{$color-border-input-active});
   background-color: var(--slds-g-color-neutral-base-100, #{$color-background-input-active});
-  box-shadow: $shadow-button-focus;
+  box-shadow: var(--slds-g-shadow-outline-focus-1, #{$shadow-button-focus});
 }

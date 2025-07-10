@@ -35,6 +35,10 @@
     .slds-combobox__input-value:focus {
       box-shadow: 0 0 0 2px var(--slds-g-color-neutral-base-100, #{$color-gray-1}) inset, 0 0 0 3px var(--slds-g-color-border-base-1, #{$color-border}) inset;
     }
+
+    .slds-combobox__input-value:focus {
+      outline: 2px solid var(--slds-g-color-brand-base-40);
+    }
   }
 
   /**
@@ -58,8 +62,11 @@
   }
 
   &.slds-has-object-switcher {
+
     .slds-listbox_object-switcher {
+
       .slds-button:focus {
+
         outline-offset: 0;
       }
     }
@@ -99,7 +106,7 @@ input[readonly][role="combobox"] {
 
   &:focus,
   &.slds-has-focus {
-    box-shadow: var(--slds-g-shadow-outline-focus-1, #{$shadow-button-focus}); 
+    box-shadow: var(--slds-g-shadow-outline-focus-1, #{$shadow-button-focus});
   }
 
   &[disabled] {
@@ -179,12 +186,19 @@ input[readonly][role="combobox"] {
  */
 .slds-listbox__option {
 
+  color: var(--slds-c-listbox-option-color);
+  background-color: var(--slds-c-listbox-option-color-background);
+
   &:hover {
     cursor: pointer;
+    color: var(--slds-c-listbox-option-color-hover);
+    background-color: var(--slds-c-listbox-option-color-background-hover);
   }
 
   &:focus {
     outline: 0;
+    color: var(--slds-c-listbox-option-color-focus);
+    background-color: var(--slds-c-listbox-option-color-background-focus);
   }
 
   .slds-truncate {
@@ -192,8 +206,11 @@ input[readonly][role="combobox"] {
     vertical-align: middle;
   }
 
-  &[aria-disabled="true"] {
-    color: var(--slds-g-color-neutral-base-50, #{$color-text-button-default-disabled});
+  &[aria-disabled="true"],
+  &[aria-disabled="true"]:hover,
+  &[aria-disabled="true"]:focus {
+    color: var(--slds-c-listbox-option-color-disabled, var(--slds-g-color-neutral-base-50, #{$color-text-button-default-disabled}));
+    background-color: var(--slds-c-listbox-option-color-background-disabled);
   }
 }
 
@@ -243,19 +260,26 @@ input[readonly][role="combobox"] {
   .slds-listbox__option:focus,
   .slds-listbox__option:hover,
   .slds-listbox__option.slds-has-focus {
-    background-color: var(--slds-g-color-neutral-base-95, #{$color-background-row-hover});
     text-decoration: none;
+  }
+
+  .slds-listbox__option:hover {
+    background-color: var(--slds-c-listbox-option-color-background-hover, var(--slds-g-color-neutral-base-95, #{$color-background-row-hover}));
   }
 
   .slds-listbox__option:focus,
   .slds-listbox__option.slds-has-focus {
+    background-color: var(--slds-c-listbox-option-color-background-focus, var(--slds-g-color-neutral-base-95, #{$color-background-row-hover}));
     box-shadow: var(--slds-g-shadow-inset-focus-1, #{$shadow-button-focus});
     outline: 0;
   }
 
   .slds-listbox__option[aria-disabled="true"],
+  .slds-listbox__option[aria-disabled="true"]:hover,
+  .slds-listbox__option[aria-disabled="true"]:focus,
+  .slds-listbox__option[aria-disabled="true"].slds-has-focus,
   .slds-listbox__option[role="presentation"]:hover {
-    background-color: transparent;
+    background-color: var(--slds-c-listbox-option-color-background-disabled, transparent);
     cursor: default;
   }
 
@@ -305,8 +329,10 @@ input[readonly][role="combobox"] {
 }
 
 .slds-dueling-list__options {
+
   .slds-listbox_vertical,
   .slds-listbox--vertical {
+
     .slds-listbox__option.slds-is-selected:focus,
     .slds-listbox__option.slds-is-selected.slds-has-focus {
       box-shadow: var(--slds-g-shadow-inset-inverse-focus-1);
@@ -324,6 +350,7 @@ input[readonly][role="combobox"] {
 .slds-input-has-icon_left-right,
 .slds-input-has-icon--left,
 .slds-input-has-icon--left-right {
+
   & .slds-combobox__input[value],
   & .slds-combobox__input.slds-combobox__input-value {
     padding-left: ($square-icon-small-boundary + $spacing-small);
@@ -414,11 +441,20 @@ input[readonly][role="combobox"] {
 .slds-listbox__option-meta {
   display: block;
   margin-top: ($spacing-xx-small * -1); // Offset $line-height-text from result-text
-  color: var(--slds-g-color-neutral-base-30, #{$color-text-label});
+  color: var(--slds-c-listbox-option-meta-color, var(--slds-g-color-neutral-base-30, #{$color-text-label}));
+
+  .slds-listbox__option:hover & {
+    color: var(--slds-c-listbox-option-meta-color-hover);
+  }
+
+  .slds-listbox__option:focus &,
+  .slds-listbox__option.slds-has-focus & {
+    color: var(--slds-c-listbox-option-meta-color-focus);
+  }
 }
 
 .slds-listbox__option[aria-disabled="true"] .slds-listbox__option-meta {
-  color: currentColor;
+  color: var(--slds-c-listbox-option-meta-color-disabled, currentColor);
 }
 
 .slds-listbox_object-switcher,

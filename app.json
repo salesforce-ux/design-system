@@ -10,7 +10,7 @@
       "url": "https://github.com/salesforce-ux/heroku-buildpack-nginx.git#dse"
     }
   ],
-  "stack": "heroku-20",
+  "stack": "heroku-22",
   "environments": {
     "review": {
       "buildpacks": [

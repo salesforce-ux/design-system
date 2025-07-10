@@ -70,7 +70,7 @@ export let Checkbox = props => {
             )}
           >
             {props.isRequired && (
-              <abbr className="slds-required" title="required">
+              <abbr className="slds-required" title="required" aria-hidden="true">
                 *{' '}
               </abbr>
             )}
@@ -106,7 +106,7 @@ export let Indeterminate = props => {
 export let Required = props => (
   <FormElement>
     <Checkbox label={checkboxLabel}>
-      <abbr className="slds-required" title="required">
+      <abbr className="slds-required" title="required" aria-hidden="true">
         *
       </abbr>
     </Checkbox>
@@ -120,7 +120,7 @@ export let ErrorState = props => (
     errorId={errorId}
   >
     <Checkbox label={checkboxLabel} errorId="error_01">
-      <abbr className="slds-required" title="required">
+      <abbr className="slds-required" title="required" aria-hidden="true">
         *
       </abbr>
     </Checkbox>
@@ -152,7 +152,7 @@ export let Group = props => (
 export let GroupRequired = props => (
   <Fieldset required>
     <Legend>
-      <abbr className="slds-required" title="required">
+      <abbr className="slds-required" title="required" aria-hidden="true">
         *
       </abbr>{' '}
       Checkbox Group Label
@@ -167,7 +167,7 @@ export let GroupRequired = props => (
 export let GroupError = props => (
   <Fieldset required className="slds-has-error">
     <Legend>
-      <abbr className="slds-required" title="required">
+      <abbr className="slds-required" title="required" aria-hidden="true">
         *
       </abbr>{' '}
       Checkbox Group Label
@@ -222,7 +222,7 @@ export let states = [
     element: (
       <FormElement>
         <Checkbox label="When you wake up in the morning, it's a quarter to one, And you want to have a little fun. You brush your teeth, ch ch ch ch, ch ch ch ch. You brush your teeth, ch ch ch ch, ch ch ch ch">
-          <abbr className="slds-required" title="required">
+          <abbr className="slds-required" title="required" aria-hidden="true">
             *
           </abbr>
         </Checkbox>
@@ -236,7 +236,7 @@ export let states = [
     storybookStyles: true,
     element: (
       <Checkbox label="When you wake up in the morning, it's a quarter to one, And you want to have a little fun. You brush your teeth, ch ch ch ch, ch ch ch ch. You brush your teeth, ch ch ch ch, ch ch ch ch">
-        <abbr className="slds-required" title="required">
+        <abbr className="slds-required" title="required" aria-hidden="true">
           *
         </abbr>
       </Checkbox>
@@ -248,7 +248,7 @@ export let states = [
     element: (
       <FormElement>
         <Checkbox label={checkboxLabel}>
-          <abbr className="slds-required" title="required">
+          <abbr className="slds-required" title="required" aria-hidden="true">
             *
           </abbr>
         </Checkbox>
@@ -301,7 +301,7 @@ export let examples = [
     element: (
       <Fieldset>
         <Legend>
-          <abbr className="slds-required" title="required">
+          <abbr className="slds-required" title="required" aria-hidden="true">
             *{' '}
           </abbr>
           Checkbox Group Label
@@ -323,7 +323,7 @@ export let examples = [
     element: (
       <Fieldset>
         <Legend>
-          <abbr className="slds-required" title="required">
+          <abbr className="slds-required" title="required" aria-hidden="true">
             *{' '}
           </abbr>
           Checkbox Group Label

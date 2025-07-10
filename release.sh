@@ -119,13 +119,14 @@ sed -i.bak 's/require(\(.*\))/\1/' postcss.config.js
 cd __release
 
 # Clone site repository, main branch HEAD
-git clone --single-branch --branch main git@github.com:salesforce-ux/design-system-site.git .
-# git clone --single-branch --branch fix/remove-sketch-entirely git@github.com:salesforce-ux/design-system-site.git .
+git clone --single-branch --branch main git@github-emu:salesforce-ux-emu/design-system-site.git .
+# git clone --single-branch --branch fix/remove-sketch-entirely git@github-emu:salesforce-ux-emu/design-system-site.git .
 
 #
 # Update CanIUse database
 #
-npx browserslist@latest --update-db
+npx update-browserslist-db@latest
+#npx browserslist@latest --update-db
 
 # perform Node modules install
 npm ci --prefer-offline

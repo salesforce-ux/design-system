@@ -412,6 +412,15 @@ gulp.task(
       'dist:searchConfig'
     ),
     'dist:minifyCss',
+    /*
+      * ==================
+      * Inject SLDS styling hooks post-minification
+      * Workaround for old clean-css version which removes @layer, :where() blocks
+      * See: https://github.com/clean-css/clean-css/issues/1272
+      * Hooks are injected and then minified in a separate step
+      * ==================
+      */
+    withName('dist:injectSldsStylingHooks')(dist.injectSldsStylingHooks),
     'dist:writeUI',
     'dist:writeLibrary',
     'dist:writeTokenComponentMap',

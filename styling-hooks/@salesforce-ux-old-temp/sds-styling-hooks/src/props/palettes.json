@@ -1,0 +1,800 @@
+{
+  "global": {
+    "namespace": "sds",
+    "type": "color",
+    "category": "color",
+    "syntax": "<color>",
+    "inherits": true,
+    "scope": "global",
+    "group": "reference",
+    "cssProperties": ["background-color", "color", "border-color", "fill"]
+  },
+  "imports": ["@salesforce-ux/sds-styling-aliases/dist/color-palettes.json"],
+  "props": [
+    {
+      "name": "color-palette-blue-10",
+      "value": "{!PALETTE_BLUE_10}",
+      "comment": "Blue 10"
+    },
+    {
+      "name": "color-palette-blue-15",
+      "value": "{!PALETTE_BLUE_15}",
+      "comment": "Blue 15"
+    },
+    {
+      "name": "color-palette-blue-20",
+      "value": "{!PALETTE_BLUE_20}",
+      "comment": "Blue 20"
+    },
+    {
+      "name": "color-palette-blue-30",
+      "value": "{!PALETTE_BLUE_30}",
+      "comment": "Blue 30"
+    },
+    {
+      "name": "color-palette-blue-40",
+      "value": "{!PALETTE_BLUE_40}",
+      "comment": "Blue 40"
+    },
+    {
+      "name": "color-palette-blue-50",
+      "value": "{!PALETTE_BLUE_50}",
+      "comment": "Blue 50"
+    },
+    {
+      "name": "color-palette-blue-60",
+      "value": "{!PALETTE_BLUE_60}",
+      "comment": "Blue 60"
+    },
+    {
+      "name": "color-palette-blue-65",
+      "value": "{!PALETTE_BLUE_65}",
+      "comment": "Blue 65"
+    },
+    {
+      "name": "color-palette-blue-70",
+      "value": "{!PALETTE_BLUE_70}",
+      "comment": "Blue 70"
+    },
+    {
+      "name": "color-palette-blue-80",
+      "value": "{!PALETTE_BLUE_80}",
+      "comment": "Blue 80"
+    },
+    {
+      "name": "color-palette-blue-90",
+      "value": "{!PALETTE_BLUE_90}",
+      "comment": "Blue 90"
+    },
+    {
+      "name": "color-palette-blue-95",
+      "value": "{!PALETTE_BLUE_95}",
+      "comment": "Blue 95"
+    },
+    {
+      "name": "color-palette-cloud-blue-10",
+      "value": "{!PALETTE_CLOUD_BLUE_10}",
+      "comment": "Cloud Blue 10"
+    },
+    {
+      "name": "color-palette-cloud-blue-15",
+      "value": "{!PALETTE_CLOUD_BLUE_15}",
+      "comment": "Cloud Blue 15"
+    },
+    {
+      "name": "color-palette-cloud-blue-20",
+      "value": "{!PALETTE_CLOUD_BLUE_20}",
+      "comment": "Cloud Blue 20"
+    },
+    {
+      "name": "color-palette-cloud-blue-30",
+      "value": "{!PALETTE_CLOUD_BLUE_30}",
+      "comment": "Cloud Blue 30"
+    },
+    {
+      "name": "color-palette-cloud-blue-40",
+      "value": "{!PALETTE_CLOUD_BLUE_40}",
+      "comment": "Cloud Blue 40"
+    },
+    {
+      "name": "color-palette-cloud-blue-50",
+      "value": "{!PALETTE_CLOUD_BLUE_50}",
+      "comment": "Cloud Blue 50"
+    },
+    {
+      "name": "color-palette-cloud-blue-60",
+      "value": "{!PALETTE_CLOUD_BLUE_60}",
+      "comment": "Cloud Blue 60"
+    },
+    {
+      "name": "color-palette-cloud-blue-65",
+      "value": "{!PALETTE_CLOUD_BLUE_65}",
+      "comment": "Cloud Blue 65"
+    },
+    {
+      "name": "color-palette-cloud-blue-70",
+      "value": "{!PALETTE_CLOUD_BLUE_70}",
+      "comment": "Cloud Blue 70"
+    },
+    {
+      "name": "color-palette-cloud-blue-80",
+      "value": "{!PALETTE_CLOUD_BLUE_80}",
+      "comment": "Cloud Blue 80"
+    },
+    {
+      "name": "color-palette-cloud-blue-90",
+      "value": "{!PALETTE_CLOUD_BLUE_90}",
+      "comment": "Cloud Blue 90"
+    },
+    {
+      "name": "color-palette-cloud-blue-95",
+      "value": "{!PALETTE_CLOUD_BLUE_95}",
+      "comment": "Cloud Blue 95"
+    },
+    {
+      "name": "color-palette-green-10",
+      "value": "{!PALETTE_GREEN_10}",
+      "comment": "Green 10"
+    },
+    {
+      "name": "color-palette-green-15",
+      "value": "{!PALETTE_GREEN_15}",
+      "comment": "Green 15"
+    },
+    {
+      "name": "color-palette-green-20",
+      "value": "{!PALETTE_GREEN_20}",
+      "comment": "Green 20"
+    },
+    {
+      "name": "color-palette-green-30",
+      "value": "{!PALETTE_GREEN_30}",
+      "comment": "Green 30"
+    },
+    {
+      "name": "color-palette-green-40",
+      "value": "{!PALETTE_GREEN_40}",
+      "comment": "Green 40"
+    },
+    {
+      "name": "color-palette-green-50",
+      "value": "{!PALETTE_GREEN_50}",
+      "comment": "Green 50"
+    },
+    {
+      "name": "color-palette-green-60",
+      "value": "{!PALETTE_GREEN_60}",
+      "comment": "Green 60"
+    },
+    {
+      "name": "color-palette-green-65",
+      "value": "{!PALETTE_GREEN_65}",
+      "comment": "Green 65"
+    },
+    {
+      "name": "color-palette-green-70",
+      "value": "{!PALETTE_GREEN_70}",
+      "comment": "Green 70"
+    },
+    {
+      "name": "color-palette-green-80",
+      "value": "{!PALETTE_GREEN_80}",
+      "comment": "Green 80"
+    },
+    {
+      "name": "color-palette-green-90",
+      "value": "{!PALETTE_GREEN_90}",
+      "comment": "Green 90"
+    },
+    {
+      "name": "color-palette-green-95",
+      "value": "{!PALETTE_GREEN_95}",
+      "comment": "Green 95"
+    },
+    {
+      "name": "color-palette-hot-orange-10",
+      "value": "{!PALETTE_HOT_ORANGE_10}",
+      "comment": "Hot Orange 10"
+    },
+    {
+      "name": "color-palette-hot-orange-15",
+      "value": "{!PALETTE_HOT_ORANGE_15}",
+      "comment": "Hot Orange 15"
+    },
+    {
+      "name": "color-palette-hot-orange-20",
+      "value": "{!PALETTE_HOT_ORANGE_20}",
+      "comment": "Hot Orange 20"
+    },
+    {
+      "name": "color-palette-hot-orange-30",
+      "value": "{!PALETTE_HOT_ORANGE_30}",
+      "comment": "Hot Orange 30"
+    },
+    {
+      "name": "color-palette-hot-orange-40",
+      "value": "{!PALETTE_HOT_ORANGE_40}",
+      "comment": "Hot Orange 40"
+    },
+    {
+      "name": "color-palette-hot-orange-50",
+      "value": "{!PALETTE_HOT_ORANGE_50}",
+      "comment": "Hot Orange 50"
+    },
+    {
+      "name": "color-palette-hot-orange-60",
+      "value": "{!PALETTE_HOT_ORANGE_60}",
+      "comment": "Hot Orange 60"
+    },
+    {
+      "name": "color-palette-hot-orange-65",
+      "value": "{!PALETTE_HOT_ORANGE_65}",
+      "comment": "Hot Orange 65"
+    },
+    {
+      "name": "color-palette-hot-orange-70",
+      "value": "{!PALETTE_HOT_ORANGE_70}",
+      "comment": "Hot Orange 70"
+    },
+    {
+      "name": "color-palette-hot-orange-80",
+      "value": "{!PALETTE_HOT_ORANGE_80}",
+      "comment": "Hot Orange 80"
+    },
+    {
+      "name": "color-palette-hot-orange-90",
+      "value": "{!PALETTE_HOT_ORANGE_90}",
+      "comment": "Hot Orange 90"
+    },
+    {
+      "name": "color-palette-hot-orange-95",
+      "value": "{!PALETTE_HOT_ORANGE_95}",
+      "comment": "Hot Orange 95"
+    },
+    {
+      "name": "color-palette-indigo-10",
+      "value": "{!PALETTE_INDIGO_10}",
+      "comment": "Indigo 10"
+    },
+    {
+      "name": "color-palette-indigo-15",
+      "value": "{!PALETTE_INDIGO_15}",
+      "comment": "Indigo 15"
+    },
+    {
+      "name": "color-palette-indigo-20",
+      "value": "{!PALETTE_INDIGO_20}",
+      "comment": "Indigo 20"
+    },
+    {
+      "name": "color-palette-indigo-30",
+      "value": "{!PALETTE_INDIGO_30}",
+      "comment": "Indigo 30"
+    },
+    {
+      "name": "color-palette-indigo-40",
+      "value": "{!PALETTE_INDIGO_40}",
+      "comment": "Indigo 40"
+    },
+    {
+      "name": "color-palette-indigo-50",
+      "value": "{!PALETTE_INDIGO_50}",
+      "comment": "Indigo 50"
+    },
+    {
+      "name": "color-palette-indigo-60",
+      "value": "{!PALETTE_INDIGO_60}",
+      "comment": "Indigo 60"
+    },
+    {
+      "name": "color-palette-indigo-65",
+      "value": "{!PALETTE_INDIGO_65}",
+      "comment": "Indigo 65"
+    },
+    {
+      "name": "color-palette-indigo-70",
+      "value": "{!PALETTE_INDIGO_70}",
+      "comment": "Indigo 70"
+    },
+    {
+      "name": "color-palette-indigo-80",
+      "value": "{!PALETTE_INDIGO_80}",
+      "comment": "Indigo 80"
+    },
+    {
+      "name": "color-palette-indigo-90",
+      "value": "{!PALETTE_INDIGO_90}",
+      "comment": "Indigo 90"
+    },
+    {
+      "name": "color-palette-indigo-95",
+      "value": "{!PALETTE_INDIGO_95}",
+      "comment": "Indigo 95"
+    },
+    {
+      "name": "color-palette-orange-10",
+      "value": "{!PALETTE_ORANGE_10}",
+      "comment": "Orange 10"
+    },
+    {
+      "name": "color-palette-orange-15",
+      "value": "{!PALETTE_ORANGE_15}",
+      "comment": "Orange 15"
+    },
+    {
+      "name": "color-palette-orange-20",
+      "value": "{!PALETTE_ORANGE_20}",
+      "comment": "Orange 20"
+    },
+    {
+      "name": "color-palette-orange-30",
+      "value": "{!PALETTE_ORANGE_30}",
+      "comment": "Orange 30"
+    },
+    {
+      "name": "color-palette-orange-40",
+      "value": "{!PALETTE_ORANGE_40}",
+      "comment": "Orange 40"
+    },
+    {
+      "name": "color-palette-orange-50",
+      "value": "{!PALETTE_ORANGE_50}",
+      "comment": "Orange 50"
+    },
+    {
+      "name": "color-palette-orange-60",
+      "value": "{!PALETTE_ORANGE_60}",
+      "comment": "Orange 60"
+    },
+    {
+      "name": "color-palette-orange-65",
+      "value": "{!PALETTE_ORANGE_65}",
+      "comment": "Orange 65"
+    },
+    {
+      "name": "color-palette-orange-70",
+      "value": "{!PALETTE_ORANGE_70}",
+      "comment": "Orange 70"
+    },
+    {
+      "name": "color-palette-orange-80",
+      "value": "{!PALETTE_ORANGE_80}",
+      "comment": "Orange 80"
+    },
+    {
+      "name": "color-palette-orange-90",
+      "value": "{!PALETTE_ORANGE_90}",
+      "comment": "Orange 90"
+    },
+    {
+      "name": "color-palette-orange-95",
+      "value": "{!PALETTE_ORANGE_95}",
+      "comment": "Orange 95"
+    },
+    {
+      "name": "color-palette-pink-10",
+      "value": "{!PALETTE_PINK_10}",
+      "comment": "Pink 10"
+    },
+    {
+      "name": "color-palette-pink-15",
+      "value": "{!PALETTE_PINK_15}",
+      "comment": "Pink 15"
+    },
+    {
+      "name": "color-palette-pink-20",
+      "value": "{!PALETTE_PINK_20}",
+      "comment": "Pink 20"
+    },
+    {
+      "name": "color-palette-pink-30",
+      "value": "{!PALETTE_PINK_30}",
+      "comment": "Pink 30"
+    },
+    {
+      "name": "color-palette-pink-40",
+      "value": "{!PALETTE_PINK_40}",
+      "comment": "Pink 40"
+    },
+    {
+      "name": "color-palette-pink-50",
+      "value": "{!PALETTE_PINK_50}",
+      "comment": "Pink 50"
+    },
+    {
+      "name": "color-palette-pink-60",
+      "value": "{!PALETTE_PINK_60}",
+      "comment": "Pink 60"
+    },
+    {
+      "name": "color-palette-pink-65",
+      "value": "{!PALETTE_PINK_65}",
+      "comment": "Pink 65"
+    },
+    {
+      "name": "color-palette-pink-70",
+      "value": "{!PALETTE_PINK_70}",
+      "comment": "Pink 70"
+    },
+    {
+      "name": "color-palette-pink-80",
+      "value": "{!PALETTE_PINK_80}",
+      "comment": "Pink 80"
+    },
+    {
+      "name": "color-palette-pink-90",
+      "value": "{!PALETTE_PINK_90}",
+      "comment": "Pink 90"
+    },
+    {
+      "name": "color-palette-pink-95",
+      "value": "{!PALETTE_PINK_95}",
+      "comment": "Pink 95"
+    },
+    {
+      "name": "color-palette-purple-10",
+      "value": "{!PALETTE_PURPLE_10}",
+      "comment": "Purple 10"
+    },
+    {
+      "name": "color-palette-purple-15",
+      "value": "{!PALETTE_PURPLE_15}",
+      "comment": "Purple 15"
+    },
+    {
+      "name": "color-palette-purple-20",
+      "value": "{!PALETTE_PURPLE_20}",
+      "comment": "Purple 20"
+    },
+    {
+      "name": "color-palette-purple-30",
+      "value": "{!PALETTE_PURPLE_30}",
+      "comment": "Purple 30"
+    },
+    {
+      "name": "color-palette-purple-40",
+      "value": "{!PALETTE_PURPLE_40}",
+      "comment": "Purple 40"
+    },
+    {
+      "name": "color-palette-purple-50",
+      "value": "{!PALETTE_PURPLE_50}",
+      "comment": "Purple 50"
+    },
+    {
+      "name": "color-palette-purple-60",
+      "value": "{!PALETTE_PURPLE_60}",
+      "comment": "Purple 60"
+    },
+    {
+      "name": "color-palette-purple-65",
+      "value": "{!PALETTE_PURPLE_65}",
+      "comment": "Purple 65"
+    },
+    {
+      "name": "color-palette-purple-70",
+      "value": "{!PALETTE_PURPLE_70}",
+      "comment": "Purple 70"
+    },
+    {
+      "name": "color-palette-purple-80",
+      "value": "{!PALETTE_PURPLE_80}",
+      "comment": "Purple 80"
+    },
+    {
+      "name": "color-palette-purple-90",
+      "value": "{!PALETTE_PURPLE_90}",
+      "comment": "Purple 90"
+    },
+    {
+      "name": "color-palette-purple-95",
+      "value": "{!PALETTE_PURPLE_95}",
+      "comment": "Purple 95"
+    },
+    {
+      "name": "color-palette-red-10",
+      "value": "{!PALETTE_RED_10}",
+      "comment": "Red 10"
+    },
+    {
+      "name": "color-palette-red-15",
+      "value": "{!PALETTE_RED_15}",
+      "comment": "Red 15"
+    },
+    {
+      "name": "color-palette-red-20",
+      "value": "{!PALETTE_RED_20}",
+      "comment": "Red 20"
+    },
+    {
+      "name": "color-palette-red-30",
+      "value": "{!PALETTE_RED_30}",
+      "comment": "Red 30"
+    },
+    {
+      "name": "color-palette-red-40",
+      "value": "{!PALETTE_RED_40}",
+      "comment": "Red 40"
+    },
+    {
+      "name": "color-palette-red-50",
+      "value": "{!PALETTE_RED_50}",
+      "comment": "Red 50"
+    },
+    {
+      "name": "color-palette-red-60",
+      "value": "{!PALETTE_RED_60}",
+      "comment": "Red 60"
+    },
+    {
+      "name": "color-palette-red-65",
+      "value": "{!PALETTE_RED_65}",
+      "comment": "Red 65"
+    },
+    {
+      "name": "color-palette-red-70",
+      "value": "{!PALETTE_RED_70}",
+      "comment": "Red 70"
+    },
+    {
+      "name": "color-palette-red-80",
+      "value": "{!PALETTE_RED_80}",
+      "comment": "Red 80"
+    },
+    {
+      "name": "color-palette-red-90",
+      "value": "{!PALETTE_RED_90}",
+      "comment": "Red 90"
+    },
+    {
+      "name": "color-palette-red-95",
+      "value": "{!PALETTE_RED_95}",
+      "comment": "Red 95"
+    },
+    {
+      "name": "color-palette-teal-10",
+      "value": "{!PALETTE_TEAL_10}",
+      "comment": "Teal 10"
+    },
+    {
+      "name": "color-palette-teal-15",
+      "value": "{!PALETTE_TEAL_15}",
+      "comment": "Teal 15"
+    },
+    {
+      "name": "color-palette-teal-20",
+      "value": "{!PALETTE_TEAL_20}",
+      "comment": "Teal 20"
+    },
+    {
+      "name": "color-palette-teal-30",
+      "value": "{!PALETTE_TEAL_30}",
+      "comment": "Teal 30"
+    },
+    {
+      "name": "color-palette-teal-40",
+      "value": "{!PALETTE_TEAL_40}",
+      "comment": "Teal 40"
+    },
+    {
+      "name": "color-palette-teal-50",
+      "value": "{!PALETTE_TEAL_50}",
+      "comment": "Teal 50"
+    },
+    {
+      "name": "color-palette-teal-60",
+      "value": "{!PALETTE_TEAL_60}",
+      "comment": "Teal 60"
+    },
+    {
+      "name": "color-palette-teal-65",
+      "value": "{!PALETTE_TEAL_65}",
+      "comment": "Teal 65"
+    },
+    {
+      "name": "color-palette-teal-70",
+      "value": "{!PALETTE_TEAL_70}",
+      "comment": "Teal 70"
+    },
+    {
+      "name": "color-palette-teal-80",
+      "value": "{!PALETTE_TEAL_80}",
+      "comment": "Teal 80"
+    },
+    {
+      "name": "color-palette-teal-90",
+      "value": "{!PALETTE_TEAL_90}",
+      "comment": "Teal 90"
+    },
+    {
+      "name": "color-palette-teal-95",
+      "value": "{!PALETTE_TEAL_95}",
+      "comment": "Teal 95"
+    },
+    {
+      "name": "color-palette-violet-10",
+      "value": "{!PALETTE_VIOLET_10}",
+      "comment": "Violet 10"
+    },
+    {
+      "name": "color-palette-violet-15",
+      "value": "{!PALETTE_VIOLET_15}",
+      "comment": "Violet 15"
+    },
+    {
+      "name": "color-palette-violet-20",
+      "value": "{!PALETTE_VIOLET_20}",
+      "comment": "Violet 20"
+    },
+    {
+      "name": "color-palette-violet-30",
+      "value": "{!PALETTE_VIOLET_30}",
+      "comment": "Violet 30"
+    },
+    {
+      "name": "color-palette-violet-40",
+      "value": "{!PALETTE_VIOLET_40}",
+      "comment": "Violet 40"
+    },
+    {
+      "name": "color-palette-violet-50",
+      "value": "{!PALETTE_VIOLET_50}",
+      "comment": "Violet 50"
+    },
+    {
+      "name": "color-palette-violet-60",
+      "value": "{!PALETTE_VIOLET_60}",
+      "comment": "Violet 60"
+    },
+    {
+      "name": "color-palette-violet-65",
+      "value": "{!PALETTE_VIOLET_65}",
+      "comment": "Violet 65"
+    },
+    {
+      "name": "color-palette-violet-70",
+      "value": "{!PALETTE_VIOLET_70}",
+      "comment": "Violet 70"
+    },
+    {
+      "name": "color-palette-violet-80",
+      "value": "{!PALETTE_VIOLET_80}",
+      "comment": "Violet 80"
+    },
+    {
+      "name": "color-palette-violet-90",
+      "value": "{!PALETTE_VIOLET_90}",
+      "comment": "Violet 90"
+    },
+    {
+      "name": "color-palette-violet-95",
+      "value": "{!PALETTE_VIOLET_95}",
+      "comment": "Violet 95"
+    },
+    {
+      "name": "color-palette-yellow-10",
+      "value": "{!PALETTE_YELLOW_10}",
+      "comment": "Yellow 10"
+    },
+    {
+      "name": "color-palette-yellow-15",
+      "value": "{!PALETTE_YELLOW_15}",
+      "comment": "Yellow 15"
+    },
+    {
+      "name": "color-palette-yellow-20",
+      "value": "{!PALETTE_YELLOW_20}",
+      "comment": "Yellow 20"
+    },
+    {
+      "name": "color-palette-yellow-30",
+      "value": "{!PALETTE_YELLOW_30}",
+      "comment": "Yellow 30"
+    },
+    {
+      "name": "color-palette-yellow-40",
+      "value": "{!PALETTE_YELLOW_40}",
+      "comment": "Yellow 40"
+    },
+    {
+      "name": "color-palette-yellow-50",
+      "value": "{!PALETTE_YELLOW_50}",
+      "comment": "Yellow 50"
+    },
+    {
+      "name": "color-palette-yellow-60",
+      "value": "{!PALETTE_YELLOW_60}",
+      "comment": "Yellow 60"
+    },
+    {
+      "name": "color-palette-yellow-65",
+      "value": "{!PALETTE_YELLOW_65}",
+      "comment": "Yellow 65"
+    },
+    {
+      "name": "color-palette-yellow-70",
+      "value": "{!PALETTE_YELLOW_70}",
+      "comment": "Yellow 70"
+    },
+    {
+      "name": "color-palette-yellow-80",
+      "value": "{!PALETTE_YELLOW_80}",
+      "comment": "Yellow 80"
+    },
+    {
+      "name": "color-palette-yellow-90",
+      "value": "{!PALETTE_YELLOW_90}",
+      "comment": "Yellow 90"
+    },
+    {
+      "name": "color-palette-yellow-95",
+      "value": "{!PALETTE_YELLOW_95}",
+      "comment": "Yellow 95"
+    },
+    {
+      "name": "color-palette-neutral-10",
+      "value": "{!PALETTE_NEUTRAL_10}",
+      "comment": "Neutral 10"
+    },
+    {
+      "name": "color-palette-neutral-15",
+      "value": "{!PALETTE_NEUTRAL_15}",
+      "comment": "Neutral 15"
+    },
+    {
+      "name": "color-palette-neutral-20",
+      "value": "{!PALETTE_NEUTRAL_20}",
+      "comment": "Neutral 20"
+    },
+    {
+      "name": "color-palette-neutral-30",
+      "value": "{!PALETTE_NEUTRAL_30}",
+      "comment": "Neutral 30"
+    },
+    {
+      "name": "color-palette-neutral-40",
+      "value": "{!PALETTE_NEUTRAL_40}",
+      "comment": "Neutral 40"
+    },
+    {
+      "name": "color-palette-neutral-50",
+      "value": "{!PALETTE_NEUTRAL_50}",
+      "comment": "Neutral 50"
+    },
+    {
+      "name": "color-palette-neutral-60",
+      "value": "{!PALETTE_NEUTRAL_60}",
+      "comment": "Neutral 60"
+    },
+    {
+      "name": "color-palette-neutral-65",
+      "value": "{!PALETTE_NEUTRAL_65}",
+      "comment": "Neutral 65"
+    },
+    {
+      "name": "color-palette-neutral-70",
+      "value": "{!PALETTE_NEUTRAL_70}",
+      "comment": "Neutral 70"
+    },
+    {
+      "name": "color-palette-neutral-80",
+      "value": "{!PALETTE_NEUTRAL_80}",
+      "comment": "Neutral 80"
+    },
+    {
+      "name": "color-palette-neutral-90",
+      "value": "{!PALETTE_NEUTRAL_90}",
+      "comment": "Neutral 90"
+    },
+    {
+      "name": "color-palette-neutral-95",
+      "value": "{!PALETTE_NEUTRAL_95}",
+      "comment": "Neutral 95"
+    },
+    {
+      "name": "color-palette-neutral-100",
+      "value": "{!PALETTE_NEUTRAL_100}",
+      "comment": "Neutral 100"
+    }
+  ]
+}

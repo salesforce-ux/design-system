@@ -1,0 +1,284 @@
+{
+  "global": {
+    "namespace": "sds",
+    "category": "font",
+    "scope": "global",
+    "cssProperties": ["font-size"]
+  },
+  "imports": ["@salesforce-ux/sds-styling-aliases/dist/font-sizes.json"],
+  "props": [
+    {
+      "name": "font-family",
+      "value": "system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+      "type": "raw",
+      "syntax": "<length>",
+      "inherits": true,
+      "cssProperties": ["font-family"],
+      "comment": "System font stack for your application."
+    },
+    {
+      "name": "font-family-monospace",
+      "value": "Consolas, Menlo, Monaco, Courier, monospace",
+      "type": "raw",
+      "syntax": "<length>",
+      "inherits": true,
+      "cssProperties": ["font-family"],
+      "comment": "Monospace font stack for your application."
+    },
+    {
+      "name": "font-weight-bold",
+      "value": "bold",
+      "type": "any",
+      "syntax": "<custom-ident>",
+      "inherits": false,
+      "cssProperties": ["font-weight"],
+      "comment": "Bold font-weight, use to increase emphasis."
+    },
+    {
+      "name": "font-weight-1",
+      "value": "100",
+      "type": "any",
+      "syntax": "<custom-ident>",
+      "inherits": false,
+      "cssProperties": ["font-weight"],
+      "comment": "Font weight 1"
+    },
+    {
+      "name": "font-weight-2",
+      "value": "200",
+      "type": "any",
+      "syntax": "<custom-ident>",
+      "inherits": false,
+      "cssProperties": ["font-weight"],
+      "comment": "Font weight 2"
+    },
+    {
+      "name": "font-weight-3",
+      "value": "300",
+      "type": "any",
+      "syntax": "<custom-ident>",
+      "inherits": false,
+      "cssProperties": ["font-weight"],
+      "comment": "Font weight 3"
+    },
+    {
+      "name": "font-weight-4",
+      "value": "400",
+      "type": "any",
+      "syntax": "<custom-ident>",
+      "inherits": false,
+      "cssProperties": ["font-weight"],
+      "comment": "Font weight 4"
+    },
+    {
+      "name": "font-weight-5",
+      "value": "500",
+      "type": "any",
+      "syntax": "<custom-ident>",
+      "inherits": false,
+      "cssProperties": ["font-weight"],
+      "comment": "Font weight 5"
+    },
+    {
+      "name": "font-weight-6",
+      "value": "600",
+      "type": "any",
+      "syntax": "<custom-ident>",
+      "inherits": false,
+      "cssProperties": ["font-weight"],
+      "comment": "Font weight 6"
+    },
+    {
+      "name": "font-weight-7",
+      "value": "700",
+      "type": "any",
+      "syntax": "<custom-ident>",
+      "inherits": false,
+      "cssProperties": ["font-weight"],
+      "comment": "Font weight 7"
+    },
+    {
+      "name": "font-lineheight",
+      "value": "1.5",
+      "type": "number",
+      "syntax": "<number>",
+      "inherits": true,
+      "cssProperties": ["line-height"],
+      "comment": "Default line-height for your application."
+    },
+    {
+      "name": "font-lineheight-1",
+      "value": "1",
+      "type": "number",
+      "syntax": "<number>",
+      "inherits": true,
+      "cssProperties": ["line-height"],
+      "comment": "Line-height 1."
+    },
+    {
+      "name": "font-lineheight-2",
+      "value": "1.25",
+      "type": "number",
+      "syntax": "<number>",
+      "inherits": true,
+      "cssProperties": ["line-height"],
+      "comment": "Line-height 2."
+    },
+    {
+      "name": "font-lineheight-3",
+      "value": "1.375",
+      "type": "number",
+      "syntax": "<number>",
+      "inherits": true,
+      "cssProperties": ["line-height"],
+      "comment": "Line-height 3."
+    },
+    {
+      "name": "font-lineheight-4",
+      "value": "1.5",
+      "type": "number",
+      "syntax": "<number>",
+      "inherits": true,
+      "cssProperties": ["line-height"],
+      "comment": "Line-height 4."
+    },
+    {
+      "name": "font-lineheight-5",
+      "value": "1.75",
+      "type": "number",
+      "syntax": "<number>",
+      "inherits": true,
+      "cssProperties": ["line-height"],
+      "comment": "Line-height 5."
+    },
+    {
+      "name": "font-lineheight-6",
+      "value": "2",
+      "type": "number",
+      "syntax": "<number>",
+      "inherits": true,
+      "cssProperties": ["line-height"],
+      "comment": "Line-height 6."
+    },
+    {
+      "name": "font-size-base",
+      "value": "{!FONT_SIZE_BASE}",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Default font-size for your application."
+    },
+    {
+      "name": "font-scale-neg-4",
+      "value": "{!FONT_SIZE_NEG_4}",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Scaled font-size that is 4 stops smaller than the base."
+    },
+    {
+      "name": "font-scale-neg-3",
+      "value": "{!FONT_SIZE_NEG_3}",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Scaled font-size that is 3 stops smaller than the base."
+    },
+    {
+      "name": "font-scale-neg-2",
+      "value": "{!FONT_SIZE_NEG_2}",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Scaled font-size that is 2 stops smaller than the base."
+    },
+    {
+      "name": "font-scale-neg-1",
+      "value": "{!FONT_SIZE_NEG_1}",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Scaled font-size that is 1 stop smaller than the base."
+    },
+    {
+      "name": "font-scale-1",
+      "value": "{!FONT_SIZE_1}",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Scaled font-size that is 1 stop bigger than the base."
+    },
+    {
+      "name": "font-scale-2",
+      "value": "{!FONT_SIZE_2}",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Scaled font-size that is 2 stops bigger than the base."
+    },
+    {
+      "name": "font-scale-3",
+      "value": "{!FONT_SIZE_3}",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Scaled font-size that is 3 stops bigger than the base."
+    },
+    {
+      "name": "font-scale-4",
+      "value": "{!FONT_SIZE_4}",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Scaled font-size that is 4 stops bigger than the base."
+    },
+    {
+      "name": "font-scale-5",
+      "value": "{!FONT_SIZE_5}",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Scaled font-size that is 5 stops bigger than the base."
+    },
+    {
+      "name": "font-scale-6",
+      "value": "{!FONT_SIZE_6}",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Scaled font-size that is 6 stops bigger than the base."
+    },
+    {
+      "name": "font-scale-7",
+      "value": "{!FONT_SIZE_7}",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Scaled font-size that is 7 stops bigger than the base."
+    },
+    {
+      "name": "font-scale-8",
+      "value": "{!FONT_SIZE_8}",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Scaled font-size that is 8 stops bigger than the base."
+    },
+    {
+      "name": "font-scale-9",
+      "value": "{!FONT_SIZE_9}",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Scaled font-size that is 9 stops bigger than the base."
+    },
+    {
+      "name": "font-scale-10",
+      "value": "{!FONT_SIZE_10}",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Scaled font-size that is 10 stops bigger than the base."
+    }
+  ]
+}

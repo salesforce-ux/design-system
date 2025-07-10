@@ -38,9 +38,24 @@ module.exports = {
     '@salesforce-ux/design-system-primitive-tokens'
   ),
   sldsStylingHooksProps: rootPath('styling-hooks'),
+  /**
+   * Note: The path to the sdsStylingHooksProps below are related to WCAG.
+   * In v2 of the sds-styling-hooks package, the props are no longer available.
+   * Due to these structural changes, props files from v1 are copied over temporarily.
+   * Those files can be removed once we merge WCAG with the global hooks.
+   * See:
+   * - `design-system-internal/scripts/gulp/generate/styling-hooks.js`
+   * - `design-system-internal/styling-hooks/slds-hooks.json`
+   */
+  // Old sds-styling-hooks package 1.1.0-alpha.2
+  // sdsStylingHooksProps: path.resolve(
+  //   node_modules,
+  //   '@salesforce-ux/sds-styling-hooks/src/props'
+  // ),
+  // New sds-styling-hooks package 2.0.0.beta.5
   sdsStylingHooksProps: path.resolve(
-    node_modules,
-    '@salesforce-ux/sds-styling-hooks/src/props'
+    root,
+    'styling-hooks/@salesforce-ux-old-temp/sds-styling-hooks/src/props'
   ),
   sdsStylingAliases: path.resolve(
     node_modules,

@@ -49,12 +49,11 @@ export let Footer = props => (
 export default [
   {
     context: 'Walkthrough',
-    deprecated: true,
     id: 'walkthrough-default',
-    label: 'Deprecated – Walkthrough default',
+    label: 'Walkthrough default [dark]',
     element: (
       <Popover
-        className="slds-popover_walkthrough slds-nubbin_left"
+        className="slds-popover_dark slds-nubbin_left"
         headingId={headingUniqueId}
         header={<Header title="Walkthrough title" />}
         footer={<Footer steps nextButton />}
@@ -71,6 +70,212 @@ export default [
 ];
 
 export let examples = [
+  {
+    context: 'Walkthrough',
+    id: 'micro-setup-dark',
+    label: 'Micro Setup [dark]',
+    element: (
+      <Popover
+        className="slds-popover_dark slds-nubbin_left"
+        headingId={headingUniqueId}
+        header={<Header title="Walkthrough title" />}
+        footer={<Footer steps setupButton nextButton />}
+        closeButton
+        inverse
+      >
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </Popover>
+    )
+  },
+  {
+    context: 'Walkthrough',
+    id: 'micro-setup-alternate-dark',
+    label: 'Micro Setup - Alternate [dark]',
+    element: (
+      <Popover
+        className="slds-popover_dark slds-nubbin_left"
+        headingId={headingUniqueId}
+        header={<Header title="Walkthrough title" />}
+        footer={<Footer steps skipButton setupButton />}
+        closeButton
+        inverse
+      >
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </Popover>
+    )
+  },
+  {
+    context: 'Walkthrough',
+    id: 'micro-setup-in-page-dark',
+    label: 'Micro Setup - In Page [dark]',
+    element: (
+      <Popover
+        className="slds-popover_dark slds-nubbin_bottom"
+        headingId={headingUniqueId}
+        header={<Header title="Walkthrough title" />}
+        footer={<Footer steps skipButton />}
+        closeButton
+        inverse
+      >
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </Popover>
+    )
+  },
+  {
+    context: 'Walkthrough',
+    id: 'micro-setup-inline-form-dark',
+    label: 'Micro Setup - Inline Form [dark]',
+    element: (
+      <Popover
+        className="slds-popover_dark slds-nubbin_left"
+        headingId={headingUniqueId}
+        header={<Header title="Walkthrough title" />}
+        footer={<Footer steps skipButton nextButton />}
+        closeButton
+        inverse
+      >
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <div className="slds-form-element slds-p-top_small">
+          <label
+            className="slds-form-element__label slds-assistive-text"
+            htmlFor="email-text-input-01"
+          >
+            Email Address
+          </label>
+          <div className="slds-form-element__control">
+            <input
+              id="email-text-input-01"
+              className="slds-input"
+              type="text"
+              placeholder="Email Address"
+            />
+          </div>
+        </div>
+      </Popover>
+    )
+  },
+  {
+    context: 'Walkthrough',
+    id: 'action-popover-dark',
+    label: 'Action Popover [dark]',
+    element: (
+      <Popover
+        className="slds-popover_dark slds-nubbin_left"
+        title="Dialog Title"
+        closeButton
+        inverse
+      >
+        <div className="slds-media">
+          <div className="slds-media__figure">
+            <span
+              className="slds-icon_container"
+              title="description of icon when needed"
+            >
+              <SvgIcon
+                className="slds-icon slds-icon_small slds-icon-text-default"
+                sprite="utility"
+                symbol="touch_action"
+              />
+              <span className="slds-assistive-text">Description of icon</span>
+            </span>
+          </div>
+          <div className="slds-media__body">
+            <p className="slds-text-heading_small">
+              Text that describes the action
+            </p>
+            <p className="slds-m-top_medium slds-text-title">Step 3 of 4</p>
+          </div>
+        </div>
+      </Popover>
+    )
+  },
+  {
+    context: 'Walkthrough',
+    id: 'action-popover-heading-dark',
+    label: 'Action Popover - With Heading [dark]',
+    element: (
+      <Popover
+        className="slds-popover_dark slds-nubbin_left"
+        headingId={headingUniqueId}
+        closeButton
+        inverse
+      >
+        <div className="slds-media">
+          <div className="slds-media__figure">
+            <span
+              className="slds-icon_container"
+              title="description of icon when needed"
+            >
+              <SvgIcon
+                className="slds-icon slds-icon_small slds-icon-text-default"
+                sprite="utility"
+                symbol="touch_action"
+              />
+              <span className="slds-assistive-text">Description of icon</span>
+            </span>
+          </div>
+          <div className="slds-media__body">
+            <h2 id={headingUniqueId} className="slds-text-heading_small">
+              Action title
+            </h2>
+            <p>Text that describes the action</p>
+            <p className="slds-m-top_medium slds-text-title">Step 3 of 4</p>
+          </div>
+        </div>
+      </Popover>
+    )
+  },
+  {
+    context: 'Walkthrough',
+    id: 'action-popover-with-link-dark',
+    label: 'Action Popover - With Link [dark]',
+    element: (
+      <Popover
+        className="slds-popover_dark slds-nubbin_left"
+        headingId={headingUniqueId}
+        closeButton
+        inverse
+      >
+        <div className="slds-media">
+          <div className="slds-media__figure">
+            <span
+              className="slds-icon_container"
+              title="description of icon when needed"
+            >
+              <SvgIcon
+                className="slds-icon slds-icon_small slds-icon-text-default"
+                sprite="utility"
+                symbol="touch_action"
+              />
+              <span className="slds-assistive-text">Description of icon</span>
+            </span>
+          </div>
+          <div className="slds-media__body">
+            <h2 id={headingUniqueId} className="slds-text-heading_small">
+              Action title
+            </h2>
+            <p>Text that describes the action</p>
+            <a href="#" onClick={e => e.preventDefault()}>
+              Take Action
+            </a>
+            <p className="slds-m-top_medium slds-text-title">Step 3 of 4</p>
+          </div>
+        </div>
+      </Popover>
+    )
+  },
   {
     context: 'Walkthrough',
     deprecated: true,

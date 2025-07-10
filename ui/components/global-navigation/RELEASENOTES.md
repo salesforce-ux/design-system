@@ -4,11 +4,17 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.27.0
+
+## Fixed
+
+- Fixed issue in grouped menu subheadings not being announced in screen reader
+
 ## 2.21.0
 
 ### Added
 
-- Added `role="presentation"` for globlal navigation's overflow tab item 
+- Added `role="presentation"` for globlal navigation's overflow tab item
 
 ## 2.19.0
 

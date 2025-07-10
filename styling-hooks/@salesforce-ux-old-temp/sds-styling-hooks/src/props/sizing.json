@@ -1,0 +1,218 @@
+{
+  "global": {
+    "namespace": "sds",
+    "category": "sizing",
+    "scope": "global",
+    "cssProperties": ["border-width", "width"]
+  },
+  "props": [
+    {
+      "name": "sizing-border-1",
+      "value": "1px",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Border size 1."
+    },
+    {
+      "name": "sizing-border-2",
+      "value": "2px",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Border size 2."
+    },
+    {
+      "name": "sizing-border-3",
+      "value": "3px",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Border size 3."
+    },
+    {
+      "name": "sizing-border-4",
+      "value": "4px",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Border size 4."
+    },
+    {
+      "name": "sizing-1",
+      "value": "0.125rem",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Size 1."
+    },
+    {
+      "name": "sizing-2",
+      "value": "0.25rem",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Size 2."
+    },
+    {
+      "name": "sizing-3",
+      "value": "0.5rem",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Size 3."
+    },
+    {
+      "name": "sizing-4",
+      "value": "0.75rem",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Size 4."
+    },
+    {
+      "name": "sizing-5",
+      "value": "1rem",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Size 5."
+    },
+    {
+      "name": "sizing-6",
+      "value": "1.25rem",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Size 6."
+    },
+    {
+      "name": "sizing-7",
+      "value": "1.5rem",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Size 7."
+    },
+    {
+      "name": "sizing-8",
+      "value": "1.75rem",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Size 8."
+    },
+    {
+      "name": "sizing-9",
+      "value": "2rem",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Size 9."
+    },
+    {
+      "name": "sizing-10",
+      "value": "3rem",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Size 10."
+    },
+    {
+      "name": "sizing-11",
+      "value": "4rem",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Size 11."
+    },
+    {
+      "name": "sizing-12",
+      "value": "5rem",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Size 12."
+    },
+    {
+      "name": "sizing-13",
+      "value": "10rem",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Size 13."
+    },
+    {
+      "name": "sizing-14",
+      "value": "15rem",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Size 14."
+    },
+    {
+      "name": "sizing-15",
+      "value": "20rem",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Size 15."
+    },
+    {
+      "name": "sizing-16",
+      "value": "30rem",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Size 16."
+    },
+    {
+      "name": "sizing-content-1",
+      "value": "20ch",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Content Size 1."
+    },
+    {
+      "name": "sizing-content-2",
+      "value": "45ch",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Content Size 2."
+    },
+    {
+      "name": "sizing-content-3",
+      "value": "60ch",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Content Size 3."
+    },
+    {
+      "name": "sizing-heading-1",
+      "value": "20ch",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Header content size 1."
+    },
+    {
+      "name": "sizing-heading-2",
+      "value": "25ch",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Header content size 2."
+    },
+    {
+      "name": "sizing-heading-3",
+      "value": "35ch",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "comment": "Header content size 3."
+    }
+  ]
+}

@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.27.0
+
+### Changed
+
+- Added no flip rule to the checkbox-toggle, faux border style to fix rtl bug
+
 ## 2.23.0
 
 ### Changed

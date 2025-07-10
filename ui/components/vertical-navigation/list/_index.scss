@@ -160,7 +160,7 @@
     &:focus {
       text-decoration: none;
       box-shadow: inset 4px 0 0 $brand-primary;
-      outline: 2px solid var(--slds-g-color-palette-blue-40);
+      outline: 2px solid var(--slds-g-color-palette-blue-40, #{$palette-blue-40});
       outline-offset: 1px;
     }
 

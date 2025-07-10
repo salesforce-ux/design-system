@@ -180,20 +180,43 @@
 * @restrict .slds-popover
 * @modifier
 */
+
+
 .slds-popover_dark {
-  background-color: $brand-background-dark;
+  background-color: var(--slds-g-color-brand-base-10, #{$brand-background-dark});
   color: var(--slds-g-color-neutral-base-100, #{$color-text-brand-primary});
 
   .slds-badge {
-    background-color: var(--slds-g-color-neutral-base-100, #{$color-background-alt});
+      background-color: var(--slds-g-color-neutral-base-100, #{$color-background-alt});
   }
 
   .slds-popover__close {
-    color: var(--slds-g-color-neutral-base-100, #{$color-text-brand-primary});
+      color: var(--slds-g-color-neutral-base-100, #{$color-text-brand-primary});
+  }
+
+  .slds-text-title {
+      color: var(--slds-g-color-neutral-base-100, #{$color-text-inverse});
+  }
+
+  a {
+      color: var(--slds-g-color-neutral-base-100, #{$color-text-inverse});
+      text-decoration: underline;
+  
+      &:hover {
+          text-decoration: none;
+      }
   }
 
   .slds-icon-text-default {
     fill: var(--slds-g-color-neutral-base-100, #{$color-background-alt});
+  }
+
+  .slds-popover__header {
+    color: var(--slds-g-color-neutral-base-100, #{$color-text-inverse});
+  }
+
+  .slds-popover__body {
+    color: var(--slds-g-color-neutral-base-100, #{$color-text-inverse});
   }
 
   .slds-popover__footer {
@@ -205,3 +228,4 @@
     box-shadow: var(--slds-g-shadow-outset-focus-1);
   }
 }
+

@@ -3,6 +3,11 @@
 # Datetime Picker Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.27.0
+
+#### Added
+- Added `aria-hidden` attribute to required datetime picker label asterisk to avoid being announced by screen reader to meet accessibility WCAG label criteria
+
 ## 2.25.4
 
 ### Updated

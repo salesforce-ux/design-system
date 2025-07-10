@@ -30,7 +30,16 @@ const sldsStylingHooksFormats = [
 
 const sourcePaths = [
   `${path.resolve(paths.sdsStylingHooksProps, '*.json')}`,
-  `${path.resolve(paths.sldsStylingHooksProps, '*.json')}`
+  /**
+   * Note: Some of the references included in the path below are related to WCAG.
+   * In v2 of the sds-styling-hooks package, some of those files are no longer available.
+   * Due to these structural changes, 'colors' and 'palettes' files from v1 are copied over temporarily.
+   * Those files can be removed once we merge WCAG with the global hooks.
+   * See:
+   * - `design-system-internal/scripts/helpers/paths.js`
+   * - `design-system-internal/styling-hooks/slds-hooks.json`
+   */
+  `${path.resolve(paths.sldsStylingHooksProps, '*.json')}`,
 ];
 
 export const createStylingHooks = (done) => {

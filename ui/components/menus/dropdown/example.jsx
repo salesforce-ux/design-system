@@ -7,6 +7,7 @@ import ButtonIcon from '../../button-icons/';
 import SvgIcon from '../../../shared/svg-icon';
 import classNames from 'classnames';
 import { UtilityIcon } from '../../icons/base/example';
+import _ from '../../../shared/helpers';
 
 /// ////////////////////////////////////////
 // Partial(s)
@@ -200,32 +201,47 @@ export const OverflowMenu = props => (
   </Trigger>
 );
 
-export const SubHeader = props => (
-  <Trigger isOpen>
-    <Menu className="slds-dropdown_left slds-dropdown_small">
-      <MenuList ariaLabel="Show More">
-        <li
-          className="slds-dropdown__header slds-truncate"
-          title="Menu Sub Heading"
-          role="presentation"
-        >
-          <span>Menu Sub Heading</span>
-        </li>
-        <MenuItem tabIndex="0">Menu Item One</MenuItem>
-        <MenuItem>Menu Item Two</MenuItem>
-        <li
-          className="slds-dropdown__header slds-truncate"
-          title="Menu Sub Heading"
-          role="presentation"
-        >
-          <span>Menu Sub Heading</span>
-        </li>
-        <MenuItem>Menu Item One</MenuItem>
-        <MenuItem>Menu Item Two</MenuItem>
-      </MenuList>
-    </Menu>
-  </Trigger>
-);
+export const SubHeader = props => {
+  const menuGroupOneUniqueId = _.uniqueId('menu-group-id-');
+  const menuGroupTwoUniqueId = _.uniqueId('menu-group-id-');
+
+  return (
+    <Trigger isOpen>
+      <Menu className="slds-dropdown_left slds-dropdown_small">
+        <MenuList ariaLabel="Show More">
+          <li role="presentation">
+            <ul role="group" aria-labelledby={menuGroupOneUniqueId}>
+              <li
+                className="slds-dropdown__header slds-truncate"
+                title="Menu Sub Heading"
+                role="presentation"
+                id={menuGroupOneUniqueId}
+              >
+                <span>Menu Sub Heading</span>
+              </li>
+              <MenuItem tabIndex="0">Menu Item One</MenuItem>
+              <MenuItem>Menu Item Two</MenuItem>
+            </ul>
+          </li>
+          <li role="presentation">
+            <ul role="group" aria-labelledby={menuGroupTwoUniqueId}>
+              <li
+                className="slds-dropdown__header slds-truncate"
+                title="Menu Sub Heading"
+                role="presentation"
+                id={menuGroupTwoUniqueId}
+              >
+                <span>Menu Sub Heading</span>
+              </li>
+              <MenuItem>Menu Item One</MenuItem>
+              <MenuItem>Menu Item Two</MenuItem>
+            </ul>
+          </li>
+        </MenuList>
+      </Menu>
+    </Trigger>
+  );
+};
 
 export const IconLeft = props => (
   <Trigger isOpen>

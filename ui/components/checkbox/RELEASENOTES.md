@@ -3,6 +3,11 @@
 # Checkbox Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.27.0
+
+#### Added
+- Added `aria-hidden` attribute to required checkbox label asterisk to avoid being announced by screen reader to meet accessibility WCAG label criteria
+
 ## 2.22.1
 
 ### Fixed

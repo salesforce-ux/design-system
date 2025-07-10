@@ -1,0 +1,54 @@
+{
+  "global": {
+    "namespace": "sds",
+    "category": "radius",
+    "cssProperties": ["border-radius"]
+  },
+  "props": [
+    {
+      "name": "radius-border-1",
+      "value": "0.125rem",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "scope": "global",
+      "comment": "Small border radius for UI elements."
+    },
+    {
+      "name": "radius-border-2",
+      "value": "0.25rem",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "scope": "global",
+      "comment": "Medium border radius for UI elements."
+    },
+    {
+      "name": "radius-border-3",
+      "value": "0.5rem",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "scope": "global",
+      "comment": "Large border radius for UI elements."
+    },
+    {
+      "name": "radius-border-4",
+      "value": "1rem",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "scope": "global",
+      "comment": "Extra Large border radius for UI elements."
+    },
+    {
+      "name": "radius-border-circle",
+      "value": "100%",
+      "type": "number",
+      "syntax": "<length>",
+      "inherits": false,
+      "scope": "global",
+      "comment": "Circular border radius for UI elements."
+    }
+  ]
+}

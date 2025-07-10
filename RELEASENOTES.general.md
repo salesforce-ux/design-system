@@ -1,6 +1,51 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
+## 2.27.0 - April 17, 2025
+
+- Update icons to `v10.12.2`
+  - Standard set
+    - Added it_service_management
+  - Utility set
+    - Added it_service_management
+
+- Styling Hooks
+  - Include a new set of global and shared hooks in the dist CSS for "default", "sanitized", "offline", and "minified" versions.
+  - For this release, the new hooks are scoped exclusively to a predefined list of Lightning Web Component primitives, Copilot elements, and a catch-all class. (This is set to change in the future.)
+
+- Update icons to `v10.12.1`
+  - Utility set
+    - Added ai_search
+
+- Update icons to `v10.12.0`
+  - Standard set
+    - Added entity_milestone_time
+    - Added entity_milestone_date
+    - Added outcome_timebound
+    - Added outcome_datebound
+    - Added submit_for_approval
+    - Updated flow
+    - Updated apex
+    - Updated apex_plugin
+    - Updated assignment
+    - Updated decision
+    - Updated loop
+
+  - Utility set
+    - Added ai_app
+    - Added submit_for_approval
+    - Added slack_user_add
+    - Added slack_thread
+    - Added slack_mentions
+    - Added slack_formatting
+    - Added slack_ai_summary
+    - Added slack_add_reaction
+    - Added slack_lock
+    - Added slack_channel
+    - Added slack_user
+    - Added slack_notifications_on
+    - Added slack_notifications_off
+
 ## 2.26.3 - April 19, 2025
 
 ## Fixed

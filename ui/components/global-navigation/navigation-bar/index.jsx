@@ -8,31 +8,41 @@ import SvgIcon from '../../../shared/svg-icon';
 import { Menu, MenuList, MenuItem } from '../../menus/dropdown/example';
 import ButtonIcon from '../../button-icons/';
 import WaffleIcon from '../../dynamic-icons/waffle';
+import _ from '../../../shared/helpers';
 
-// Context Item Dropdown
-const contextDropdown = (
-  <Menu className="slds-dropdown_right">
-    <MenuList>
-      <MenuItem title="Main action">
-        <SvgIcon
-          className="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small"
-          sprite="utility"
-          symbol="add"
-        />
-        Main action
-      </MenuItem>
-      <li
-        className="slds-dropdown__header slds-has-divider_top-space"
-        role="separator"
-      >
-        <span>Menu header</span>
-      </li>
-      <MenuItem>Menu Item One</MenuItem>
-      <MenuItem>Menu Item Two</MenuItem>
-      <MenuItem>Menu Item Three</MenuItem>
-    </MenuList>
-  </Menu>
-);
+// Context Item Dropdown Menu
+const ContextDropdownMenu = () => {
+  const menuGroupUniqueId = _.uniqueId('menu-group-id-');
+
+  return (
+    <Menu className="slds-dropdown_right">
+      <MenuList>
+        <MenuItem title="Main action">
+          <SvgIcon
+            className="slds-icon slds-icon_x-small slds-icon-text-default slds-m-right_x-small"
+            sprite="utility"
+            symbol="add"
+          />
+          Main action
+        </MenuItem>
+        <li role="presentation">
+          <ul role="group" aria-labelledby={menuGroupUniqueId}>
+            <li
+              className="slds-dropdown__header slds-has-divider_top-space"
+              role="presentation"
+              id={menuGroupUniqueId}
+            >
+              <span>Menu header</span>
+            </li>
+            <MenuItem>Menu Item One</MenuItem>
+            <MenuItem>Menu Item Two</MenuItem>
+            <MenuItem>Menu Item Three</MenuItem>
+          </ul>
+        </li>
+      </MenuList>
+    </Menu>
+  );
+};
 
 export const NavBarItem = props => {
   const {
@@ -63,7 +73,7 @@ export const NavBarItem = props => {
       {hasNavMenu && (
         <React.Fragment>
           <OverflowMenuButton onClick={props.onClick} />
-          {hasMenuDropdown && contextDropdown}
+          {hasMenuDropdown && <ContextDropdownMenu />}
         </React.Fragment>
       )}
     </li>

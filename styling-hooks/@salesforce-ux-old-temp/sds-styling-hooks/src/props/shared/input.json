@@ -1,0 +1,169 @@
+{
+  "global": {
+    "namespace": "sds",
+    "scope": "shared",
+    "group": "inputs"
+  },
+  "props": [
+    {
+      "name": "input-color-background",
+      "value": null,
+      "type": "color",
+      "category": "color",
+      "syntax": "<color>",
+      "inherits": false,
+      "cssProperties": ["background-color"],
+      "comment": "Shared background color for all components similarily semantic to an input."
+    },
+    {
+      "name": "input-color-background-hover",
+      "value": null,
+      "type": "color",
+      "category": "color",
+      "syntax": "<color>",
+      "inherits": false,
+      "cssProperties": ["background-color"],
+      "comment": "Shared background color on hover for all components similarily semantic to an input."
+    },
+    {
+      "name": "input-color-background-focus",
+      "value": null,
+      "type": "color",
+      "category": "color",
+      "syntax": "<color>",
+      "inherits": false,
+      "cssProperties": ["background-color"],
+      "comment": "Shared background color on focus for all components similarily semantic to an input."
+    },
+    {
+      "name": "input-color-background-disabled",
+      "value": null,
+      "type": "color",
+      "category": "color",
+      "syntax": "<color>",
+      "inherits": false,
+      "cssProperties": ["background-color"],
+      "comment": "Shared disabled background color for all components similarily semantic to an input."
+    },
+    {
+      "name": "input-text-color",
+      "value": null,
+      "type": "color",
+      "category": "color",
+      "syntax": "<color>",
+      "inherits": false,
+      "cssProperties": ["color"],
+      "comment": "Shared text color for all components visually represent an input. The text must sit on top of `*-s-input-color-background`"
+    },
+    {
+      "name": "input-text-color-hover",
+      "value": null,
+      "type": "color",
+      "category": "color",
+      "syntax": "<color>",
+      "inherits": false,
+      "cssProperties": ["color"],
+      "comment": "Shared text color on hover for all components visually represent an input. The text must sit on top of `*-s-input-color-background-hover`"
+    },
+    {
+      "name": "input-text-color-focus",
+      "value": null,
+      "type": "color",
+      "category": "color",
+      "syntax": "<color>",
+      "inherits": false,
+      "cssProperties": ["color"],
+      "comment": "Shared text color on focus for all components visually represent an input. The text must sit on top of `*-s-input-color-background-focus`"
+    },
+    {
+      "name": "input-color-border",
+      "value": null,
+      "type": "color",
+      "category": "color",
+      "syntax": "<color>",
+      "inherits": false,
+      "cssProperties": ["border-color"],
+      "comment": "Shared border color for all components visually represent an input. The border color must be coupled with `*-s-input-color-background`"
+    },
+    {
+      "name": "input-color-border-hover",
+      "value": null,
+      "type": "color",
+      "category": "color",
+      "syntax": "<color>",
+      "inherits": false,
+      "cssProperties": ["border-color"],
+      "comment": "Shared border color on hover for all components visually represent an input. The border color must be coupled with `*-s-input-color-background-hover`"
+    },
+    {
+      "name": "input-color-border-focus",
+      "value": null,
+      "type": "color",
+      "category": "color",
+      "syntax": "<color>",
+      "inherits": false,
+      "cssProperties": ["border-color"],
+      "comment": "Shared border color on focus for all components visually represent an input. The border color must be coupled with `*-s-input-color-background-focus`"
+    },
+    {
+      "name": "input-color-border-disabled",
+      "value": null,
+      "type": "color",
+      "category": "color",
+      "syntax": "<color>",
+      "inherits": false,
+      "cssProperties": ["border-color"],
+      "comment": "Shared disabled border color for all components similarily semantic to an input. The border color must be coupled with `*-s-input-color-background-disabled`"
+    },
+    {
+      "name": "input-sizing-border",
+      "value": null,
+      "type": "number",
+      "category": "sizing",
+      "syntax": "<length>",
+      "inherits": false,
+      "cssProperties": ["border-width"],
+      "comment": "Shared border size for all components visually represent an input."
+    },
+    {
+      "name": "input-radius-border",
+      "value": null,
+      "type": "number",
+      "category": "border-radius",
+      "syntax": "<length>",
+      "inherits": false,
+      "cssProperties": ["border-radius"],
+      "comment": "Shared border radius for all components visually represent an input."
+    },
+    {
+      "name": "input-shadow",
+      "value": null,
+      "type": "raw",
+      "category": "shadow",
+      "syntax": "<color>",
+      "inherits": false,
+      "cssProperties": ["box-shadow"],
+      "comment": "Shared shadow for all components visually represent an input."
+    },
+    {
+      "name": "input-shadow-hover",
+      "value": null,
+      "type": "raw",
+      "category": "shadow",
+      "syntax": "<color>",
+      "inherits": false,
+      "cssProperties": ["box-shadow"],
+      "comment": "Shared shadow on hover for all components visually represent an input."
+    },
+    {
+      "name": "input-shadow-focus",
+      "value": null,
+      "type": "raw",
+      "category": "shadow",
+      "syntax": "<color>",
+      "inherits": false,
+      "cssProperties": ["box-shadow"],
+      "comment": "Shared shadow on focus for all components visually represent an input."
+    }
+  ]
+}

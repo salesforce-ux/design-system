@@ -5,6 +5,8 @@ const addClasses = require('rehype-add-classes');
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
+const injectStylingHooksPlugin = require('./postcss/postcss-inject-styling-hooks');
+
 const tags = [
   'p',
   'div',
@@ -65,6 +67,16 @@ const commonRules = [
 
 const extractRules = ['extract-loader'].concat(commonRules);
 
+// Used to inject sds-styling-hooks into the main CSS
+const injectStylingHooksRule = {
+  loader: 'postcss-loader',
+  options: {
+    ident: 'postcss-inject-styling-hooks',
+    sourceMap: true,
+    plugins: [injectStylingHooksPlugin]
+  }
+};
+
 module.exports = async ({ config, mode }) => {
   config.module.rules.push(
     // Sass file import/require rules
@@ -109,10 +121,11 @@ module.exports = async ({ config, mode }) => {
             {
               loader: 'file-loader',
               options: {
-                name: 'assets/styles/salesforce-lightning-design-system.min.css'
-              }
-            }
-          ].concat(extractRules)
+                name: 'assets/styles/salesforce-lightning-design-system.min.css',
+              },
+            },
+            // Inject styling hooks from sds-styling-hooks package + common rules
+          ].concat([injectStylingHooksRule]).concat(extractRules),
         },
         // touch stylesheet (with media/feature query)
         {

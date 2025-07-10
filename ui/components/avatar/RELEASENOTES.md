@@ -2,7 +2,14 @@
 
 # Avatar Release Notes
 
-## 2.19
+<!-- ## [Unreleased] -->
+## 2.27.0
+
+#### Added
+
+- Added focus style to avatar
+
+## 2.19.0
 
 ### Fixed
 

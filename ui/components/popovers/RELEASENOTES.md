@@ -4,7 +4,11 @@
 
 <!-- ## [Unreleased] -->
 
-## 2.26.0
+## 2.27.0
+
+## Added
+
+- Added examples with a dark background for the feature and walkthrough popover variants.
 
 ## Updated
 

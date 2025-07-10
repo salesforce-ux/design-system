@@ -47,6 +47,7 @@ class CodeView extends React.Component {
 
   render() {
     const {
+      codeExample,
       position,
       toggleCode,
       exampleOnly,
@@ -68,7 +69,7 @@ class CodeView extends React.Component {
         {position === 'bottom' ? this.renderChildren() : null}
         {!exampleOnly && (
           <CodeBlock language="html" toggleCode={toggleCode}>
-            {children}
+            {codeExample || children}
           </CodeBlock>
         )}
         {position === 'top' ? this.renderChildren() : null}
@@ -101,6 +102,7 @@ class CodeView extends React.Component {
 
 CodeView.propTypes = {
   children: PropTypes.node,
+  codeExample: PropTypes.node, // utilities stories use this to pass in the element as the code example
   position: PropTypes.oneOf(['top', 'bottom']),
   demoStyles: PropTypes.string,
   isViewport: PropTypes.bool,

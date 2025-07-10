@@ -1,9 +1,21 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
+## 2.26.3 - April 19, 2025
+
+## Fixed
+
+- Set `chromedriver` override in package file t fix `npm install` for Apple silicone
+
+## Updated
+
+- Updated `@salesforce-ux/sds-styling-hooks` dependency
+
 ## 2.26.2 - February 6, 2025
 
 ## 2.26.1 - January 30, 2025
+
+## Updated
 
 - Update icons to `v10.11.2`
   - Standard Set:
@@ -14,6 +26,8 @@
     - Added changes
 
 ## 2.26.0 - January 16, 2025
+
+## Updated
 
 - Update icons to `v10.11.1`
   - Renamed summary_usage to usage_summary
@@ -130,13 +144,13 @@
 - We have added the latest hooks at the front and kept all the previously existed ones as fallback value to support backward compatibility
 - The components updated are - accordion, alert, avatar, breadcrumbs, buttons, card, input, modals, pills, tabs, textarea, toast, tooltips.
 
-## Updated
-
 - Updated popover header error background color.
 
 ## 2.25.6 - January 16, 2024
 
 ## 2.25.5 - December 2, 2024
+
+## Updated
 
 - Updated icons to `v10.10.1`
   - Utility Set:
@@ -147,6 +161,7 @@
 ## 2.25.3 - October 10, 2024
 
 ## Fixed
+
  - Updated neutral-50 color to close icon when the '.slds-button_icon-inverse' class is not present beside/under the .slds-modal__close selector
 
 ## 2.25.2 - September 26, 2024
@@ -154,6 +169,8 @@
 ## 2.25.1 - September 19, 2024
 
 ## 2.25.0 - August 15, 2024
+
+## Updated
 
 - Updated icons to `v10.10.0`
   - Standard Set:

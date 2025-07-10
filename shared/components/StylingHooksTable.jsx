@@ -155,7 +155,7 @@ class StylingHooksTable extends Component {
                             );
                           })}
                         </td>
-                        <td>{varData.value}</td>
+                        <td>{varData.value.split(", ").length > 1 ? varData.value.split(", ")[1] : varData.value}</td>
                       </tr>
                     ))}
                   </>

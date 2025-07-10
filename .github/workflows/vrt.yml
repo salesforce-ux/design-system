@@ -3,14 +3,19 @@ name: VRT Triggered from Label
 on:
   pull_request:
     types: [labeled]
+  push:
+    branches: ["2[0-9][02468]-*-2[0-9]"]
 
 env:
   CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN_DSE }}
 
 jobs:
   vrt-storybook-prepare:
-    if: startsWith(github.event.label.name, 'vrt:')
+    if: |
+      startsWith(github.event.label.name, 'vrt:') || github.event_name == 'push'
     runs-on: salesforce-ux-emu-Ubuntu
+    outputs:
+      auto-accept-changes: ${{ steps.check-auto-accept-status.outputs.result }}
     steps:
       - uses: actions/checkout@v3
 
@@ -42,6 +47,12 @@ jobs:
           name: storybook-build-for-chromatic
           path: workspace/storybook.tar.gz
 
+      - name: Check if chromatic baselines should be auto-accepted
+        id: check-auto-accept-status
+        uses: ./.github/actions/baseline-auto-accept-checks
+        with:
+          auto-accept-branches: ${{ vars.AUTO_BASELINE_ACCEPT_BRANCHES }}
+
   vrt-chromatic:
     # if: ${{ (1 < 0) }}
     runs-on: salesforce-ux-emu-Ubuntu
@@ -69,7 +80,7 @@ jobs:
         working-directory: workspace
         run: tar -xvf storybook.tar.gz
 
-      - name: Publish dse-system-internal to chromatic
+      - name: Publish dse-system-internal to chromatic #turbo snapshots disabled
         id: chromatic
         uses: chromaui/action@v10
         with:
@@ -77,12 +88,12 @@ jobs:
           storybookBuildDir: workspace/.www
           exitZeroOnChanges: true
           exitOnceUploaded: true
-          onlyChanged: true
-          traceChanged: true
+          autoAcceptChanges: ${{ needs.vrt-storybook-prepare.outputs.auto-accept-changes }}
 
       - name: Find Chromatic Comment
         uses: salesforce-ux-emu/find-comment@v1.0.0
         id: find-chromatic-comment
+        if: needs.vrt-storybook-prepare.outputs.auto-accept-changes == 'false'
         with:
           issue-number: ${{ github.event.pull_request.number }}
           comment-author: "github-actions[bot]"
@@ -91,6 +102,7 @@ jobs:
       - name: Publish Chromatic results to GitHub
         uses: salesforce-ux-emu/create-or-update-comment@v1.0.0
         id: post-chromatic-comment
+        if: needs.vrt-storybook-prepare.outputs.auto-accept-changes == 'false'
         with:
           comment-id: ${{ steps.find-chromatic-comment.outputs.comment-id }}
           issue-number: ${{ github.event.pull_request.number }}

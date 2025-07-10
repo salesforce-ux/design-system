@@ -51,10 +51,10 @@
 .slds-tabs--default__item {
   color: var(--slds-c-tabs-item-text-color, var(--sds-c-tabs-item-text-color, var(--slds-g-color-neutral-base-30, #{$color-text-action-label})));
   position: relative;
-  padding-top: var(--slds-c-tabs-item-spacing-blockstart, var(--slds-c-tabs-item-spacing-block-start, var(--sds-c-tabs-item-spacing-block-start, var(--sds-c-tabs-item-spacing-block, 0))));
-  padding-right: var(--slds-c-tabs-item-spacing-inlineend, var(--slds-c-tabs-item-spacing-inline-end, var(--sds-c-tabs-item-spacing-inline-end, var(--sds-c-tabs-item-spacing-inline, $spacing-small))));
-  padding-bottom: var(--slds-c-tabs-item-spacing-blockend, var(--slds-c-tabs-item-spacing-block-end, var(--sds-c-tabs-item-spacing-block-end, var(--sds-c-tabs-item-spacing-block, 0))));
-  padding-left: var(--slds-c-tabs-item-spacing-inlinestart, var(--slds-c-tabs-item-spacing-inline-start, var(--sds-c-tabs-item-spacing-inline-start, var(--sds-c-tabs-item-spacing-inline, $spacing-small))));
+  padding-top: var(--slds-c-tabs-item-spacing-blockstart, var(--slds-c-tabs-item-spacing-block-start,var(--slds-c-tabs-item-spacing-block, var(--sds-c-tabs-item-spacing-block-start, var(--sds-c-tabs-item-spacing-block, 0)))));
+  padding-right: var(--slds-c-tabs-item-spacing-inlineend, var(--slds-c-tabs-item-spacing-inline-end,var(--slds-c-tabs-item-spacing-inline, var(--sds-c-tabs-item-spacing-inline-end, var(--sds-c-tabs-item-spacing-inline, $spacing-small)))));
+  padding-bottom: var(--slds-c-tabs-item-spacing-blockend, var(--slds-c-tabs-item-spacing-block-end,var(--slds-c-tabs-item-spacing-block, var(--sds-c-tabs-item-spacing-block-end, var(--sds-c-tabs-item-spacing-block, 0)))));
+  padding-left: var(--slds-c-tabs-item-spacing-inlinestart, var(--slds-c-tabs-item-spacing-inline-start,var(--slds-c-tabs-item-spacing-inline, var(--sds-c-tabs-item-spacing-inline-start, var(--sds-c-tabs-item-spacing-inline, $spacing-small)))));
   margin-bottom: calc(var(--slds-c-tabs-list-sizing-border, var(--sds-c-tabs-list-sizing-border, #{$border-width-thin})) * -1);
 
   &:has(:focus-visible) {

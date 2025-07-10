@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.26.1
+
+### Fixed
+
+- Move clear fix applied in release 2.25.6 to a different form element to avoid possible regressions.
+
 ## 2.26.0
 
 ### Fixed

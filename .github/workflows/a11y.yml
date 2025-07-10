@@ -101,14 +101,14 @@ jobs:
 
       - name: Archive test results
         if: success() || failure()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: a11y
           path: __tests__/a11y/results/
 
       - name: Archive test xml
         if: success() || failure()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: a11y-xml
           path: __tests__/a11y/xml/

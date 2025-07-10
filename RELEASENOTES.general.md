@@ -1,6 +1,7 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
+## 2.27.2 - June 25, 2025
 
 ## 2.27.1 - May 7, 2025
 

@@ -1,4 +1,5 @@
 import CodeView from '../../../shared/components/CodeView';
+import RequiredLabelExample from '../../../shared/components/RequiredLabelExample';
 import StylingHooksTable from '../../../shared/components/StylingHooksTable';
 import { getDisplayElementById } from '../../shared/helpers';
 import Blockquote from '../../../shared/components/Blockquote';
@@ -15,6 +16,13 @@ import * as Textareas from './base/example';
 ## About Textarea
 
 You can style the HTML `<textarea>` element to align with the Salesforce brand by using the class `.slds-textarea` on the `<textarea>` element.
+
+### Accessibility
+
+All form elements marked as required with an * must have an accompanying legend.
+
+Example:
+<RequiredLabelExample/>
 
 ## Base
 

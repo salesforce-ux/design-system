@@ -38,7 +38,7 @@
    */
   &[readonly] {
     /*! @css-var-fallback padding-left */
-    --slds-c-input-spacing-inlinestart: 0;
+    --slds-c-input-spacing-inline-start: 0;
 
     /*! @css-var-fallback border-color */
     --slds-c-input-color-border: transparent;
@@ -90,10 +90,10 @@
   --slds-c-input-color-background: transparent;
 
   /*! @css-var-fallback padding-right */
-  --slds-c-input-spacing-inlineend: 0;
+  --slds-c-input-spacing-inline-end: 0;
 
   /*! @css-var-fallback padding-left */
-  --slds-c-input-spacing-inlinestart: #{$spacing-small};
+  --slds-c-input-spacing-inline-start: #{$spacing-small};
 
   /*! @css-var-fallback color */
   --slds-c-input-text-color: var(--slds-g-color-neutral-base-10, #{$color-text-default});
@@ -153,7 +153,7 @@
  */
 .slds-input_borders[readonly] {
   /*! @css-var-fallback padding-right */
-  --slds-c-input-spacing-inlinestart: #{$spacing-small};
+  --slds-c-input-spacing-inline-start: #{$spacing-small};
 
   /*! @css-var-fallback border-color */
   --slds-c-input-color-border: var(--slds-g-color-border-base-4, #{$color-border-input});
@@ -207,7 +207,7 @@
   .slds-input_bare,
   .slds-input--bare {
     /*! @css-var-fallback padding-left */
-    --slds-c-input-spacing-inlinestart: #{$spacing-x-large};
+    --slds-c-input-spacing-inline-start: #{$spacing-x-large};
   }
 }
 
@@ -229,7 +229,7 @@
   .slds-input_bare,
   .slds-input--bare {
     /*! @css-var-fallback padding-right */
-    --slds-c-input-spacing-inlineend: #{$spacing-x-large};
+    --slds-c-input-spacing-inline-end: #{$spacing-x-large};
   }
 }
 
@@ -268,10 +268,10 @@
   .slds-input_bare,
   .slds-input--bare {
     /*! @css-var-fallback padding-left */
-    --slds-c-input-spacing-inlinestart: #{$spacing-x-large};
+    --slds-c-input-spacing-inline-start: #{$spacing-x-large};
 
     /*! @css-var-fallback padding-right */
-    --slds-c-input-spacing-inlineend: #{$spacing-x-large};
+    --slds-c-input-spacing-inline-end: #{$spacing-x-large};
   }
 }
 
@@ -286,7 +286,7 @@
   .slds-input_bare,
   .slds-input--bare {
     /*! @css-var-fallback padding-right */
-    --slds-c-input-spacing-inlineend: calc(#{$spacing-xx-large} + #{$spacing-x-small});
+    --slds-c-input-spacing-inline-end: calc(#{$spacing-xx-large} + #{$spacing-x-small});
   }
 }
 

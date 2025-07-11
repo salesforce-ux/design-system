@@ -19,7 +19,7 @@
 .slds-popover_tooltip,
 .slds-popover--tooltip {
   width: auto;
-  max-width: var(--slds-c-tooltip-sizing-width-max, var(--slds-c-tooltip-sizing-max-width, var(--sds-c-tooltip-sizing-max-width, $size-medium)));
+  max-width: var(--slds-c-tooltip-sizing-max-width, var(--slds-c-tooltip-sizing-width-max, var(--sds-c-tooltip-sizing-max-width, $size-medium)));
   background-color: var(--slds-c-tooltip-color-background, var(--sds-c-tooltip-color-background, var(--slds-g-color-brand-base-20, #{$color-background-alt-inverse})));
   border: 0;
 

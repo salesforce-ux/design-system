@@ -4,10 +4,10 @@
 @mixin button-shape($api-variant, $reassign: false) {
   @if $reassign == true {
     /*! @css-var-fallback padding-left */
-    --slds-c-button-spacing-inlinestart: var(--slds-c-button-#{$api-variant}-spacing-inlinestart, var(--slds-c-button-#{$api-variant}-spacing-inline-start, var(--sds-c-button-#{$api-variant}-spacing-inline-start, #{$spacing-medium})));
+    --slds-c-button-spacing-inline-start: var(--slds-c-button-#{$api-variant}-spacing-inline-start, var(--slds-c-button-#{$api-variant}-spacing-inlinestart, var(--sds-c-button-#{$api-variant}-spacing-inline-start, #{$spacing-medium})));
 
     /*! @css-var-fallback padding-right */
-    --slds-c-button-spacing-inlineend: var(--slds-c-button-#{$api-variant}-spacing-inlineend, var(--slds-c-button-#{$api-variant}-spacing-inline-end, var(--sds-c-button-#{$api-variant}-spacing-inline-end, #{$spacing-medium})));
+    --slds-c-button-spacing-inline-end: var(--slds-c-button-#{$api-variant}-spacing-inline-end, var(--slds-c-button-#{$api-variant}-spacing-inlineend, var(--sds-c-button-#{$api-variant}-spacing-inline-end, #{$spacing-medium})));
   } @else {
     padding-left: var(--slds-c-button-#{$api-variant}-spacing-inline-start, var(--sds-c-button-#{$api-variant}-spacing-inline-start, $spacing-medium));
     padding-right: var(--slds-c-button-#{$api-variant}-spacing-inline-end, var(--sds-c-button-#{$api-variant}-spacing-inline-end, $spacing-medium));

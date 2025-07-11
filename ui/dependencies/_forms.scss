@@ -65,9 +65,9 @@
 
 @mixin input {
   padding-top: 0;
-  padding-right: var(--slds-c-input-spacing-inlineend, var(--slds-c-input-spacing-horizontal-end, var(--sds-c-input-spacing-horizontal-end, $spacing-medium)));
+  padding-right: var(--slds-c-input-spacing-inline-end, var(--slds-c-input-spacing-horizontal-end, var(--sds-c-input-spacing-horizontal-end, $spacing-medium)));
   padding-bottom: 0;
-  padding-left: var(--slds-c-input-spacing-inlinestart, var(--slds-c-input-spacing-horizontal-start, var(--sds-c-input-spacing-horizontal-start, $spacing-small)));
+  padding-left: var(--slds-c-input-spacing-inline-start, var(--slds-c-input-spacing-horizontal-start, var(--sds-c-input-spacing-horizontal-start, $spacing-small)));
   width: 100%;
   min-height: calc(#{$height-input} + (#{$border-width-thin} * 2)); // For IE
   line-height: $height-input;

@@ -204,10 +204,10 @@ input[readonly][role="combobox"] {
   /**
    * If the listbox option is empty and slds-truncate is not present this fix the height of the option
    *
-   * @selector .slds-media__body > span
+   * @selector .slds-media__body > :first-child
    * @restrict .slds-listbox__option
    */
-  .slds-truncate, .slds-media__body > span {
+  .slds-truncate, .slds-media__body > :first-child {
     display: inline-block;
     vertical-align: middle;
   }

@@ -339,6 +339,7 @@ export const ContextTabBarOverflow = props => (
       className="slds-button slds-context-bar__label-action"
       title="More Tab Items"
       aria-haspopup="true"
+      role="tab"
     >
       <IndicatorContainer>
         {props.itemUnsaved && <IndicatorUnsaved />}

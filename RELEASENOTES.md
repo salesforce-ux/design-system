@@ -11,6 +11,10 @@
   - This change simplifies the styling hooks implementation and provides broader CSS scope as originally intended by the `sds-styling-hooks` package.
 
 ## Component Blueprints
+### [Button Icons](https://www.lightningdesignsystem.com/components/button-icons)
+#### Added
+- Added `role="tab"` to button menu component when it used under tabs for screen reader accessibility.
+
 ### [Checkbox Toggle](https://www.lightningdesignsystem.com/components/checkbox-toggle)
 #### Added
 - Added `role="switch"` to input element to ensure accessibility.

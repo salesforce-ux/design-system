@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.28.0
+
+### Added
+
+- Added `role="tab"` to button menu component when it used under tabs for screen reader accessibility.
+
 ## 2.27.0
 
 ### Added

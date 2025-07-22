@@ -3,6 +3,41 @@
 
 ## Release 2.28.0 - Upcoming
 
+- Updated icons to `v10.13.0`
+  - Doctype set
+    - Added css
+  - Standard set
+    - Added secondary_index
+    - Added sparkles
+    - Added action_override
+    - Added custom_entity
+    - Added custom_textbox
+    - Added tabset
+    - Added agent_astro
+    - Added push
+    - Added business_unit
+    - Added dx_pipeline
+    - Added collection_alt
+    - Added database
+    - Updated feed
+  - Utility set
+    - Added language_settings
+    - Added account
+    - Added translate
+    - Added fill_rate
+    - Added dx_org_dev
+    - Added dx_org_scratch
+    - Added dx_org_production
+    - Added dx_org_test
+    - Added dx_commit
+    - Added dx_change_request
+    - Added dx_pipeline
+    - Added dx_branch
+    - Added analytics_promoted
+    - Added analytics_referenced
+    - Added analytics_extended
+    - Added analytics_reused
+    - Updated feed
 - Updated `@salesforce-ux/design-system-primitive-tokens` to version `0.3.7` to apply BLUE_40 as the link text color.
 - Updated color picker range indicator from <a> to a <button>
   
@@ -11,6 +46,10 @@
   - This change simplifies the styling hooks implementation and provides broader CSS scope as originally intended by the `sds-styling-hooks` package.
 
 ## Component Blueprints
+### [Button Groups](https://www.lightningdesignsystem.com/components/button-groups)
+#### Changed
+- Modified display for `slds-dropdown-trigger` to `inline-flex`.
+
 ### [Button Icons](https://www.lightningdesignsystem.com/components/button-icons)
 #### Added
 - Added `role="tab"` to button menu component when it used under tabs for screen reader accessibility.

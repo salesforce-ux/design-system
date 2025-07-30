@@ -8,7 +8,10 @@
 
 #### Fixed
 
+-  Update the selected value of grouped combobox variants to display a context label to meet the WCAG SC 3.3.2.
+
 - Adds css to fix the height of empty list option in cases where `slds-truncate` class is not present
+
 
 ### Fixed
 

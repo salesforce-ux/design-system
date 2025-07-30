@@ -5,6 +5,8 @@
 
 ## 2.28.0 - Upcoming
 
+-  Update the selected value of grouped combobox variants to display a context label to meet the WCAG SC 3.3.2.
+
 - Updated icons to `v10.13.0`
   - Doctype set
     - Added css

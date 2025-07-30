@@ -6,6 +6,10 @@
 
 ## 2.28.0
 
+### Fixed
+
+- Fixed checkbox clickable area to only apply within container.
+
 ### Added
 
 - Added `role="switch"` to input element to ensure accessibility.

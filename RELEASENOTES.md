@@ -55,6 +55,8 @@
 - Added `role="tab"` to button menu component when it used under tabs for screen reader accessibility.
 
 ### [Checkbox Toggle](https://www.lightningdesignsystem.com/components/checkbox-toggle)
+#### Fixed
+- Fixed checkbox clickable area to only apply within container.
 #### Added
 - Added `role="switch"` to input element to ensure accessibility.
 

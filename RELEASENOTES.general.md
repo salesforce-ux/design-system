@@ -1,11 +1,8 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
-## 2.27.2 - June 25, 2025
 
 ## 2.28.0 - Upcoming
-
--  Update the selected value of grouped combobox variants to display a context label to meet the WCAG SC 3.3.2.
 
 - Updated icons to `v10.13.0`
   - Doctype set
@@ -45,10 +42,12 @@
 
 - Updated `@salesforce-ux/design-system-primitive-tokens` to version `0.3.7` to apply BLUE_40 as the link text color.
 - Updated color picker range indicator from <a> to a <button>
-  
+
 - Styling Hooks
   - Removed custom scope from styling hooks. The limited scope was introduced in 2.27.0, but it's now applied broadly (new scope `:where(html)`).
   - This change simplifies the styling hooks implementation and provides broader CSS scope as originally intended by the `sds-styling-hooks` package.
+
+## 2.27.2 - June 25, 2025
 
 ## 2.27.1 - May 7, 2025
 

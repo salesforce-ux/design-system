@@ -40,7 +40,6 @@
     - Updated feed
 - Updated `@salesforce-ux/design-system-primitive-tokens` to version `0.3.7` to apply BLUE_40 as the link text color.
 - Updated color picker range indicator from <a> to a <button>
-  
 - Styling Hooks
   - Removed custom scope from styling hooks. The limited scope was introduced in 2.27.0, but it's now applied broadly (new scope `:where(html)`).
   - This change simplifies the styling hooks implementation and provides broader CSS scope as originally intended by the `sds-styling-hooks` package.
@@ -62,6 +61,7 @@
 
 ### [Combobox](https://www.lightningdesignsystem.com/components/combobox)
 #### Fixed
+-  Update the selected value of grouped combobox variants to display a context label to meet the WCAG SC 3.3.2.
 - Adds css to fix the height of empty list option in cases where `slds-truncate` class is not present
 #### Fixed
 - Fixed a11y concern with truncated menu options for longer text. The text for each option now wraps by default.

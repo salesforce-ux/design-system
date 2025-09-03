@@ -2,7 +2,7 @@
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
 
-## 2.28.0 - Upcoming
+## 2.28.0 - September 3, 2025
 
 - Updated icons to `v10.13.0`
   - Doctype set

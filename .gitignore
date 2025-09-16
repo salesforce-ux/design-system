@@ -73,7 +73,7 @@ __crypt
 /__tests__/a11y/axe-results.xml
 /__tests__/a11y/__testfiles__
 
-# ignore downloaded package ZIPs
+# Downloaded package ZIPs
 *.zip
 *.tar
 *.tar.gz

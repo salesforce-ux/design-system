@@ -12,36 +12,33 @@
 }
 
 /**
-  * @summary Changes padding to .25rem
-  *
-  * @selector .slds-box_xx-small
-  * @restrict .slds-box
-  * @modifier
-  */
+ * @summary Changes padding to .25rem
+ *
+ * @selector .slds-box_xx-small
+ * @modifier
+ */
 .slds-box_xx-small,
 .slds-box--xx-small {
   padding: $spacing-xx-small;
 }
 
 /**
-  * @summary Changes padding to .5rem
-  *
-  * @selector .slds-box_x-small
-  * @restrict .slds-box
-  * @modifier
-  */
+ * @summary Changes padding to .5rem
+ *
+ * @selector .slds-box_x-small
+ * @modifier
+ */
 .slds-box_x-small,
 .slds-box--x-small {
   padding: $spacing-x-small;
 }
 
 /**
-  * @summary Changes padding to .75rem
-  *
-  * @selector .slds-box_small
-  * @restrict .slds-box
-  * @modifier
-  */
+ * @summary Changes padding to .75rem
+ *
+ * @selector .slds-box_small
+ * @modifier
+ */
 .slds-box_small,
 .slds-box--small {
   padding: $spacing-small;
@@ -57,7 +54,6 @@
  * @summary Handles interactions if the box is applied to an actionable element
  *
  * @selector .slds-box_link
- * @restrict .slds-box
  * @modifier
  * @notes Requires a block display property, e.g. block, inline-block, flex
  */

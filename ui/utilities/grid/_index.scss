@@ -60,7 +60,7 @@
 }
 
 /**
- * @summary Allows columns to wrap when they exceed 100% of their parent’s width
+ * @summary Allows columns to wrap when they exceed 100% of their parent's width
  *
  * @selector .slds-wrap
  * @modifier
@@ -921,6 +921,12 @@
   margin-left: auto;
 }
 
+/**
+ * @summary Creates an overflow grid that allows horizontal scrolling
+ *
+ * @selector .slds-grid_overflow
+ * @modifier
+ */
 .slds-grid_overflow,
 .slds-grid--overflow {
   flex-flow: row nowrap;

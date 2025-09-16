@@ -1,6 +1,6 @@
 # Salesforce Lightning Design System
 
-Welcome to the [Salesforce Lightning Design System](https://www.lightningdesignsystem.com) brought to you by [Salesforce UX](https://twitter.com/salesforceux).
+Welcome to [Salesforce Lightning Design System 1](https://v1.lightningdesignsystem.com) brought to you by [Salesforce UX](https://linkedin.com/showcase/salesforce-designers).
 
 * Tailored for building Salesforce apps: Using the Lightning Design System markup and CSS framework results in UIs that reflect the Salesforce Lightning look and feel.
 * Continuously updated: As long as you’re using the latest version of the Lightning Design System, your pages are always up to date with Salesforce UI changes.
@@ -8,7 +8,7 @@ Welcome to the [Salesforce Lightning Design System](https://www.lightningdesigns
 ## Search
 
 Handled by Algolia.
-This process decribes indexing as a standalone process. Search indexing can also be done at time of site build by passing `--make-index` to the script: `sh ./release.sh --make-index`
+This process describes indexing as a standalone process. Search indexing can also be done at time of site build by passing `--make-index` to the script: `sh ./release.sh --make-index`
 
 To crawl and update the index, use the [Docker method](https://docsearch.algolia.com/docs/legacy/run-your-own/#run-the-crawl-from-the-docker-image).
 

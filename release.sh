@@ -1,5 +1,21 @@
 #! /bin/bash
 
+# Check Node.js version - fail if greater than 16
+NODE_VERSION=$(node -v | sed 's/v//')
+NODE_MAJOR_VERSION=$(echo $NODE_VERSION | cut -d. -f1)
+
+if [ "$NODE_MAJOR_VERSION" -gt 16 ]; then
+    echo "==============================================================="
+    echo -e "\033[31m» Error: Node.js version $NODE_VERSION is not supported. Please use Node.js version 16 or lower.\033[0m"
+    echo "» Current version: $NODE_VERSION"
+    echo "==============================================================="
+    exit 1
+fi
+
+echo "==============================================================="
+echo "» Node.js version check passed: $NODE_VERSION"
+echo "==============================================================="
+
 build_site_only=false
 
 dist_path="./.dist"
@@ -63,7 +79,7 @@ until [ "$selection" = "0" ]; do
   echo "    	2  -  Core patch"
   echo "    	3  -  Core main"
   echo "    	4  -  Staging (for release)"
-  echo "    	5  -  Staging (for archive)"
+  echo "    	5  -  Staging (for archive/nofollow/noindex)"
   echo "    	6  -  Build site only"
   echo "    	0  -  Exit"
   echo ""

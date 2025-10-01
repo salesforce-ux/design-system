@@ -54,7 +54,7 @@
     "@salesforce-ux/postcss-css-variable-value": "0.2.0",
     "@salesforce-ux/scss-parser-aura": "^3.1.1",
     "@salesforce-ux/sds-styling-aliases": "0.2.4",
-    "@salesforce-ux/sds-styling-hooks": "2.0.0-beta.5",
+    "@salesforce-ux/sds-styling-hooks": "2.0.0-beta.11",
     "@storybook/addon-a11y": "^5.3.21",
     "@storybook/addon-backgrounds": "^5.3.21",
     "@storybook/addon-docs": "^5.3.21",

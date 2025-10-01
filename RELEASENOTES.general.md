@@ -1,6 +1,10 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
+## 2.28.1 - October 1, 2025
+
+## Updated
+- Updated `@salesforce-ux/sds-styling-hooks` to version `2.0.0-beta.11`.
 
 ## 2.28.0 - September 3, 2025
 

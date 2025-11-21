@@ -8,14 +8,14 @@
     "CSS"
   ],
   "homepage": "https://lightningdesignsystem.com",
-  "version": "2.28.0",
+  "version": "2.28.1",
   "author": "Salesforce",
   "bugs": {
     "url": "https://github.com/salesforce-ux/design-system/issues"
   },
   "slds": {
-    "name": "Summer ’25",
-    "id": "256"
+    "name": "Winter ’26",
+    "id": "258"
   },
   "important": [
     "'private' and 'config.slds.internal' should have the same value",
@@ -54,7 +54,7 @@
     "@salesforce-ux/postcss-css-variable-value": "0.2.0",
     "@salesforce-ux/scss-parser-aura": "^3.1.1",
     "@salesforce-ux/sds-styling-aliases": "0.2.4",
-    "@salesforce-ux/sds-styling-hooks": "2.0.0-beta.5",
+    "@salesforce-ux/sds-styling-hooks": "2.0.0-beta.11",
     "@storybook/addon-a11y": "^5.3.21",
     "@storybook/addon-backgrounds": "^5.3.21",
     "@storybook/addon-docs": "^5.3.21",

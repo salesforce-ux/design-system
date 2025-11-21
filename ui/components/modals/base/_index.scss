@@ -84,10 +84,10 @@
   background-color: var(--slds-c-modal-header-color-background, var(--sds-c-modal-header-color-background, var(--slds-c-modal-color-background, var(--sds-c-modal-color-background, var(--slds-g-color-neutral-base-100, #{$color-background-alt})))));
   color: var(--slds-c-modal-header-text-color, var(--sds-c-modal-header-text-color, var(--sds-c-modal-text-color)));
   flex-shrink: 0;
-  padding-top: var(--slds-c-modal-header-spacing-blockstart, var(--slds-c-modal-header-spacing-block-start, var(--sds-c-modal-header-spacing-block-start, $spacing-medium)));
-  padding-right: var(--slds-c-modal-header-spacing-inlineend, var(--slds-c-modal-header-spacing-inline-end, var(--sds-c-modal-header-spacing-inline-end, $spacing-medium)));
-  padding-bottom: var(--slds-c-modal-header-spacing-blockend, var(--slds-c-modal-header-spacing-block-end, var(--sds-c-modal-header-spacing-block-end, $spacing-medium)));
-  padding-left: var(--slds-c-modal-header-spacing-inlinestart, var(--slds-c-modal-header-spacing-inline-start, var(--sds-c-modal-header-spacing-inline-start, $spacing-medium)));
+  padding-top: var(--slds-c-modal-header-spacing-block-start, var(--slds-c-modal-header-spacing-blockstart, var(--sds-c-modal-header-spacing-block-start, $spacing-medium)));
+  padding-right: var(--slds-c-modal-header-spacing-inline-end, var(--slds-c-modal-header-spacing-inlineend, var(--sds-c-modal-header-spacing-inline-end, $spacing-medium)));
+  padding-bottom: var(--slds-c-modal-header-spacing-block-end, var(--slds-c-modal-header-spacing-blockend, var(--sds-c-modal-header-spacing-block-end, $spacing-medium)));
+  padding-left: var(--slds-c-modal-header-spacing-inline-start, var(--slds-c-modal-header-spacing-inlinestart, var(--sds-c-modal-header-spacing-inline-start, $spacing-medium)));
   text-align: center;
 
   + .slds-modal__menu {
@@ -155,10 +155,10 @@
   background-color: var(--slds-c-modal-footer-color-background, var(--sds-c-modal-footer-color-background, var(--slds-c-modal-color-background, var(--sds-c-modal-color-background, var(--slds-g-color-neutral-base-95, #{$color-background})))));
   color: var(--slds-c-modal-footer-text-color, var(--sds-c-modal-footer-text-color, var(--slds-c-modal-text-color, var(--sds-c-modal-text-color))));
   flex-shrink: 0;
-  padding-top: var(--slds-c-modal-footer-spacing-blockstart, var(--slds-c-modal-footer-spacing-block-start, var(--sds-c-modal-footer-spacing-block-start, $spacing-small)));
-  padding-right: var(--slds-c-modal-footer-spacing-inlineend, var(--slds-c-modal-footer-spacing-inline-end, var(--sds-c-modal-footer-spacing-inline-end, $spacing-medium)));
-  padding-bottom: var(--slds-c-modal-footer-spacing-blockend, var(--slds-c-modal-footer-spacing-block-end, var(--sds-c-modal-footer-spacing-block-end, $spacing-small)));
-  padding-left: var(--slds-c-modal-footer-spacing-inlinestart, var(--slds-c-modal-footer-spacing-inline-start, var(--sds-c-modal-footer-spacing-inline-start, $spacing-medium)));
+  padding-top: var(--slds-c-modal-footer-spacing-block-start, var(--slds-c-modal-footer-spacing-blockstart, var(--sds-c-modal-footer-spacing-block-start, $spacing-small)));
+  padding-right: var(--slds-c-modal-footer-spacing-inline-end, var(--slds-c-modal-footer-spacing-inlineend, var(--sds-c-modal-footer-spacing-inline-end, $spacing-medium)));
+  padding-bottom: var(--slds-c-modal-footer-spacing-block-end, var(--slds-c-modal-footer-spacing-blockend, var(--sds-c-modal-footer-spacing-block-end, $spacing-small)));
+  padding-left: var(--slds-c-modal-footer-spacing-inline-start, var(--slds-c-modal-footer-spacing-inlinestart, var(--sds-c-modal-footer-spacing-inline-start, $spacing-medium)));
   text-align: right;
   box-shadow: var(--slds-c-modal-shadow, var(--sds-c-modal-shadow, $shadow-drop-down));
 
@@ -211,6 +211,12 @@
   &.slds-icon-utility-close, .slds-icon-utility-close {
     --slds-c-icon-color-foreground: var(--slds-g-color-neutral-base-50,#747474);
   }
+
+  &:focus,
+  &:focus-visible {
+    box-shadow: var(--slds-g-shadow-inset-inverse-focus-1);
+    outline: 0;
+  }
 }
 
 @mixin backdrop {
@@ -224,7 +230,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background: var(--slds-s-backdrop-color-background, var(--slds-c-backdrop-color-background, var(--sds-c-backdrop-color-background,
+  background: var(--slds-c-backdrop-color-background, var(--sds-c-backdrop-color-background, var(--slds-s-backdrop-color-background, 
     var(--slds-g-color-neutral-10-opacity-50, #{$color-background-temp-modal-tint}))));
   z-index: $z-index-modal;
 

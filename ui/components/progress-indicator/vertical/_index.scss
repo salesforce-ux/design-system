@@ -28,7 +28,7 @@
       position: absolute;
       left: calc((#{$square-icon-utility-small} / 2) - 1px); // "-1px" accounts for half of line width to get true center
       width: 2px;
-      background-color: var(--slds-g-color-neutral-base-80, #{$progress-bar-color-background});
+      background-color: var(--slds-g-color-neutral-base-50, #{$progress-bar-color-background});
     }
 
     &:before {

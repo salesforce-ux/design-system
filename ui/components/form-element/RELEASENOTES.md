@@ -3,9 +3,16 @@
 # Form Element Release Notes
 
 <!-- ## [Unreleased] -->
+## 2.27.2
+
+### Fixed
+
+- Fixed error help text to be aligned with appropriate form control
+
 ## 2.27.0
 
-#### Added
+### Added
+
 - Added `aria-hidden` attribute to required form element label asterisk to avoid being announced by screen reader to meet accessibility WCAG label criteria
 
 ## 2.26.2

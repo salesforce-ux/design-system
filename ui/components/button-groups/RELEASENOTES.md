@@ -4,6 +4,12 @@
 
 <!-- ## [Unreleased] -->
 
+## 2.28.0
+
+### Changed
+
+- Modified display for `slds-dropdown-trigger` to `inline-flex`.
+
 ## 2.10.0
 
 ### Changed

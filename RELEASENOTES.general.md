@@ -1,6 +1,52 @@
 <!-- Release notes authoring guidelines: http://keepachangelog.com/ -->
 <!-- On release, add general notes here. In time the legacy release notes will be add to this -->
 
+
+## 2.28.0 - September 3, 2025
+
+- Updated icons to `v10.13.0`
+  - Doctype set
+    - Added css
+  - Standard set
+    - Added secondary_index
+    - Added sparkles
+    - Added action_override
+    - Added custom_entity
+    - Added custom_textbox
+    - Added tabset
+    - Added agent_astro
+    - Added push
+    - Added business_unit
+    - Added dx_pipeline
+    - Added collection_alt
+    - Added database
+    - Updated feed
+  - Utility set
+    - Added language_settings
+    - Added account
+    - Added translate
+    - Added fill_rate
+    - Added dx_org_dev
+    - Added dx_org_scratch
+    - Added dx_org_production
+    - Added dx_org_test
+    - Added dx_commit
+    - Added dx_change_request
+    - Added dx_pipeline
+    - Added dx_branch
+    - Added analytics_promoted
+    - Added analytics_referenced
+    - Added analytics_extended
+    - Added analytics_reused
+    - Updated feed
+
+- Updated `@salesforce-ux/design-system-primitive-tokens` to version `0.3.7` to apply BLUE_40 as the link text color.
+- Updated color picker range indicator from <a> to a <button>
+
+- Styling Hooks
+  - Removed custom scope from styling hooks. The limited scope was introduced in 2.27.0, but it's now applied broadly (new scope `:where(html)`).
+  - This change simplifies the styling hooks implementation and provides broader CSS scope as originally intended by the `sds-styling-hooks` package.
+
 ## 2.27.2 - June 25, 2025
 
 ## 2.27.1 - May 7, 2025
@@ -14,7 +60,7 @@
     - Added it_service_management
 
 - Styling Hooks
-  - Include a new set of global and shared hooks in the dist CSS for "default", "sanitized", "offline", and "minified" versions.
+  - Include a new set of global hooks in the dist CSS for "default", "sanitized", "offline", and "minified" versions.
   - For this release, the new hooks are scoped exclusively to a predefined list of Lightning Web Component primitives, Copilot elements, and a catch-all class. (This is set to change in the future.)
 
 - Update icons to `v10.12.1`

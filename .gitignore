@@ -20,7 +20,6 @@
 !/.prettierignore
 !/.storybook
 !/.circleci
-!/.npmrc
 !/.nvmrc
 !/.snyk
 
@@ -73,3 +72,8 @@ __crypt
 /__tests__/a11y/results
 /__tests__/a11y/axe-results.xml
 /__tests__/a11y/__testfiles__
+
+# ignore downloaded package ZIPs
+*.zip
+*.tar
+*.tar.gz

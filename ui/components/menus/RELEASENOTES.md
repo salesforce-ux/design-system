@@ -68,6 +68,7 @@
 - Update `.slds-dropdown_fluid` to have a `min-width` set to `$size-x-small` (12rem) to prevent menus from being unreadable when associated with inputs that have a small width
 
 ### Added
+
 - Added explicit `right: auto` to `slds-dropdown_left`
 
 ## 2.8.0

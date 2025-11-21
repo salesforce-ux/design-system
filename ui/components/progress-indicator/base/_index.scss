@@ -19,6 +19,7 @@
     position: absolute;
     top: 50%;
     margin-top: (($progress-bar-height * 0.5) * -1);
+    background: var(--slds-g-color-neutral-base-50, #{$progress-bar-color-background});
   }
 }
 
@@ -182,7 +183,7 @@
   justify-content: center;
   position: relative;
   border-radius: $border-radius-circle;
-  background: var(--slds-g-color-neutral-base-80, #{$progress-bar-color-background});
+  background: var(--slds-g-color-neutral-base-50, #{$progress-bar-color-background});
   border: 4px solid var(--slds-g-color-neutral-base-100, #{$progress-color-border});
   vertical-align: middle;
 

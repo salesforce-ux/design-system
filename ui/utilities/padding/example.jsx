@@ -1,11 +1,26 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from 'react';
+import React, { Fragment } from 'react';
+import demoStylesPadding from './docs/demoStylesPadding';
 
-export const Context = props => (
-  <div className="demo-only-spacing demo-only-padding">{props.children}</div>
-);
+export const Context = props => {
+  // console.log(React.Children.toArray(props.children)[0].props.children);
+  return (
+    <Fragment>
+      <style>{demoStylesPadding}</style>
+      <div className="story-doc-padding story-doc-padding_content">
+        {React.Children.toArray(props.children)[0].props.children.map((child, i) => (
+          <div key={`padding-${i}`} className="doc-spacing slds-m-right_medium">{child}</div>
+        ))}
+      </div>
+    </Fragment>
+  );
+};
+
+// export const Context = props => (
+//   <div className="demo-only-spacing demo-only-padding">{props.children}</div>
+// );
 
 export let examples = [
   {

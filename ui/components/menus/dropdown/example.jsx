@@ -135,7 +135,7 @@ export let MenuItem = props => {
         tabIndex={tabIndex || '-1'}
         onClick={e => e.preventDefault()}
       >
-        <span className="slds-truncate" title={title || children}>
+        <span title={title || children}>
           {isSelectable ? (
             <SvgIcon
               className="slds-icon slds-icon_selected slds-icon_x-small slds-icon-text-default slds-m-right_x-small"
@@ -212,7 +212,7 @@ export const SubHeader = props => {
           <li role="presentation">
             <ul role="group" aria-labelledby={menuGroupOneUniqueId}>
               <li
-                className="slds-dropdown__header slds-truncate"
+                className="slds-dropdown__header"
                 title="Menu Sub Heading"
                 role="presentation"
                 id={menuGroupOneUniqueId}
@@ -226,7 +226,7 @@ export const SubHeader = props => {
           <li role="presentation">
             <ul role="group" aria-labelledby={menuGroupTwoUniqueId}>
               <li
-                className="slds-dropdown__header slds-truncate"
+                className="slds-dropdown__header"
                 title="Menu Sub Heading"
                 role="presentation"
                 id={menuGroupTwoUniqueId}

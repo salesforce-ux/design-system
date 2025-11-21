@@ -5,6 +5,7 @@ import {
   getExampleStoryParams,
   getStoryWrapperDecorator
 } from '../ui/shared/helpers';
+import CodeView from "../shared/components/CodeView";
 import {
   getComponents,
   getComponentVariants,
@@ -125,16 +126,54 @@ const createUtilStories = () => {
 
     if (examples && examples.examples) {
       const utilStory = storiesOf(`Utilities/${utilTitle}`, module);
+      const utilWithCodeStory = storiesOf(
+        `Utilities (with code)/${utilTitle}`,
+        module
+      );
       const DocsComponent = () => <DocsPage title={utilTitle} Docs={Docs} />;
 
-      examples.examples.forEach(example => {
+      examples.examples.forEach((example) => {
         utilStory.add(
           example.label,
           () => getDisplayElementById(examples.examples, example.id),
           {
             docs: {
-              page: DocsComponent
-            }
+              page: DocsComponent,
+            },
+          }
+        );
+      });
+
+      examples.examples.forEach(example => {
+        const element = getDisplayElementById(examples.examples, example.id);
+        const UtilStoryWithCode = () => {
+          // Check if the examples file has a Context component defined
+          // If it exists, wrap the element with Context to provide necessary styling
+          // If not, return the element as is
+          return examples.Context ? (
+            <examples.Context>{element}</examples.Context>
+          ) : (
+            element
+          );
+        };
+
+        utilWithCodeStory.add(
+          example.label,
+          () => {
+            return (
+              <CodeView
+                toggleCode={false}
+                // if the example has a Context, use the element as the code example
+                {...(examples.Context ? { codeExample: element } : {})}
+              >
+                <UtilStoryWithCode />
+              </CodeView>
+            );
+          },
+          {
+            docs: {
+              page: DocsComponent,
+            },
           }
         );
       });

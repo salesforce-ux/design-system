@@ -1,14 +1,29 @@
 // Copyright (c) 2015-present, salesforce.com, inc. All rights reserved
 // Licensed under BSD 3-Clause - see LICENSE.txt or git.io/sfdc-license
 
-import React from 'react';
+import React, { Fragment } from 'react';
+import demoStylesMargin from './docs/demoStylesMargin';
+
+export const Context = props => {
+  // console.log(React.Children.toArray(props.children)[0].props.children);
+  return (
+    <Fragment>
+      <style>{demoStylesMargin}</style>
+      <div className="story-doc-margin story-doc-margin_content">
+        {React.Children.toArray(props.children)[0].props.children.map((child, i) => (
+          <div key={`margin-${i}`} className="doc-spacing slds-m-right_medium">{child}</div>
+        ))}
+      </div>
+    </Fragment>
+  );
+};
 
 export let examples = [
   {
     id: 'top',
     label: 'Top',
     element: (
-      <div>
+      <Fragment>
         <div className="slds-m-top_none" />
         <div className="slds-m-top_xxx-small" />
         <div className="slds-m-top_xx-small" />
@@ -18,14 +33,14 @@ export let examples = [
         <div className="slds-m-top_large" />
         <div className="slds-m-top_x-large" />
         <div className="slds-m-top_xx-large" />
-      </div>
+      </Fragment>
     )
   },
   {
     id: 'right',
     label: 'Right',
     element: (
-      <div>
+      <>
         <div className="slds-m-right_none" />
         <div className="slds-m-right_xxx-small" />
         <div className="slds-m-right_xx-small" />
@@ -35,14 +50,14 @@ export let examples = [
         <div className="slds-m-right_large" />
         <div className="slds-m-right_x-large" />
         <div className="slds-m-right_xx-large" />
-      </div>
+      </>
     )
   },
   {
     id: 'bottom',
     label: 'Bottom',
     element: (
-      <div>
+      <>
         <div className="slds-m-bottom_none" />
         <div className="slds-m-bottom_xxx-small" />
         <div className="slds-m-bottom_xx-small" />
@@ -52,14 +67,14 @@ export let examples = [
         <div className="slds-m-bottom_large" />
         <div className="slds-m-bottom_x-large" />
         <div className="slds-m-bottom_xx-large" />
-      </div>
+      </>
     )
   },
   {
     id: 'left',
     label: 'Left',
     element: (
-      <div>
+      <>
         <div className="slds-m-left_none" />
         <div className="slds-m-left_xxx-small" />
         <div className="slds-m-left_xx-small" />
@@ -69,14 +84,14 @@ export let examples = [
         <div className="slds-m-left_large" />
         <div className="slds-m-left_x-large" />
         <div className="slds-m-left_xx-large" />
-      </div>
+      </>
     )
   },
   {
     id: 'vertical',
     label: 'Vertical',
     element: (
-      <div>
+      <>
         <div className="slds-m-vertical_none" />
         <div className="slds-m-vertical_xxx-small" />
         <div className="slds-m-vertical_xx-small" />
@@ -86,14 +101,14 @@ export let examples = [
         <div className="slds-m-vertical_large" />
         <div className="slds-m-vertical_x-large" />
         <div className="slds-m-vertical_xx-large" />
-      </div>
+      </>
     )
   },
   {
     id: 'horizontal',
     label: 'Horizontal',
     element: (
-      <div>
+      <>
         <div className="slds-m-horizontal_none" />
         <div className="slds-m-horizontal_xxx-small" />
         <div className="slds-m-horizontal_xx-small" />
@@ -103,14 +118,14 @@ export let examples = [
         <div className="slds-m-horizontal_large" />
         <div className="slds-m-horizontal_x-large" />
         <div className="slds-m-horizontal_xx-large" />
-      </div>
+      </>
     )
   },
   {
     id: 'around',
     label: 'Around',
     element: (
-      <div>
+      <>
         <div className="slds-m-around_none" />
         <div className="slds-m-around_xxx-small" />
         <div className="slds-m-around_xx-small" />
@@ -120,7 +135,7 @@ export let examples = [
         <div className="slds-m-around_large" />
         <div className="slds-m-around_x-large" />
         <div className="slds-m-around_xx-large" />
-      </div>
+      </>
     )
   }
 ];

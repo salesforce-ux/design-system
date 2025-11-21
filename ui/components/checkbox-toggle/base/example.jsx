@@ -39,6 +39,7 @@ export let Checkbox = props => (
     name={props.uniqueId}
     value={props.uniqueId}
     type="checkbox"
+    role="switch"
     disabled={props.disabled}
     defaultChecked={props.checked}
     aria-describedby={props.uniqueId}

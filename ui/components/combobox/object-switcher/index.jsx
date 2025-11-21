@@ -35,7 +35,7 @@ class ObjectSwitcher extends Component {
           id={id}
           aria-controls={listboxId || listboxId01}
           comboboxAriaControls={comboboxAriaControls}
-          label="Filter Search by:"
+          label="Filter Search"
           hideLabel
           inputIconPosition="right"
           placeholder=" "

@@ -112,6 +112,14 @@
   margin-left: $spacing-xx-small;
 }
 
+/**
+ * @summary Until all triggers can be flex this is required for groups
+ */
+.slds-button-group .slds-dropdown-trigger,
+.slds-button-group-list .slds-dropdown-trigger {
+  display: inline-flex;
+}
+
 // The .slds-button--last class should be placed on the wrapper
 // of a button that's the final one in a button-group
 //

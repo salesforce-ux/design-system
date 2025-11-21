@@ -29,7 +29,7 @@ export let examples = [
           </div>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            eiusmod tempor incididunt ut labore et dolore.
           </p>
         </div>
       </div>
@@ -63,7 +63,7 @@ export let examples = [
           </div>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            eiusmod tempor incididunt ut labore et dolore.
           </p>
         </div>
       </div>
@@ -94,7 +94,7 @@ export let examples = [
           </div>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            eiusmod tempor incididunt ut labore et dolore.
           </p>
         </div>
       </div>
@@ -125,7 +125,7 @@ export let examples = [
           </div>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            eiusmod tempor incididunt ut labore et dolore.
           </p>
         </div>
       </div>

@@ -46,7 +46,7 @@ export default [
         addon={
           <ObjectSwitcher
             id={_.uniqueId('combobox-id-')}
-            value="Accounts"
+            value="Filter by: Accounts"
             addonPosition="start"
             hasInteractions
             comboboxAriaControls="primary-combobox-id-1"
@@ -95,7 +95,7 @@ export let states = [
         addon={
           <ObjectSwitcher
             id={_.uniqueId('combobox-id-')}
-            value="Accounts"
+            value="Filter by: Accounts"
             addonPosition="start"
             comboboxAriaControls="primary-combobox-id-2"
           />
@@ -143,7 +143,7 @@ export let states = [
         addon={
           <ObjectSwitcher
             id={_.uniqueId('combobox-id-')}
-            value="Accounts"
+            value="Filter by: Accounts"
             addonPosition="start"
             comboboxAriaControls="primary-combobox-id-2"
           />
@@ -192,7 +192,7 @@ export let states = [
         addon={
           <ObjectSwitcher
             id={_.uniqueId('combobox-id-')}
-            value="Accounts"
+            value="Filter by: Accounts"
             addonPosition="start"
             comboboxAriaControls="primary-combobox-id-2"
           />
@@ -226,7 +226,7 @@ export let states = [
         addon={
           <ObjectSwitcher
             id={_.uniqueId('combobox-id-')}
-            value="Accounts"
+            value="Filter by: Accounts"
             addonPosition="start"
             comboboxAriaControls="primary-combobox-id-3"
           />
@@ -274,7 +274,7 @@ export let states = [
         addon={
           <ObjectSwitcher
             id={_.uniqueId('combobox-id-')}
-            value="Accounts"
+            value="Filter by: Accounts"
             addonPosition="start"
             comboboxAriaControls="primary-combobox-id-4"
           />
@@ -320,7 +320,7 @@ export let states = [
         addon={
           <ObjectSwitcher
             id={_.uniqueId('combobox-id-')}
-            value="Accounts"
+            value="Filter by: Accounts"
             addonPosition="start"
             comboboxAriaControls="primary-combobox-id-5"
           />
@@ -367,7 +367,7 @@ export let states = [
         addon={
           <ObjectSwitcher
             id={_.uniqueId('combobox-id-')}
-            value="Accounts"
+            value="Filter by: Accounts"
             addonPosition="start"
             comboboxAriaControls="primary-combobox-id-6"
           />
@@ -492,7 +492,7 @@ export let states = [
         addon={
           <ObjectSwitcher
             id={_.uniqueId('combobox-id-')}
-            value="Accounts"
+            value="Filter by: Accounts"
             addonPosition="start"
             isOpen
             hasFocus
@@ -538,6 +538,7 @@ export let states = [
           <IconObjectSwitcher
             id={_.uniqueId('combobox-id-')}
             value="Apex"
+            label="Filter By:"
             filteredSymbol="apex"
             addonPosition="start"
             comboboxAriaControls="primary-combobox-id-9"

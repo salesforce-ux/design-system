@@ -204,7 +204,7 @@ export const SubtabOverflow = props => {
           props.isOpen && 'slds-is-open'
         )}
       >
-        <Button aria-haspopup="true" title="More Tab Items">
+        <Button aria-haspopup="true" title="More Tab Items" role="tab">
           <IndicatorContainer>
             {props.itemUnsaved && (
               <IndicatorUnsaved title="Tab(s) within menu not saved" />

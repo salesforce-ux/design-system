@@ -3,6 +3,21 @@
 # Combobox Release Notes
 
 <!-- ## [Unreleased] -->
+
+## 2.28.0
+
+#### Fixed
+
+-  Update the selected value of grouped combobox variants to display a context label to meet the WCAG SC 3.3.2.
+
+- Adds css to fix the height of empty list option in cases where `slds-truncate` class is not present
+
+
+### Fixed
+
+- Fixed a11y concern with truncated menu options for longer text. The text for each option now wraps by default.
+- Update examples to remove `slds-truncate` class from options. The `slds-truncate` class can still be used to achieve the previous behavior.
+
 ## 2.27.0
 
 #### Fixed
@@ -34,11 +49,15 @@
 - Updated Combobox disabled color
 
 ## 2.22.0
+
 ### Added
 - Tooltip option provided for Date/DateTime pickers.
 - Updated from tabindex to tabIndex.
+
 ## 2.21.0
+
 ### Fixed
+
 - Fixed by adding tabindex for `scrollable region must have keyboard access` wcag issue
 - Fixed by adding dynamic Ids for duplicate-id-aria issue
 - Fixed by adding unique Ids,aria-label for `aria-allowed-attr` wcag issue
@@ -72,7 +91,6 @@ Added `aria-label` to meet accessibility requirements specifically for screen re
 - Changed `@restrict` annotation of `.slds-combobox__input` from `.slds-combobox input` to `.slds-combobox__form-element input, .slds-combobox__form-element button`
 
 - Changed `@restrict` annotation of `.slds-combobox__input-value` from `.slds-combobox input` to `.slds-combobox__input`
-
 
 ## 2.13.1
 

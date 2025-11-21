@@ -9,9 +9,9 @@ import ButtonIcon from '../';
 import classNames from 'classnames';
 
 const ButtonText = props => {
-  const { label, assistiveText } = props;
+  const { label, assistiveText, type } = props;
   return (
-    <Button aria-haspopup>
+    <Button aria-haspopup role={type === 'tabs' && 'tab'}>
       {label}
       {assistiveText && (
         <span className="slds-assistive-text">{assistiveText}</span>
@@ -31,7 +31,7 @@ ButtonText.propTypes = {
 };
 
 export const ButtonMenu = props => {
-  const { isOpen, label, symbol, assistiveText, children } = props;
+  const { isOpen, label, symbol, assistiveText, children, type } = props;
   return (
     <div
       className={classNames(
@@ -40,7 +40,7 @@ export const ButtonMenu = props => {
       )}
     >
       {label ? (
-        <ButtonText label={label} assistiveText={assistiveText} />
+        <ButtonText label={label} assistiveText={assistiveText} type={type} />
       ) : (
         <ButtonIcon
           isOpen

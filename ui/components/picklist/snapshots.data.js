@@ -6,7 +6,7 @@ export const options = {
     name: 'Option B'
   },
   option3: {
-    name: 'Option ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    name: 'Option ABCDE FGHIJ KLMNO PQRST UVWXYZ'
   }
 };
 
@@ -19,7 +19,7 @@ export const optionsFocused = {
     name: 'Option B'
   },
   option3: {
-    name: 'Option ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    name: 'Option ABCDE FGHIJ KLMNO PQRST UVWXYZ'
   }
 };
 
@@ -32,7 +32,7 @@ export const optionSelected = {
     name: 'Option B'
   },
   option3: {
-    name: 'Option ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    name: 'Option ABCDE FGHIJ KLMNO PQRST UVWXYZ'
   }
 };
 
@@ -46,7 +46,7 @@ export const optionsSelected = {
     selected: true
   },
   option3: {
-    name: 'Option ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    name: 'Option ABCDE FGHIJ KLMNO PQRST UVWXYZ'
   }
 };
 

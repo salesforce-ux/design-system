@@ -87,7 +87,7 @@
       var(--sds-c-button-brand-color-border-hover, #{$brand-accessible-active})));
 
     /*! @css-var-fallback color */
-    --slds-c-button-dual-stateful-text-color-selected:
+    --slds-c-button-text-color-hover:
       var(--slds-c-button-dual-stateful-text-color-selected-hover,
       var(--slds-c-button-brand-text-color-hover,
       var(--sds-c-button-brand-text-color-hover, var(--slds-g-color-neutral-base-100, #{$color-text-brand-primary}))));
